@@ -1,0 +1,81 @@
+{
+  "chapters": {
+    "gevrey_chambertin_01": {
+      "title": "第一章:熱夫雷-香貝丹的迷霧",
+      "start_node": "opening",
+      "nodes": {
+
+        "opening": {
+          "text": "十一月的第戎,雨絲斜斜打在月台上,像老照片裡褪色的雜訊。你按著地址找到那間石屋酒莊時,天已經黑了。\n\n開門的是一位背有點駝的老人,手裡端著油燈。「你就是巴黎那邊寄信來的人?」他上下打量你,眼神裡有懷疑,也有一絲藏不住的期待。「我叫 Étienne Rousset。跟我來吧,趁我還沒改變主意。」\n\n地窖裡冷得像另一個季節。他從角落一個上鎖的木箱中取出那瓶酒,動作小心得像在觸碰易碎的回憶。\n\n「這是我父親留下的最後一瓶,1976 年。他把某塊地的酒藏了起來,從此再也沒提過那塊地一個字。你若真懂風土,替我找回它。」",
+          "choices": [
+            {"label": "🍷 先聞香,讓酒自己說話", "next": "smell_a"},
+            {"label": "📖 問 Étienne:「你父親還留下什麼東西嗎?」", "next": "ask_b"},
+            {"label": "🕯️ 注意瓶身上那個畫歪的十字符號", "next": "symbol_c"}
+          ]
+        },
+
+        "symbol_c": {
+          "text": "「這個符號……」你指著瓶身。Étienne 的表情忽然僵住。\n\n「我問過村裡的老人,他們說這是修道院的舊地界記號。可是我們家的地,從來不是教會的產業。」他頓了頓。「除非……我父親買的那塊地,原本另有主人。」\n\n地窖深處的燈影搖晃了一下,牆角還放著一疊發黃的信件,用麻繩捆著。",
+          "choices": [
+            {"label": "翻看那疊信件", "next": "letters_hook", "sets_flag": "found_letters"},
+            {"label": "先專心品飲,信件晚點再說", "next": "smell_a", "sets_fog": "letters_thread"}
+          ]
+        },
+
+        "letters_hook": {
+          "text": "信紙脆得幾乎一碰就碎。你只認出零星幾個字:「……Marguerite……婚約……地契……」墨水暈開的地方,像是被眼淚打濕過。\n\nÉtienne 沉默地看著你手中的信,沒有阻止,也沒有說話。",
+          "choices": [
+            {"label": "先把酒喝完,信件的事晚點再談", "next": "smell_a"}
+          ]
+        },
+
+        "ask_b": {
+          "text": "「還有什麼……」Étienne 望向地窖深處堆積的箱子。「地契、舊帳本,還有一疊我從沒敢細看的信。我一直告訴自己那不重要。」\n\n他的手在發抖,不知道是地窖太冷,還是別的原因。",
+          "choices": [
+            {"label": "先聞聞杯中的酒", "next": "smell_a"}
+          ]
+        },
+
+        "smell_a": {
+          "text": "你把杯子送到鼻尖。第一層是成熟黑櫻桃與甘草,接著浮出一絲濕土與蘑菇的氣息——像剛下過雨的森林地表。\n\nÉtienne 在你身後屏住呼吸。「怎麼樣?」他的聲音有一絲不易察覺的顫抖。",
+          "choices": [
+            {"label": "「土壤氣息很深,單寧結構很緊——這不是隨便一塊地的酒。」", "next": "quiz_01"}
+          ]
+        },
+
+        "quiz_01": {
+          "type": "quiz",
+          "text": "濕土與蘑菇氣息通常在陳年後更明顯,但你注意到單寧還很緊緻、酒體集中度高。這比較像——",
+          "choices": [
+            {"label": "A. Village 等級,年輕早飲型", "next": "quiz_01_wrong", "correct": false},
+            {"label": "B. Premier Cru,如 Clos St-Jacques", "next": "quiz_01_wrong", "correct": false},
+            {"label": "C. Grand Cru,如 Chambertin Clos de Bèze", "next": "quiz_01_correct", "correct": true}
+          ],
+          "knowledge_card": "熱夫雷-香貝丹的土壤與風格:石灰岩與泥灰岩混合的坡地,賦予酒款深邃的土壤氣息與緊緻單寧骨架,是特級園陳年潛力的核心來源。"
+        },
+
+        "quiz_01_correct": {
+          "text": "Étienne 的手扶住了桌沿,像是站不穩。「Clos de Bèze……我父親生前提過一次,只有一次,喝醉的時候。他說『那塊地,我對不起一個人。』然後就再也不肯說了。」\n\n他抬起頭看你,眼眶有點紅。「你說對了等級。可是……為什麼是『對不起』?」",
+          "grants_badge": "Chambertin Clos de Bèze",
+          "choices": [
+            {"label": "這趟旅程,好像不只是關於一塊地了。(第一章完)", "next": "chapter_end"}
+          ]
+        },
+
+        "quiz_01_wrong": {
+          "text": "Étienne 的表情黯淡下來,不是生氣,只是失望。「也許……也許這瓶酒的秘密,不是誰都能聽懂的。」\n\n他把信件收回木箱,沒有再拿出來。",
+          "sets_fog": "quiz_01",
+          "choices": [
+            {"label": "再仔細想想單寧的密度說明了什麼", "next": "quiz_01"}
+          ]
+        },
+
+        "chapter_end": {
+          "text": "你走出石屋時,雨已經停了。Étienne 站在門口,忽然叫住你。\n\n「等等——我父親的信裡提過一個名字,『Marguerite』。你在調查風土的時候,能不能……順便幫我找找,她是誰?」\n\n你點頭應下,轉身走進第戎清晨的薄霧裡。\n\n【第一章完 · 已獲得產區印記:Chambertin Clos de Bèze】\n【下一章尚未解鎖:Clos St-Jacques 的信】",
+          "choices": [],
+          "is_ending": true
+        }
+      }
+    }
+  }
+}
