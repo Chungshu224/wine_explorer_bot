@@ -49,6 +49,18 @@ def load_story() -> dict[str, Any]:
         return json.load(f)
 
 
+def get_chapter_order(story: dict[str, Any]) -> list[str]:
+    """回傳章節建議遊玩順序;若資料裡沒有 chapter_order,退回用字典順序。"""
+    return story.get("chapter_order", list(story["chapters"].keys()))
+
+
+def chapter_is_unlocked(story: dict[str, Any], chapter_id: str, badges: list[str]) -> bool:
+    """檢查玩家目前的印記是否滿足該章節 meta.requires_badges 的條件。"""
+    meta = story["chapters"][chapter_id].get("meta", {})
+    required = meta.get("requires_badges", [])
+    return all(b in badges for b in required)
+
+
 def load_all_states() -> dict[str, Any]:
     if STATE_FILE.exists():
         with open(STATE_FILE, encoding="utf-8") as f:
@@ -120,9 +132,12 @@ def build_keyboard(node: dict[str, Any], chapter_id: str) -> InlineKeyboardMarku
         return None
     buttons = []
     for idx, choice in enumerate(choices):
-        # callback_data 格式: "goto:章節:目標節點:選項索引"
+        # 選項可以用 "chapter" 欄位指定跨章節跳轉的目標章節,
+        # 不指定的話預設留在目前章節(單一章節內的分支)
+        target_chapter = choice.get("chapter", chapter_id)
+        # callback_data 格式: "goto:目標章節:目標節點:選項索引"
         # 索引用來讓 handler 知道這個選項是否為 quiz 的正確答案
-        callback_data = f"goto:{chapter_id}:{choice['next']}:{idx}"
+        callback_data = f"goto:{target_chapter}:{choice['next']}:{idx}"
         buttons.append([InlineKeyboardButton(choice["label"], callback_data=callback_data)])
     return InlineKeyboardMarkup(buttons)
 
@@ -169,6 +184,63 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     update_user_state(user_id, current_node=node_id)
 
 
+async def chapters(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """/chapters 顯示章節總覽:已解鎖的可直接點按鈕跳去,未解鎖的顯示條件"""
+    user_id = update.effective_user.id
+    state = get_user_state(user_id)
+    story = load_story()
+    badges = state.get("badges", [])
+
+    region = story.get("region", "")
+    lines = [f"🗺️ {region} 章節地圖\n"]
+    buttons = []
+
+    for chapter_id in get_chapter_order(story):
+        chapter = story["chapters"][chapter_id]
+        meta = chapter.get("meta", {})
+        unlocked = chapter_is_unlocked(story, chapter_id, badges)
+        tier_label = meta.get("tier_label", "")
+        village = meta.get("village", "")
+
+        if unlocked:
+            lines.append(f"🔓 {chapter['title']}({tier_label} · {village})")
+            buttons.append([InlineKeyboardButton(
+                f"▶️ {chapter['title']}",
+                callback_data=f"startchapter:{chapter_id}",
+            )])
+        else:
+            required = meta.get("requires_badges", [])
+            missing = [b for b in required if b not in badges]
+            lines.append(
+                f"🔒 {chapter['title']}({tier_label} · {village})\n"
+                f"   需要印記:{', '.join(missing)}"
+            )
+
+    keyboard = InlineKeyboardMarkup(buttons) if buttons else None
+    await update.message.reply_text("\n\n".join(lines), reply_markup=keyboard)
+
+
+async def handle_start_chapter(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """處理 /chapters 選單裡點擊「跳去某章節」的按鈕"""
+    query = update.callback_query
+    await query.answer()
+
+    user_id = update.effective_user.id
+    chapter_id = query.data.split(":", 1)[1]
+
+    story = load_story()
+    state = get_user_state(user_id)
+    badges = state.get("badges", [])
+
+    # 伺服器端再檢查一次解鎖條件,避免用舊訊息的按鈕繞過限制
+    if not chapter_is_unlocked(story, chapter_id, badges):
+        await query.edit_message_text("這個章節還沒解鎖喔,先去收集需要的產區印記吧。")
+        return
+
+    start_node = story["chapters"][chapter_id]["start_node"]
+    await send_node(query, context, chapter_id, start_node, user_id)
+
+
 async def status(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """/status 讓玩家查看目前收集的印記與迷霧區域(複習清單)"""
     user_id = update.effective_user.id
@@ -190,11 +262,14 @@ async def handle_choice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     await query.answer()
 
     user_id = update.effective_user.id
-    _, chapter_id, next_node_id, choice_idx_str = query.data.split(":")
+    # target_chapter 是這個按鈕要「去」的章節,不一定等於玩家「目前所在」的章節
+    # (例如第一章結尾跳轉到第二章開場,兩者章節不同)
+    _, target_chapter, next_node_id, choice_idx_str = query.data.split(":")
     choice_idx = int(choice_idx_str)
 
     state = get_user_state(user_id)
-    current_node = get_node(chapter_id, state["current_node"])
+    current_chapter = state["current_chapter"]
+    current_node = get_node(current_chapter, state["current_node"])
     choice = current_node["choices"][choice_idx]
 
     # 若目前節點是品飲判斷題,記錄作答並依對錯決定要不要標記迷霧區域
@@ -219,7 +294,7 @@ async def handle_choice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     if choice.get("sets_fog"):
         append_unique(user_id, "fog_zones", choice["sets_fog"])
 
-    await send_node(query, context, chapter_id, next_node_id, user_id)
+    await send_node(query, context, target_chapter, next_node_id, user_id)
 
 
 def main() -> None:
@@ -232,7 +307,9 @@ def main() -> None:
     app = Application.builder().token(token).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("status", status))
+    app.add_handler(CommandHandler("chapters", chapters))
     app.add_handler(CallbackQueryHandler(handle_choice, pattern=r"^goto:"))
+    app.add_handler(CallbackQueryHandler(handle_start_chapter, pattern=r"^startchapter:"))
 
     logger.info("風土探勘者 bot 啟動中...")
     app.run_polling()
