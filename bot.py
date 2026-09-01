@@ -282,23 +282,60 @@ async def send_node(
 
 
 # ---------------------------------------------------------------------------
-# 故事線選單
+# 故事線選單(兩層樹狀導覽:先選產區,再選故事線)
 # ---------------------------------------------------------------------------
 
-def build_campaign_picker_text_and_keyboard(
+def build_region_menu(
     story: dict[str, Any],
+    mode: str,
+    active_campaign: str | None = None,
+    all_states: dict[str, Any] | None = None,
 ) -> tuple[str, InlineKeyboardMarkup]:
-    lines = ["🍇 選擇一條故事線開始遊玩:\n"]
+    """第一層選單:只列出產區(夜丘/伯恩丘/...),不展開個別故事線。
+    mode 是 "p"(picker,/start 用,第一次選故事線)或 "c"(/campaigns 總覽用),
+    差別只在標題文字跟要不要顯示已獲得印記數。
+    """
+    groups = group_campaigns_by_region(story)
+    header = "🍇 選擇一個產區:" if mode == "p" else "🗺️ 所有故事線 · 選擇一個產區:"
+    lines = [header, ""]
     buttons = []
-    for region, entries in group_campaigns_by_region(story):
-        lines.append(f"🗺️ ── {region} ──")
-        for idx, cid in entries:
-            campaign = story["campaigns"][cid]
+    for region_idx, (region, entries) in enumerate(groups):
+        n_campaigns = len(entries)
+        if mode == "c" and all_states is not None:
+            total_badges = sum(len(all_states.get(cid, {}).get("badges") or []) for _, cid in entries)
+            lines.append(f"🗺️ {region}({n_campaigns} 條故事線,已獲得 {total_badges} 個印記)")
+        else:
+            lines.append(f"🗺️ {region}({n_campaigns} 條故事線)")
+        buttons.append([InlineKeyboardButton(f"📂 {region}", callback_data=f"selectregion:{mode}:{region_idx}")])
+    return "\n".join(lines), InlineKeyboardMarkup(buttons)
+
+
+def build_region_detail(
+    story: dict[str, Any],
+    region_idx: int,
+    mode: str,
+    active_campaign: str | None = None,
+    all_states: dict[str, Any] | None = None,
+) -> tuple[str, InlineKeyboardMarkup]:
+    """第二層選單:展開某個產區底下的故事線列表,附一顆返回按鈕。"""
+    groups = group_campaigns_by_region(story)
+    region, entries = groups[region_idx]
+
+    lines = [f"🗺️ {region}\n"]
+    buttons = []
+    for idx, cid in entries:
+        campaign = story["campaigns"][cid]
+        if mode == "c" and all_states is not None:
+            badge_count = len(all_states.get(cid, {}).get("badges") or [])
+            active_mark = "🟢 " if cid == active_campaign else ""
+            lines.append(f"{active_mark}📖 {campaign['title']}(已獲得 {badge_count} 個印記)\n   {campaign['knowledge_focus']}\n")
+        else:
             lines.append(f"📖 {campaign['title']}\n   {campaign['tagline']}\n   知識主線:{campaign['knowledge_focus']}\n")
-            # 用索引而非完整 campaign_id 組 callback_data:Telegram 對
-            # callback_data 有 64 bytes 硬性上限,用索引可以確保不管故事線
-            # id 未來取得多長,按鈕資料都維持極短、不會有超過上限的風險。
-            buttons.append([InlineKeyboardButton(f"▶️ {campaign['title']}", callback_data=f"startcampaign:{idx}")])
+        # 用索引而非完整 campaign_id 組 callback_data:Telegram 對
+        # callback_data 有 64 bytes 硬性上限,用索引可以確保不管故事線
+        # id 未來取得多長,按鈕資料都維持極短、不會有超過上限的風險。
+        buttons.append([InlineKeyboardButton(f"▶️ {campaign['title']}", callback_data=f"startcampaign:{idx}")])
+    buttons.append([InlineKeyboardButton("⬅️ 返回產區選單", callback_data=f"regionmenu:{mode}")])
     return "\n".join(lines), InlineKeyboardMarkup(buttons)
 
 
@@ -312,7 +349,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     active_campaign = await get_active_campaign(user_id)
 
     if active_campaign is None:
-        text, keyboard = build_campaign_picker_text_and_keyboard(story)
+        text, keyboard = build_region_menu(story, mode="p")
         await update.message.reply_text(text, reply_markup=keyboard)
         return
 
@@ -337,19 +374,41 @@ async def campaigns_command(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     active_campaign = await get_active_campaign(user_id)
     all_states = await get_all_campaign_states(user_id)
 
-    lines = ["🗺️ 所有故事線:\n"]
-    buttons = []
-    for region, entries in group_campaigns_by_region(story):
-        lines.append(f"── {region} ──")
-        for idx, cid in entries:
-            campaign = story["campaigns"][cid]
-            campaign_state = all_states.get(cid, {})
-            badge_count = len(campaign_state.get("badges") or [])
-            active_mark = "🟢 " if cid == active_campaign else ""
-            lines.append(f"{active_mark}📖 {campaign['title']}(已獲得 {badge_count} 個印記)\n   {campaign['knowledge_focus']}\n")
-            buttons.append([InlineKeyboardButton(f"切換到:{campaign['title']}", callback_data=f"startcampaign:{idx}")])
+    text, keyboard = build_region_menu(story, mode="c", active_campaign=active_campaign, all_states=all_states)
+    await update.message.reply_text(text, reply_markup=keyboard)
 
-    await update.message.reply_text("\n".join(lines), reply_markup=InlineKeyboardMarkup(buttons))
+
+async def handle_select_region(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """使用者點了「產區」按鈕,展開該產區底下的故事線列表。"""
+    query = update.callback_query
+    await query.answer()
+
+    user_id = update.effective_user.id
+    _, mode, region_idx_str = query.data.split(":")
+    region_idx = int(region_idx_str)
+
+    story = load_story()
+    active_campaign = await get_active_campaign(user_id) if mode == "c" else None
+    all_states = await get_all_campaign_states(user_id) if mode == "c" else None
+
+    text, keyboard = build_region_detail(story, region_idx, mode, active_campaign, all_states)
+    await query.edit_message_text(text, reply_markup=keyboard)
+
+
+async def handle_region_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """「返回產區選單」按鈕,回到第一層(只列產區)。"""
+    query = update.callback_query
+    await query.answer()
+
+    user_id = update.effective_user.id
+    mode = query.data.split(":", 1)[1]
+
+    story = load_story()
+    active_campaign = await get_active_campaign(user_id) if mode == "c" else None
+    all_states = await get_all_campaign_states(user_id) if mode == "c" else None
+
+    text, keyboard = build_region_menu(story, mode, active_campaign, all_states)
+    await query.edit_message_text(text, reply_markup=keyboard)
 
 
 async def chapters(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -533,6 +592,8 @@ def main() -> None:
     app.add_handler(CommandHandler("campaigns", campaigns_command))
     app.add_handler(CallbackQueryHandler(handle_start_campaign, pattern=r"^startcampaign:"))
     app.add_handler(CallbackQueryHandler(handle_start_chapter, pattern=r"^startchapter:"))
+    app.add_handler(CallbackQueryHandler(handle_select_region, pattern=r"^selectregion:"))
+    app.add_handler(CallbackQueryHandler(handle_region_menu, pattern=r"^regionmenu:"))
     app.add_handler(CallbackQueryHandler(handle_choice, pattern=r"^goto:"))
 
     logger.info("風土探勘者 bot(Supabase 持久化版)啟動中...")

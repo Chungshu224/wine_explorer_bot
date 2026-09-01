@@ -3844,6 +3844,951 @@
           }
         }
       }
+    },
+    "pommard_line": {
+      "title": "玻馬的鐵拳",
+      "tagline": "隔壁的渥爾內講優雅,玻馬只信一件事——結構要扎實",
+      "knowledge_focus": "玻馬 vs 渥爾內的力量對比、AOC 制度保護的真實歷史案例(玻馬曾是被仿冒最嚴重的勃根地名字之一)",
+      "region": "伯恩丘 Côte de Beaune",
+      "chapter_order": [
+        "pommard_vs_volnay_01",
+        "monopole_outpost",
+        "counterfeit_pommard_02",
+        "english_market_outpost",
+        "old_vines_wp",
+        "succession_weight_wp"
+      ],
+      "chapters": {
+        "pommard_vs_volnay_01": {
+          "title": "第一章:玻馬 vs 渥爾內",
+          "meta": {
+            "village": "Pommard",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "力量型 vs 優雅型的經典對照組",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「隔壁渥爾內的人老愛說我們粗魯,」Odile Berthaut 一邊倒酒一邊笑,「我倒覺得,他們只是沒那個骨架撐得起『扎實』兩個字。」\n\n她是玻馬本地酒莊主人,家族在這裡種了三代。你手上的兩杯酒,顏色都深沉,但拿起來聞,氣息走向明顯不同。",
+              "choices": [
+                {
+                  "label": "「玻馬跟渥爾內,土壤條件差在哪?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍷 先比較這兩杯酒的差異",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "第一杯,單寧紮實有稜角,黑色漿果與皮革氣息濃郁,酒體厚重有力。第二杯,單寧細滑許多,紅色漿果與花香為主,線條明顯輕盈優雅,幾乎是完全不同的個性。",
+              "choices": [
+                {
+                  "label": "「這麼大的差異,土壤條件差很多嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「玻馬的土壤含較多富含鐵質的紅棕色黏土,當地人叫『terres rouges』,」Odile 解釋,「排水較差、土質厚重,黑皮諾在這種條件下,天生就傾向長出扎實的單寧結構跟深色果味。渥爾內那邊,石灰岩比例更高、土層更薄,葡萄藤沒那麼『費力』,自然長得更輕盈優雅。」\n\n她敲了敲桌面。「一牆之隔,個性完全不同,這就是勃根地最迷人的地方。」",
+              "choices": [
+                {
+                  "label": "「所以第一杯應該是玻馬,第二杯是渥爾內?」",
+                  "next": "quiz_pommard"
+                }
+              ]
+            },
+            "quiz_pommard": {
+              "type": "quiz",
+              "text": "第一杯:單寧紮實有稜角、黑色漿果與皮革氣息、酒體厚重。第二杯:單寧細滑、紅色漿果與花香、線條輕盈優雅。哪一杯是玻馬,哪一杯是渥爾內?",
+              "choices": [
+                {
+                  "label": "A. 第一杯是渥爾內,第二杯是玻馬——優雅的地方通常結構更飽滿",
+                  "next": "quiz_pommard_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 第一杯是玻馬(鐵質黏土帶來紮實單寧與厚重酒體),第二杯是渥爾內(石灰岩薄土帶來輕盈優雅)",
+                  "next": "quiz_pommard_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 無法判斷,兩個村莊風格其實幾乎一樣",
+                  "next": "quiz_pommard_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "玻馬(Pommard)與渥爾內(Volnay)是勃根地最經典的風格對照組之一,兩村緊鄰卻風格迥異:玻馬土壤富含鐵質紅棕色黏土(terres rouges),排水較差、土質厚重,造就結構紮實、單寧有稜角、酒體厚重有力的「力量型」風格,是勃根地紅酒裡公認較為陽剛強勁的代表;渥爾內土壤石灰岩比例更高、土層較薄,葡萄藤生長條件較「輕鬆」,造就單寧細滑、線條輕盈、以花香與紅色漿果為主的「優雅型」風格。這組對比,是繼熱夫雷-香貝丹 vs 香波-蜜思妮之後,另一個練習「力量 vs 優雅」風土判斷邏輯的經典案例。"
+            },
+            "quiz_pommard_correct": {
+              "text": "Odile 滿意地點頭。「答對了。玻馬從來沒拿過 Grand Cru,你知道嗎?最高只到 Premier Cru,渥爾內也一樣——但沒人因此小看我們,這村子的名字,靠的是實打實的風格辨識度。」\n\n她頓了頓,表情忽然變得嚴肅。「說到『名字』,我家有一段歷史,你可能會有興趣聽。」",
+              "grants_badge": "玻馬渥爾內對比",
+              "choices": [
+                {
+                  "label": "「什麼歷史?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_pommard_wrong": {
+              "text": "Odile 搖搖頭。「鐵質黏土排水差、土質厚重,通常會養出什麼樣的單寧?再想想。」",
+              "sets_fog": "quiz_pommard",
+              "choices": [
+                {
+                  "label": "重新判斷哪杯是玻馬、哪杯是渥爾內",
+                  "next": "quiz_pommard"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Odile 起身走向書櫃,抽出一個裝滿泛黃文件的資料夾。「我爺爺那個年代,『玻馬』這個名字在海外差點被人玩壞了——你聽過『仿冒』這件事嗎?」\n\n【第一章完 · 已獲得知識印記:玻馬渥爾內對比】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:假冒的玻馬",
+                  "next": "opening",
+                  "chapter": "counterfeit_pommard_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "counterfeit_pommard_02": {
+          "title": "第二章:假冒的玻馬",
+          "meta": {
+            "village": "Pommard",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "AOC 制度保護的真實歷史案例:玻馬名字的仿冒史",
+            "requires_badges": [
+              "玻馬渥爾內對比"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Odile 翻開資料夾,裡面是一疊法文與英文夾雜的舊信件與剪報。「二十世紀初,玻馬是全世界最知名的勃根地紅酒名字之一,」她說,「知名到什麼程度呢——海外市場上,掛著『Pommard』標籤賣的酒,一大堆根本不是我們這裡產的。」",
+              "choices": [
+                {
+                  "label": "「怎麼會有人敢直接仿冒村莊名字?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📜 先看看資料夾裡那些舊剪報",
+                  "next": "browse_a"
+                }
+              ]
+            },
+            "browse_a": {
+              "text": "剪報裡有幾則英文報導,提到當時海外市場上「Pommard」幾乎變成一種泛稱的紅酒風格代名詞,消費者買到的酒,產地可能來自任何地方,跟真正的玻馬村毫無關係。",
+              "choices": [
+                {
+                  "label": "「這樣不就等於盜用了整個村莊的名譽?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「就是這樣,」Odile 說,「在正式的 AOC 產區法定保護制度確立之前,地理名稱幾乎沒有法律約束力,誰都可以拿知名產區的名字包裝自己的酒。我爺爺那一輩,花了很大力氣參與遊說跟訴訟,爭取讓『Pommard』這個名字受到法律實質保護。」\n\n她指著其中一份文件。「這也是為什麼,你之前在菲仙學到的那個 AOC 制度史,對我們家來說不是課本知識,是真實打過的仗。」",
+              "choices": [
+                {
+                  "label": "「所以 AOC 制度,某種程度上是被這種仿冒問題逼出來的?」",
+                  "next": "quiz_counterfeit"
+                }
+              ]
+            },
+            "quiz_counterfeit": {
+              "type": "quiz",
+              "text": "玻馬在二十世紀初面臨的海外仿冒問題(名字被廣泛盜用、產地與品質毫無保障),對後來 AOC(法定產區)制度的建立與強化,最合理的歷史關聯是:",
+              "choices": [
+                {
+                  "label": "A. 兩者完全無關,AOC 制度純粹是政府主動的行政規劃",
+                  "next": "quiz_counterfeit_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 像玻馬這樣知名產區地理名稱遭到大規模仿冒濫用的真實案例,正是推動生產者團結遊說、促成 AOC 制度建立與強化地理名稱法律保護的重要現實壓力之一",
+                  "next": "quiz_counterfeit_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 仿冒問題只發生在玻馬,勃根地其他產區完全沒遇過類似狀況",
+                  "next": "quiz_counterfeit_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "二十世紀初,玻馬(Pommard)是海外市場上最知名、也因此最常被仿冒濫用的勃根地紅酒名字之一——不少海外市售的「Pommard」標籤酒款,產地與品質跟真正的玻馬村毫無關係。這類真實發生、切身影響生產者利益的仿冒問題,是推動勃根地(乃至法國全國)生產者團結遊說、促成法國 AOC(Appellation d'Origine Contrôlée)制度逐步建立與強化的重要現實壓力之一——AOC 制度用嚴格的地理邊界與法律約束力,正是為了終結這種「借知名地名之名,行魚目混珠之實」的亂象。玻馬的仿冒史,讓你之前在菲仙學到的 AOC 制度史,有了一個更具體、更貼近真實產業利益的案例。"
+            },
+            "quiz_counterfeit_correct": {
+              "text": "Odile 闔上資料夾,眼神裡帶著一絲驕傲。「我爺爺常說,『玻馬』這兩個字,是他們那一代人,一場一場官司、一封一封信,硬生生從仿冒者手上搶回來的。現在你手上這杯,喝的不只是黑皮諾,還有一段被保護下來的名譽。」",
+              "grants_badge": "玻馬仿冒史",
+              "choices": [
+                {
+                  "label": "「謝謝妳分享這段家族歷史,Odile。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_counterfeit_wrong": {
+              "text": "Odile 搖頭。「不是無關,也不是只有玻馬遇過——再想想,大規模的仿冒濫用問題,會不會變成生產者團結起來爭取法律保護的現實動機?」",
+              "sets_fog": "quiz_counterfeit",
+              "choices": [
+                {
+                  "label": "重新思考仿冒史與 AOC 制度的關聯",
+                  "next": "quiz_counterfeit"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你走出 Odile 的酒莊,手裡還留著那杯玻馬的餘味——紮實、有稜角,像這個村子花了一整代人才守住的名字。\n\n風土的故事,原來不只寫在土壤跟氣候裡,也寫在一場場為了名字本身打過的仗。\n\n【第二章完 · 已獲得知識印記:玻馬仿冒史】\n【下一章尚未解鎖:待續】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "monopole_outpost": {
+          "title": "驛站:圍牆裡的獨家",
+          "meta": {
+            "village": "Pommard",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "monopole(獨家單一持有園)的概念,與 Clos de Vougeot 的碎片化形成對比",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "玻馬村一片被石牆完整圍起來的葡萄園前,導覽員停下腳步。「這叫 Clos des Epeneaux,」她說,「整片園子,從頭到尾只屬於一個家族。」\n\n遊客好奇地問:「那有什麼特別的?你們家族的地不也都是自己的嗎?」",
+              "choices": [
+                {
+                  "label": "「單一持有,跟一般的地塊有什麼不同?」",
+                  "next": "quiz_monopole"
+                }
+              ]
+            },
+            "quiz_monopole": {
+              "type": "quiz",
+              "text": "像 Clos des Epeneaux 這樣完整由單一家族/酒莊持有的地塊,勃根地稱為「monopole」(獨家單一持有園)。這種持有型態,跟你之前學過 Clos de Vougeot 那種橫跨八十幾位地主的地塊相比,最主要的實務差異是什麼?",
+              "choices": [
+                {
+                  "label": "A. Monopole 一定是特級園等級,一般地塊不可能是 monopole",
+                  "next": "quiz_monopole_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. Monopole 由單一持有者全權決定種植與釀造決策,不需要像多地主地塊那樣協調不同持分主人的意見,風格一致性通常更容易掌控",
+                  "next": "quiz_monopole_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. Monopole 表示這塊地禁止對外銷售,只能自用",
+                  "next": "quiz_monopole_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "「Monopole」指的是完整由單一酒莊或家族持有、沒有其他共有人的地塊,可以是村莊級、一級園,甚至特級園(例如夜丘的 Romanée-Conti 本身就是知名的特級園 monopole)。玻馬的 Clos des Epeneaux 是一級園等級的知名 monopole 案例。這種持有型態最大的實務優勢,是所有種植與釀造決策都由單一持有者全權拍板,不需要像 Clos de Vougeot 那樣協調八十幾位地主各自的意見,風格一致性與品質控管通常更容易掌握——是理解「地塊持有結構如何影響最終酒款」的另一個重要面向,跟均分繼承制造成的碎片化恰好形成對照。"
+            },
+            "quiz_monopole_correct": {
+              "text": "導覽員點頭。「沒錯,想像一下,八十幾個地主要為了一塊地的種植方式吵架,跟一個家族自己拍板決定,哪一種比較容易做出穩定風格的酒。」\n\n【驛站完 · 已獲得知識印記:Monopole 持有邏輯】",
+              "grants_badge": "Monopole 持有邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_monopole_wrong": {
+              "text": "導覽員搖頭。「Monopole 各種等級都有,也完全可以對外銷售——再想想,『只有一個持有者』對決策協調會有什麼幫助?」",
+              "sets_fog": "quiz_monopole",
+              "choices": [
+                {
+                  "label": "重新思考 monopole 的實務優勢",
+                  "next": "quiz_monopole"
+                }
+              ]
+            }
+          }
+        },
+        "english_market_outpost": {
+          "title": "驛站:英倫市場的傳奇",
+          "meta": {
+            "village": "Pommard",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "勃根地酒歷史上倚重的英國出口市場",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "一位酒商在講座上翻出一張泛黃的舊出口紀錄。「玻馬在海外會這麼有名,某種程度上要感謝英國人,」他說,「勃根地酒跟英國市場的淵源,比大部分人想像的更久遠。」",
+              "choices": [
+                {
+                  "label": "「英國市場對勃根地酒的重要性,是從什麼時候開始的?」",
+                  "next": "quiz_english"
+                }
+              ]
+            },
+            "quiz_english": {
+              "type": "quiz",
+              "text": "英國長期是勃根地酒重要的出口市場,這段貿易淵源最主要可以追溯到什麼樣的歷史脈絡?",
+              "choices": [
+                {
+                  "label": "A. 純粹是二十世紀後半才興起的現代貿易關係,沒有更早的歷史根源",
+                  "next": "quiz_english_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 這段貿易關係有相當久遠的歷史淵源,英國酒商與消費市場長期以來就是法國葡萄酒(包括勃根地)重要的海外通路,是延續數百年的傳統出口關係",
+                  "next": "quiz_english_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 英國市場其實從未真正重視勃根地酒,主要出口對象一直是美國",
+                  "next": "quiz_english_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "英國與法國葡萄酒貿易的淵源相當久遠,倫敦的酒商網絡數百年來一直是法國葡萄酒(包括波爾多與勃根地)重要的海外銷售通路與品評話語權中心之一。這種長期累積的貿易關係與市場話語權,也是為什麼像玻馬這類風格強勁、討喜「英式味蕾」的勃根地紅酒,能在海外累積起響亮名聲的背景因素之一——但也正因為市場需求龐大、名氣響亮,才更容易招來仿冒濫用的問題,這正好呼應了你在上一個章節學到的玻馬仿冒史。"
+            },
+            "quiz_english_correct": {
+              "text": "酒商點頭。「就是這樣,名氣是把雙面刃——市場越大,越容易被人盯上、被人仿冒。」\n\n【驛站完 · 已獲得知識印記:英倫市場淵源】",
+              "grants_badge": "英倫市場淵源",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_english_wrong": {
+              "text": "酒商搖頭。「這段淵源比你想的久遠得多,也不是美國——再想想,英國酒商網絡在歷史上扮演的角色。」",
+              "sets_fog": "quiz_english",
+              "choices": [
+                {
+                  "label": "重新思考英國市場的歷史地位",
+                  "next": "quiz_english"
+                }
+              ]
+            }
+          }
+        },
+        "old_vines_wp": {
+          "title": "支線:老藤的抉擇",
+          "meta": {
+            "village": "Pommard",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "「Vieilles Vignes」老藤標示沒有法定規範的現實",
+            "requires_badges": [
+              "玻馬渥爾內對比"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你再訪玻馬時,Odile 正站在一片藤蔓稀疏、明顯年邁的葡萄園前發愁。「這片藤有六十年了,」她說,「產量一年比一年低,但釀出來的酒濃縮度跟複雜度,是年輕藤比不上的。我在猶豫要不要挖掉重種。」",
+              "choices": [
+                {
+                  "label": "「酒標上常看到『Vieilles Vignes』老藤,這個標示有法定標準嗎?」",
+                  "next": "quiz_old_vines"
+                }
+              ]
+            },
+            "quiz_old_vines": {
+              "type": "quiz",
+              "text": "酒標上常見的「Vieilles Vignes」(老藤)標示,在法國 AOC 法規裡,有沒有法定的最低樹齡規範?",
+              "choices": [
+                {
+                  "label": "A. 有,法規明確規定至少要 35 年以上才能標示",
+                  "next": "quiz_old_vines_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 沒有法定規範,「Vieilles Vignes」是各酒莊自行認定使用的行銷用語,不同酒莊對「老藤」的樹齡標準可能差異很大",
+                  "next": "quiz_old_vines_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 有,但只適用於特級園等級的酒款",
+                  "next": "quiz_old_vines_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "「Vieilles Vignes」(老藤)是勃根地乃至法國葡萄酒產業常見的酒標用語,普遍認知裡指樹齡較高、產量較低、風味濃縮度較高的葡萄藤,但這個詞在法國 AOC 法規裡並沒有法定的最低樹齡標準——是否使用這個標示、認定樹齡門檻多少,完全由各酒莊自行決定。這代表消費者看到「Vieilles Vignes」時,無法單憑這個詞判斷確切樹齡,不同酒莊的認定標準可能從二十幾年到六十年以上都有,是消費者容易誤解、卻很少被明確提醒的酒標用語陷阱之一。"
+            },
+            "quiz_old_vines_correct": {
+              "text": "Odile 苦笑。「沒錯,所以我糾結的不只是要不要挖,還有挖了以後,我還能不能誠實地在酒標上寫『老藤』——畢竟我知道這個詞背後,沒有任何法律在幫消費者把關。」",
+              "grants_badge": "老藤標示的模糊性",
+              "choices": [
+                {
+                  "label": "「妳最後決定怎麼做?」",
+                  "next": "waypoint_end_old_vines"
+                }
+              ]
+            },
+            "quiz_old_vines_wrong": {
+              "text": "Odile 搖頭。「沒有這麼明確的法規喔——再想想,這個詞聽起來很正式,但實際上有沒有法律把關?」",
+              "sets_fog": "quiz_old_vines",
+              "choices": [
+                {
+                  "label": "重新思考老藤標示的法規現況",
+                  "next": "quiz_old_vines"
+                }
+              ]
+            },
+            "waypoint_end_old_vines": {
+              "text": "「我決定再留幾年,」Odile 說,「產量低沒關係,這片藤還有話要說,我想聽完。」\n\n她望向那片稀疏卻頑強的葡萄園。「至於酒標怎麼寫,等真的要決定的那天,我會誠實面對——不是每個詞,都值得為了行銷效果去用。」\n\n【支線完 · 已獲得知識印記:老藤標示的模糊性】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "succession_weight_wp": {
+          "title": "支線:接班的重量",
+          "meta": {
+            "village": "Pommard",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "傳統力量型風格與市場口味變化之間的世代抉擇",
+            "requires_badges": [
+              "老藤標示的模糊性"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Odile 的女兒也在場——剛從釀酒學校畢業,準備接手家族酒莊。「市場這幾年,好像比較喜歡更柔和、更討喜的風格,」女兒有些猶豫地說,「我在想,我們是不是也該調整一下玻馬一貫的『鐵拳』風格。」",
+              "choices": [
+                {
+                  "label": "「傳統風格跟市場口味變化,要怎麼取捨?」",
+                  "next": "quiz_succession"
+                }
+              ]
+            },
+            "quiz_succession": {
+              "type": "quiz",
+              "text": "面對「傳統風格辨識度」與「市場口味變化」之間的張力,最貼近成熟釀酒思維的態度應該是:",
+              "choices": [
+                {
+                  "label": "A. 完全不理會市場變化,永遠只做傳統風格,拒絕任何調整",
+                  "next": "quiz_succession_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 在保留核心風土辨識度(玻馬的結構與力量感)的前提下,理解並謹慎回應市場品味的變化,而不是全盤否定傳統或全盤迎合市場——找到兩者之間可持續的平衡點",
+                  "next": "quiz_succession_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 完全放棄傳統風格,徹底改做市場當下最流行的口味",
+                  "next": "quiz_succession_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "葡萄酒產業(乃至任何有百年傳統的手工藝產業)長期面對同一個張力:如何在保留核心風土辨識度與傳統技藝的同時,回應消費市場品味的長期變化。極端的兩種做法——完全拒絕改變,或完全放棄傳統迎合市場——都有各自的風險:前者可能失去與新世代消費者的連結,後者則可能讓一個產區數百年累積的風格識別度徹底消失。成熟的世代交替,往往在於找到「哪些是核心、不可妥協的風土表達」與「哪些是可以隨時代調整的工藝細節」之間的平衡點,而不是簡單的二選一。"
+            },
+            "quiz_succession_correct": {
+              "text": "Odile 看著女兒,眼神裡帶著欣慰。「妳問到重點了。玻馬的『鐵拳』,骨子裡的結構感不能丟,那是這塊地給我們的東西;但怎麼呈現、怎麼跟現在的人溝通,妳可以有自己的想法。」\n\n她把酒杯遞給女兒。「這間酒莊,接下來要怎麼走,妳自己決定——但記得,土地一直都在,它會等妳找到答案。」",
+              "grants_badge": "傳統與世代的平衡",
+              "choices": [
+                {
+                  "label": "帶著這份見證,結束玻馬的旅程",
+                  "next": "waypoint_end_succession"
+                }
+              ]
+            },
+            "quiz_succession_wrong": {
+              "text": "Odile 搖頭。「兩個極端都有風險——再想想,有沒有一種做法,能同時保住『玻馬是玻馬』的核心,又不完全故步自封?」",
+              "sets_fog": "quiz_succession",
+              "choices": [
+                {
+                  "label": "重新思考傳統與市場變化的平衡",
+                  "next": "quiz_succession"
+                }
+              ]
+            },
+            "waypoint_end_succession": {
+              "text": "你告別 Odile 一家,走出玻馬村。這趟旅程從一杯對比酒開始,到一段仿冒史,到一片老藤的抉擇,最後停在一場關於未來的溫柔對話——風土從來不只是土壤與氣候的故事,也是一代又一代人,在傳承與改變之間,反覆練習誠實面對的故事。\n\n【支線完 · 已獲得知識印記:傳統與世代的平衡】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      }
+    },
+    "beaune_negociant_line": {
+      "title": "伯恩的調配師",
+      "tagline": "地塊講究「這是哪裡」,酒商講究「年年都一樣」——兩種邏輯,同樣誠實",
+      "knowledge_focus": "négociant 跨村莊調配的品牌邏輯、伯恩作為酒商權力中心的歷史成因",
+      "region": "伯恩丘 Côte de Beaune",
+      "chapter_order": [
+        "blenders_nose_01",
+        "regional_puzzle_outpost",
+        "power_map_of_beaune_02",
+        "negociant_trust_outpost",
+        "harvest_negotiation_wp",
+        "weight_of_brand_wp"
+      ],
+      "chapters": {
+        "blenders_nose_01": {
+          "title": "第一章:調配師的鼻子",
+          "meta": {
+            "village": "Beaune",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "négociant 跨村莊調配的品牌一致性邏輯",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "伯恩舊城區地下,一整片挖進石灰岩的酒窖深處,Aurélie Bertin 正一杯接一杯地試飲,面前擺著十幾個貼著編號、來自不同村莊的樣品。「這些全部要調成同一款酒,」她頭也不抬地說,「而且要跟去年那瓶喝起來像同一個『人』。」",
+              "choices": [
+                {
+                  "label": "「跟去年『喝起來像同一個人』是什麼意思?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍷 先試試看其中兩款差異明顯的樣品",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "你試了兩杯——一杯果香濃郁圓潤,顯然來自較溫暖的村莊;另一杯結構緊瘦、酸度銳利,像是石灰岩坡地的表現。單獨喝,兩者個性差異明顯。",
+              "choices": [
+                {
+                  "label": "「這麼不同的兩杯,要怎麼調成同一款酒?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「你在夜丘應該學過 domaine 裝瓶,」Aurélie 說,「domaine 追求的是『忠實呈現這塊地』,今年風格跟去年不一樣沒關係,因為那是這塊地那一年的真實樣子。négociant 的邏輯完全相反——我們賣的是一個『品牌承諾』,消費者買這款酒,期待的是每年打開都認得出『這就是那個味道』,不是每年都要重新認識一次。」\n\n她把兩杯樣品倒進同一個杯子。「所以我的工作,不是找出『最好』的那一桶,是找出能組成『一貫風格』的比例。」",
+              "choices": [
+                {
+                  "label": "「這跟你之前學過的桶次調配,邏輯一樣嗎?」",
+                  "next": "risk_c"
+                }
+              ]
+            },
+            "risk_c": {
+              "text": "「規模不一樣,」Aurélie 說,「桶次調配是同一塊地、不同處理方式的原酒互相截長補短。我這裡調的,是完全不同村莊、不同種植者的葡萄或酒液,規模大得多,而且年年都要重新找到能『複製』去年風格的組合——這比單一莊園的調配難得多,因為每年的原料供應商跟成熟度都在變。」",
+              "choices": [
+                {
+                  "label": "思考 négociant 調配跟 domaine 調配的核心差異",
+                  "next": "quiz_beaune"
+                }
+              ]
+            },
+            "quiz_beaune": {
+              "type": "quiz",
+              "text": "domaine 裝瓶追求「忠實呈現特定地塊當年的真實樣貌」,négociant 品牌調配追求「年復一年維持消費者熟悉的一貫風格」。這兩種邏輯的根本差異最準確的描述是:",
+              "choices": [
+                {
+                  "label": "A. négociant 調配的酒品質一定比 domaine 差,因為不是單一地塊",
+                  "next": "quiz_beaune_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 兩者服務的目標不同——domaine 忠於「土地與年份的真實變化」,négociant 忠於「消費者對品牌風格的穩定期待」,不是品質高低之分,是不同的誠實方式",
+                  "next": "quiz_beaune_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 兩者其實做的是完全一樣的事,只是行銷說法不同",
+                  "next": "quiz_beaune_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "domaine(酒莊)裝瓶與 négociant(酒商)品牌調配,服務的是兩種不同卻同樣正當的「誠實」:domaine 裝瓶追求忠實呈現特定地塊在特定年份的真實表現,年份間的風格差異被視為風土與氣候變化的誠實紀錄;négociant 品牌調配則追求跨年份、跨產地來源的風格一致性,讓消費者買到熟悉、可預期的品牌風味,這種一致性本身也是對消費者的一種承諾與誠實。兩者不是品質高低之分,而是完全不同的商業邏輯與價值主張——伯恩作為歷史悠久的酒商重鎮,長期以這種跨村莊調配的品牌邏輯運作,跟周邊以單一地塊表現為核心的種植者村莊,形成互補而非競爭的兩套系統。"
+            },
+            "quiz_beaune_correct": {
+              "text": "Aurélie 滿意地點頭。「就是這樣。很多人覺得 négociant 是『次一等』的選擇,其實我們只是在回答一個不同的問題——domaine 回答『這塊地今年怎麼樣』,我們回答『這個品牌一直以來是什麼樣子』。」\n\n她望向窖藏深處。「你知道為什麼伯恩會變成這種跨村莊生意的大本營嗎?這跟這座城市本身的歷史很有關係。」",
+              "grants_badge": "調配師的品牌邏輯",
+              "choices": [
+                {
+                  "label": "「為什麼是伯恩,不是別的村莊?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_beaune_wrong": {
+              "text": "Aurélie 搖搖頭。「品質高低不是重點——再想想,這兩種做法,分別在『忠於』什麼東西?」",
+              "sets_fog": "quiz_beaune",
+              "choices": [
+                {
+                  "label": "重新思考兩種調配邏輯的差異",
+                  "next": "quiz_beaune"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Aurélie 領你走出酒窖,穿過伯恩舊城蜿蜒的石板路。「這整座城市底下,」她說,「挖滿了跟我們剛剛那間一樣的酒窖——這不是巧合。」\n\n【第一章完 · 已獲得知識印記:調配師的品牌邏輯】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:伯恩的權力地圖",
+                  "next": "opening",
+                  "chapter": "power_map_of_beaune_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "power_map_of_beaune_02": {
+          "title": "第二章:伯恩的權力地圖",
+          "meta": {
+            "village": "Beaune",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "伯恩作為酒商權力中心的歷史成因",
+            "requires_badges": [
+              "調配師的品牌邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「大部分知名的 négociant 酒商,總部都設在伯恩,不是設在玻馬或默爾索這些真正種葡萄的村莊,」Aurélie 站在城牆邊說,「你不覺得奇怪嗎?生意應該離原料越近越好才對。」",
+              "choices": [
+                {
+                  "label": "「那為什麼大家都選擇在伯恩設點?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🏰 先觀察伯恩舊城牆與地下酒窖的規模",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "你抬頭看向厚實的舊城牆,又想起剛才走過的那片深入地下、挖進石灰岩層的巨大酒窖網絡——規模遠超過你在其他村莊見過的任何一間。",
+              "choices": [
+                {
+                  "label": "「這些城牆跟酒窖,是伯恩發展成商業中心的關鍵嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「算是其中一個關鍵,」Aurélie 說,「伯恩歷史上是有城牆防禦的重鎮,安全性比周邊小村莊高,加上地底石灰岩層挖出來的酒窖,溫度濕度天然適合長期陳年儲酒——對需要大量存貨、跨年份調配的酒商來說,這種基礎設施太重要了。種植村莊有葡萄園,但不一定有這種規模的安全儲酒空間。」\n\n她頓了頓。「加上伯恩自古以來就是交通與商業節點,酒商在這裡,離葡萄園不算太遠,又能就近對接外地買家跟運輸路線。」",
+              "choices": [
+                {
+                  "label": "「所以伯恩的優勢,不是種植條件,是商業基礎設施?」",
+                  "next": "quiz_power_map"
+                }
+              ]
+            },
+            "quiz_power_map": {
+              "type": "quiz",
+              "text": "大型 négociant 酒商歷史上多半選擇在伯恩(而非玻馬、默爾索等種植村莊)設立總部,最主要的原因組合是什麼?",
+              "choices": [
+                {
+                  "label": "A. 伯恩本身的葡萄園品質遠勝周邊所有村莊,酒商當然要設在最好的產區",
+                  "next": "quiz_power_map_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 伯恩具備防禦城牆帶來的安全性、石灰岩地層挖鑿出的大規模天然酒窖儲存條件,加上作為商業與交通節點的區位優勢——這些是跨村莊調配、長期陳年、對外貿易所需要的基礎設施,不是單純的種植條件",
+                  "next": "quiz_power_map_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 純粹是歷史偶然,沒有任何實際地理或商業因素",
+                  "next": "quiz_power_map_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "伯恩作為勃根地酒商(négociant)的歷史重鎮,關鍵優勢並非種植條件本身(伯恩雖有優質一級園,但沒有 Grand Cru,葡萄園規模也不如玻馬、默爾索等專業種植村莊),而是商業基礎設施:歷史悠久的城牆防禦體系提供安全性,城市地底廣闊的石灰岩地層挖鑿出天然溫濕度穩定的大型酒窖網絡,適合大量存貨與跨年份長期陳年調配,加上伯恩自古以來作為區域交通與商業節點的區位優勢,讓酒商得以同時兼顧「靠近葡萄園產地」與「便於對接外地買家、運輸貿易」兩種需求。這解釋了為什麼勃根地的「種植權力」集中在各個村莊,而「商業權力」卻長期集中在伯恩這座城市。"
+            },
+            "quiz_power_map_correct": {
+              "text": "Aurélie 點頭。「沒錯,種植的人跟賣酒的人,權力中心從一開始就不在同一個地方——這也是為什麼,你之前學過的那些小農把葡萄賣給 négociant 的故事,某種程度上都會匯流到伯恩這座城市來。」\n\n她望向城牆外緩緩起伏的葡萄園。「每一塊地都在說自己的故事,但這些故事,最後常常要透過伯恩這個節點,才傳得到全世界。」",
+              "grants_badge": "伯恩商業權力地圖",
+              "choices": [
+                {
+                  "label": "「謝謝妳,Aurélie,這趟徹底補上了我對勃根地產業結構的理解。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_power_map_wrong": {
+              "text": "Aurélie 搖頭。「伯恩的葡萄園條件很好,但不是全勃根地最頂尖——再想想,城牆跟地底酒窖,對『跨村莊調配』跟『長期陳年貿易』分別提供了什麼?」",
+              "sets_fog": "quiz_power_map",
+              "choices": [
+                {
+                  "label": "重新思考伯恩成為商業中心的關鍵因素",
+                  "next": "quiz_power_map"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你告別 Aurélie,走在伯恩舊城的石板路上。城牆內外,種植的權力與商業的權力,幾百年來各自生長,又始終緊密交織——就像這片土地上每一段故事,最終都指向同一件事:風土從來不是一個人的事。\n\n【第二章完 · 已獲得知識印記:伯恩商業權力地圖】\n【下一章尚未解鎖:待續】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "regional_puzzle_outpost": {
+          "title": "驛站:大區級的拼圖",
+          "meta": {
+            "village": "Beaune",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "大區級 Bourgogne AOC 的跨區採購邏輯",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "一位酒商倉庫管理員指著堆到天花板的橡木桶。「這些全部要調成一款『Bourgogne』大區級酒,」他說,「來源從夏布利南邊到馬貢內都有,你猜這種等級的酒,產區身份要怎麼認定?」",
+              "choices": [
+                {
+                  "label": "「大區級的葡萄,可以來自整個勃根地任何地方嗎?」",
+                  "next": "quiz_regional"
+                }
+              ]
+            },
+            "quiz_regional": {
+              "type": "quiz",
+              "text": "「Bourgogne」大區級 AOC,是勃根地分級金字塔最基礎的一層。這個等級的酒,葡萄來源範圍最準確的理解是:",
+              "choices": [
+                {
+                  "label": "A. 只能來自夜丘與伯恩丘,不包括夏布利或馬貢內",
+                  "next": "quiz_regional_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 可以來自整個勃根地產區範圍內符合規範的地塊,不限定特定村莊或坡位,是分級金字塔裡地理範圍最廣、風格彈性也最大的一層",
+                  "next": "quiz_regional_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 大區級其實不算正式 AOC,只是行銷用詞",
+                  "next": "quiz_regional_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "「Bourgogne」大區級 AOC 是勃根地分級金字塔(大區級 → 村莊級 → 一級園 → 特級園)最基礎、地理涵蓋範圍最廣的一層,葡萄來源可以是整個勃根地產區範圍內符合規範的地塊,不限定特定村莊或坡位。這個等級對 négociant 而言特別重要——因為地理彈性大,方便從多個來源地採購原料,調配出穩定供應、價格親民的入門款品牌酒,是許多消費者第一次接觸勃根地酒的入口,也是酒商跨區採購調配邏輯發揮最徹底的一個等級。"
+            },
+            "quiz_regional_correct": {
+              "text": "管理員點頭。「沒錯,越基礎的等級,地理彈性越大——這也是為什麼大區級酒的價格,通常比村莊級以上親民得多。」\n\n【驛站完 · 已獲得知識印記:大區級採購邏輯】",
+              "grants_badge": "大區級採購邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_regional_wrong": {
+              "text": "管理員搖頭。「大區級是正式 AOC,地理範圍也不只夜丘伯恩丘——再想想,越基礎的分級層級,地理限制應該越寬還是越窄?」",
+              "sets_fog": "quiz_regional",
+              "choices": [
+                {
+                  "label": "重新思考大區級的地理範圍",
+                  "next": "quiz_regional"
+                }
+              ]
+            }
+          }
+        },
+        "negociant_trust_outpost": {
+          "title": "驛站:酒商的信譽制度",
+          "meta": {
+            "village": "Beaune",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "négociant 品牌信譽如何跨世代累積",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "伯恩一間歷史悠久的酒商總部裡,牆上掛滿了創辦以來每一代負責人的照片。接待你的公關笑著說:「客人常問,為什麼買酒要認品牌?我們家族守著這個招牌,已經好幾代人了。」",
+              "choices": [
+                {
+                  "label": "「品牌信譽,對 négociant 來說有多重要?」",
+                  "next": "quiz_trust"
+                }
+              ]
+            },
+            "quiz_trust": {
+              "type": "quiz",
+              "text": "相較於單一 domaine 的信譽主要繫於「這塊地、這位釀酒師」,négociant 品牌信譽的累積邏輯最主要建立在什麼基礎上?",
+              "choices": [
+                {
+                  "label": "A. 純粹依賴廣告行銷,跟實際品質無關",
+                  "next": "quiz_trust_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 跨世代持續維持穩定的採購與調配品質標準,讓消費者累積起「這個牌子,年年都值得信賴」的長期信心,信譽本身成為一種需要長期經營、難以速成的無形資產",
+                  "next": "quiz_trust_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. négociant 品牌信譽完全來自法律強制認證,消費者不需要自行判斷",
+                  "next": "quiz_trust_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "négociant 品牌信譽的建立邏輯,跟單一 domaine 主要仰賴「特定地塊與釀酒師個人聲望」不同——酒商必須跨世代、跨年份持續維持穩定的採購篩選標準與調配品質,才能讓消費者累積起長期信任感。這種信譽是需要長時間經營、難以速成的無形資產,也解釋了為什麼歷史悠久的伯恩酒商世家,即使不擁有某塊知名地塊,品牌本身依然具備高度市場價值——消費者買的不只是一瓶酒的產地,也是這個名字背後幾代人維持品質承諾的紀錄。"
+            },
+            "quiz_trust_correct": {
+              "text": "公關笑著點頭。「就是這樣。我們家從沒指望靠一塊特級園撐場面,靠的是一代一代人,不能砸的招牌。」\n\n【驛站完 · 已獲得知識印記:négociant 信譽制度】",
+              "grants_badge": "négociant 信譽制度",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_trust_wrong": {
+              "text": "公關搖頭。「純靠廣告撐不了好幾代人,法律也不會替消費者做這個判斷——再想想,長期穩定的品質,對消費者信任感會累積出什麼效果?」",
+              "sets_fog": "quiz_trust",
+              "choices": [
+                {
+                  "label": "重新思考 négociant 信譽的累積邏輯",
+                  "next": "quiz_trust"
+                }
+              ]
+            }
+          }
+        },
+        "harvest_negotiation_wp": {
+          "title": "支線:採購季的談判",
+          "meta": {
+            "village": "Beaune",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "酒商與種植者之間的採購合約與議價現實",
+            "requires_badges": [
+              "調配師的品牌邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "採收季前,Aurélie 打電話約你:「這幾週我要跑遍好幾個村莊,跟種植者談今年的收購價格,你要不要跟著看看?」\n\n你跟她走進第一位種植者的院子,對方一開口就皺眉:「今年產量少,妳這個價格開得太低了。」",
+              "choices": [
+                {
+                  "label": "「收購價格是怎麼談出來的?」",
+                  "next": "quiz_negotiation"
+                }
+              ]
+            },
+            "quiz_negotiation": {
+              "type": "quiz",
+              "text": "négociant 跟種植者之間的葡萄/酒液收購價格談判,通常會受到哪些因素影響?",
+              "choices": [
+                {
+                  "label": "A. 完全由政府統一定價,雙方沒有議價空間",
+                  "next": "quiz_negotiation_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 受當年產量、品質、市場需求、雙方長期合作關係與信任基礎等多重因素影響,是真實的商業議價過程,長期穩定合作的關係往往能換得更好的條件",
+                  "next": "quiz_negotiation_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 只看地塊的官方分級等級,其他因素完全不重要",
+                  "next": "quiz_negotiation_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "négociant 與種植者之間的葡萄或酒液收購價格,並非政府統一定價,而是真實的商業議價過程,受到當年產量豐歉、品質狀況、市場整體需求、地塊等級,以及雙方長期合作關係與互信基礎等多重因素共同影響。長期穩定合作的種植者與酒商之間,往往能建立起超越單次交易的信任關係,換得更穩定、有時更優惠的收購條件——這也是均分繼承制造成的小地主們,即使手上只有零星地塊,依然能透過穩定的 négociant 合作關係維持生計的現實基礎。"
+            },
+            "quiz_negotiation_correct": {
+              "text": "Aurélie 最終跟對方談出雙方都能接受的價格,握手道別後,她對你說:「這行做久了你會發現,價格從來不只是數字,是十幾年信任堆出來的。」",
+              "grants_badge": "採購議價邏輯",
+              "choices": [
+                {
+                  "label": "「這跟你之前說的品牌信譽,好像是同一件事的兩面。」",
+                  "next": "waypoint_end_negotiation"
+                }
+              ]
+            },
+            "quiz_negotiation_wrong": {
+              "text": "Aurélie 搖頭。「沒有統一定價這回事,分級也不是唯一考量——再想想,真實的商業關係裡,還有什麼會影響議價空間?」",
+              "sets_fog": "quiz_negotiation",
+              "choices": [
+                {
+                  "label": "重新思考收購價格的形成邏輯",
+                  "next": "quiz_negotiation"
+                }
+              ]
+            },
+            "waypoint_end_negotiation": {
+              "text": "「沒錯,」Aurélie 笑著說,「消費者信任我的品牌,我信任這些種植者的葡萄——這條鏈,少一環都不行。」\n\n你們繼續走向下一位種植者的院子,新一輪的談判又要開始。\n\n【支線完 · 已獲得知識印記:採購議價邏輯】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "weight_of_brand_wp": {
+          "title": "支線:品牌的重量",
+          "meta": {
+            "village": "Beaune",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "négociant 模式的現代演變:négociant-éleveur 與單一地塊裝瓶的興起",
+            "requires_badges": [
+              "採購議價邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Aurélie 給你看了公司最新推出的一款酒——酒標上罕見地標示了單一村莊、甚至單一地塊的名字。「這是我們最近的新嘗試,」她說,「不是傳統的跨村莊調配品牌酒,是單一來源裝瓶。」",
+              "choices": [
+                {
+                  "label": "「這樣不就跟 domaine 裝瓶一樣了嗎?」",
+                  "next": "quiz_evolution"
+                }
+              ]
+            },
+            "quiz_evolution": {
+              "type": "quiz",
+              "text": "近年不少傳統 négociant 酒商,除了原本的跨村莊品牌調配酒款,也開始推出單一村莊甚至單一地塊裝瓶的「négociant-éleveur」酒款。這種轉變最準確的理解是:",
+              "choices": [
+                {
+                  "label": "A. 這證明 négociant 傳統調配模式已經徹底過時,即將被淘汰",
+                  "next": "quiz_evolution_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 這是 négociant 模式的擴展而非取代——酒商同時經營跨村莊品牌調配酒(滿足穩定風格需求)與單一地塊裝瓶(滿足消費者對特定風土表現的興趣),兩種商業模式並存,domaine 與 négociant 之間的界線也因此變得更模糊",
+                  "next": "quiz_evolution_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 單一地塊裝瓶只是行銷噱頭,酒液來源其實跟品牌調配酒完全一樣",
+                  "next": "quiz_evolution_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "近年勃根地產業出現一個值得關注的現象:不少傳統 négociant 酒商,除了原本擅長的跨村莊品牌調配酒款,也開始推出單一村莊甚至單一地塊的「négociant-éleveur」裝瓶(採購葡萄或酒液後,自行進行後續培養與裝瓶,但強調單一產地來源而非跨區調配)。這不代表傳統調配模式被淘汰,而是 négociant 商業模式的擴展——酒商同時服務兩種市場需求:追求穩定品牌風格的消費者,以及對特定風土表現有興趣的消費者。這個趨勢也讓 domaine(酒莊)與 négociant(酒商)之間原本相對清晰的界線,變得更加模糊而多元。"
+            },
+            "quiz_evolution_correct": {
+              "text": "Aurélie 點頭。「說得好。我不是要放棄我們家幾代人建立起來的品牌調配傳統,是想證明,我們也做得出忠於單一地塊的酒——兩件事,不衝突。」\n\n她把新酒款遞給你。「勃根地這個地方最有意思的,就是它從不強迫你只能選一種答案。」",
+              "grants_badge": "négociant-éleveur 現代演變",
+              "choices": [
+                {
+                  "label": "「謝謝妳,Aurélie,這趟旅程讓我看懂了整個產業的全貌。」",
+                  "next": "waypoint_end_evolution"
+                }
+              ]
+            },
+            "quiz_evolution_wrong": {
+              "text": "Aurélie 搖頭。「不是淘汰,也不是噱頭——再想想,同時經營兩種模式,對酒商跟消費者分別意味著什麼?」",
+              "sets_fog": "quiz_evolution",
+              "choices": [
+                {
+                  "label": "重新思考這個產業趨勢的意義",
+                  "next": "quiz_evolution"
+                }
+              ]
+            },
+            "waypoint_end_evolution": {
+              "text": "你走出伯恩的酒商總部,夕陽把舊城牆染成溫暖的橘紅色。從調配師的鼻子,到城市的權力地圖,到採購季的談判,再到品牌自身的演變——這條旅程讓你明白,勃根地的故事從來不是「地塊 vs 品牌」的二選一,而是兩套邏輯幾百年來,始終在同一片土地上並肩生長。\n\n【支線完 · 已獲得知識印記:négociant-éleveur 現代演變】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      }
     }
   }
 }
