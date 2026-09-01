@@ -1,340 +1,1404 @@
 {
-  "region": "夜丘 Côte de Nuits",
-  "chapter_order": ["gevrey_chambertin_01", "chambolle_musigny_02", "vougeot_03", "vosne_romanee_04"],
-
-  "chapters": {
-    "gevrey_chambertin_01": {
-      "title": "第一章:熱夫雷-香貝丹的迷霧",
-      "meta": {
-        "village": "Gevrey-Chambertin",
-        "tier": "core",
-        "tier_label": "核心村莊",
-        "style_focus": "力量與結構",
-        "requires_badges": []
-      },
-      "start_node": "opening",
-      "nodes": {
-
-        "opening": {
-          "text": "十一月的第戎,雨絲斜斜打在月台上,像老照片裡褪色的雜訊。你按著地址找到那間石屋酒莊時,天已經黑了。\n\n開門的是一位背有點駝的老人,手裡端著油燈。「你就是巴黎那邊寄信來的人?」他上下打量你,眼神裡有懷疑,也有一絲藏不住的期待。「我叫 Étienne Rousset。跟我來吧,趁我還沒改變主意。」\n\n地窖裡冷得像另一個季節。他從角落一個上鎖的木箱中取出那瓶酒,動作小心得像在觸碰易碎的回憶。\n\n「這是我父親留下的最後一瓶,1976 年。他把某塊地的酒藏了起來,從此再也沒提過那塊地一個字。你若真懂風土,替我找回它。」",
-          "choices": [
-            {"label": "🍷 先聞香,讓酒自己說話", "next": "smell_a"},
-            {"label": "📖 問 Étienne:「你父親還留下什麼東西嗎?」", "next": "ask_b"},
-            {"label": "🕯️ 注意瓶身上那個畫歪的十字符號", "next": "symbol_c"}
-          ]
+  "campaigns": {
+    "terroir_detective": {
+      "title": "風土偵探",
+      "tagline": "循著一瓶無標籤的酒,拼湊出一個家族四十年的秘密",
+      "knowledge_focus": "村莊風土對比、AOC 制度邏輯、品飲推理方法論",
+      "region": "夜丘 Côte de Nuits",
+      "chapter_order": [
+        "gevrey_chambertin_01",
+        "fixin_outpost",
+        "marsannay_outpost",
+        "chambolle_musigny_02",
+        "morey_saint_denis_wp",
+        "cote_de_nuits_villages_outpost",
+        "vougeot_03",
+        "nuits_saint_georges_wp",
+        "vosne_romanee_04",
+        "flagey_echezeaux_wp"
+      ],
+      "chapters": {
+        "gevrey_chambertin_01": {
+          "title": "第一章:熱夫雷-香貝丹的迷霧",
+          "meta": {
+            "village": "Gevrey-Chambertin",
+            "tier": "core",
+            "tier_label": "核心村莊",
+            "style_focus": "力量與結構",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "十一月的第戎,雨絲斜斜打在月台上,像老照片裡褪色的雜訊。你按著地址找到那間石屋酒莊時,天已經黑了。\n\n開門的是一位背有點駝的老人,手裡端著油燈。「你就是巴黎那邊寄信來的人?」他上下打量你,眼神裡有懷疑,也有一絲藏不住的期待。「我叫 Étienne Rousset。跟我來吧,趁我還沒改變主意。」\n\n地窖裡冷得像另一個季節。他從角落一個上鎖的木箱中取出那瓶酒,動作小心得像在觸碰易碎的回憶。\n\n「這是我父親留下的最後一瓶,1976 年。他把某塊地的酒藏了起來,從此再也沒提過那塊地一個字。你若真懂風土,替我找回它。」",
+              "choices": [
+                {
+                  "label": "🍷 先聞香,讓酒自己說話",
+                  "next": "smell_a"
+                },
+                {
+                  "label": "📖 問 Étienne:「你父親還留下什麼東西嗎?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🕯️ 注意瓶身上那個畫歪的十字符號",
+                  "next": "symbol_c"
+                }
+              ]
+            },
+            "symbol_c": {
+              "text": "「這個符號……」你指著瓶身。Étienne 的表情忽然僵住。\n\n「我問過村裡的老人,他們說這是修道院的舊地界記號。可是我們家的地,從來不是教會的產業。」他頓了頓。「除非……我父親買的那塊地,原本另有主人。」\n\n地窖深處的燈影搖晃了一下,牆角還放著一疊發黃的信件,用麻繩捆著。",
+              "choices": [
+                {
+                  "label": "翻看那疊信件",
+                  "next": "letters_hook",
+                  "sets_flag": "found_letters"
+                },
+                {
+                  "label": "先專心品飲,信件晚點再說",
+                  "next": "smell_a",
+                  "sets_fog": "letters_thread"
+                }
+              ]
+            },
+            "letters_hook": {
+              "text": "信紙脆得幾乎一碰就碎。你只認出零星幾個字:「……Marguerite……婚約……地契……」墨水暈開的地方,像是被眼淚打濕過。\n\nÉtienne 沉默地看著你手中的信,沒有阻止,也沒有說話。",
+              "choices": [
+                {
+                  "label": "先把酒喝完,信件的事晚點再談",
+                  "next": "smell_a"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「還有什麼……」Étienne 望向地窖深處堆積的箱子。「地契、舊帳本,還有一疊我從沒敢細看的信。我一直告訴自己那不重要。」\n\n他的手在發抖,不知道是地窖太冷,還是別的原因。",
+              "choices": [
+                {
+                  "label": "先聞聞杯中的酒",
+                  "next": "smell_a"
+                }
+              ]
+            },
+            "smell_a": {
+              "text": "你把杯子送到鼻尖。第一層是成熟黑櫻桃與甘草,接著浮出一絲濕土與蘑菇的氣息——像剛下過雨的森林地表。\n\nÉtienne 在你身後屏住呼吸。「怎麼樣?」他的聲音有一絲不易察覺的顫抖。",
+              "choices": [
+                {
+                  "label": "「土壤氣息很深,單寧結構很緊——這不是隨便一塊地的酒。」",
+                  "next": "quiz_01"
+                }
+              ]
+            },
+            "quiz_01": {
+              "type": "quiz",
+              "text": "濕土與蘑菇氣息通常在陳年後更明顯,但你注意到單寧還很緊緻、酒體集中度高。這比較像——",
+              "choices": [
+                {
+                  "label": "A. Village 等級,年輕早飲型",
+                  "next": "quiz_01_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. Premier Cru,如 Clos St-Jacques",
+                  "next": "quiz_01_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C. Grand Cru,如 Chambertin Clos de Bèze",
+                  "next": "quiz_01_correct",
+                  "correct": true
+                }
+              ],
+              "knowledge_card": "熱夫雷-香貝丹的土壤與風格:石灰岩與泥灰岩混合的坡地,賦予酒款深邃的土壤氣息與緊緻單寧骨架,是特級園陳年潛力的核心來源。"
+            },
+            "quiz_01_correct": {
+              "text": "Étienne 的手扶住了桌沿,像是站不穩。「Clos de Bèze……我父親生前提過一次,只有一次,喝醉的時候。他說『那塊地,我對不起一個人。』然後就再也不肯說了。」\n\n他抬起頭看你,眼眶有點紅。「你說對了等級。可是……為什麼是『對不起』?」",
+              "grants_badge": "Chambertin Clos de Bèze",
+              "choices": [
+                {
+                  "label": "這趟旅程,好像不只是關於一塊地了。(第一章完)",
+                  "next": "chapter_end"
+                }
+              ]
+            },
+            "quiz_01_wrong": {
+              "text": "Étienne 的表情黯淡下來,不是生氣,只是失望。「也許……也許這瓶酒的秘密,不是誰都能聽懂的。」\n\n他把信件收回木箱,沒有再拿出來。",
+              "sets_fog": "quiz_01",
+              "choices": [
+                {
+                  "label": "再仔細想想單寧的密度說明了什麼",
+                  "next": "quiz_01"
+                }
+              ]
+            },
+            "chapter_end": {
+              "text": "你走出石屋時,雨已經停了。Étienne 站在門口,忽然叫住你。\n\n「等等——我父親的信裡提過一個名字,『Marguerite』。你在調查風土的時候,能不能……順便幫我找找,她是誰?」\n\n你點頭應下,轉身走進第戎清晨的薄霧裡。\n\n【第一章完 · 已獲得產區印記:Chambertin Clos de Bèze】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:香波-蜜思妮的畫像",
+                  "next": "opening",
+                  "chapter": "chambolle_musigny_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
         },
-
-        "symbol_c": {
-          "text": "「這個符號……」你指著瓶身。Étienne 的表情忽然僵住。\n\n「我問過村裡的老人,他們說這是修道院的舊地界記號。可是我們家的地,從來不是教會的產業。」他頓了頓。「除非……我父親買的那塊地,原本另有主人。」\n\n地窖深處的燈影搖晃了一下,牆角還放著一疊發黃的信件,用麻繩捆著。",
-          "choices": [
-            {"label": "翻看那疊信件", "next": "letters_hook", "sets_flag": "found_letters"},
-            {"label": "先專心品飲,信件晚點再說", "next": "smell_a", "sets_fog": "letters_thread"}
-          ]
+        "chambolle_musigny_02": {
+          "title": "第二章:香波-蜜思妮的畫像",
+          "meta": {
+            "village": "Chambolle-Musigny",
+            "tier": "core",
+            "tier_label": "核心村莊",
+            "style_focus": "優雅與細緻(與第一章對比教學)",
+            "requires_badges": [
+              "Chambertin Clos de Bèze"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "從熱夫雷往北,葡萄園的坡度忽然變得溫柔許多。土壤裡的石灰岩露頭少了,取而代之的是一層更薄、更細膩的表土。\n\nÉtienne 打聽到一個名字——Solange,住在香波-蜜思妮村邊緣的老婦人,據說年輕時跟 Marguerite 是手帕交。她的屋子小小的,爬滿了紫藤,牆上掛滿了褪色的葡萄園水彩畫。\n\n「Marguerite 的朋友?」Solange 打量你手裡那瓶用麻布包著的酒,忽然臉色一變。「這個符號……我幾十年沒見過了。」她請你進門,倒了兩杯完全不同顏色的酒放在你面前——一杯是你熟悉的深石榴紅,另一杯淺得幾乎透光,像洋蔥皮。",
+              "choices": [
+                {
+                  "label": "🍷 先比較這兩杯酒的差異",
+                  "next": "taste_a"
+                },
+                {
+                  "label": "🖼️ 注意牆上一幅特別的水彩畫",
+                  "next": "painting_c"
+                },
+                {
+                  "label": "❓ 直接問:「Marguerite 後來怎麼了?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "painting_c": {
+              "text": "那幅畫的角落簽著小小的字:「M. 1974」。畫的是一片朝南的緩坡,葡萄藤整齊得像梳過的頭髮,坡底立著一塊石碑,你依稀認出上頭刻的字——「Les Amoureuses」。\n\n「戀人們的葡萄園。」Solange 輕聲說,像是怕驚動什麼。「Marguerite 最後幾年,幾乎天天坐在那塊地邊寫生。」",
+              "choices": [
+                {
+                  "label": "「這名字……是巧合嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "Solange 沉默了很久,久到你以為她不會回答了。\n\n「她從熱夫雷搬來這裡,是很多年前的事了。沒結婚,一個人住,靠教村裡孩子畫畫過日子。她從不提過去,但每年十一月,總會收到一箱沒有名字的酒。」她的聲音低下去。「她從來沒開過那些酒。整整齊齊疊在地窖裡,跟你手上這瓶,一模一樣的符號。」",
+              "choices": [
+                {
+                  "label": "回頭看看桌上那兩杯酒",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "你端起那杯淺色的酒。香氣先是紫羅蘭與新鮮紅櫻桃,接著是一絲玫瑰花瓣般的細膩香氣——跟你在熱夫雷嚐到的深沉黑櫻桃、濕土氣息完全是兩個世界。入口單寧細滑如絲,幾乎感覺不到骨架,卻有種說不出的綿長。\n\n「這裡的土淺,」Solange 說,「風格自然就輕盈。有些人覺得這樣不夠『強』,但我父親常說——優雅也是一種力量,只是說話比較小聲。」",
+              "choices": [
+                {
+                  "label": "「顏色淺、單寧滑、香氣是花香系——這比較像……」",
+                  "next": "quiz_02"
+                }
+              ]
+            },
+            "quiz_02": {
+              "type": "quiz",
+              "text": "淺石榴紅、絲滑單寧、紫羅蘭與紅櫻桃香氣,對比你在熱夫雷嚐過的深色、緊緻、土壤氣息——這杯比較像:",
+              "choices": [
+                {
+                  "label": "A. 香波-蜜思妮 Village 等級",
+                  "next": "quiz_02_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. Premier Cru,如 Les Amoureuses",
+                  "next": "quiz_02_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. Grand Cru Musigny",
+                  "next": "quiz_02_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "香波-蜜思妮的土壤與風格:表土薄、石灰岩含量高但質地細碎,加上東向緩坡日照溫和,造就全勃根地最細緻優雅的酒風,單寧絲滑、香氣以紫羅蘭與紅果為主,是「優雅」的風土典範,常與熱夫雷的「力量」型風格作對比教學。"
+            },
+            "quiz_02_correct": {
+              "text": "Solange 的手微微顫抖,放下手中的杯子。「Les Amoureuses……你怎麼會猜到。」\n\n她起身走進裡屋,抱出一個滿是灰塵的木箱,裡面整整齊齊躺著十幾瓶從未開封的酒,每一瓶都貼著同樣手寫的年份與那個歪斜的十字符號。\n\n「這塊地,不是 Marguerite 家的。」她的聲音幾乎是哽咽的。「是後來才有人買下,每年秋天,不具名地送來給她。四十年,從沒斷過,直到那個人過世那年。」\n\n你忽然明白——Marcel 用整整一塊「戀人們的葡萄園」,說著一句他一輩子沒敢說出口的話。",
+              "grants_badge": "Les Amoureuses",
+              "choices": [
+                {
+                  "label": "翻看木箱底部,似乎還壓著一張泛黃的地圖",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_02_wrong": {
+              "text": "Solange 輕輕搖頭,不是責怪,只是像在整理自己的思緒。「還不太一樣……你再仔細感覺一下那個單寧的滑順程度。」\n\n她把酒杯往你面前推近了一些,給你重新感受的機會。",
+              "sets_fog": "quiz_02",
+              "choices": [
+                {
+                  "label": "再仔細感受單寧的滑順程度",
+                  "next": "quiz_02"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "地圖已經脆得幾乎散開,上面用鉛筆圈出一塊地,標注著陌生的字——「Vougeot,修道院舊產」。角落還有一行小字,墨水已經暈開大半,你只勉強認出幾個字:「……地契的起點……欠 M. 家的……」\n\nSolange 看著你手中的地圖,輕輕嘆了口氣。「如果你真想把這件事查清楚,去梧玖吧。那裡的老修道院牆,還留著跟你手上一樣的符號。」\n\n【第二章完 · 已獲得產區印記:Les Amoureuses】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:梧玖的修道院牆",
+                  "next": "opening",
+                  "chapter": "vougeot_03"
+                }
+              ],
+              "is_ending": true
+            }
+          }
         },
-
-        "letters_hook": {
-          "text": "信紙脆得幾乎一碰就碎。你只認出零星幾個字:「……Marguerite……婚約……地契……」墨水暈開的地方,像是被眼淚打濕過。\n\nÉtienne 沉默地看著你手中的信,沒有阻止,也沒有說話。",
-          "choices": [
-            {"label": "先把酒喝完,信件的事晚點再談", "next": "smell_a"}
-          ]
+        "vougeot_03": {
+          "title": "第三章:梧玖的修道院牆",
+          "meta": {
+            "village": "Vougeot",
+            "tier": "core",
+            "tier_label": "核心村莊",
+            "style_focus": "同一塊地,不同地主與坡位的變因拆解",
+            "requires_badges": [
+              "Les Amoureuses"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "梧玖村小得幾乎一眼就能看穿,但村子中央那座石造城堡——Château du Clos de Vougeot——卻大得不成比例。厚重的石牆圍出一塊超過五十公頃的葡萄園,你站在牆邊,忽然明白為什麼 Solange 說「牆」而不是「園」。\n\n城堡側門有位穿著磨舊工作服的老先生在修剪薔薇,自我介紹是 Albert Chevrier,「業餘的村史愛好者,正式身份是這裡的看門人。」他瞥了一眼你手上的酒瓶,瞇起眼睛。「這符號,西多會修道院的舊印。你是為了地契來的?」",
+              "choices": [
+                {
+                  "label": "🧱 先看看那面刻著符號的修道院牆",
+                  "next": "wall_c"
+                },
+                {
+                  "label": "📜 問 Albert 這塊地為什麼有八十幾位地主",
+                  "next": "ask_owners_b"
+                },
+                {
+                  "label": "🍷 直接請 Albert 讓你品飲比較",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "wall_c": {
+              "text": "牆角石塊上果然刻著一個歪斜的十字——跟瓶身上的一模一樣,只是這裡的更深、更古老。「十二世紀,熙篤會修士圈下這塊地開始釀酒,」Albert 說,「法國大革命後,教會地產被沒收拍賣,一塊完整的葡萄園,從此被切成幾十份賣給了村民與商人。你手上那瓶酒的符號,說明它的地契,原本就是從這裡流出去的一部分。",
+              "choices": [
+                {
+                  "label": "「所以 Marcel 家的地,是從這裡買來的?」",
+                  "next": "ask_owners_b"
+                }
+              ]
+            },
+            "ask_owners_b": {
+              "text": "「差不多是這個意思。」Albert 領你走進城堡側翼一間堆滿地籍圖的檔案室。「Clos de Vougeot 現在有八十幾位地主,同一塊園子,卻可能同時存在最頂級跟很普通的酒——秘密不在土地大小,在你站的『位置』。」\n\n他攤開一張坡面剖面圖:「越靠近山坡上緣、離城堡近的地塊,排水好、日照足;越靠近下方公路的地塊,土壤黏重、容易積水。同一片 Clos de Vougeot,坡頂跟坡底,可以是兩種完全不同等級的酒。」",
+              "choices": [
+                {
+                  "label": "「那我來試試看能不能分辨出坡位的差別。」",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "Albert 從架上取出三杯樣品酒,只用鉛筆編號,不告訴你產地細節。\n\n**杯 1**:色深、單寧紮實有稜角、礦物感強烈,尾韻帶著石頭般的緊緻感。\n**杯 2**:顏色濃郁但單寧略顯鬆散,果香直接奔放,少了前一杯的緊實骨架,喝起來稍嫌「肥厚」。\n**杯 3**:介於兩者之間,結構中等,但少了杯 1 的礦物尾韻。\n\n「都是 Clos de Vougeot,同一年份,」Albert 說。「猜猜看,哪一杯來自坡頂,離城堡跟香波-蜜思妮那一側最近?」",
+              "choices": [
+                {
+                  "label": "思考三杯之間的線索,做出判斷",
+                  "next": "quiz_03"
+                }
+              ]
+            },
+            "quiz_03": {
+              "type": "quiz",
+              "text": "杯 1 單寧紮實、礦物感強、尾韻緊緻;杯 2 果香奔放但單寧鬆散、略顯肥厚;杯 3 結構中等但缺乏礦物尾韻。排水好、日照足的坡頂地塊,通常會呈現哪一種特徵組合?",
+              "choices": [
+                {
+                  "label": "A. 杯 2 —— 果香奔放代表最好的成熟度",
+                  "next": "quiz_03_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 杯 1 —— 排水好帶來的緊緻結構與礦物感",
+                  "next": "quiz_03_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 杯 3 —— 中庸就是最安全的答案",
+                  "next": "quiz_03_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Clos de Vougeot 的坡位邏輯:整塊 Clos de Vougeot 橫跨整個山坡,坡頂鄰近香波-蜜思妮與馮內-侯瑪內的特級園帶,排水佳、石灰岩淺露,酒款結構緊緻、礦物感明顯;坡底鄰近公路,土壤黏重、排水差,酒款容易顯得鬆散肥厚。同一片 Grand Cru 裡,坡位造成的風格差異,常常比村莊之間的差異還要大——這也是為什麼『Clos de Vougeot』的評價從來不是單一標準。"
+            },
+            "quiz_03_correct": {
+              "text": "Albert 露出讚許的表情。「杯 1,坡頂靠城堡那側,離香波-蜜思妮的特級園帶只隔著一條小路。」\n\n他翻開檔案室裡一本厚重的地籍登記簿,手指劃過一長串姓名,忽然停住。「找到了——Rousset。1961 年,你朋友的父親,買下坡頂一小塊地,登記人共同簽署欄裡,還有另一個姓氏:Vionnet。」\n\n他抬頭看你。「這塊地,是兩個家族共同持有的,直到某一年,Vionnet 的簽名忽然消失,土地全部轉到 Rousset 名下——附帶條件,是一筆『債務清償』。」\n\n你終於拼湊出全貌:Marguerite 家族的債務,用這塊坡頂好地抵償給了 Marcel 家,而 Marcel 因為愧疚,終生沒有動用這塊地一滴酒,直到用另一塊「戀人的葡萄園」默默償還一段感情的虧欠。",
+              "grants_badge": "Clos de Vougeot",
+              "choices": [
+                {
+                  "label": "問 Albert:「地籍簿上,還有沒有更後面的紀錄?」",
+                  "next": "chapter_end_3"
+                }
+              ]
+            },
+            "quiz_03_wrong": {
+              "text": "Albert 搖搖頭,但語氣仍然溫和。「再想一想——排水好、日照足的地方,單寧會傾向鬆散還是紮實?先別急著選『看起來最討喜』的那一杯。」\n\n他把三杯酒的順序重新擺好,讓你再嘗試一次。",
+              "sets_fog": "quiz_03",
+              "choices": [
+                {
+                  "label": "重新比較三杯酒的結構差異",
+                  "next": "quiz_03"
+                }
+              ]
+            },
+            "chapter_end_3": {
+              "text": "Albert 翻到登記簿最後幾頁,指尖停在一行 1976 年的批註上:「地塊轉讓完成同年,Rousset 名下新增一筆申報——馮內-侯瑪內,一塊未命名的小地塊,面積不到半公頃。」\n\n他闔上簿子,看著你。「如果 Marcel 這輩子只留下一塊『自己』的地,不是為了贖罪、也不是為了愛,那或許就是這一塊。你要不要去看看?」\n\n【第三章完 · 已獲得產區印記:Clos de Vougeot】",
+              "choices": [
+                {
+                  "label": "▶️ 前往最終章:馮內-侯瑪內",
+                  "next": "opening",
+                  "chapter": "vosne_romanee_04"
+                }
+              ],
+              "is_ending": true
+            }
+          }
         },
-
-        "ask_b": {
-          "text": "「還有什麼……」Étienne 望向地窖深處堆積的箱子。「地契、舊帳本,還有一疊我從沒敢細看的信。我一直告訴自己那不重要。」\n\n他的手在發抖,不知道是地窖太冷,還是別的原因。",
-          "choices": [
-            {"label": "先聞聞杯中的酒", "next": "smell_a"}
-          ]
+        "vosne_romanee_04": {
+          "title": "終章:馮內-侯瑪內的守夜",
+          "meta": {
+            "village": "Vosne-Romanée",
+            "tier": "core",
+            "tier_label": "終章 · 系列總驗收",
+            "style_focus": "無提示綜合判斷 + 結局分岔",
+            "requires_badges": [
+              "Clos de Vougeot"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "馮內-侯瑪內的名字本身就帶著傳說的重量——這裡幾乎每一小塊地都有自己的名字與神話。但地籍簿上那塊「未命名」的半公頃,卻低調得像是刻意被遺忘。\n\n你順著登記地號找到它時,發現一位頭髮花白的婦人正蹲在藤蔓間除草。「這塊地沒有名字,」她頭也不抬地說,「但村裡人私底下叫它『守夜人的地』。我叫 Marie-Claude,我家的地就在隔壁,看了它四十年。」\n\n她站起身,拍拍手上的泥土。「每年採收前後,總會有個男人一個人來,不說話,只是蹲在藤蔓旁,像在陪什麼人守夜。前幾年他不來了。我猜,是走了。」",
+              "choices": [
+                {
+                  "label": "🍇 問 Marie-Claude 能不能嚐嚐這塊地的酒",
+                  "next": "taste_a"
+                },
+                {
+                  "label": "🕯️ 問她 Marcel 一個人來的時候都做什麼",
+                  "next": "vigil_b"
+                },
+                {
+                  "label": "📍 觀察這塊地在整個馮內-侯瑪內的相對位置",
+                  "next": "location_c"
+                }
+              ]
+            },
+            "vigil_b": {
+              "text": "「什麼都不做,」Marie-Claude 說,「有時候只是坐著。有一年我看見他對著藤蔓說話,像是在道歉,也像是在報告近況——『她過得很好』之類的。」\n\n她頓了頓。「這塊地產量小得可憐,他從不賣葡萄,每年只請合作社釀一點點,全部自己收著。我一直以為是自己喝,直到你今天拿著這瓶東西出現。」",
+              "choices": [
+                {
+                  "label": "「我能嚐嚐這塊地的酒嗎?」",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "location_c": {
+              "text": "Marie-Claude 領你走到坡地邊緣,指向四周。「這一整片,是全世界最被神話化的葡萄園群之一,」她說,「隔壁幾塊地的名字,你光是唸出來,懂酒的人都會肅然起敬。但 Marcel 這塊,連正式名字都沒有,只在地籍簿上是個編號。」\n\n「奇怪的是,」她壓低聲音,「土壤跟坡度,其實跟隔壁那些赫赫有名的地塊,沒有太大差別。」",
+              "choices": [
+                {
+                  "label": "「那我更想嚐嚐看了。」",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "Marie-Claude 從屋裡取出一瓶沒有任何標籤的酒,是合作社去年才裝瓶的最新年份——這塊地至今仍在悄悄結果。\n\n你倒出一杯。色澤是清透的寶石紅,香氣一開始是野莓與玫瑰,接著浮現一絲你從沒在前三章遇過的東西——像丁香、像肉桂,某種溫暖的異國香料尾韻,伴隨著綢緞般滑順的單寧,幾乎讓人忘記去分辨結構。\n\n這次,沒有人給你任何提示。Marie-Claude 只是靜靜看著你。",
+              "choices": [
+                {
+                  "label": "綜合前三章所學,做出最終判斷",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "野莓與玫瑰香氣、丁香肉桂般的異國香料尾韻、綢緞般滑順卻仍有支撐力的單寧——這塊地籍上只登記為「Village」等級的無名小園,你認為它真正的份量是:",
+              "choices": [
+                {
+                  "label": "A. 官方等級寫 Village,葡萄本身普通,判斷應該完全依照分級",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 即使掛著 Village 等級,細膩質地與複雜香料尾韻,顯示這塊地被人用特級園的心力悉心對待——分級之外,還有人的用心",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 香氣太複雜了,一定是偷偷跟別村的酒調配過",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "官方分級反映的是長期、平均、可驗證的風土潛力,但單一年份、單一釀酒者的用心程度,永遠可能讓一塊「普通」等級的地,短暫觸碰到遠超過它紙面身份的高度。這也是 WSET 品飲訓練裡最容易被忽略的一課——分級是起點,不是終點。"
+            },
+            "quiz_final_correct": {
+              "text": "Marie-Claude 笑了,眼角有些濕潤。「你懂了。」\n\n她從口袋掏出一本磨損的小冊子,是這塊地逐年的手寫紀錄——每一年的採收日期、天氣、產量,字跡從工整逐漸變得顫抖,最後一頁停在四年前,只有一行字:「今年,替她多留一杯。」\n\n「拿去給 Rousset 家的孩子吧,」她把冊子交到你手上。「這塊地的故事,該由你們家的人自己決定怎麼結束。」",
+              "grants_badge": "馮內-侯瑪內 · 守夜人的地",
+              "choices": [
+                {
+                  "label": "帶著所有線索,回到第戎的地窖",
+                  "next": "return_to_cellar"
+                }
+              ]
+            },
+            "quiz_final_wrong": {
+              "text": "Marie-Claude 沒有說話,只是把酒杯往你面前又推近了一些,眼神裡沒有失望,只有等待。「分級是死的,酒是活的,」她輕聲說,「再感受一次那個香料尾韻,它想告訴你什麼?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "再仔細感受那股香料尾韻",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "return_to_cellar": {
+              "text": "第戎的地窖,跟你第一次來的時候一樣冷。Étienne 聽完你帶回的一切——Les Amoureuses、坡頂的地契、守夜人的無名小園——久久沒有說話,只是盯著木箱裡那瓶始終沒開封、標籤上寫著「給 M.」的酒。\n\n「所以他這輩子,」他終於開口,聲音很輕,「用一整片葡萄園的方式,說了一句從沒說出口的『對不起』,又用另一塊地,說了『我很想你』。」\n\n他抬頭看你,眼眶紅著,但沒有崩潰,只是很平靜。「這瓶『給 M.』的酒,你覺得,我該打開它,還是……讓它繼續等下去?」",
+              "choices": [
+                {
+                  "label": "「打開它。有些話,遲到四十年也該說出口。」",
+                  "next": "ending_reconciliation"
+                },
+                {
+                  "label": "「或許,有些等待,本身就是答案的一部分。」",
+                  "next": "ending_openended"
+                }
+              ]
+            },
+            "ending_reconciliation": {
+              "text": "Étienne 的手在瓶塞上停留了很久,終於,他轉開了它。\n\n木塞鬆脫的瞬間,地窖裡瀰漫開一股複雜卻溫柔的香氣——像是把 Les Amoureuses 的絲滑、Clos de Vougeot 的礦物骨架,還有守夜人小園的異國香料,揉進了同一杯酒裡。\n\n「我要重新種回熱夫雷那塊封存的地,」Étienne 說,聲音有些顫抖但很堅定。「用 Marguerite 的名字,替新酒命名。我父親沒能說出口的話,讓我替他把它種回土裡。」\n\n你們一起把最後一口酒喝完。地窖外,第戎的天空,難得放晴。\n\n【結局:和解 · 系列完】\n【感謝你陪 Étienne 走完這趟風土之旅,拼湊出四代人的風土記憶】",
+              "choices": [],
+              "is_ending": true
+            },
+            "ending_openended": {
+              "text": "Étienne 的手離開了瓶塞,輕輕把酒放回木箱,重新蓋上蓋子。\n\n「有些記憶,留著比打開更完整。」他把整套地契與地圖交到你手上,像是交付一份沉甸甸的信任。「但這趟旅程的紀錄,我想留給你保管——也許哪天,我準備好了,會想再打開它。到時候,希望你還在。」\n\n你走出石屋,手裡捧著四個產區的記憶。故事沒有一個乾脆的句點,但你知道,有些故事本來就不需要。\n\n【結局:留白 · 系列完】\n【感謝你陪 Étienne 走完這趟風土之旅,拼湊出四代人的風土記憶】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
         },
-
-        "smell_a": {
-          "text": "你把杯子送到鼻尖。第一層是成熟黑櫻桃與甘草,接著浮出一絲濕土與蘑菇的氣息——像剛下過雨的森林地表。\n\nÉtienne 在你身後屏住呼吸。「怎麼樣?」他的聲音有一絲不易察覺的顫抖。",
-          "choices": [
-            {"label": "「土壤氣息很深,單寧結構很緊——這不是隨便一塊地的酒。」", "next": "quiz_01"}
-          ]
+        "morey_saint_denis_wp": {
+          "title": "支線:莫瑞-聖丹尼的夾縫",
+          "meta": {
+            "village": "Morey-Saint-Denis",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "被兩大明星村莊夾在中間的過渡風格",
+            "requires_badges": [
+              "Chambertin Clos de Bèze"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「你要往香波去?」Étienne 忽然叫住你。「路上會經過莫瑞-聖丹尼,順道去找我老朋友 Louis Chapuis 吧,他常抱怨自己村子『最沒存在感』。」\n\n你抵達時,Louis 正蹲在自家小酒窖前擦拭一排舊木桶,聽見你提起 Étienne,咧嘴一笑。「熱夫雷跟香波的人,總說我們這裡『高不成低不就』。但你知道嗎,我們村有兩座特級園,Clos de la Roche 跟 Clos Saint-Denis,名氣就是輸人家一截。」",
+              "choices": [
+                {
+                  "label": "「為什麼會『高不成低不就』?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍷 直接請 Louis 倒一杯給你比較看看",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「地理位置啊,」Louis 攤手。「我們村剛好卡在熱夫雷跟香波中間,土壤也剛好是過渡帶——上段偏石灰岩,下段偏黏土。喝起來常常兩種風格都沾一點邊,卻兩邊都不夠典型。行銷上很吃虧,但懂酒的人反而覺得這種『中間性格』很迷人。」",
+              "choices": [
+                {
+                  "label": "「那我倒想親自嚐嚐這種中間性格。」",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "Louis 倒了一杯 Clos de la Roche。你聞到熟悉的深色漿果與泥土氣息,像熱夫雷;但入口單寧卻比記憶中滑順一些,尾韻甚至浮出一絲紫羅蘭,像香波。\n\n「怎麼樣,」Louis 笑著問,「這杯,你會說它比較像誰?」",
+              "choices": [
+                {
+                  "label": "綜合兩種特徵做出判斷",
+                  "next": "quiz_msd"
+                }
+              ]
+            },
+            "quiz_msd": {
+              "type": "quiz",
+              "text": "深色漿果與泥土氣息(熱夫雷特徵),但單寧滑順、帶紫羅蘭尾韻(香波特徵)。這種「兩邊都沾一點」的表現,最適合怎麼理解莫瑞-聖丹尼?",
+              "choices": [
+                {
+                  "label": "A. 這代表釀酒師技術不穩定,風格抓不定",
+                  "next": "quiz_msd_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 這是地理過渡帶土壤造成的真實風土特徵,不是缺點,是這個村莊獨有的身份",
+                  "next": "quiz_msd_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 一定是刻意調配了兩村的葡萄",
+                  "next": "quiz_msd_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "莫瑞-聖丹尼的土壤介於熱夫雷-香貝丹的深厚石灰岩與香波-蜜思妮的淺薄細碎石灰岩之間,呈現由上而下漸變的過渡帶特徵。這種「兩邊都像一點,卻誰都不是」的風格,常被行銷忽略,卻是風土教學裡最好的『過渡地帶』案例——提醒學習者,分類邊界永遠是漸層,不是斷點。"
+            },
+            "quiz_msd_correct": {
+              "text": "Louis 滿意地點頭。「就是這樣!下次有人說我們村沒個性,你可以告訴他們——『夾在中間』本身就是一種個性。」\n\n他塞了一小瓶樣酒到你手裡當紀念。「替我跟 Étienne 問好,順便告訴他,他還欠我一頓晚餐。」",
+              "grants_badge": "Clos de la Roche",
+              "choices": [
+                {
+                  "label": "帶著這份「過渡帶」的體會,繼續上路",
+                  "next": "waypoint_end"
+                }
+              ]
+            },
+            "quiz_msd_wrong": {
+              "text": "Louis 搖搖頭,笑得無奈。「先別急著下結論——這兩種特徵同時出現,通常代表什麼,而不是矛盾?」\n\n他把杯子推回你面前,讓你重新感受一次。",
+              "sets_fog": "quiz_msd",
+              "choices": [
+                {
+                  "label": "再感受一次這杯酒的雙重性格",
+                  "next": "quiz_msd"
+                }
+              ]
+            },
+            "waypoint_end": {
+              "text": "你跟 Louis 道別,繼續往香波的方向前進,行囊裡多了一份對「過渡帶」風土的理解。\n\n【支線完 · 已獲得產區印記:Clos de la Roche】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
         },
-
-        "quiz_01": {
-          "type": "quiz",
-          "text": "濕土與蘑菇氣息通常在陳年後更明顯,但你注意到單寧還很緊緻、酒體集中度高。這比較像——",
-          "choices": [
-            {"label": "A. Village 等級,年輕早飲型", "next": "quiz_01_wrong", "correct": false},
-            {"label": "B. Premier Cru,如 Clos St-Jacques", "next": "quiz_01_wrong", "correct": false},
-            {"label": "C. Grand Cru,如 Chambertin Clos de Bèze", "next": "quiz_01_correct", "correct": true}
-          ],
-          "knowledge_card": "熱夫雷-香貝丹的土壤與風格:石灰岩與泥灰岩混合的坡地,賦予酒款深邃的土壤氣息與緊緻單寧骨架,是特級園陳年潛力的核心來源。"
+        "marsannay_outpost": {
+          "title": "驛站:馬沙內的粉紅酒",
+          "meta": {
+            "village": "Marsannay",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "全勃根地唯一法定粉紅酒產區",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "夜丘最北端,馬沙內的市集小攤上,一位攤主正在倒一杯顏色鮮豔的粉紅酒。「觀光客總以為勃根地只有紅白酒,」她笑著說,「但馬沙內是整個勃根地唯一法定可以釀粉紅酒(Rosé)的村莊。要不要試試?」",
+              "choices": [
+                {
+                  "label": "🍷 嚐一口,思考這杯粉紅酒的定位",
+                  "next": "quiz_marsannay"
+                }
+              ]
+            },
+            "quiz_marsannay": {
+              "type": "quiz",
+              "text": "馬沙內粉紅酒用黑皮諾短暫浸皮釀成,顏色比一般粉紅酒深,帶有紅莓果香與一絲夜丘特有的礦物感。這款酒在勃根地分級系統裡,通常屬於:",
+              "choices": [
+                {
+                  "label": "A. 一種特殊的獨立分級系統,不算在村莊等級內",
+                  "next": "quiz_marsannay_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 就是馬沙內的 Village 等級 AOC,只是用了粉紅酒的釀法",
+                  "next": "quiz_marsannay_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 這其實是失敗的紅酒,顏色太淺才拿去賣",
+                  "next": "quiz_marsannay_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Marsannay(全名 Marsannay-la-Côte)是夜丘最北端的村莊,1987 年獲得獨立的村莊級 AOC。特別之處在於,它是勃根地唯一同時被法定允許釀造紅、白、粉紅三種顏色酒款的村莊——粉紅酒版本(Marsannay Rosé)沿用一般村莊等級分類,並非獨立分級,只是因為當地黑皮諾傳統上常用短時間浸皮工藝,逐漸發展出這個特色。"
+            },
+            "quiz_marsannay_correct": {
+              "text": "攤主微笑點頭。「答對了。很多人以為這是特殊酒款,其實它就是一般村莊等級,只是我們村的傳統釀法選擇。」\n\n【驛站完 · 已獲得產區印記:Marsannay Rosé】",
+              "grants_badge": "Marsannay Rosé",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_marsannay_wrong": {
+              "text": "攤主搖搖頭,依然笑臉。「再想想——分級系統看的是『產區與等級』,不是『顏色』。粉紅只是一種釀法選擇,不是另一個分級軌道。」",
+              "sets_fog": "quiz_marsannay",
+              "choices": [
+                {
+                  "label": "重新思考分級系統的邏輯",
+                  "next": "quiz_marsannay"
+                }
+              ]
+            }
+          }
         },
-
-        "quiz_01_correct": {
-          "text": "Étienne 的手扶住了桌沿,像是站不穩。「Clos de Bèze……我父親生前提過一次,只有一次,喝醉的時候。他說『那塊地,我對不起一個人。』然後就再也不肯說了。」\n\n他抬起頭看你,眼眶有點紅。「你說對了等級。可是……為什麼是『對不起』?」",
-          "grants_badge": "Chambertin Clos de Bèze",
-          "choices": [
-            {"label": "這趟旅程,好像不只是關於一塊地了。(第一章完)", "next": "chapter_end"}
-          ]
+        "fixin_outpost": {
+          "title": "驛站:菲仙的舊名字",
+          "meta": {
+            "village": "Fixin",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "曾經借用鄰村名氣的歷史",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "菲仙(Fixin)是熱夫雷再往北一點的小村莊,村口酒鋪的老闆娘看你拿著地圖東張西望,主動搭話。「大部分人開車經過都不會停,」她笑著說,「但我們村以前可闊氣了——十九世紀,菲仙的酒常常直接借用『熱夫雷-香貝丹』的名字賣,因為那樣好賣得多。」",
+              "choices": [
+                {
+                  "label": "「那後來為什麼不這樣做了?」",
+                  "next": "quiz_fixin"
+                }
+              ]
+            },
+            "quiz_fixin": {
+              "type": "quiz",
+              "text": "菲仙的酒風格扎實、單寧偏粗獷,結構不輸熱夫雷,卻長期被當地酒商借名銷售。二十世紀 AOC 法定產區制度建立後,這種「借鄰村名氣賣酒」的做法,理論上會如何被規範?",
+              "choices": [
+                {
+                  "label": "A. AOC 制度允許只要風格相似,就能繼續借用鄰村名字",
+                  "next": "quiz_fixin_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. AOC 制度明確劃定地理邊界,菲仙從此只能以自己村名申報,不得再借用熱夫雷之名",
+                  "next": "quiz_fixin_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 菲仙因此被強制併入熱夫雷-香貝丹產區",
+                  "next": "quiz_fixin_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "法國 AOC(Appellation d'Origine Contrôlée)制度自 1935 年起逐步建立,核心精神就是用嚴格的地理邊界杜絕「借名銷售」。菲仙是很好的歷史案例:在 AOC 制度化之前,較不知名產區借用鄰近明星產區之名銷售是常見做法,制度化後,每個村莊必須以自己的名字獨立申報,即使風格再相似,也不能再共用鄰村的名氣。"
+            },
+            "quiz_fixin_correct": {
+              "text": "老闆娘點頭。「就是這樣。現在的菲仙,雖然名氣還是比不上熱夫雷,但至少賣的是『自己的名字』。」\n\n【驛站完 · 已獲得產區印記:Fixin】",
+              "grants_badge": "Fixin",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_fixin_wrong": {
+              "text": "老闆娘搖搖頭。「AOC 制度最核心的精神,就是把『地理來源』跟『名字』綁死,不會因為風格相似就放水喔。」",
+              "sets_fog": "quiz_fixin",
+              "choices": [
+                {
+                  "label": "重新思考 AOC 制度的核心精神",
+                  "next": "quiz_fixin"
+                }
+              ]
+            }
+          }
         },
-
-        "quiz_01_wrong": {
-          "text": "Étienne 的表情黯淡下來,不是生氣,只是失望。「也許……也許這瓶酒的秘密,不是誰都能聽懂的。」\n\n他把信件收回木箱,沒有再拿出來。",
-          "sets_fog": "quiz_01",
-          "choices": [
-            {"label": "再仔細想想單寧的密度說明了什麼", "next": "quiz_01"}
-          ]
+        "cote_de_nuits_villages_outpost": {
+          "title": "驛站:夜丘村莊聯盟",
+          "meta": {
+            "village": "Côte de Nuits-Villages",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "沒有獨立村莊 AOC 的產區如何組成聯合產區",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "在一場小型產區博覽會上,一位攤主的酒標讓你好奇——上面寫的不是任何你聽過的村莊名字,而是「Côte de Nuits-Villages」。\n\n「這是聯合產區,」攤主解釋,「布羅雄(Brochon)、康布蘭欣(Comblanchien)、科高羅因(Corgoloin)這些村子,單獨都沒有自己的村莊級 AOC,葡萄園規模太小、名氣也不夠獨立申報,於是夜丘最北跟最南幾個小村,就共用了這個聯合產區的名字。」",
+              "choices": [
+                {
+                  "label": "「這樣豈不是很吃虧?」",
+                  "next": "quiz_cnv"
+                }
+              ]
+            },
+            "quiz_cnv": {
+              "type": "quiz",
+              "text": "Côte de Nuits-Villages 允許來自多個指定小村莊的葡萄混合釀造,共用同一個產區名。這種「聯合產區」設計,對這些小村莊的酒農來說,最主要的實際好處是什麼?",
+              "choices": [
+                {
+                  "label": "A. 可以偽裝成更知名的村莊酒款賣高價",
+                  "next": "quiz_cnv_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 單一小村莊產量太小、難以獨立行銷,聯合起來能有穩定的產區識別度與市場能見度",
+                  "next": "quiz_cnv_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 這是政府強制規定,酒農沒有選擇權",
+                  "next": "quiz_cnv_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Côte de Nuits-Villages 是一個「聯合村莊級」AOC,涵蓋夜丘最北(如 Brochon、Fixin 部分地塊)與最南(如 Comblanchien、Corgoloin、Prémeaux-Prissey)幾個規模較小、名氣不足以獨立申報的村莊。這類聯合產區在勃根地分級制度裡扮演重要角色:讓小農有穩定的品牌識別,同時維持地理來源的誠實申報,不必被迫掛上不屬於自己的知名村莊之名。"
+            },
+            "quiz_cnv_correct": {
+              "text": "攤主笑著倒了一杯給你試飲。「沒錯,這就是團結的力量——我們單打獨鬥不夠看,但『夜丘村莊聯盟』這個招牌,大家一起撐起來。」\n\n【驛站完 · 已獲得產區印記:Côte de Nuits-Villages】",
+              "grants_badge": "Côte de Nuits-Villages",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_cnv_wrong": {
+              "text": "攤主搖搖頭。「方向反了——聯合產區的精神是『誠實抱團』,不是『借殼上市』喔。」",
+              "sets_fog": "quiz_cnv",
+              "choices": [
+                {
+                  "label": "重新思考聯合產區的設計精神",
+                  "next": "quiz_cnv"
+                }
+              ]
+            }
+          }
         },
-
-        "chapter_end": {
-          "text": "你走出石屋時,雨已經停了。Étienne 站在門口,忽然叫住你。\n\n「等等——我父親的信裡提過一個名字,『Marguerite』。你在調查風土的時候,能不能……順便幫我找找,她是誰?」\n\n你點頭應下,轉身走進第戎清晨的薄霧裡。\n\n【第一章完 · 已獲得產區印記:Chambertin Clos de Bèze】",
-          "choices": [
-            {"label": "▶️ 前往下一章:香波-蜜思妮的畫像", "next": "opening", "chapter": "chambolle_musigny_02"}
-          ],
-          "is_ending": true
+        "nuits_saint_georges_wp": {
+          "title": "支線:夜聖喬治的無冕之王",
+          "meta": {
+            "village": "Nuits-Saint-Georges",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整個「夜丘」的命名由來,卻沒有一座 Grand Cru",
+            "requires_badges": [
+              "Les Amoureuses"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「你要往梧玖去?順路去夜聖喬治找 Bernard 吧,」Albert 在你離開梧玖前隨口提起,「我們是打過同一場兵役的老戰友,他釀的酒,比他這個人耿直多了。」\n\nBernard 的酒窖比你想像中樸實得多,沒有城堡,只有一排排堆到天花板的橡木桶。「你知道嗎,」他一邊倒酒一邊說,「『夜丘』(Côte de Nuits)這整個產區的名字,就是從我們村來的——Nuits-Saint-Georges。可是我們村,一座 Grand Cru 都沒有。」",
+              "choices": [
+                {
+                  "label": "「這麼有名的村子,怎麼會沒有特級園?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍷 先嚐嚐 Bernard 的酒再說",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "Bernard 聳聳肩,不太在意的樣子。「歷史因素,也有人說是評選標準的偶然。但我倒覺得沒關係——我們村的酒,風格粗獷紮實、單寧硬朗,帶點野性的煙燻與皮革氣息,不是那種討喜的優雅路線,反而更耐久放。」",
+              "choices": [
+                {
+                  "label": "「那我更想嚐嚐這種『沒有特級園加持』的風格。」",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "你喝下一口。單寧確實硬朗、帶著一絲皮革與煙燻氣息,不如你在前面幾章嚐過的那些精緻迷人,卻有一種樸實的力量感,尾韻悠長得驚人。\n\n「很多人只認 Grand Cru 這個標籤,」Bernard 說,「卻忘了去真的『喝』一杯酒。你覺得,一款沒有特級園加持的村莊酒,能不能靠自己的實力站得住腳?」",
+              "choices": [
+                {
+                  "label": "根據剛才的品飲經驗回答",
+                  "next": "quiz_nsg"
+                }
+              ]
+            },
+            "quiz_nsg": {
+              "type": "quiz",
+              "text": "皮革、煙燻氣息,單寧硬朗、尾韻悠長,但沒有任何官方 Grand Cru 加持。這款酒告訴你關於「分級」與「品質」的關係,最貼切的理解是:",
+              "choices": [
+                {
+                  "label": "A. 沒有 Grand Cru,代表這村莊的風土先天不足",
+                  "next": "quiz_nsg_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. Grand Cru 是歷史評選與制度的產物,不是唯一衡量品質的標準,村莊等級一樣能展現風土實力",
+                  "next": "quiz_nsg_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 沒有 Grand Cru 的村莊,酒商應該爭取把整村升級",
+                  "next": "quiz_nsg_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Nuits-Saint-Georges 是整個「夜丘」(Côte de Nuits)產區命名的來源村莊,擁有數十座知名的 Premier Cru,風格以扎實硬朗、帶皮革與煙燻氣息著稱,是夜丘最『粗獷』的代表風格之一。但因為歷史評選過程的因素,至今沒有任何一塊地被列為 Grand Cru——這是勃根地分級系統裡最常被提出討論的『遺珠』案例,提醒學習者:分級是特定時空下的制度產物,不等於品質的絕對天花板。"
+            },
+            "quiz_nsg_correct": {
+              "text": "Bernard 難得露出笑容,替你的杯子續上一點酒。「就是這個道理。跟 Albert 說,他那個徒弟還算識貨。」",
+              "grants_badge": "Nuits-Saint-Georges",
+              "choices": [
+                {
+                  "label": "帶著這份體悟,繼續往梧玖前進",
+                  "next": "waypoint_end_nsg"
+                }
+              ]
+            },
+            "quiz_nsg_wrong": {
+              "text": "Bernard 搖搖頭,語氣依然溫和。「別把『沒有 Grand Cru』直接等於『不夠好』——先想想,分級到底是誰、在什麼時空背景下訂出來的?」",
+              "sets_fog": "quiz_nsg",
+              "choices": [
+                {
+                  "label": "重新思考分級制度的本質",
+                  "next": "quiz_nsg"
+                }
+              ]
+            },
+            "waypoint_end_nsg": {
+              "text": "你跟 Bernard 道別,朝梧玖走去,腦海裡多了一個問題——分級究竟在衡量什麼?這個問題,你決定留到旅途的最後再回答。\n\n【支線完 · 已獲得產區印記:Nuits-Saint-Georges】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "flagey_echezeaux_wp": {
+          "title": "彩蛋支線:弗拉吉的行政孤兒",
+          "meta": {
+            "village": "Flagey-Échézeaux",
+            "tier": "waypoint",
+            "tier_label": "中繼站 · 完結後彩蛋",
+            "style_focus": "有特級園卻沒有自己村莊 AOC 的行政孤兒",
+            "requires_badges": [
+              "馮內-侯瑪內 · 守夜人的地"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "在你離開馮內-侯瑪內前,Marie-Claude 忽然又叫住你。「既然你把整個系列的故事都聽完了,」她眨眨眼,「要不要順路去弗拉吉(Flagey-Échézeaux)看看?那裡有個很少人知道的行政怪現象。」\n\n你抵達時,村子小得幾乎沒有中心,一位路過的酒農笑著替你解惑:「我們村有兩座正牌 Grand Cru——Échézeaux 跟 Grands Échézeaux,可是我們村本身,沒有自己的村莊級 AOC。」",
+              "choices": [
+                {
+                  "label": "「有特級園卻沒有村莊 AOC?這怎麼可能?」",
+                  "next": "quiz_flagey"
+                }
+              ]
+            },
+            "quiz_flagey": {
+              "type": "quiz",
+              "text": "弗拉吉村擁有兩座法定 Grand Cru(Échézeaux、Grands Échézeaux),但村莊等級以下的酒,歷史上被規劃併入哪個鄰近村莊的 AOC 申報?",
+              "choices": [
+                {
+                  "label": "A. 併入梧玖(Vougeot)申報",
+                  "next": "quiz_flagey_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 併入馮內-侯瑪內(Vosne-Romanée)申報,村莊酒可掛「Vosne-Romanée」之名",
+                  "next": "quiz_flagey_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 完全沒有分級,只能標示成日常餐酒",
+                  "next": "quiz_flagey_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Flagey-Échézeaux 是勃根地分級系統裡最特殊的行政案例之一:村莊本身擁有兩座頂級的 Grand Cru(Échézeaux、Grands Échézeaux),但村莊等級與 Premier Cru 等級的酒款,歷史上被劃入相鄰的 Vosne-Romanée AOC 範圍申報銷售,因此市面上幾乎見不到「Flagey-Échézeaux」這個村莊名稱本身的酒標——是分級制度裡『有特級,沒村名』的少見案例。"
+            },
+            "quiz_flagey_correct": {
+              "text": "酒農笑著點頭。「答對了。所以你如果在酒標上看到『Vosne-Romanée』,裡面搞不好就有我們村的葡萄。算是……行政上的孤兒,風味上的家人。」\n\n你想起 Marie-Claude,想起整趟旅程走過的每一塊地——原來風土的故事,永遠比酒標上寫的更複雜一點。\n\n【彩蛋支線完 · 已獲得產區印記:Flagey-Échézeaux】",
+              "grants_badge": "Flagey-Échézeaux",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_flagey_wrong": {
+              "text": "酒農搖搖頭。「猜錯方向了——想想地理位置,我們村緊鄰哪一個你已經很熟悉的村莊?」",
+              "sets_fog": "quiz_flagey",
+              "choices": [
+                {
+                  "label": "重新思考弗拉吉的地理位置",
+                  "next": "quiz_flagey"
+                }
+              ]
+            }
+          }
         }
       }
     },
-
-    "chambolle_musigny_02": {
-      "title": "第二章:香波-蜜思妮的畫像",
-      "meta": {
-        "village": "Chambolle-Musigny",
-        "tier": "core",
-        "tier_label": "核心村莊",
-        "style_focus": "優雅與細緻(與第一章對比教學)",
-        "requires_badges": ["Chambertin Clos de Bèze"]
-      },
-      "start_node": "opening",
-      "nodes": {
-
-        "opening": {
-          "text": "從熱夫雷往北,葡萄園的坡度忽然變得溫柔許多。土壤裡的石灰岩露頭少了,取而代之的是一層更薄、更細膩的表土。\n\nÉtienne 打聽到一個名字——Solange,住在香波-蜜思妮村邊緣的老婦人,據說年輕時跟 Marguerite 是手帕交。她的屋子小小的,爬滿了紫藤,牆上掛滿了褪色的葡萄園水彩畫。\n\n「Marguerite 的朋友?」Solange 打量你手裡那瓶用麻布包著的酒,忽然臉色一變。「這個符號……我幾十年沒見過了。」她請你進門,倒了兩杯完全不同顏色的酒放在你面前——一杯是你熟悉的深石榴紅,另一杯淺得幾乎透光,像洋蔥皮。",
-          "choices": [
-            {"label": "🍷 先比較這兩杯酒的差異", "next": "taste_a"},
-            {"label": "🖼️ 注意牆上一幅特別的水彩畫", "next": "painting_c"},
-            {"label": "❓ 直接問:「Marguerite 後來怎麼了?」", "next": "ask_b"}
-          ]
+    "inheritance_line": {
+      "title": "地契與繼承",
+      "tagline": "同一件事,換一副眼鏡看——為什麼勃根地的地圖,碎成了這個樣子",
+      "knowledge_focus": "拿破崙法典均分繼承制、地塊破碎化成因、GFA 共有制度、négociant vs domaine",
+      "region": "夜丘 Côte de Nuits",
+      "chapter_order": [
+        "notary_archive_01",
+        "metayage_outpost",
+        "half_row_inheritance_02",
+        "price_pyramid_outpost",
+        "phylloxera_wp",
+        "indivision_wp"
+      ],
+      "chapters": {
+        "notary_archive_01": {
+          "title": "第一章:公證處的檔案室",
+          "meta": {
+            "village": "Nuits-Saint-Georges",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "拿破崙法典均分繼承制 vs 長子繼承制",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "距離你在熱夫雷第一次拿起那瓶無標籤的酒,已經過了大半年。你現在受雇於夜聖喬治一間小型公證事務所,工作是把十九、二十世紀的地契與繼承文件,一份份掃描歸檔。\n\n事務所主人 Maître Fabienne Roussy 是個說話又快又直接的中年女人。「你不是第一個覺得這工作無聊的年輕人,」她把一疊發黃的文件推到你面前,「但如果你真想搞懂勃根地的葡萄酒,這些紙,比任何一本教科書都誠實。」\n\n第一份文件,是一張 1850 年代的家族地契,底下密密麻麻簽了六個名字。",
+              "choices": [
+                {
+                  "label": "「為什麼一塊地要六個人簽名?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📜 先隨手翻幾份文件感受一下規律",
+                  "next": "browse_a"
+                }
+              ]
+            },
+            "browse_a": {
+              "text": "你隨手翻了十幾份文件,發現一個詭異的規律:幾乎每一份地契,傳到下一代時,面積就會縮小、簽名人數就會變多。同一塊地,三代之後,往往已經切成七、八份。",
+              "choices": [
+                {
+                  "label": "「這是巧合,還是有什麼制度在背後運作?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "Fabienne 靠上椅背,像是準備好要上一堂她說過幾百次的課。「法國大革命之後,拿破崙法典規定:遺產必須在所有子女之間『均分』,不能像某些國家那樣,把整塊地留給長子一個人。」\n\n她敲了敲那張六個簽名的地契。「聽起來很公平,對吧?但你算算看——如果一個家族每一代生三個小孩,三代之後,原本一整塊地,理論上會被切成幾份?」",
+              "choices": [
+                {
+                  "label": "思考這個問題,回答她",
+                  "next": "quiz_inheritance_01"
+                }
+              ]
+            },
+            "quiz_inheritance_01": {
+              "type": "quiz",
+              "text": "假設一塊地由一個家族持有,每一代都有三個子女均分繼承,經過三代之後,理論上這塊地最多會被切成幾份獨立持分?(提示:每一代都是前一代持分數 × 3)",
+              "choices": [
+                {
+                  "label": "A. 9 份",
+                  "next": "quiz_01_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 27 份",
+                  "next": "quiz_01_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 3 份,因為法律只規定第一代要均分",
+                  "next": "quiz_01_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "拿破崙法典(Code Napoléon,1804 年頒布)確立了「強制均分繼承制」(partage égal),規定遺產必須由所有合法子女均分,任何一方都無法透過遺囑完全剝奪其他子女的繼承權。這個制度跟波爾多式莊園常見的長子繼承傳統形成鮮明對比:波爾多的大型莊園得以維持完整的土地規模,而勃根地的葡萄園,則在兩百年間被均分繼承制切割得極度破碎——這正是「同一塊 Grand Cru,可能有幾十位地主」現象最根本的法律成因。"
+            },
+            "quiz_01_correct": {
+              "text": "「27 份,」Fabienne 點頭,「而且這還只是理論上限,實務上常常因為某幾房絕嗣或買賣又稍微合併回一些。但你現在應該懂了——梧玖的 Clos de Vougeot 為什麼會有八十幾位地主,不是意外,是這套法律運作了將近兩百年的必然結果。」\n\n她翻開一張夾在文件堆裡的便條,眼神忽然銳利起來。「說到梧玖……你聽過 Rousset 這個姓嗎?我這裡剛好有一份還沒歸檔的舊卷宗,牽涉到這個家族。」",
+              "grants_badge": "均分繼承制",
+              "choices": [
+                {
+                  "label": "「Rousset?我好像在別的地方聽過這個姓。」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_01_wrong": {
+              "text": "Fabienne 笑著搖頭。「再算一次——每一代都是『前一代的持分數 × 3』,不是只算一次喔。」",
+              "sets_fog": "quiz_inheritance_01",
+              "choices": [
+                {
+                  "label": "重新計算一次",
+                  "next": "quiz_inheritance_01"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Fabienne 把那份卷宗推到你面前,封面上用鋼筆寫著:「Rousset / Vionnet,土地移轉案,1961-1976」。\n\n你的心跳漏了一拍——這不就是你在熱夫雷、香波、梧玖一路追查的那個家族嗎?原來同一段往事,還留著一份你從沒看過的法律檔案版本。\n\n【第一章完 · 已獲得知識印記:均分繼承制】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:半壟葡萄藤的遺產",
+                  "next": "opening",
+                  "chapter": "half_row_inheritance_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
         },
-
-        "painting_c": {
-          "text": "那幅畫的角落簽著小小的字:「M. 1974」。畫的是一片朝南的緩坡,葡萄藤整齊得像梳過的頭髮,坡底立著一塊石碑,你依稀認出上頭刻的字——「Les Amoureuses」。\n\n「戀人們的葡萄園。」Solange 輕聲說,像是怕驚動什麼。「Marguerite 最後幾年,幾乎天天坐在那塊地邊寫生。」",
-          "choices": [
-            {"label": "「這名字……是巧合嗎?」", "next": "ask_b"}
-          ]
+        "half_row_inheritance_02": {
+          "title": "第二章:半壟葡萄藤的遺產",
+          "meta": {
+            "village": "Morey-Saint-Denis",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "地塊破碎化的實務後果:GFA 共有制度、négociant vs domaine",
+            "requires_badges": [
+              "均分繼承制"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "卷宗裡除了 Rousset 與 Vionnet 兩家的移轉紀錄,還夾著另一份不相關的案例——Fabienne 說這是她特別留下來當「教材」的:莫瑞-聖丹尼一戶普通農家,三兄妹繼承了父親一小塊 Premier Cru 地,總面積不到 0.3 公頃,分成三份持分後,每人手上只剩不到一壟葡萄藤的寬度。\n\n「你猜,」Fabienne 問,「這麼小的一塊地,三兄妹會怎麼處理?各自請人單獨釀酒嗎?」",
+              "choices": [
+                {
+                  "label": "「這麼小,單獨釀酒應該不划算吧?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "「他們可以合資請人一起釀嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "Fabienne 露出讚許的表情。「兩種都對,而且勃根地確實兩種做法都有人選。」她攤開後續文件。「三兄妹裡,有兩人選擇成立一個『GFA』——Groupement Foncier Agricole,農地共有集團,把持分登記在同一個法人底下共同管理;第三個人則選擇退出,直接把葡萄賣給附近的 négociant(酒商)換現金。」",
+              "choices": [
+                {
+                  "label": "「這兩種選擇,對最後裝瓶的酒會有什麼影響?」",
+                  "next": "quiz_inheritance_02"
+                }
+              ]
+            },
+            "quiz_inheritance_02": {
+              "type": "quiz",
+              "text": "同一塊 0.3 公頃的 Premier Cru 地,一部分持分主人成立 GFA 自己監督種植與釀造,另一部分持分主人把葡萄直接賣給 négociant。市面上如果同時看到這塊地的「domaine 裝瓶」與「négociant 裝瓶」兩款酒,品質與風格最可能出現什麼狀況?",
+              "choices": [
+                {
+                  "label": "A. 兩瓶一定完全一樣,因為葡萄長在同一塊地上",
+                  "next": "quiz_02_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 兩瓶可能差異明顯——domaine 版本從種植到裝瓶全程可控,négociant 版本則取決於酒商收購後的處理與調配方式",
+                  "next": "quiz_02_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. négociant 裝瓶的酒法律上不能用同一個 Premier Cru 名稱",
+                  "next": "quiz_02_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "在葡萄園極度破碎的勃根地,許多小農持有的地塊小到無法獨立負擔釀造與裝瓶成本,於是把葡萄直接賣給 négociant(酒商)。négociant 會向多位地主收購同一塊 Grand Cru / Premier Cru 的葡萄,自行釀造裝瓶,酒標上仍可合法標示該地塊名稱與等級(因為分級認定的是「土地來源」而非「持分比例」),但品質與風格取決於酒商自己的工藝與調配決策。這正是為什麼消費者常會發現「同一塊名園,不同裝瓶者,價格與評價差距極大」——不是分級制度出錯,是所有權破碎化下的必然市場現象。"
+            },
+            "quiz_02_correct": {
+              "text": "「就是這樣,」Fabienne 說,「所以你以後買酒,光看『產區名稱』還不夠,一定要看清楚裝瓶者是誰——是 domaine(酒莊自己種、自己釀、自己裝),還是 négociant(酒商買葡萄或買酒回來裝瓶)。」\n\n她把最後一份文件推向你。「現在,我們回到 Rousset 家的案子。」",
+              "grants_badge": "GFA 與裝瓶制度",
+              "choices": [
+                {
+                  "label": "查看 Rousset / Vionnet 家的完整移轉紀錄",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_02_wrong": {
+              "text": "Fabienne 搖頭。「分級制度認定的是『土地來源』,不是『誰去釀』——這中間還隔著一大段工藝與決策的差異喔,再想想。」",
+              "sets_fog": "quiz_inheritance_02",
+              "choices": [
+                {
+                  "label": "重新思考分級與裝瓶者的關係",
+                  "next": "quiz_inheritance_02"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "Rousset / Vionnet 卷宗裡,一份 1961 年的公證文件寫得清清楚楚:Vionnet 家因債務,將梧玖坡頂持分全數移轉給 Rousset 家,移轉條件欄位只有簡短一句:「以土地清償全部債務,雙方無異議。」\n\n沒有你原本以為的曲折劇情,只有一份乾淨俐落的法律文件。Fabienne 看著你的表情,輕聲說:「有時候,法律紀錄講的是事實的骨架,但骨架撐不撐得起一整段人生的重量,那是另一回事了——你已經知道那段重量是什麼形狀了,不是嗎?」\n\n【第二章完 · 已獲得知識印記:GFA 與裝瓶制度】\n【下一章尚未解鎖:待續】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
         },
-
-        "ask_b": {
-          "text": "Solange 沉默了很久,久到你以為她不會回答了。\n\n「她從熱夫雷搬來這裡,是很多年前的事了。沒結婚,一個人住,靠教村裡孩子畫畫過日子。她從不提過去,但每年十一月,總會收到一箱沒有名字的酒。」她的聲音低下去。「她從來沒開過那些酒。整整齊齊疊在地窖裡,跟你手上這瓶,一模一樣的符號。」",
-          "choices": [
-            {"label": "回頭看看桌上那兩杯酒", "next": "taste_a"}
-          ]
+        "metayage_outpost": {
+          "title": "驛站:不擁有土地的種植者",
+          "meta": {
+            "village": "夜丘各地",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "美塔亞契約制——不擁有土地也能種葡萄",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "檔案室外的小院子裡,一位老先生正彎腰檢查藤蔓,你隨口攀談才知道,他手上這塊地,他種了四十年,卻一分都不屬於他。\n\n「這叫『美塔亞』(métayage),」他直起腰,「地主提供土地,我出勞力種植管理,收成按比例分——通常地主拿一半,我拿一半。這制度在勃根地存在了幾百年,不算稀奇。」",
+              "choices": [
+                {
+                  "label": "「那這塊地的分級、名聲,算誰的?」",
+                  "next": "quiz_metayage"
+                }
+              ]
+            },
+            "quiz_metayage": {
+              "type": "quiz",
+              "text": "在美塔亞制度下,佃農(métayer)不擁有土地所有權,只憑契約分享收成。這種安排,對於「地主是誰」跟「酒標上寫什麼」這兩件事,最準確的理解是:",
+              "choices": [
+                {
+                  "label": "A. 佃農種得好,土地所有權就會自動轉移給他",
+                  "next": "quiz_metayage_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 土地所有權與分級認定始終歸屬地主,佃農只分享收成利益,不影響酒標上的產區與等級標示",
+                  "next": "quiz_metayage_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 美塔亞制度下釀的酒,法律上不能標示正式產區名稱",
+                  "next": "quiz_metayage_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "美塔亞制(métayage,英文常譯為 sharecropping)是勃根地歷史悠久的土地經營模式:地主提供葡萄園,佃農(métayer)負責種植管理,收成依契約比例分配,常見比例是對分。這個制度讓沒有資本購地的家族,得以靠勞力參與頂級產區的種植,也是均分繼承制造成地主持分過度破碎後,土地仍能被有效耕作的重要配套機制——所有權與耕作權,在勃根地經常是分開的兩件事。"
+            },
+            "quiz_metayage_correct": {
+              "text": "老先生笑了。「說得對。這塊地掛的名字,一直是地主的名字。我只負責讓它長得好——但說實話,四十年了,我對這塊地的感情,可能比地主本人還深。」\n\n【驛站完 · 已獲得知識印記:美塔亞制】",
+              "grants_badge": "美塔亞制",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_metayage_wrong": {
+              "text": "老先生搖搖頭。「所有權跟耕作權,是兩件事——再想想,契約分享的是『收成利益』,還是『土地本身』?」",
+              "sets_fog": "quiz_metayage",
+              "choices": [
+                {
+                  "label": "重新思考所有權與耕作權的差異",
+                  "next": "quiz_metayage"
+                }
+              ]
+            }
+          }
         },
-
-        "taste_a": {
-          "text": "你端起那杯淺色的酒。香氣先是紫羅蘭與新鮮紅櫻桃,接著是一絲玫瑰花瓣般的細膩香氣——跟你在熱夫雷嚐到的深沉黑櫻桃、濕土氣息完全是兩個世界。入口單寧細滑如絲,幾乎感覺不到骨架,卻有種說不出的綿長。\n\n「這裡的土淺,」Solange 說,「風格自然就輕盈。有些人覺得這樣不夠『強』,但我父親常說——優雅也是一種力量,只是說話比較小聲。」",
-          "choices": [
-            {"label": "「顏色淺、單寧滑、香氣是花香系——這比較像……」", "next": "quiz_02"}
-          ]
+        "price_pyramid_outpost": {
+          "title": "驛站:分級金字塔的地價",
+          "meta": {
+            "village": "夜丘各地",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "為什麼頂級園的每一分持分,都值得打一場官司",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "公證處同事隨口跟你分享一份地價評估報告。「你知道嗎,」她說,「同樣是夜丘的葡萄園,大區級(Régionale)、村莊級(Village)、一級園(Premier Cru)、特級園(Grand Cru),每公頃地價可以差到幾十倍。」",
+              "choices": [
+                {
+                  "label": "「這麼大的差距,是為什麼繼承糾紛常常鬧得特別兇?」",
+                  "next": "quiz_price"
+                }
+              ]
+            },
+            "quiz_price": {
+              "type": "quiz",
+              "text": "勃根地分級金字塔由下而上是:大區級 → 村莊級 → 一級園 → 特級園,地價隨等級遞增,頂級的特級園地價可能是大區級的數十倍甚至上百倍。這種懸殊價差,對均分繼承制底下的家族糾紛,最可能造成什麼影響?",
+              "choices": [
+                {
+                  "label": "A. 反正大家都均分,價差不會影響家族關係",
+                  "next": "quiz_price_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 等級越高的地塊,持分即使很小,實質價值仍然巨大,使得高階地塊的繼承分配特別容易引發家族糾紛與訴訟",
+                  "next": "quiz_price_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 特級園因為太值錢,法律規定不能被均分繼承",
+                  "next": "quiz_price_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "勃根地的分級金字塔(大區級 Régionale → 村莊級 Village → 一級園 Premier Cru → 特級園 Grand Cru)不只是品質分類,更直接反映在地價上——特級園每公頃地價常是大區級的數十倍以上。在均分繼承制底下,這種懸殊價差意味著:即使繼承到的只是特級園裡極小一塊持分,其實質經濟價值仍可能遠超過一整塊大區級土地,這正是勃根地家族土地糾紛與訴訟,往往集中在頂級產區的根本經濟原因。"
+            },
+            "quiz_price_correct": {
+              "text": "同事點頭。「沒錯,你現在應該懂,為什麼我們公證處光是處理 Grand Cru 相關的繼承案件,就佔了業務一大半。」\n\n【驛站完 · 已獲得知識印記:分級金字塔地價】",
+              "grants_badge": "分級金字塔地價",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_price_wrong": {
+              "text": "同事搖頭。「再想想——持分比例雖小,但如果地本身就值很多錢,那一小份的實質金額,還是很可觀的喔。」",
+              "sets_fog": "quiz_price",
+              "choices": [
+                {
+                  "label": "重新思考持分比例與實質價值的關係",
+                  "next": "quiz_price"
+                }
+              ]
+            }
+          }
         },
-
-        "quiz_02": {
-          "type": "quiz",
-          "text": "淺石榴紅、絲滑單寧、紫羅蘭與紅櫻桃香氣,對比你在熱夫雷嚐過的深色、緊緻、土壤氣息——這杯比較像:",
-          "choices": [
-            {"label": "A. 香波-蜜思妮 Village 等級", "next": "quiz_02_wrong", "correct": false},
-            {"label": "B. Premier Cru,如 Les Amoureuses", "next": "quiz_02_correct", "correct": true},
-            {"label": "C. Grand Cru Musigny", "next": "quiz_02_wrong", "correct": false}
-          ],
-          "knowledge_card": "香波-蜜思妮的土壤與風格:表土薄、石灰岩含量高但質地細碎,加上東向緩坡日照溫和,造就全勃根地最細緻優雅的酒風,單寧絲滑、香氣以紫羅蘭與紅果為主,是「優雅」的風土典範,常與熱夫雷的「力量」型風格作對比教學。"
+        "phylloxera_wp": {
+          "title": "支線:根瘤蚜蟲害之後",
+          "meta": {
+            "village": "夜丘各地",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "十九世紀蟲害重建潮如何加速地塊分割",
+            "requires_badges": [
+              "均分繼承制"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「你既然對地塊破碎化這麼有興趣,」Fabienne 某天翻著檔案說,「該去見見老 Grégoire,他家世代經營苗圃,對根瘤蚜蟲害之後的重建史,比誰都清楚。」\n\n你在苗圃找到 Grégoire,一位滿手泥土的老人。「十九世紀末,根瘤蚜蟲害幾乎毀掉整個勃根地的原生葡萄藤,」他說,「唯一活路,是把每一株藤都嫁接到美洲抗蟲砧木上,全面重新種植。」",
+              "choices": [
+                {
+                  "label": "「重新種植,跟地塊破碎化有什麼關係?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🌱 先看看他苗圃裡的嫁接示範",
+                  "next": "graft_a"
+                }
+              ]
+            },
+            "graft_a": {
+              "text": "Grégoire 拿起一段砧木,示範嫁接的切口。「重新種一整片葡萄園,成本極高——整地、砧木、嫁接工資,一株都不能省。有些家族撐得過去,有些家族撐不住。」",
+              "choices": [
+                {
+                  "label": "「撐不住的家族,後來怎麼辦?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「賣地,」Grégoire 直白地說。「重建成本壓垮不少小地主,尤其是那些因為均分繼承,手上本來就只剩一小條持分的人——他們往往負擔不起重新種植的錢,只能把持分賣給還有資本的鄰居或商人。」\n\n他嘆口氣。「所以你現在看到的地籍圖,不完全是繼承法切出來的,還疊加了一層——蟲害重建潮,把撐不下去的小持分,又重新洗牌了一次。」",
+              "choices": [
+                {
+                  "label": "思考這兩股力量疊加的結果",
+                  "next": "quiz_phylloxera"
+                }
+              ]
+            },
+            "quiz_phylloxera": {
+              "type": "quiz",
+              "text": "均分繼承制持續切割地塊,而十九世紀末的根瘤蚜蟲害重建潮,又對持分過小的家族造成資金壓力。這兩股力量疊加,對勃根地地籍地圖的長期演變,最準確的描述是:",
+              "choices": [
+                {
+                  "label": "A. 兩者互相抵銷,地塊分布最後回到蟲害前的樣貌",
+                  "next": "quiz_phylloxera_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 繼承制持續切割地塊,重建潮則淘汰掉撐不住的小持分,兩者共同形塑出今日極度複雜、持分持有者能力落差很大的地籍現況",
+                  "next": "quiz_phylloxera_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 政府在蟲害後強制徵收所有小持分,重新平均分配",
+                  "next": "quiz_phylloxera_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "十九世紀末的根瘤蚜蟲害(Phylloxera)迫使全歐洲葡萄園進行大規模重新嫁接種植,勃根地也不例外。這場重建潮的高昂成本,對本已因均分繼承制而持分破碎的小地主形成雙重打擊——許多人被迫出售持分求生,持分因而流向資本較充裕的家族或商人手中。這也是為什麼今日勃根地同一塊 Grand Cru 裡,地主的經濟實力與釀酒資源可以天差地遠:地籍的破碎化,是繼承法與蟲害史交織了一百多年的結果。"
+            },
+            "quiz_phylloxera_correct": {
+              "text": "Grégoire 點頭。「就是這樣。所以你去查任何一塊地的地籍史,常常會看到蟲害後那幾年,一長串的『轉讓』紀錄——不是巧合,是那個年代逼出來的。」",
+              "grants_badge": "根瘤蚜重建史",
+              "choices": [
+                {
+                  "label": "帶著這份理解,回到公證處",
+                  "next": "waypoint_end_phylloxera"
+                }
+              ]
+            },
+            "quiz_phylloxera_wrong": {
+              "text": "Grégoire 搖頭。「別想得太簡單——這是兩股力量疊加,不是互相抵銷,再想想結果會偏向哪個方向。」",
+              "sets_fog": "quiz_phylloxera",
+              "choices": [
+                {
+                  "label": "重新思考兩股力量疊加的結果",
+                  "next": "quiz_phylloxera"
+                }
+              ]
+            },
+            "waypoint_end_phylloxera": {
+              "text": "你跟 Grégoire 道別,回到公證處的路上,忽然對那些發黃地契裡密密麻麻的簽名,有了更立體的理解——每一次轉手,背後可能不只是家族溫情或算計,還有一整個時代的生存壓力。\n\n【支線完 · 已獲得知識印記:根瘤蚜重建史】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
         },
-
-        "quiz_02_correct": {
-          "text": "Solange 的手微微顫抖,放下手中的杯子。「Les Amoureuses……你怎麼會猜到。」\n\n她起身走進裡屋,抱出一個滿是灰塵的木箱,裡面整整齊齊躺著十幾瓶從未開封的酒,每一瓶都貼著同樣手寫的年份與那個歪斜的十字符號。\n\n「這塊地,不是 Marguerite 家的。」她的聲音幾乎是哽咽的。「是後來才有人買下,每年秋天,不具名地送來給她。四十年,從沒斷過,直到那個人過世那年。」\n\n你忽然明白——Marcel 用整整一塊「戀人們的葡萄園」,說著一句他一輩子沒敢說出口的話。",
-          "grants_badge": "Les Amoureuses",
-          "choices": [
-            {"label": "翻看木箱底部,似乎還壓著一張泛黃的地圖", "next": "chapter_end_2"}
-          ]
-        },
-
-        "quiz_02_wrong": {
-          "text": "Solange 輕輕搖頭,不是責怪,只是像在整理自己的思緒。「還不太一樣……你再仔細感覺一下那個單寧的滑順程度。」\n\n她把酒杯往你面前推近了一些,給你重新感受的機會。",
-          "sets_fog": "quiz_02",
-          "choices": [
-            {"label": "再仔細感受單寧的滑順程度", "next": "quiz_02"}
-          ]
-        },
-
-        "chapter_end_2": {
-          "text": "地圖已經脆得幾乎散開,上面用鉛筆圈出一塊地,標注著陌生的字——「Vougeot,修道院舊產」。角落還有一行小字,墨水已經暈開大半,你只勉強認出幾個字:「……地契的起點……欠 M. 家的……」\n\nSolange 看著你手中的地圖,輕輕嘆了口氣。「如果你真想把這件事查清楚,去梧玖吧。那裡的老修道院牆,還留著跟你手上一樣的符號。」\n\n【第二章完 · 已獲得產區印記:Les Amoureuses】",
-          "choices": [
-            {"label": "▶️ 前往下一章:梧玖的修道院牆", "next": "opening", "chapter": "vougeot_03"}
-          ],
-          "is_ending": true
-        }
-      }
-    },
-
-    "vougeot_03": {
-      "title": "第三章:梧玖的修道院牆",
-      "meta": {
-        "village": "Vougeot",
-        "tier": "core",
-        "tier_label": "核心村莊",
-        "style_focus": "同一塊地,不同地主與坡位的變因拆解",
-        "requires_badges": ["Les Amoureuses"]
-      },
-      "start_node": "opening",
-      "nodes": {
-
-        "opening": {
-          "text": "梧玖村小得幾乎一眼就能看穿,但村子中央那座石造城堡——Château du Clos de Vougeot——卻大得不成比例。厚重的石牆圍出一塊超過五十公頃的葡萄園,你站在牆邊,忽然明白為什麼 Solange 說「牆」而不是「園」。\n\n城堡側門有位穿著磨舊工作服的老先生在修剪薔薇,自我介紹是 Albert Chevrier,「業餘的村史愛好者,正式身份是這裡的看門人。」他瞥了一眼你手上的酒瓶,瞇起眼睛。「這符號,西多會修道院的舊印。你是為了地契來的?」",
-          "choices": [
-            {"label": "🧱 先看看那面刻著符號的修道院牆", "next": "wall_c"},
-            {"label": "📜 問 Albert 這塊地為什麼有八十幾位地主", "next": "ask_owners_b"},
-            {"label": "🍷 直接請 Albert 讓你品飲比較", "next": "taste_a"}
-          ]
-        },
-
-        "wall_c": {
-          "text": "牆角石塊上果然刻著一個歪斜的十字——跟瓶身上的一模一樣,只是這裡的更深、更古老。「十二世紀,熙篤會修士圈下這塊地開始釀酒,」Albert 說,「法國大革命後,教會地產被沒收拍賣,一塊完整的葡萄園,從此被切成幾十份賣給了村民與商人。你手上那瓶酒的符號,說明它的地契,原本就是從這裡流出去的一部分。",
-          "choices": [
-            {"label": "「所以 Marcel 家的地,是從這裡買來的?」", "next": "ask_owners_b"}
-          ]
-        },
-
-        "ask_owners_b": {
-          "text": "「差不多是這個意思。」Albert 領你走進城堡側翼一間堆滿地籍圖的檔案室。「Clos de Vougeot 現在有八十幾位地主,同一塊園子,卻可能同時存在最頂級跟很普通的酒——秘密不在土地大小,在你站的『位置』。」\n\n他攤開一張坡面剖面圖:「越靠近山坡上緣、離城堡近的地塊,排水好、日照足;越靠近下方公路的地塊,土壤黏重、容易積水。同一片 Clos de Vougeot,坡頂跟坡底,可以是兩種完全不同等級的酒。」",
-          "choices": [
-            {"label": "「那我來試試看能不能分辨出坡位的差別。」", "next": "taste_a"}
-          ]
-        },
-
-        "taste_a": {
-          "text": "Albert 從架上取出三杯樣品酒,只用鉛筆編號,不告訴你產地細節。\n\n**杯 1**:色深、單寧紮實有稜角、礦物感強烈,尾韻帶著石頭般的緊緻感。\n**杯 2**:顏色濃郁但單寧略顯鬆散,果香直接奔放,少了前一杯的緊實骨架,喝起來稍嫌「肥厚」。\n**杯 3**:介於兩者之間,結構中等,但少了杯 1 的礦物尾韻。\n\n「都是 Clos de Vougeot,同一年份,」Albert 說。「猜猜看,哪一杯來自坡頂,離城堡跟香波-蜜思妮那一側最近?」",
-          "choices": [
-            {"label": "思考三杯之間的線索,做出判斷", "next": "quiz_03"}
-          ]
-        },
-
-        "quiz_03": {
-          "type": "quiz",
-          "text": "杯 1 單寧紮實、礦物感強、尾韻緊緻;杯 2 果香奔放但單寧鬆散、略顯肥厚;杯 3 結構中等但缺乏礦物尾韻。排水好、日照足的坡頂地塊,通常會呈現哪一種特徵組合?",
-          "choices": [
-            {"label": "A. 杯 2 —— 果香奔放代表最好的成熟度", "next": "quiz_03_wrong", "correct": false},
-            {"label": "B. 杯 1 —— 排水好帶來的緊緻結構與礦物感", "next": "quiz_03_correct", "correct": true},
-            {"label": "C. 杯 3 —— 中庸就是最安全的答案", "next": "quiz_03_wrong", "correct": false}
-          ],
-          "knowledge_card": "Clos de Vougeot 的坡位邏輯:整塊 Clos de Vougeot 橫跨整個山坡,坡頂鄰近香波-蜜思妮與馮內-侯瑪內的特級園帶,排水佳、石灰岩淺露,酒款結構緊緻、礦物感明顯;坡底鄰近公路,土壤黏重、排水差,酒款容易顯得鬆散肥厚。同一片 Grand Cru 裡,坡位造成的風格差異,常常比村莊之間的差異還要大——這也是為什麼『Clos de Vougeot』的評價從來不是單一標準。"
-        },
-
-        "quiz_03_correct": {
-          "text": "Albert 露出讚許的表情。「杯 1,坡頂靠城堡那側,離香波-蜜思妮的特級園帶只隔著一條小路。」\n\n他翻開檔案室裡一本厚重的地籍登記簿,手指劃過一長串姓名,忽然停住。「找到了——Rousset。1961 年,你朋友的父親,買下坡頂一小塊地,登記人共同簽署欄裡,還有另一個姓氏:Vionnet。」\n\n他抬頭看你。「這塊地,是兩個家族共同持有的,直到某一年,Vionnet 的簽名忽然消失,土地全部轉到 Rousset 名下——附帶條件,是一筆『債務清償』。」\n\n你終於拼湊出全貌:Marguerite 家族的債務,用這塊坡頂好地抵償給了 Marcel 家,而 Marcel 因為愧疚,終生沒有動用這塊地一滴酒,直到用另一塊「戀人的葡萄園」默默償還一段感情的虧欠。",
-          "grants_badge": "Clos de Vougeot",
-          "choices": [
-            {"label": "問 Albert:「地籍簿上,還有沒有更後面的紀錄?」", "next": "chapter_end_3"}
-          ]
-        },
-
-        "quiz_03_wrong": {
-          "text": "Albert 搖搖頭,但語氣仍然溫和。「再想一想——排水好、日照足的地方,單寧會傾向鬆散還是紮實?先別急著選『看起來最討喜』的那一杯。」\n\n他把三杯酒的順序重新擺好,讓你再嘗試一次。",
-          "sets_fog": "quiz_03",
-          "choices": [
-            {"label": "重新比較三杯酒的結構差異", "next": "quiz_03"}
-          ]
-        },
-
-        "chapter_end_3": {
-          "text": "Albert 翻到登記簿最後幾頁,指尖停在一行 1976 年的批註上:「地塊轉讓完成同年,Rousset 名下新增一筆申報——馮內-侯瑪內,一塊未命名的小地塊,面積不到半公頃。」\n\n他闔上簿子,看著你。「如果 Marcel 這輩子只留下一塊『自己』的地,不是為了贖罪、也不是為了愛,那或許就是這一塊。你要不要去看看?」\n\n【第三章完 · 已獲得產區印記:Clos de Vougeot】",
-          "choices": [
-            {"label": "▶️ 前往最終章:馮內-侯瑪內", "next": "opening", "chapter": "vosne_romanee_04"}
-          ],
-          "is_ending": true
-        }
-      }
-    },
-
-    "vosne_romanee_04": {
-      "title": "終章:馮內-侯瑪內的守夜",
-      "meta": {
-        "village": "Vosne-Romanée",
-        "tier": "core",
-        "tier_label": "終章 · 系列總驗收",
-        "style_focus": "無提示綜合判斷 + 結局分岔",
-        "requires_badges": ["Clos de Vougeot"]
-      },
-      "start_node": "opening",
-      "nodes": {
-
-        "opening": {
-          "text": "馮內-侯瑪內的名字本身就帶著傳說的重量——這裡幾乎每一小塊地都有自己的名字與神話。但地籍簿上那塊「未命名」的半公頃,卻低調得像是刻意被遺忘。\n\n你順著登記地號找到它時,發現一位頭髮花白的婦人正蹲在藤蔓間除草。「這塊地沒有名字,」她頭也不抬地說,「但村裡人私底下叫它『守夜人的地』。我叫 Marie-Claude,我家的地就在隔壁,看了它四十年。」\n\n她站起身,拍拍手上的泥土。「每年採收前後,總會有個男人一個人來,不說話,只是蹲在藤蔓旁,像在陪什麼人守夜。前幾年他不來了。我猜,是走了。」",
-          "choices": [
-            {"label": "🍇 問 Marie-Claude 能不能嚐嚐這塊地的酒", "next": "taste_a"},
-            {"label": "🕯️ 問她 Marcel 一個人來的時候都做什麼", "next": "vigil_b"},
-            {"label": "📍 觀察這塊地在整個馮內-侯瑪內的相對位置", "next": "location_c"}
-          ]
-        },
-
-        "vigil_b": {
-          "text": "「什麼都不做,」Marie-Claude 說,「有時候只是坐著。有一年我看見他對著藤蔓說話,像是在道歉,也像是在報告近況——『她過得很好』之類的。」\n\n她頓了頓。「這塊地產量小得可憐,他從不賣葡萄,每年只請合作社釀一點點,全部自己收著。我一直以為是自己喝,直到你今天拿著這瓶東西出現。」",
-          "choices": [
-            {"label": "「我能嚐嚐這塊地的酒嗎?」", "next": "taste_a"}
-          ]
-        },
-
-        "location_c": {
-          "text": "Marie-Claude 領你走到坡地邊緣,指向四周。「這一整片,是全世界最被神話化的葡萄園群之一,」她說,「隔壁幾塊地的名字,你光是唸出來,懂酒的人都會肅然起敬。但 Marcel 這塊,連正式名字都沒有,只在地籍簿上是個編號。」\n\n「奇怪的是,」她壓低聲音,「土壤跟坡度,其實跟隔壁那些赫赫有名的地塊,沒有太大差別。」",
-          "choices": [
-            {"label": "「那我更想嚐嚐看了。」", "next": "taste_a"}
-          ]
-        },
-
-        "taste_a": {
-          "text": "Marie-Claude 從屋裡取出一瓶沒有任何標籤的酒,是合作社去年才裝瓶的最新年份——這塊地至今仍在悄悄結果。\n\n你倒出一杯。色澤是清透的寶石紅,香氣一開始是野莓與玫瑰,接著浮現一絲你從沒在前三章遇過的東西——像丁香、像肉桂,某種溫暖的異國香料尾韻,伴隨著綢緞般滑順的單寧,幾乎讓人忘記去分辨結構。\n\n這次,沒有人給你任何提示。Marie-Claude 只是靜靜看著你。",
-          "choices": [
-            {"label": "綜合前三章所學,做出最終判斷", "next": "quiz_final"}
-          ]
-        },
-
-        "quiz_final": {
-          "type": "quiz",
-          "text": "野莓與玫瑰香氣、丁香肉桂般的異國香料尾韻、綢緞般滑順卻仍有支撐力的單寧——這塊地籍上只登記為「Village」等級的無名小園,你認為它真正的份量是:",
-          "choices": [
-            {"label": "A. 官方等級寫 Village,葡萄本身普通,判斷應該完全依照分級", "next": "quiz_final_wrong", "correct": false},
-            {"label": "B. 即使掛著 Village 等級,細膩質地與複雜香料尾韻,顯示這塊地被人用特級園的心力悉心對待——分級之外,還有人的用心", "next": "quiz_final_correct", "correct": true},
-            {"label": "C. 香氣太複雜了,一定是偷偷跟別村的酒調配過", "next": "quiz_final_wrong", "correct": false}
-          ],
-          "knowledge_card": "官方分級反映的是長期、平均、可驗證的風土潛力,但單一年份、單一釀酒者的用心程度,永遠可能讓一塊「普通」等級的地,短暫觸碰到遠超過它紙面身份的高度。這也是 WSET 品飲訓練裡最容易被忽略的一課——分級是起點,不是終點。"
-        },
-
-        "quiz_final_correct": {
-          "text": "Marie-Claude 笑了,眼角有些濕潤。「你懂了。」\n\n她從口袋掏出一本磨損的小冊子,是這塊地逐年的手寫紀錄——每一年的採收日期、天氣、產量,字跡從工整逐漸變得顫抖,最後一頁停在四年前,只有一行字:「今年,替她多留一杯。」\n\n「拿去給 Rousset 家的孩子吧,」她把冊子交到你手上。「這塊地的故事,該由你們家的人自己決定怎麼結束。」",
-          "grants_badge": "馮內-侯瑪內 · 守夜人的地",
-          "choices": [
-            {"label": "帶著所有線索,回到第戎的地窖", "next": "return_to_cellar"}
-          ]
-        },
-
-        "quiz_final_wrong": {
-          "text": "Marie-Claude 沒有說話,只是把酒杯往你面前又推近了一些,眼神裡沒有失望,只有等待。「分級是死的,酒是活的,」她輕聲說,「再感受一次那個香料尾韻,它想告訴你什麼?」",
-          "sets_fog": "quiz_final",
-          "choices": [
-            {"label": "再仔細感受那股香料尾韻", "next": "quiz_final"}
-          ]
-        },
-
-        "return_to_cellar": {
-          "text": "第戎的地窖,跟你第一次來的時候一樣冷。Étienne 聽完你帶回的一切——Les Amoureuses、坡頂的地契、守夜人的無名小園——久久沒有說話,只是盯著木箱裡那瓶始終沒開封、標籤上寫著「給 M.」的酒。\n\n「所以他這輩子,」他終於開口,聲音很輕,「用一整片葡萄園的方式,說了一句從沒說出口的『對不起』,又用另一塊地,說了『我很想你』。」\n\n他抬頭看你,眼眶紅著,但沒有崩潰,只是很平靜。「這瓶『給 M.』的酒,你覺得,我該打開它,還是……讓它繼續等下去?」",
-          "choices": [
-            {"label": "「打開它。有些話,遲到四十年也該說出口。」", "next": "ending_reconciliation"},
-            {"label": "「或許,有些等待,本身就是答案的一部分。」", "next": "ending_openended"}
-          ]
-        },
-
-        "ending_reconciliation": {
-          "text": "Étienne 的手在瓶塞上停留了很久,終於,他轉開了它。\n\n木塞鬆脫的瞬間,地窖裡瀰漫開一股複雜卻溫柔的香氣——像是把 Les Amoureuses 的絲滑、Clos de Vougeot 的礦物骨架,還有守夜人小園的異國香料,揉進了同一杯酒裡。\n\n「我要重新種回熱夫雷那塊封存的地,」Étienne 說,聲音有些顫抖但很堅定。「用 Marguerite 的名字,替新酒命名。我父親沒能說出口的話,讓我替他把它種回土裡。」\n\n你們一起把最後一口酒喝完。地窖外,第戎的天空,難得放晴。\n\n【結局:和解 · 系列完】\n【感謝你陪 Étienne 走完這趟風土之旅,拼湊出四代人的風土記憶】",
-          "choices": [],
-          "is_ending": true
-        },
-
-        "ending_openended": {
-          "text": "Étienne 的手離開了瓶塞,輕輕把酒放回木箱,重新蓋上蓋子。\n\n「有些記憶,留著比打開更完整。」他把整套地契與地圖交到你手上,像是交付一份沉甸甸的信任。「但這趟旅程的紀錄,我想留給你保管——也許哪天,我準備好了,會想再打開它。到時候,希望你還在。」\n\n你走出石屋,手裡捧著四個產區的記憶。故事沒有一個乾脆的句點,但你知道,有些故事本來就不需要。\n\n【結局:留白 · 系列完】\n【感謝你陪 Étienne 走完這趟風土之旅,拼湊出四代人的風土記憶】",
-          "choices": [],
-          "is_ending": true
+        "indivision_wp": {
+          "title": "支線:懸而未決的共有",
+          "meta": {
+            "village": "夜丘各地",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "現代仍在發生的共有僵局(indivision)",
+            "requires_badges": [
+              "GFA 與裝瓶制度"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「這個案子,你可能會有興趣,」Fabienne 把一份還在處理中的檔案推給你,「一塊 Premier Cru 地,五位繼承人共有了快二十年,至今沒有正式分割,也沒有成立 GFA——法律上叫『indivision』,共有卻懸而未決。」\n\n她皺眉。「五個人裡,有人想賣、有人想種、有人根本不聞不問,結果這塊地,快十年沒好好被照顧了。」",
+              "choices": [
+                {
+                  "label": "「為什麼不能像之前那三兄妹一樣,直接處理掉?」",
+                  "next": "quiz_indivision"
+                }
+              ]
+            },
+            "quiz_indivision": {
+              "type": "quiz",
+              "text": "「Indivision」狀態下,土地由多位繼承人共有,但重大決定(例如出售、成立 GFA、重新規劃種植)通常需要全體或高比例共有人一致同意才能執行。這種制度設計,最可能造成的實際後果是:",
+              "choices": [
+                {
+                  "label": "A. 反正大家都是家人,實務上很少真的僵持不下",
+                  "next": "quiz_indivision_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 只要有一位共有人不同意或消極不配合,整塊地的處置就可能長期卡住,甚至導致土地缺乏管理、品質下滑",
+                  "next": "quiz_indivision_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. Indivision 狀態超過五年,土地會自動收歸國有",
+                  "next": "quiz_indivision_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "「Indivision」(共有未分割狀態)是法國繼承法下常見的過渡狀態:繼承人共同持有一塊土地,卻未正式分割產權或整合為法人(如 GFA)。這種狀態的風險在於,重大決策通常需要高比例甚至全體共有人同意,只要有一位繼承人態度消極、意見分歧,或單純找不到人(移居海外、失聯等),整塊地的處置就可能陷入僵局——勃根地不少歷史悠久的小地塊,至今仍處於這種『沒人明確負責』的灰色狀態,是均分繼承制留下的長期後遺症之一。"
+            },
+            "quiz_indivision_correct": {
+              "text": "Fabienne 點頭。「這就是我們這行最頭痛,也最常見的案子。均分繼承制解決了『公平』的問題,卻留下了『誰來做決定』這個更麻煩的問題。」\n\n她闔上檔案。「有時候我覺得,勃根地的葡萄園,不只是被土壤跟氣候塑造出來的,也是被這些法律文件,一頁一頁塑造出來的。」",
+              "grants_badge": "Indivision 共有僵局",
+              "choices": [
+                {
+                  "label": "帶著這份體悟,結束今天的檔案工作",
+                  "next": "waypoint_end_indivision"
+                }
+              ]
+            },
+            "quiz_indivision_wrong": {
+              "text": "Fabienne 搖頭。「法律上沒有『自動收歸國有』這種事,也別太樂觀——想想看,只要一個人不配合,會發生什麼事?」",
+              "sets_fog": "quiz_indivision",
+              "choices": [
+                {
+                  "label": "重新思考共有制度的決策困境",
+                  "next": "quiz_indivision"
+                }
+              ]
+            },
+            "waypoint_end_indivision": {
+              "text": "你關上檔案櫃,窗外天色已暗。整個下午,你看的不是什麼傳奇故事,只是一份份平凡卻真實的法律文件——但你忽然明白,這些文件裡藏著的,可能比任何一則風土傳說都更貼近勃根地真正的日常。\n\n【支線完 · 已獲得知識印記:Indivision 共有僵局】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
         }
       }
     }
