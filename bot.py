@@ -63,6 +63,24 @@ def get_campaign_order(story: dict[str, Any]) -> list[str]:
     return list(story["campaigns"].keys())
 
 
+def group_campaigns_by_region(story: dict[str, Any]) -> list[tuple[str, list[tuple[int, str]]]]:
+    """把故事線依照 campaign["region"] 分組,方便 /campaigns 跟 /start 選單
+    用「夜丘」「伯恩丘」這種產區小標分區顯示,而不是一長串扁平列表。
+    回傳的每個 campaign_id 都附帶它在 get_campaign_order() 裡的原始索引,
+    因為按鈕的 callback_data 是用這個索引定位故事線,分組顯示不能打亂它。
+    """
+    order = get_campaign_order(story)
+    groups: dict[str, list[tuple[int, str]]] = {}
+    group_order: list[str] = []
+    for idx, cid in enumerate(order):
+        region = story["campaigns"][cid].get("region", "其他")
+        if region not in groups:
+            groups[region] = []
+            group_order.append(region)
+        groups[region].append((idx, cid))
+    return [(region, groups[region]) for region in group_order]
+
+
 def get_chapter_order(story: dict[str, Any], campaign_id: str) -> list[str]:
     campaign = story["campaigns"][campaign_id]
     return campaign.get("chapter_order", list(campaign["chapters"].keys()))
@@ -272,13 +290,15 @@ def build_campaign_picker_text_and_keyboard(
 ) -> tuple[str, InlineKeyboardMarkup]:
     lines = ["🍇 選擇一條故事線開始遊玩:\n"]
     buttons = []
-    for idx, cid in enumerate(get_campaign_order(story)):
-        campaign = story["campaigns"][cid]
-        lines.append(f"📖 {campaign['title']}\n   {campaign['tagline']}\n   知識主線:{campaign['knowledge_focus']}\n")
-        # 用索引而非完整 campaign_id 組 callback_data:Telegram 對
-        # callback_data 有 64 bytes 硬性上限,用索引可以確保不管故事線
-        # id 未來取得多長,按鈕資料都維持極短、不會有超過上限的風險。
-        buttons.append([InlineKeyboardButton(f"▶️ {campaign['title']}", callback_data=f"startcampaign:{idx}")])
+    for region, entries in group_campaigns_by_region(story):
+        lines.append(f"🗺️ ── {region} ──")
+        for idx, cid in entries:
+            campaign = story["campaigns"][cid]
+            lines.append(f"📖 {campaign['title']}\n   {campaign['tagline']}\n   知識主線:{campaign['knowledge_focus']}\n")
+            # 用索引而非完整 campaign_id 組 callback_data:Telegram 對
+            # callback_data 有 64 bytes 硬性上限,用索引可以確保不管故事線
+            # id 未來取得多長,按鈕資料都維持極短、不會有超過上限的風險。
+            buttons.append([InlineKeyboardButton(f"▶️ {campaign['title']}", callback_data=f"startcampaign:{idx}")])
     return "\n".join(lines), InlineKeyboardMarkup(buttons)
 
 
@@ -319,13 +339,15 @@ async def campaigns_command(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
     lines = ["🗺️ 所有故事線:\n"]
     buttons = []
-    for idx, cid in enumerate(get_campaign_order(story)):
-        campaign = story["campaigns"][cid]
-        campaign_state = all_states.get(cid, {})
-        badge_count = len(campaign_state.get("badges") or [])
-        active_mark = "🟢 " if cid == active_campaign else ""
-        lines.append(f"{active_mark}📖 {campaign['title']}(已獲得 {badge_count} 個印記)\n   {campaign['knowledge_focus']}\n")
-        buttons.append([InlineKeyboardButton(f"切換到:{campaign['title']}", callback_data=f"startcampaign:{idx}")])
+    for region, entries in group_campaigns_by_region(story):
+        lines.append(f"── {region} ──")
+        for idx, cid in entries:
+            campaign = story["campaigns"][cid]
+            campaign_state = all_states.get(cid, {})
+            badge_count = len(campaign_state.get("badges") or [])
+            active_mark = "🟢 " if cid == active_campaign else ""
+            lines.append(f"{active_mark}📖 {campaign['title']}(已獲得 {badge_count} 個印記)\n   {campaign['knowledge_focus']}\n")
+            buttons.append([InlineKeyboardButton(f"切換到:{campaign['title']}", callback_data=f"startcampaign:{idx}")])
 
     await update.message.reply_text("\n".join(lines), reply_markup=InlineKeyboardMarkup(buttons))
 
