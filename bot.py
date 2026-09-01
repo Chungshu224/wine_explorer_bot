@@ -220,23 +220,20 @@ async def get_all_campaign_states(user_id: int) -> dict[str, dict[str, Any]]:
 # ---------------------------------------------------------------------------
 
 def build_keyboard(
-    node: dict[str, Any], campaign_id: str, chapter_id: str, node_id: str
+    node: dict[str, Any], campaign_id: str
 ) -> InlineKeyboardMarkup | None:
     choices = node.get("choices", [])
     if not choices:
         return None
     buttons = []
     for idx, choice in enumerate(choices):
-        target_chapter = choice.get("chapter", chapter_id)
-        # callback_data 格式:
-        # "goto:故事線:來源章節:來源節點:目標章節:目標節點:選項索引"
-        # 記住「來源節點」是為了在使用者按下按鈕時,核對資料庫目前狀態
-        # 是否還停留在同一個節點——避免舊訊息裡過期的按鈕,拿舊索引去對
-        # 到已經前進的新節點,造成 IndexError。
-        callback_data = (
-            f"goto:{campaign_id}:{chapter_id}:{node_id}:"
-            f"{target_chapter}:{choice['next']}:{idx}"
-        )
+        # callback_data 故意保持極簡:Telegram 對 callback_data 有 64 bytes
+        # 的硬性長度上限,塞進完整的章節/節點 id 很容易超過(尤其中文章節
+        # 名對應的 id 加起來很長),超過就會導致 Telegram 直接拒收整則訊息
+        # (400 Bad Request),表現起來就是「按鈕完全沒反應、bot 像當機」。
+        # 所以這裡只帶「故事線 id + 選項索引」,其餘資訊(玩家目前在哪個
+        # 章節/節點)一律從資料庫現查,資料庫本身就是唯一的真相來源。
+        callback_data = f"goto:{campaign_id}:{idx}"
         buttons.append([InlineKeyboardButton(choice["label"], callback_data=callback_data)])
     return InlineKeyboardMarkup(buttons)
 
@@ -252,7 +249,7 @@ async def send_node(
     story = load_story()
     node = get_node(story, campaign_id, chapter_id, node_id)
     text = node["text"]
-    keyboard = build_keyboard(node, campaign_id, chapter_id, node_id)
+    keyboard = build_keyboard(node, campaign_id)
 
     if node.get("grants_badge"):
         await append_unique(user_id, campaign_id, "badges", node["grants_badge"])
@@ -275,10 +272,13 @@ def build_campaign_picker_text_and_keyboard(
 ) -> tuple[str, InlineKeyboardMarkup]:
     lines = ["🍇 選擇一條故事線開始遊玩:\n"]
     buttons = []
-    for cid in get_campaign_order(story):
+    for idx, cid in enumerate(get_campaign_order(story)):
         campaign = story["campaigns"][cid]
         lines.append(f"📖 {campaign['title']}\n   {campaign['tagline']}\n   知識主線:{campaign['knowledge_focus']}\n")
-        buttons.append([InlineKeyboardButton(f"▶️ {campaign['title']}", callback_data=f"startcampaign:{cid}")])
+        # 用索引而非完整 campaign_id 組 callback_data:Telegram 對
+        # callback_data 有 64 bytes 硬性上限,用索引可以確保不管故事線
+        # id 未來取得多長,按鈕資料都維持極短、不會有超過上限的風險。
+        buttons.append([InlineKeyboardButton(f"▶️ {campaign['title']}", callback_data=f"startcampaign:{idx}")])
     return "\n".join(lines), InlineKeyboardMarkup(buttons)
 
 
@@ -306,7 +306,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         node_id = campaign_state["current_node"]
 
     node = get_node(story, active_campaign, chapter_id, node_id)
-    keyboard = build_keyboard(node, active_campaign, chapter_id, node_id)
+    keyboard = build_keyboard(node, active_campaign)
     await update.message.reply_text(node["text"], reply_markup=keyboard)
     await update_campaign_state(user_id, active_campaign, current_chapter=chapter_id, current_node=node_id)
 
@@ -319,13 +319,13 @@ async def campaigns_command(update: Update, context: ContextTypes.DEFAULT_TYPE) 
 
     lines = ["🗺️ 所有故事線:\n"]
     buttons = []
-    for cid in get_campaign_order(story):
+    for idx, cid in enumerate(get_campaign_order(story)):
         campaign = story["campaigns"][cid]
         campaign_state = all_states.get(cid, {})
         badge_count = len(campaign_state.get("badges") or [])
         active_mark = "🟢 " if cid == active_campaign else ""
         lines.append(f"{active_mark}📖 {campaign['title']}(已獲得 {badge_count} 個印記)\n   {campaign['knowledge_focus']}\n")
-        buttons.append([InlineKeyboardButton(f"切換到:{campaign['title']}", callback_data=f"startcampaign:{cid}")])
+        buttons.append([InlineKeyboardButton(f"切換到:{campaign['title']}", callback_data=f"startcampaign:{idx}")])
 
     await update.message.reply_text("\n".join(lines), reply_markup=InlineKeyboardMarkup(buttons))
 
@@ -345,8 +345,9 @@ async def chapters(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
     lines = [f"🗺️ {campaign['title']} · 章節地圖\n"]
     buttons = []
+    campaign_idx = get_campaign_order(story).index(active_campaign)
 
-    for chapter_id in get_chapter_order(story, active_campaign):
+    for chapter_idx, chapter_id in enumerate(get_chapter_order(story, active_campaign)):
         chapter = campaign["chapters"][chapter_id]
         meta = chapter.get("meta", {})
         unlocked = chapter_is_unlocked(story, active_campaign, chapter_id, badges)
@@ -357,7 +358,7 @@ async def chapters(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             lines.append(f"🔓 {chapter['title']}({tier_label} · {village})")
             buttons.append([InlineKeyboardButton(
                 f"▶️ {chapter['title']}",
-                callback_data=f"startchapter:{active_campaign}:{chapter_id}",
+                callback_data=f"startchapter:{campaign_idx}:{chapter_idx}",
             )])
         else:
             required = meta.get("requires_badges", [])
@@ -399,8 +400,9 @@ async def handle_start_campaign(update: Update, context: ContextTypes.DEFAULT_TY
     await query.answer()
 
     user_id = update.effective_user.id
-    campaign_id = query.data.split(":", 1)[1]
+    campaign_idx = int(query.data.split(":", 1)[1])
     story = load_story()
+    campaign_id = get_campaign_order(story)[campaign_idx]
 
     await set_active_campaign(user_id, campaign_id)
     campaign_state = await get_campaign_state(user_id, campaign_id)
@@ -420,9 +422,13 @@ async def handle_start_chapter(update: Update, context: ContextTypes.DEFAULT_TYP
     await query.answer()
 
     user_id = update.effective_user.id
-    _, campaign_id, chapter_id = query.data.split(":")
+    _, campaign_idx_str, chapter_idx_str = query.data.split(":")
+    campaign_idx, chapter_idx = int(campaign_idx_str), int(chapter_idx_str)
 
     story = load_story()
+    campaign_id = get_campaign_order(story)[campaign_idx]
+    chapter_id = get_chapter_order(story, campaign_id)[chapter_idx]
+
     campaign_state = await get_campaign_state(user_id, campaign_id)
     badges = campaign_state.get("badges") or []
 
@@ -439,26 +445,17 @@ async def handle_choice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     await query.answer()
 
     user_id = update.effective_user.id
-    (
-        _, campaign_id, source_chapter, source_node,
-        target_chapter, next_node_id, choice_idx_str,
-    ) = query.data.split(":")
+    _, campaign_id, choice_idx_str = query.data.split(":")
     choice_idx = int(choice_idx_str)
 
     story = load_story()
     campaign_state = await get_campaign_state(user_id, campaign_id)
+    source_chapter = campaign_state.get("current_chapter")
+    source_node = campaign_state.get("current_node")
 
-    # 核對這顆按鈕是不是「過期的」——如果資料庫目前記錄的章節/節點
-    # 跟按鈕上記住的來源不一致,代表玩家點到舊訊息裡的按鈕(例如重複
-    # 按過 /start 或 /chapters,留下好幾則長得很像的訊息)。這種情況
-    # 不能直接拿舊的選項索引去對目前節點的選項清單,會 IndexError。
-    if (
-        campaign_state.get("current_chapter") != source_chapter
-        or campaign_state.get("current_node") != source_node
-    ):
+    if source_chapter is None or source_node is None:
         await query.edit_message_text(
-            "這個按鈕已經過期了(可能是重複開啟的舊訊息)。"
-            "輸入 /start 或 /chapters 回到目前的進度繼續遊玩。"
+            "找不到目前的進度,輸入 /start 重新開始這條故事線。"
         )
         return
 
@@ -467,10 +464,16 @@ async def handle_choice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     try:
         choice = current_node["choices"][choice_idx]
     except IndexError:
+        # 玩家點到「過期」的按鈕(通常是重複開啟的舊訊息,選項索引已經
+        # 對不上目前節點的選項清單),不讓它整個當機,給友善提示即可。
         await query.edit_message_text(
-            "這個按鈕已經過期了,輸入 /start 或 /chapters 回到目前的進度繼續遊玩。"
+            "這個按鈕已經過期了(可能是重複開啟的舊訊息)。"
+            "輸入 /start 或 /chapters 回到目前的進度繼續遊玩。"
         )
         return
+
+    target_chapter = choice.get("chapter", source_chapter)
+    next_node_id = choice["next"]
 
     if current_node.get("type") == "quiz":
         attempt_count = await record_attempt(user_id, campaign_id, source_node)
