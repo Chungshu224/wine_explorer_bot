@@ -932,7 +932,8 @@
         "half_row_inheritance_02",
         "price_pyramid_outpost",
         "phylloxera_wp",
-        "indivision_wp"
+        "indivision_wp",
+        "hospices_beaune_wp"
       ],
       "chapters": {
         "notary_archive_01": {
@@ -1397,6 +1398,99 @@
               "text": "你關上檔案櫃,窗外天色已暗。整個下午,你看的不是什麼傳奇故事,只是一份份平凡卻真實的法律文件——但你忽然明白,這些文件裡藏著的,可能比任何一則風土傳說都更貼近勃根地真正的日常。\n\n【支線完 · 已獲得知識印記:Indivision 共有僵局】",
               "choices": [],
               "is_ending": true
+            }
+          }
+        },
+        "hospices_beaune_wp": {
+          "title": "支線:濟貧院的遺產",
+          "meta": {
+            "village": "Hospices de Beaune(伯恩)",
+            "tier": "waypoint",
+            "tier_label": "中繼站 · 跨區延伸",
+            "style_focus": "捐贈作為第五種土地移轉機制、拍賣制度、Cuvée 命名邏輯",
+            "requires_badges": [
+              "Indivision 共有僵局"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「你處理了繼承、買賣、GFA、美塔亞制,還有那些懸而未決的共有糾紛,」Fabienne 某天把一份厚重的舊卷宗攤在桌上,「但還有一種土地移轉方式,我們公證處這幾年才開始整理電子化——捐贈。這份是伯恩濟貧院的舊檔案,還沒歸檔。」\n\n她指著卷宗封面燙金的字樣:「Hôtel-Dieu de Beaune」。",
+              "choices": [
+                {
+                  "label": "「濟貧院跟葡萄酒有什麼關係?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📜 先翻開卷宗看看裡面的內容",
+                  "next": "browse_a"
+                }
+              ]
+            },
+            "browse_a": {
+              "text": "卷宗裡是一長串跨越數百年的捐贈紀錄,每一筆都寫著捐贈人姓名、捐出的地塊、以及捐贈日期。最早一筆,日期停在十五世紀。",
+              "choices": [
+                {
+                  "label": "「這麼早?濟貧院的葡萄園是怎麼來的?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「1443 年,勃根地大法官 Nicolas Rolin 跟妻子 Guigone de Salins 創辦了這間濟貧醫院,專門收治窮人,」Fabienne 解釋,「數百年來,富裕的伯恩居民陸續把自己的葡萄園『捐』給醫院,一部分是宗教信仰,一部分也是行善積德的社會期待。到今天,濟貧院名下的葡萄園,橫跨伯恩好幾個知名產區。」\n\n她翻到卷宗某一頁。「你之前學過繼承、買賣,這是第五種土地移轉方式——捐贈。邏輯不同,但一樣要走公證程序、一樣要登記地籍。」",
+              "choices": [
+                {
+                  "label": "「那濟貧院自己種葡萄、賣酒維持營運嗎?」",
+                  "next": "auction_c"
+                }
+              ]
+            },
+            "auction_c": {
+              "text": "「更特別,」Fabienne 說,「每年十一月,濟貧院會辦一場拍賣會,把當年新釀的酒(還在橡木桶裡,尚未裝瓶)拍賣出去,拍賣所得用來維持醫院運作。這場拍賣現在是全球酒商每年關注的大事——因為拍賣出來的價格,常常被拿來當作『這個年份市場行情』的風向指標。」\n\n她把卷宗翻到另一頁,上面列著幾款酒的名字,每一款後面都跟著一個人名。",
+              "choices": [
+                {
+                  "label": "「這些酒名後面為什麼都接著人名?」",
+                  "next": "quiz_hospices"
+                }
+              ]
+            },
+            "quiz_hospices": {
+              "type": "quiz",
+              "text": "濟貧院的酒款,酒標上常常不是單純的村莊或地塊名稱,而是像「Cuvée Nicolas Rolin」這種「地塊名 + 人名」的組合命名方式。這種命名邏輯,最準確的理解是:",
+              "choices": [
+                {
+                  "label": "A. 人名只是行銷噱頭,跟土地本身的歷史無關",
+                  "next": "quiz_hospices_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 人名通常是當初把這塊地捐給濟貧院的捐贈人,酒標記錄的是地塊的捐贈起源,而非單純地理位置",
+                  "next": "quiz_hospices_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 人名是現任莊主的名字,跟其他酒莊的命名邏輯完全一樣",
+                  "next": "quiz_hospices_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Hospices de Beaune(伯恩濟貧院)自 1443 年由 Nicolas Rolin 與 Guigone de Salins 創辦以來,陸續接受各方捐贈的葡萄園,如今持有的地塊橫跨伯恩多個知名產區。濟貧院的酒款命名習慣上採用「Cuvée + 捐贈人姓名」的形式(例如 Cuvée Nicolas Rolin),記錄的是這塊地當初的捐贈起源,而非單純的地理位置——酒標上的名字,講的其實是一段土地移轉的歷史。每年十一月的拍賣會(法文稱為 Vente des vins des Hospices de Beaune,是「光榮三日」週末慶典的一部分),拍賣尚在橡木桶陳年、尚未裝瓶的新酒,所得用於維持醫院運作,拍賣價格也因為受到全球酒商矚目,常被視為當年份市場行情的重要指標。"
+            },
+            "quiz_hospices_correct": {
+              "text": "Fabienne 點頭。「沒錯——你現在應該明白,土地的故事,不一定寫在地契的『買賣』或『繼承』欄位裡,有時候寫在『捐贈』這種比較容易被忽略的角落。」\n\n她闔上卷宗。「這份檔案我會盡快數位化歸檔。謝謝你,又幫我上了一課——雖然照理說,應該是我在教你才對。」",
+              "grants_badge": "濟貧院捐贈制度",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_hospices_wrong": {
+              "text": "Fabienne 搖搖頭。「再想想——這些人名的年代,通常跟『現任莊主』對得上嗎?還是對得上『地塊最早的來源』?」",
+              "sets_fog": "quiz_hospices",
+              "choices": [
+                {
+                  "label": "重新思考酒標上人名的意義",
+                  "next": "quiz_hospices"
+                }
+              ]
             }
           }
         }
@@ -2184,7 +2278,8 @@
         "hail_scars_outpost",
         "vintage_chart_myth_wp",
         "forty_years_later_03",
-        "climate_adaptation_wp"
+        "climate_adaptation_wp",
+        "beaune_old_friend_outpost"
       ],
       "chapters": {
         "nameless_vintage_01": {
@@ -2751,6 +2846,998 @@
             },
             "waypoint_end_adaptation": {
               "text": "你告別老先生,走在夜丘的葡萄園小徑上,忽然意識到這趟旅程從熱夫雷的一瓶神秘酒開始,一路走到這裡——風土、法律、工藝、氣候,四條線索,最終都指向同一件事:這片土地上的每一個人,都在用自己的方式,努力讓一些珍貴的東西,能夠繼續傳下去。\n\n【支線完 · 已獲得知識印記:氣候調適策略】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "beaune_old_friend_outpost": {
+          "title": "驛站:伯恩丘的老朋友",
+          "meta": {
+            "village": "伯恩丘各地",
+            "tier": "outpost",
+            "tier_label": "知識驛站 · 跨區延伸",
+            "style_focus": "白酒年份判讀邏輯、早期氧化(premox)警訊辨識",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "整理到地窖角落一個不起眼的小木箱時,Isabelle 忽然停下動作。「這箱我沒印象,」她打開來,裡面是幾瓶顏色明顯不同的酒——不是夜丘常見的深石榴紅,有幾瓶甚至是白酒。\n\n「我先生年輕時,伯恩丘有位老朋友,兩人常常互相寄酒交換意見,」她說。「白酒我不太懂,你能幫我看看這幾瓶的狀態嗎?」",
+              "choices": [
+                {
+                  "label": "🍷 開兩瓶年份相近的白酒比較",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "第一杯,顏色是淺淺的金黃,帶著清新的青蘋果與柑橘香氣,還能感受到一絲礦物尾韻,狀態相當有活力。\n\n第二杯,顏色深得多,接近琥珀色,香氣也變了調——不是熟成該有的堅果、蜂蜜香氣,而是帶著一絲雪莉酒般的氧化感,甚至有點類似濕紙板的沉悶氣息,新鮮果香幾乎消失殆盡。",
+              "choices": [
+                {
+                  "label": "判斷這兩瓶酒的狀態差異",
+                  "next": "quiz_premox"
+                }
+              ]
+            },
+            "quiz_premox": {
+              "type": "quiz",
+              "text": "兩瓶年份相近的白酒:一瓶顏色淺金、果香清新有活力;另一瓶顏色深至琥珀、雪莉般氧化調性明顯、果香幾乎消失。這種「年份相近卻氧化程度天差地遠」的狀況,最可能反映什麼?",
+              "choices": [
+                {
+                  "label": "A. 兩瓶都是正常陳年的結果,只是風格不同",
+                  "next": "quiz_premox_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 第二瓶可能是「早期氧化」(premox)的案例——遠比預期更快出現氧化跡象,是勃根地優質白酒曾經面臨的真實品質爭議",
+                  "next": "quiz_premox_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 白酒本來就不會因為氧化而變色,顏色差異單純是品種不同",
+                  "next": "quiz_premox_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "夏多內等白葡萄品種對氧化的敏感度通常高於黑皮諾,「早期氧化」(premature oxidation,業界簡稱 premox)是勃根地白酒圈子從 1990 年代末到 2000 年代初開始受到高度關注的真實品質爭議——部分理應還在適飲高峰期的優質白酒,被發現遠比預期更快出現氧化跡象:顏色過早轉深、果香被雪莉酒般的氧化調性取代、新鮮感喪失。這個現象的成因至今業界仍在討論(可能牽涉封瓶材料、裝瓶前抗氧化操作、橡木桶處理方式等多重因素),也促使不少酒莊調整了釀造與裝瓶流程。對品飲者而言,學會分辨「正常陳年的金黃轉深」與「過早氧化的警訊」,是白酒年份判讀裡格外重要的一課。"
+            },
+            "quiz_premox_correct": {
+              "text": "Isabelle 若有所思地看著那杯深色的酒。「所以這不是『陳得比較久』,是『壞得比較快』?」\n\n她輕輕嘆了口氣。「我先生那位老朋友要是還在,大概會很想知道這瓶怎麼了。」\n\n【驛站完 · 已獲得知識印記:早期氧化辨識】",
+              "grants_badge": "早期氧化辨識",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_premox_wrong": {
+              "text": "你重新聞了一次第二杯酒,雪莉般的氧化調性跟濕紙板的沉悶感依然明顯。「再想想——正常的陳年風味,跟氧化過快的警訊,聞起來會是同一種調性嗎?」",
+              "sets_fog": "quiz_premox",
+              "choices": [
+                {
+                  "label": "重新比較兩杯酒的差異",
+                  "next": "quiz_premox"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "white_wine_logic": {
+      "title": "白酒的另一套邏輯",
+      "tagline": "黑皮諾的規則,在夏多內身上不一定管用——你得重新學一次",
+      "knowledge_focus": "村莊風格對比(默爾索 vs 普里尼-蒙哈榭)、攪桶與乳酸發酵、氧化型 vs 還原型釀造哲學",
+      "region": "伯恩丘 Côte de Beaune",
+      "chapter_order": [
+        "meursault_richness_01",
+        "montrachet_naming_outpost",
+        "oxidative_philosophy_02",
+        "malolactic_choice_outpost",
+        "chardonnay_oak_age_wp",
+        "puligny_rivalry_wp"
+      ],
+      "chapters": {
+        "meursault_richness_01": {
+          "title": "第一章:默爾索的溫柔",
+          "meta": {
+            "village": "Meursault",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "默爾索 vs 普里尼-蒙哈榭的風格對比",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「聽說你跟 Léa 混得挺熟,」一位陌生訊息忽然傳來,「我是 Camille,她釀酒學校的老同學。她說你在夜丘到處學東西,學得還算像樣——夏多內你碰過嗎?」\n\n你依約來到默爾索一間小酒莊,Camille 正蹲在橡木桶邊,拿著攪拌棒在桶口攪動。「來得正好,」她說,「先幫我判斷兩件事:這動作在幹嘛,還有這杯酒喝起來像不像你熟悉的那一套規則。」",
+              "choices": [
+                {
+                  "label": "「妳手上那根攪拌棒,是在做什麼?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍷 先嚐嚐她倒的兩杯白酒,比較風格差異",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "第一杯,質地圓潤豐厚,帶著奶油、烤堅果、蜂蜜般的溫暖氣息,酒體有種包覆感。第二杯,線條明顯緊瘦許多,礦物感銳利,柑橘與白花香氣為主,幾乎沒有第一杯那種厚實的質地。",
+              "choices": [
+                {
+                  "label": "「差這麼多,是因為村莊不同嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「一部分是風土,一部分是工藝,」Camille 說,「第一杯是默爾索,第二杯是隔壁普里尼-蒙哈榭。默爾索的土壤含較多黏土,天生就傾向圓潤豐厚;普里尼那邊石灰岩比例更高,酒款線條更緊、礦物感更突出。」\n\n她舉起攪拌棒。「但工藝也會放大這種差異——我剛剛做的叫『攪桶』(bâtonnage),把沉澱在桶底的酒渣(lees)重新攪散懸浮回酒液裡,讓酒吸收更多酒渣風味與質地,做出更厚實圓潤的口感。」",
+              "choices": [
+                {
+                  "label": "「所以默爾索的酒,是刻意做出這種厚實感?」",
+                  "next": "quiz_meursault"
+                }
+              ]
+            },
+            "quiz_meursault": {
+              "type": "quiz",
+              "text": "默爾索風格圓潤豐厚(奶油、堅果、蜂蜜氣息),普里尼-蒙哈榭風格緊瘦礦物(柑橘、白花)。攪桶(bâtonnage)這個工藝手法,最主要的作用邏輯是什麼?",
+              "choices": [
+                {
+                  "label": "A. 攪桶單純是為了防止酒液變質,跟風格無關",
+                  "next": "quiz_meursault_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 攪桶把沉澱的酒渣重新懸浮,讓酒液吸收更多酒渣帶來的質地與風味,增添圓潤厚實感,是塑造默爾索豐厚風格的工藝手段之一",
+                  "next": "quiz_meursault_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 攪桶會讓酒的顏色變深,是純粹的視覺效果",
+                  "next": "quiz_meursault_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "攪桶(bâtonnage,又稱 lees stirring)是白酒釀造常見工藝,發酵完成後,死酵母細胞與其他固體物質會沉澱在桶底形成酒渣(lees),攪桶就是定期用工具把這些沉澱重新攪散懸浮回酒液裡,讓酒液長時間與酒渣接觸(sur lie 陳年),吸收酒渣分解釋放的風味物質與質地,增添圓潤、奶油般的口感與堅果、烘烤氣息。這個技法在默爾索這類追求豐厚風格的產區運用得更積極;普里尼-蒙哈榭等追求緊緻礦物感的產區,則可能刻意減少攪桶頻率,保留更銳利乾淨的線條。風格差異,是風土與工藝選擇共同作用的結果。"
+            },
+            "quiz_meursault_correct": {
+              "text": "Camille 滿意地點頭。「算你懂了。默爾索沒有 Grand Cru,你知道嗎?整個村莊,最高只到 Premier Cru。」\n\n她把攪拌棒放回桶邊。「但沒人會因此小看默爾索——這村莊的名氣,是靠風格本身撐起來的,不是靠分級標籤。」",
+              "grants_badge": "攪桶與村莊風格",
+              "choices": [
+                {
+                  "label": "「跟夜聖喬治一樣,沒有特級園卻很有名?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_meursault_wrong": {
+              "text": "Camille 搖搖頭。「跟防止變質沒關係,也不是視覺效果——再想想,攪散沉澱物,讓酒液『多接觸』什麼東西?」",
+              "sets_fog": "quiz_meursault",
+              "choices": [
+                {
+                  "label": "重新思考攪桶的作用邏輯",
+                  "next": "quiz_meursault"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「沒錯,」Camille 笑了,「分級這種東西,只能反映一部分的故事。默爾索靠的是幾百年來累積下來的風格辨識度。」\n\n她收拾工具,朝地窖深處走去。「明天你要不要再來一趟?我想跟你聊聊,為什麼我這幾年,選擇走一條跟大部分默爾索酒莊不太一樣的路。」\n\n【第一章完 · 已獲得知識印記:攪桶與村莊風格】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:氧化與還原的哲學",
+                  "next": "opening",
+                  "chapter": "oxidative_philosophy_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "oxidative_philosophy_02": {
+          "title": "第二章:氧化與還原的哲學",
+          "meta": {
+            "village": "Meursault",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "氧化型 vs 還原型白酒釀造哲學,呼應 premox 爭議",
+            "requires_badges": [
+              "攪桶與村莊風格"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "隔天,Camille 領你走進她的壓榨區。「你聽過『premox』嗎?早期氧化,」她問,「幾年前勃根地白酒圈子鬧得很大的爭議——一堆頂級白酒,喝起來遠比預期老得快、壞得快。」",
+              "choices": [
+                {
+                  "label": "「我聽過,聽說到現在原因都還沒完全定論。」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍇 先看看她壓榨葡萄的方式",
+                  "next": "press_a"
+                }
+              ]
+            },
+            "press_a": {
+              "text": "你注意到她壓榨葡萄的動作特別快,幾乎是搶時間般地把果汁快速轉移到桶裡,過程中還小心翼翼地避免果汁接觸太多空氣。",
+              "choices": [
+                {
+                  "label": "「妳這麼小心翼翼避免接觸空氣,是為了防止 premox 嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「算是我的立場,」Camille 說,「白酒釀造大致上有兩種哲學路線:『還原型』(reductive)盡量隔絕氧氣接觸,從壓榨到裝瓶全程保護果汁與酒液,理論上能保留更多新鮮果香、降低氧化風險;『氧化型』(oxidative)則反過來,在釀造初期刻意讓果汁適度接觸空氣,讓一部分容易氧化的物質提前反應掉、穩定下來,理論支持者認為這樣反而能讓成品酒在裝瓶後更穩定、更耐久放。」\n\n她指著自己的操作。「我選還原型路線,盡量減少氧氣接觸。」",
+              "choices": [
+                {
+                  "label": "「那哪一種路線,才是對抗 premox 的正解?」",
+                  "next": "risk_c"
+                }
+              ]
+            },
+            "risk_c": {
+              "text": "「這正是業界至今還在吵的地方,」Camille 苦笑,「有人說 premox 就是因為太多酒莊改用還原型工藝、又搭配某種封瓶方式,結果適得其反;也有人堅持還原型才是正解,問題出在別的環節。老實說,沒有誰能百分之百拍胸脯保證。」\n\n她倒出兩杯酒。「這杯是我自己的還原型做法,這杯是跟我意見不同的同行朋友給的氧化型做法。你喝喝看,分不分得出差異走向。」",
+              "choices": [
+                {
+                  "label": "品飲比較兩種釀造哲學的成品",
+                  "next": "quiz_oxidative"
+                }
+              ]
+            },
+            "quiz_oxidative": {
+              "type": "quiz",
+              "text": "關於「氧化型」與「還原型」白酒釀造哲學孰優孰劣、以及何者更能有效預防 premox,以下哪一種描述最公允?",
+              "choices": [
+                {
+                  "label": "A. 還原型工藝已被證實是 premox 的唯一元凶,業界應全面禁止",
+                  "next": "quiz_oxidative_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 兩種哲學各有支持者與邏輯依據,premox 的確切成因目前業界仍無定論,可能涉及封瓶材料、抗氧化操作等多重因素,不能簡化成單一路線的對錯",
+                  "next": "quiz_oxidative_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 氧化型工藝已被證實完全無效,現代酒莊都該改用還原型",
+                  "next": "quiz_oxidative_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "白酒釀造的「氧化型」與「還原型」哲學路線,是業界長期存在、各有支持者的立場分歧:還原型主張全程隔絕氧氣、保留新鮮果香;氧化型則主張初期適度接觸空氣、讓不穩定物質提前反應,追求裝瓶後更長期的穩定性。「早期氧化」(premox)爭議發生後,兩派都提出了各自的解釋與因應方式,但截至目前,業界對 premox 確切成因仍無單一定論,可能涉及封瓶材料演變、裝瓶前抗氧化操作、橡木桶處理等多重因素交互作用。作為學習者,理解這是一個仍在發展中、沒有簡單標準答案的技術與哲學辯論,會比急著選邊站更貼近事實。"
+            },
+            "quiz_oxidative_correct": {
+              "text": "Camille 笑了。「你這個答案,大概是整個伯恩丘吵了十幾年、最接近『共識』的說法了——沒有共識,就是目前最誠實的共識。」\n\n她拍拍你的肩膀。「謝謝你陪我聊這些,說實話,能有人願意聽完整個爭議、不急著下定論,挺難得的。」",
+              "grants_badge": "氧化還原釀造哲學",
+              "choices": [
+                {
+                  "label": "「這趟收穫很多,謝謝妳,Camille。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_oxidative_wrong": {
+              "text": "Camille 搖頭。「別把還沒有定論的爭議,講得好像已經有『唯一真相』一樣——這行至今誰也沒能完全說服誰。」",
+              "sets_fog": "quiz_oxidative",
+              "choices": [
+                {
+                  "label": "重新思考這組哲學辯論的本質",
+                  "next": "quiz_oxidative"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你走出默爾索的酒窖時,夕陽正把整片緩坡染成金黃色。黑皮諾教會你的那套「土壤、坡位、單寧」的判斷邏輯,在這裡只能算半套——夏多內有自己的一套規則,而規則裡最誠實的部分,往往是「還沒有標準答案」這幾個字。\n\n【第二章完 · 已獲得知識印記:氧化還原釀造哲學】\n【下一章尚未解鎖:待續】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "montrachet_naming_outpost": {
+          "title": "驛站:借來的姓氏",
+          "meta": {
+            "village": "Puligny-Montrachet / Chassagne-Montrachet",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "村莊改名借用頂級園之名的歷史",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "一位遊客拿著地圖疑惑地問路邊的酒鋪老闆:「Puligny-Montrachet 跟 Chassagne-Montrachet,這兩個村名怎麼都帶著『Montrachet』?是同一個地方嗎?」\n\n老闆笑了。「這你算問對人了——這兩個村子的名字,其實是『借』來的。」",
+              "choices": [
+                {
+                  "label": "「借來的?怎麼借法?」",
+                  "next": "quiz_naming"
+                }
+              ]
+            },
+            "quiz_naming": {
+              "type": "quiz",
+              "text": "Puligny 與 Chassagne 這兩個村莊,在十九世紀分別把自己的村名改成「Puligny-Montrachet」與「Chassagne-Montrachet」。這種改名做法,最主要的目的是什麼?",
+              "choices": [
+                {
+                  "label": "A. 純粹是行政區劃合併的結果,跟行銷無關",
+                  "next": "quiz_naming_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 借用境內最負盛名的特級園 Montrachet 之名,提升整個村莊的知名度與酒款辨識度,是勃根地常見的「借名升級」做法,熱夫雷-香貝丹也是同樣邏輯",
+                  "next": "quiz_naming_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. Montrachet 特級園本身要求所有周邊村莊都必須改名才能使用其名稱釀酒",
+                  "next": "quiz_naming_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "勃根地有一個常見的村莊改名傳統:把境內最知名的特級園名稱,加掛到原本的村名後面,藉此提升整個村莊(包括村莊等級與一級園酒款)的市場辨識度與聲望。Puligny 與 Chassagne 在十九世紀分別改名為 Puligny-Montrachet、Chassagne-Montrachet,借用横跨兩村邊界的頂級特級園 Montrachet 之名;這個做法跟熱夫雷借用 Chambertin 特級園之名改為熱夫雷-香貝丹(Gevrey-Chambertin),是完全一樣的行銷邏輯——特級園的名氣,某種程度上「借」給了整個村莊。"
+            },
+            "quiz_naming_correct": {
+              "text": "「沒錯,」老闆說,「跟熱夫雷-香貝丹是一個道理——沾特級園的光,整個村子跟著受益。」\n\n【驛站完 · 已獲得知識印記:借名升級傳統】",
+              "grants_badge": "借名升級傳統",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_naming_wrong": {
+              "text": "老闆搖頭。「不是行政合併,Montrachet 也沒有強制要求——再想想,借用名氣響亮的特級園之名,對整個村莊的『行銷』會有什麼幫助?」",
+              "sets_fog": "quiz_naming",
+              "choices": [
+                {
+                  "label": "重新思考改名的動機",
+                  "next": "quiz_naming"
+                }
+              ]
+            }
+          }
+        },
+        "malolactic_choice_outpost": {
+          "title": "驛站:白酒的乳酸發酵二選一",
+          "meta": {
+            "village": "伯恩丘各地",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "白酒是否進行乳酸發酵(MLF)的風格取捨",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "一場品飲會上,講者拿出兩杯同一款白酒的不同版本。「這杯做了完整乳酸發酵,這杯完全沒做,」她說,「紅酒幾乎都會做乳酸發酵,但白酒,這是一個真正的選擇題。」",
+              "choices": [
+                {
+                  "label": "「乳酸發酵對白酒的影響,跟紅酒一樣嗎?」",
+                  "next": "quiz_mlf"
+                }
+              ]
+            },
+            "quiz_mlf": {
+              "type": "quiz",
+              "text": "乳酸發酵(malolactic fermentation, MLF)會把酒中尖銳的蘋果酸轉化為較柔和的乳酸。紅酒幾乎必然進行 MLF,但白酒(尤其夏多內)是否進行 MLF,是一個真正的風格選擇題。完整 MLF 的白酒,通常會呈現什麼傾向?",
+              "choices": [
+                {
+                  "label": "A. 酸度更銳利、更接近未成熟蘋果的尖酸感",
+                  "next": "quiz_mlf_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 酸度變柔和圓潤,常帶有奶油般的質地與氣息,但同時會犧牲部分新鮮爽脆的果酸表現",
+                  "next": "quiz_mlf_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 酒精濃度會因此明顯升高",
+                  "next": "quiz_mlf_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "乳酸發酵(MLF)是把尖銳的蘋果酸轉化為口感較圓潤的乳酸(同時是產生「奶油」風味化合物雙乙醯的來源之一)。紅酒幾乎必然完整進行 MLF,以降低酸度、增加穩定性;但白酒(尤其夏多內)是否進行 MLF,是一個真正的風格分岔點:完整 MLF 會讓酒款更圓潤、帶奶油質地(默爾索傳統風格常見完整 MLF),但也會犧牲部分新鮮爽脆的果酸表現;部分或完全不做 MLF,則能保留更銳利的酸度與礦物感,是追求緊緻線條風格(例如夏布利或部分現代派普里尼-蒙哈榭生產者)常見的選擇。"
+            },
+            "quiz_mlf_correct": {
+              "text": "講者點頭。「就是這樣——這不是『有沒有做對』的問題,是釀酒師想要哪一種風格的問題。」\n\n【驛站完 · 已獲得知識印記:白酒乳酸發酵取捨】",
+              "grants_badge": "白酒乳酸發酵取捨",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_mlf_wrong": {
+              "text": "講者搖頭。「乳酸比蘋果酸溫和得多——再想想,轉化成乳酸之後,酸度會變得更尖銳,還是更柔和?」",
+              "sets_fog": "quiz_mlf",
+              "choices": [
+                {
+                  "label": "重新思考乳酸發酵對酸度的影響",
+                  "next": "quiz_mlf"
+                }
+              ]
+            }
+          }
+        },
+        "chardonnay_oak_age_wp": {
+          "title": "支線:夏多內的年齡",
+          "meta": {
+            "village": "Meursault",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "白酒的橡木桶新舊比例決策,不同於紅酒的邏輯",
+            "requires_badges": [
+              "氧化還原釀造哲學"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "又過了幾週,Camille 打電話來。「這批夏多內快下桶了,」她說,「你在夜丘學過新舊桶怎麼配紅酒風格,白酒的邏輯不太一樣,你要不要來看看?」\n\n你抵達時,她正比對兩桶樣品——一桶全新橡木桶,一桶用了兩年的舊桶。",
+              "choices": [
+                {
+                  "label": "「白酒的新舊桶邏輯,哪裡不一樣?」",
+                  "next": "quiz_chard_oak"
+                }
+              ]
+            },
+            "quiz_chard_oak": {
+              "type": "quiz",
+              "text": "白酒(尤其夏多內)相較於紅酒,對新橡木桶比例的容忍度通常如何?",
+              "choices": [
+                {
+                  "label": "A. 白酒的果香與質地相對細膩,容易被高比例新桶的香草、烤吐司氣息蓋過,新桶比例通常需要更謹慎控制",
+                  "next": "quiz_chard_oak_correct",
+                  "correct": true
+                },
+                {
+                  "label": "B. 白酒沒有單寧,所以可以無限制使用全新橡木桶,完全不用擔心",
+                  "next": "quiz_chard_oak_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C. 白酒完全不適合進橡木桶,只能用不鏽鋼槽",
+                  "next": "quiz_chard_oak_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "白酒(尤其夏多內)沒有紅酒那樣依賴單寧與橡木桶氧氣交換來柔化結構的需求,果香與質地通常也更細膩,因此對高比例全新橡木桶的容忍度普遍低於紅酒——過多新桶帶來的香草、烤吐司、丁香氣息,很容易蓋過細緻的果香與礦物感。許多頂級白酒產區(包括默爾索)的優質生產者,即使使用橡木桶陳年,也會謹慎控制新桶比例,或搭配較大型的桶具(降低單位酒液與木材的接觸比例),讓橡木風味融入而非主導。"
+            },
+            "quiz_chard_oak_correct": {
+              "text": "Camille 點頭。「沒錯,這桶我打算新桶比例控制在三成以內,剩下用一年、兩年的舊桶搭配。」\n\n她記下最終比例。「白酒的橡木桶,說到底是要『托住』果香,不是要『取代』果香。」",
+              "grants_badge": "白酒橡木桶邏輯",
+              "choices": [
+                {
+                  "label": "帶著這份體會,結束今天的拜訪",
+                  "next": "waypoint_end_oak"
+                }
+              ]
+            },
+            "quiz_chard_oak_wrong": {
+              "text": "Camille 搖頭。「白酒沒有單寧沒錯,但橡木桶帶來的香氣化合物,照樣會蓋過細膩的果香——再想想,新桶比例太高,對細緻的白酒風味會有什麼影響?」",
+              "sets_fog": "quiz_chard_oak",
+              "choices": [
+                {
+                  "label": "重新思考白酒與新橡木桶的關係",
+                  "next": "quiz_chard_oak"
+                }
+              ]
+            },
+            "waypoint_end_oak": {
+              "text": "你走出酒窖,Camille 在身後喊住你:「下次要不要跟我一起去普里尼那邊?我有個朋友,風格跟我完全不一樣,你應該會覺得有意思。」\n\n【支線完 · 已獲得知識印記:白酒橡木桶邏輯】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "puligny_rivalry_wp": {
+          "title": "支線:跟普里尼的較勁",
+          "meta": {
+            "village": "Puligny-Montrachet",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "普里尼-蒙哈榭的礦物精準風格與地塊細分",
+            "requires_badges": [
+              "白酒橡木桶邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Camille 帶你到普里尼-蒙哈榭,介紹她的朋友 Marc——一位堅持極簡工藝的年輕釀酒師。「我用攪桶、用新桶,」Camille 笑著說,「他幾乎什麼都不做,就讓葡萄自己說話。」\n\nMarc 聳聳肩:「不是『不做』,是『盡量少介入』。這裡的土地已經很誠實了,不需要工藝幫它說謊。」",
+              "choices": [
+                {
+                  "label": "「普里尼的地塊,細分得比默爾索更精細嗎?」",
+                  "next": "quiz_puligny"
+                }
+              ]
+            },
+            "quiz_puligny": {
+              "type": "quiz",
+              "text": "Marc 的極簡工藝哲學(少攪桶、少新桶),跟普里尼-蒙哈榭本身講究地塊精準表現的風格傳統,兩者之間的邏輯關係是:",
+              "choices": [
+                {
+                  "label": "A. 極簡工藝跟地塊表現力沒有關係,純粹是個人偏好",
+                  "next": "quiz_puligny_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 減少工藝介入(少攪桶、少新桶),能讓地塊本身的礦物感與細微差異更清晰地顯現,契合普里尼一帶強調「精準表達地塊」的風格傳統",
+                  "next": "quiz_puligny_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 極簡工藝會讓所有地塊喝起來變得一模一樣,反而抹平差異",
+                  "next": "quiz_puligny_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "普里尼-蒙哈榭一帶的白酒傳統,相較於默爾索的圓潤豐厚,更強調「精準表達地塊」——礦物感、線條、細微的地塊差異是重點。這種風格傾向,常常搭配相對極簡的工藝哲學:減少攪桶頻率、降低新橡木桶比例,讓工藝介入降到最低,避免掩蓋葡萄本身傳遞的地塊訊息。這也是為什麼同樣是勃根地頂級夏多內產區,默爾索與普里尼-蒙哈榭給人的風格印象差異如此鮮明——風土差異加上工藝哲學的選擇,兩者相互強化。"
+            },
+            "quiz_puligny_correct": {
+              "text": "Marc 難得露出笑容。「算你懂了。」\n\nCamille 在一旁笑著搖頭。「我們兩個大概會為了這個吵一輩子,但說真的,勃根地能同時容得下我們兩種做法,才是最有意思的地方。」",
+              "grants_badge": "普里尼精準風格",
+              "choices": [
+                {
+                  "label": "「兩種哲學,好像都各自說得通。」",
+                  "next": "waypoint_end_puligny"
+                }
+              ]
+            },
+            "quiz_puligny_wrong": {
+              "text": "Marc 搖頭。「工藝介入太多,反而會蓋掉地塊之間原本就存在的細微差異——再想想,『少做一點』對『展現差異』會有什麼幫助?」",
+              "sets_fog": "quiz_puligny",
+              "choices": [
+                {
+                  "label": "重新思考極簡工藝與地塊表現的關係",
+                  "next": "quiz_puligny"
+                }
+              ]
+            },
+            "waypoint_end_puligny": {
+              "text": "你告別 Camille 與 Marc,走在普里尼安靜的村莊小徑上。兩種截然不同的釀酒哲學,卻都指向同一件事——想辦法讓這片土地,用它自己的語言說話。\n\n【支線完 · 已獲得知識印記:普里尼精準風格】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      }
+    },
+    "divided_corton": {
+      "title": "分裂的柯通",
+      "tagline": "同一座山丘,紅酒特級園跟白酒特級園並肩而立——邊界劃在哪裡,靠的不是行政命令",
+      "knowledge_focus": "柯通丘紅白特級園並存的地理邏輯、伯恩丘紅白特級園數量的不對稱現象",
+      "region": "伯恩丘 Côte de Beaune",
+      "chapter_order": [
+        "two_identities_01",
+        "pernand_hidden_outpost",
+        "the_only_exception_02",
+        "ladoix_boundary_outpost",
+        "charlemagne_legend_wp",
+        "hill_future_wp"
+      ],
+      "chapters": {
+        "two_identities_01": {
+          "title": "第一章:一座山,兩個身份",
+          "meta": {
+            "village": "Aloxe-Corton",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "柯通丘紅白特級園的坡位與土壤邏輯",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "阿羅斯-科通村外,一座渾圓的山丘從平地拔起,山頂帽子般覆蓋著一片樹林。Thibault Marchand 一家在這座山丘上種了四代葡萄,紅酒地塊跟白酒地塊都有。\n\n「很多人以為特級園分紅酒特級園、白酒特級園是兩塊完全不相干的地,」他站在半山腰,指向山丘不同方向,「其實它們是同一座山,只是站的位置不同。」",
+              "choices": [
+                {
+                  "label": "「同一座山,為什麼會同時產出紅酒跟白酒特級園?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🧭 先觀察山丘不同坡位的地塊分布",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "你順著他手指的方向看去——山丘上段坡地,土壤顏色偏白、石灰岩含量明顯較高;往下段走,土壤逐漸轉為偏紅棕色,黏土比例增加。",
+              "choices": [
+                {
+                  "label": "「土壤顏色的變化,跟紅白特級園的分布有關嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「有直接關係,」Thibault 說,「山丘上段,石灰岩含量高、排水極佳、日照角度也不同,這種條件特別適合夏多內,長年下來被劃為 Corton-Charlemagne(白酒特級園)。中下段坡地,黏土比例增加,更適合黑皮諾扎根,劃為 Corton(紅酒特級園)。」\n\n他頓了頓。「邊界不是哪個委員會拍腦袋決定的,是幾百年來,種植者累積下來『這塊地適合種什麼』的經驗,最後才反映到法定分級的地圖上。」",
+              "choices": [
+                {
+                  "label": "「所以邊界劃分,本質上是風土條件的結果?」",
+                  "next": "quiz_corton"
+                }
+              ]
+            },
+            "quiz_corton": {
+              "type": "quiz",
+              "text": "柯通丘上,Corton-Charlemagne(白酒特級園)主要位於坡地上段、石灰岩含量高的區域;Corton(紅酒特級園)則位於中下段、黏土比例較高的區域。這種紅白特級園在同一座山丘上並存的邊界劃分,最準確的理解是:",
+              "choices": [
+                {
+                  "label": "A. 純粹是歷史上行政區劃的偶然結果,跟土壤或坡位沒有必然關係",
+                  "next": "quiz_corton_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 邊界大致反映了不同坡位土壤與排水條件對品種適應性的長期經驗——石灰岩上段適合夏多內,黏土中下段適合黑皮諾,法定分級是這種經驗的制度化結果",
+                  "next": "quiz_corton_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 柯通丘其實只有一種土壤,紅白特級園的差異純粹來自釀酒師的選擇",
+                  "next": "quiz_corton_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Aloxe-Corton(以及相鄰的 Ladoix-Serrigny、Pernand-Vergelesses)共享的柯通丘,是勃根地少數紅白特級園並存於同一座山丘的案例。Corton-Charlemagne(白酒特級園)大致分布在坡地上段,石灰岩含量較高、排水良好,適合夏多內;Corton(紅酒特級園,勃根地伯恩丘唯一的紅酒特級園)則多位於中下段坡地,黏土比例較高,適合黑皮諾扎根發展。這種邊界劃分並非行政上的隨意決定,而是數百年來種植者實務經驗與土壤特性長期磨合的結果,最終才反映進法定分級地圖——是理解「風土決定分級,而非分級決定風土」這個原則的絕佳案例。"
+            },
+            "quiz_corton_correct": {
+              "text": "Thibault 點頭。「就是這個道理。我爺爺常說,這座山丘自己會『告訴』你哪裡該種什麼,人只是花了幾百年才聽懂。」\n\n他望向山頂的樹林。「不過,你知道嗎,整個伯恩丘的紅酒產區裡,能被列為特級園的,只有柯通這一塊。」",
+              "grants_badge": "柯通丘邊界邏輯",
+              "choices": [
+                {
+                  "label": "「只有柯通?玻馬、渥爾內這些知名紅酒村都沒有?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_corton_wrong": {
+              "text": "Thibault 搖搖頭。「不是行政偶然,也不是單純釀酒師的選擇——再想想,山丘上段跟中下段的土壤組成,剛剛觀察到的差異是什麼?」",
+              "sets_fog": "quiz_corton",
+              "choices": [
+                {
+                  "label": "重新思考邊界劃分的依據",
+                  "next": "quiz_corton"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「一個都沒有,」Thibault 確認,「玻馬、渥爾內,都是響噹噹的紅酒名村,但整個伯恩丘的法定分級系統裡,紅酒特級園就只有柯通一家,獨一無二。」\n\n他笑了笑。「這個問題,值得你自己再去查一查——為什麼會這樣。」\n\n【第一章完 · 已獲得知識印記:柯通丘邊界邏輯】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:唯一的例外",
+                  "next": "opening",
+                  "chapter": "the_only_exception_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "the_only_exception_02": {
+          "title": "第二章:唯一的例外",
+          "meta": {
+            "village": "Aloxe-Corton",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "伯恩丘紅白特級園數量不對稱的現象",
+            "requires_badges": [
+              "柯通丘邊界邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你帶著上次的疑問,又找上 Thibault。「我查了資料,」你說,「伯恩丘的白酒特級園,除了 Corton-Charlemagne,還有蒙哈榭那一整組——好幾塊。但紅酒特級園,真的就只有 Corton 一塊。」\n\nThibault 給你倒了一杯酒。「你觀察得很仔細。這個不對稱,不是巧合。」",
+              "choices": [
+                {
+                  "label": "「為什麼伯恩丘的白酒特級園這麼多,紅酒卻只有一塊?」",
+                  "next": "quiz_asymmetry"
+                }
+              ]
+            },
+            "quiz_asymmetry": {
+              "type": "quiz",
+              "text": "伯恩丘白酒特級園數量明顯多於紅酒特級園(紅酒僅 Corton 一塊,白酒則有 Corton-Charlemagne、蒙哈榭家族等多塊)。這種不對稱現象,最主要跟以下哪個因素有關?",
+              "choices": [
+                {
+                  "label": "A. 伯恩丘的紅酒品質整體不如夜丘,所以評選標準特別嚴格",
+                  "next": "quiz_asymmetry_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 伯恩丘南段(默爾索、普里尼-蒙哈榭、夏山-蒙哈榭一帶)的石灰岩與坡向條件特別適合夏多內表現出頂級複雜度,而歷史上被評選為特級園的地塊,自然集中在這類優越的白酒風土上",
+                  "next": "quiz_asymmetry_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 純粹是命名巧合,伯恩丘紅酒地塊其實也有很多特級園,只是名字上沒有標明",
+                  "next": "quiz_asymmetry_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "伯恩丘的特級園分布呈現明顯的紅白不對稱:紅酒特級園僅有 Corton 一塊(且是勃根地伯恩丘唯一的紅酒特級園),白酒特級園卻有 Corton-Charlemagne 以及默爾索以南、以蒙哈榭(Montrachet)為核心的一整組頂級白酒地塊(包括跨越普里尼-蒙哈榭與夏山-蒙哈榭兩村邊界的 Montrachet 本身,以及周邊的 Bâtard-Montrachet、Chevalier-Montrachet 等)。這種不對稱反映的是地理現實:伯恩丘南段的石灰岩坡地與朝向條件,長期被認為特別能讓夏多內展現出頂級複雜度與陳年潛力,歷史上的分級評選也因此自然集中在這類白酒風土上,形塑出今天「伯恩丘以白酒特級園見長,紅酒僅柯通一枝獨秀」的格局。"
+            },
+            "quiz_asymmetry_correct": {
+              "text": "Thibault 露出讚許的笑容。「沒錯。這也是為什麼我們家在柯通這座山丘上特別自豪——我們同時擁有那『唯一一塊』紅酒特級園的地塊,也擁有白酒特級園的地塊。整個伯恩丘,能同時說這句話的家族不多。」\n\n他舉杯。「風土不會說謊,只是需要很長的時間,才會被人類的分級制度追上。」",
+              "grants_badge": "伯恩丘紅白特級園格局",
+              "choices": [
+                {
+                  "label": "「謝謝你,這趟徹底刷新了我對伯恩丘的認識。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_asymmetry_wrong": {
+              "text": "Thibault 搖頭。「伯恩丘的紅酒品質毫不遜色,玻馬、渥爾內都是響亮的名字——再想想,南段那些村莊的地質條件,特別適合哪個品種發揮到極致?」",
+              "sets_fog": "quiz_asymmetry",
+              "choices": [
+                {
+                  "label": "重新思考這種不對稱現象的成因",
+                  "next": "quiz_asymmetry"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你告別 Thibault,走下柯通丘。回頭望去,山頂那圈樹林像一頂王冠,把紅與白兩個世界穩穩地戴在同一座山上。\n\n從熱夫雷的一瓶神秘酒開始,到這座紅白並存的山丘,風土的故事一直在提醒你同一件事:地圖上的每一條分級界線背後,都是土地自己畫出來的。\n\n【第二章完 · 已獲得知識印記:伯恩丘紅白特級園格局】\n【下一章尚未解鎖:待續】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "pernand_hidden_outpost": {
+          "title": "驛站:帕娜-維哲雷斯的隱形村莊",
+          "meta": {
+            "village": "Pernand-Vergelesses",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "共享柯通丘卻名氣被掩蓋的村莊",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "柯通丘另一側,帕娜-維哲雷斯村安靜得幾乎沒有觀光客。村裡一位老酒農苦笑著說:「我們也有 Corton-Charlemagne 的地塊,但大家提到柯通,只會想到阿羅斯。」",
+              "choices": [
+                {
+                  "label": "「為什麼同樣共享柯通丘,名氣卻差這麼多?」",
+                  "next": "quiz_pernand"
+                }
+              ]
+            },
+            "quiz_pernand": {
+              "type": "quiz",
+              "text": "帕娜-維哲雷斯跟阿羅斯-科通一樣,境內都有柯通丘的特級園地塊,但村莊本身的知名度明顯較低。這種現象最主要的原因是什麼?",
+              "choices": [
+                {
+                  "label": "A. 帕娜-維哲雷斯境內的柯通丘地塊,法律上不能標示 Corton 或 Corton-Charlemagne 之名",
+                  "next": "quiz_pernand_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 特級園酒標本身通常只標示特級園名稱(如 Corton-Charlemagne),不會特別強調背後屬於哪個行政村莊,加上阿羅斯村名本身跟「柯通」的關聯性在歷史行銷上更早被建立,久而久之外界印象自然集中在阿羅斯",
+                  "next": "quiz_pernand_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 帕娜-維哲雷斯的葡萄園面積遠小於阿羅斯,幾乎可以忽略",
+                  "next": "quiz_pernand_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "柯通丘的特級園(Corton、Corton-Charlemagne)實際上橫跨阿羅斯-科通(Aloxe-Corton)、帕娜-維哲雷斯(Pernand-Vergelesses)、拉多瓦-塞里尼(Ladoix-Serrigny)三個行政村莊,但由於特級園酒標通常只強調特級園本身的名稱,不特別標明背後的行政村莊,加上阿羅斯村名很早就跟「柯通」形成強烈的市場聯想,使得外界印象長期集中在阿羅斯一村,帕娜-維哲雷斯與拉多瓦儘管同樣持有珍貴的柯通丘地塊,知名度卻相對被掩蓋——這是勃根地「特級園名氣蓋過行政村莊」現象的另一個案例。"
+            },
+            "quiz_pernand_correct": {
+              "text": "老酒農點頭。「說得對。我們這裡的酒,喝起來一點不輸阿羅斯那邊,只是名字上吃虧。」\n\n【驛站完 · 已獲得知識印記:柯通丘的隱形村莊】",
+              "grants_badge": "柯通丘的隱形村莊",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_pernand_wrong": {
+              "text": "老酒農搖頭。「地塊面積不算小,法律上也完全可以標示特級園名稱——再想想,酒標上通常會不會特別標出『背後是哪個行政村莊』?」",
+              "sets_fog": "quiz_pernand",
+              "choices": [
+                {
+                  "label": "重新思考名氣落差的成因",
+                  "next": "quiz_pernand"
+                }
+              ]
+            }
+          }
+        },
+        "ladoix_boundary_outpost": {
+          "title": "驛站:拉多瓦的邊界",
+          "meta": {
+            "village": "Ladoix-Serrigny",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "柯通丘第三個共享村莊的邊界複雜度",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "夜丘與伯恩丘交界處,拉多瓦-塞里尼村的地籍圖上,線條密密麻麻。「我們是柯通丘三個共享村莊裡最少人知道的,」當地一位地籍測量員說,「但邊界複雜度,我們可能是三個裡面最誇張的。」",
+              "choices": [
+                {
+                  "label": "「為什麼拉多瓦的邊界特別複雜?」",
+                  "next": "quiz_ladoix"
+                }
+              ]
+            },
+            "quiz_ladoix": {
+              "type": "quiz",
+              "text": "拉多瓦-塞里尼同時位於夜丘與伯恩丘的行政交界處,境內葡萄園橫跨柯通丘的一部分,也有屬於自己村莊等級與一級園的地塊。這種行政與地理雙重交界的位置,對理解勃根地分級系統帶來什麼提醒?",
+              "choices": [
+                {
+                  "label": "A. 這證明勃根地的產區劃分毫無邏輯,完全隨意",
+                  "next": "quiz_ladoix_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 產區邊界劃分是地理條件(土壤、坡向)與歷史行政沿革交織的結果,像拉多瓦這樣橫跨多重交界的村莊,提醒我們「夜丘/伯恩丘」這種大分類本身也是相對而非絕對的概念",
+                  "next": "quiz_ladoix_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 拉多瓦其實不屬於任何官方分級系統,是法律漏洞",
+                  "next": "quiz_ladoix_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "拉多瓦-塞里尼(Ladoix-Serrigny)地理位置特殊,同時鄰接夜丘最南端與伯恩丘最北端,境內葡萄園一部分屬於柯通丘特級園範圍,一部分則是自己獨立的村莊級與一級園地塊。這種橫跨多重交界的位置提醒學習者:「夜丘」與「伯恩丘」這種大區分類,本身也是地理與歷史沿革共同形塑的相對概念,而非涇渭分明的絕對邊界——勃根地的分級地圖,越往細節看,越會發現邊界的複雜度遠超過教科書上簡化的版本。"
+            },
+            "quiz_ladoix_correct": {
+              "text": "測量員笑了。「沒錯,我常跟人說,想真正搞懂勃根地,就得先接受『邊界從來不是一條乾淨的線』這件事。」\n\n【驛站完 · 已獲得知識印記:拉多瓦的邊界複雜度】",
+              "grants_badge": "拉多瓦的邊界複雜度",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_ladoix_wrong": {
+              "text": "測量員搖頭。「不是隨意,也不是漏洞——再想想,邊界的複雜,反映的是『地理』跟『歷史』兩種力量同時在起作用。」",
+              "sets_fog": "quiz_ladoix",
+              "choices": [
+                {
+                  "label": "重新思考拉多瓦邊界複雜度的意義",
+                  "next": "quiz_ladoix"
+                }
+              ]
+            }
+          }
+        },
+        "charlemagne_legend_wp": {
+          "title": "支線:查理曼大帝的傳說",
+          "meta": {
+            "village": "Aloxe-Corton",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "Corton-Charlemagne 名稱由來的歷史傳說",
+            "requires_badges": [
+              "伯恩丘紅白特級園格局"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "又一次拜訪柯通丘,Thibault 指著山坡上一塊白酒地塊。「你知道 Charlemagne 這個名字哪來的嗎?」他問,「有個流傳很廣的傳說,雖然沒人能百分之百證實。」",
+              "choices": [
+                {
+                  "label": "「傳說是什麼?」",
+                  "next": "quiz_charlemagne"
+                }
+              ]
+            },
+            "quiz_charlemagne": {
+              "type": "quiz",
+              "text": "關於 Corton-Charlemagne 名稱由來,流傳最廣的民間傳說版本是:查理曼大帝曾在柯通丘擁有葡萄園,因為擔心紅酒弄髒自己的白鬍子,下令改種白葡萄。這個傳說最適合用什麼態度來看待?",
+              "choices": [
+                {
+                  "label": "A. 這是經過嚴謹史料考證、百分之百確認的正式歷史事實",
+                  "next": "quiz_charlemagne_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 這是流傳已久、廣為人知的民間傳說,增添了地名的文化色彩與故事性,但並非經過嚴謹史料考證的確鑿史實,學習時應該把它當作傳說而非定論來欣賞",
+                  "next": "quiz_charlemagne_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 這個傳說已經被證實完全是現代行銷公司捏造,毫無歷史根據",
+                  "next": "quiz_charlemagne_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Corton-Charlemagne 這個名稱,民間流傳著一個廣為人知的傳說:法蘭克國王暨神聖羅馬帝國皇帝查理曼大帝(Charlemagne)曾在柯通丘擁有葡萄園,因為年邁後不想讓紅酒弄髒自己著名的白鬍子,下令將部分紅葡萄地塊改種白葡萄,這塊地後來因此得名。這個故事增添了地名的文化色彩,是勃根地眾多歷史傳說之一,但嚴格來說並非經過嚴謹史料考證確鑿無疑的正式史實——對待這類流傳久遠的產區傳說,恰當的態度是欣賞它為土地增添的故事厚度,同時清楚區分「傳說」與「已考證的歷史事實」。"
+            },
+            "quiz_charlemagne_correct": {
+              "text": "Thibault 笑著點頭。「就是這個態度——我小時候我爺爺講這個故事講得跟真的一樣,長大後才知道,沒人能真正證實。但這不妨礙它是個好故事。」\n\n他望向那片白酒地塊。「有時候,一塊地的名字裡,裝的不只是地理事實,還有幾百年來人們想像出來的溫度。」",
+              "grants_badge": "查理曼傳說",
+              "choices": [
+                {
+                  "label": "帶著這份故事,結束今天的拜訪",
+                  "next": "waypoint_end_charlemagne"
+                }
+              ]
+            },
+            "quiz_charlemagne_wrong": {
+              "text": "Thibault 搖頭。「別把民間傳說講得太絕對——不管是『百分之百真』還是『百分之百假』,都不是面對這種故事該有的態度。」",
+              "sets_fog": "quiz_charlemagne",
+              "choices": [
+                {
+                  "label": "重新思考該用什麼態度看待這個傳說",
+                  "next": "quiz_charlemagne"
+                }
+              ]
+            },
+            "waypoint_end_charlemagne": {
+              "text": "夕陽西下,柯通丘的輪廓在餘暉裡顯得格外柔和。你想起這趟旅程走過的所有村莊——每一個名字背後,都疊著風土的事實與人的故事,兩者從來密不可分。\n\n【支線完 · 已獲得知識印記:查理曼傳說】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "hill_future_wp": {
+          "title": "支線:山丘的未來",
+          "meta": {
+            "village": "Aloxe-Corton",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "氣候變遷對柯通丘紅白邊界的長期潛在影響",
+            "requires_badges": [
+              "查理曼傳說"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Thibault 帶你走到山丘最上緣,望向整片家族持有了四代的土地。「我常在想一個問題,」他說,「氣候一直在變暖,你之前應該也聽別人提過這件事。」",
+              "choices": [
+                {
+                  "label": "「暖化會影響柯通丘的紅白邊界嗎?」",
+                  "next": "quiz_hill_future"
+                }
+              ]
+            },
+            "quiz_hill_future": {
+              "type": "quiz",
+              "text": "柯通丘的紅白特級園邊界,長期以來由土壤與坡位條件決定。如果生長季氣溫持續上升的長期趨勢延續,對這條邊界最合理的推測方向是什麼?",
+              "choices": [
+                {
+                  "label": "A. 邊界是法律劃定的,不管氣候怎麼變,實際種植品種永遠不會受影響",
+                  "next": "quiz_hill_future_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B. 雖然法定邊界不會輕易更動,但長期而言,原本偏冷、較晚成熟的坡位條件可能變得更適合品種調整,種植者的實務選擇有可能逐漸偏離歷史邊界背後的原始氣候假設",
+                  "next": "quiz_hill_future_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C. 暖化只會影響採收日期,對品種與坡位的適配關係完全沒有影響",
+                  "next": "quiz_hill_future_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "柯通丘紅白特級園的邊界,歷史上是根據當時的氣候條件與土壤特性,判斷哪個坡位「適合」哪個品種而劃定的。法定邊界本身具有高度制度慣性,不會因為短期氣候波動而輕易更動,但長期而言,如果生長季氣溫持續上升的趨勢延續,原本被認為較冷、較晚成熟、因此適合特定品種的坡位條件,實際適配關係可能逐漸鬆動——這是氣候變遷對百年分級制度提出的長期潛在挑戰,也是勃根地產區近年開始認真討論的議題之一:風土條件不是永遠靜止的,分級制度該如何應對這種緩慢卻真實的變化,目前還沒有明確答案。"
+            },
+            "quiz_hill_future_correct": {
+              "text": "Thibault 沉默了一會兒。「我爺爺劃給我爸的地圖,跟我未來要劃給我女兒的地圖,搞不好已經不完全一樣了。」\n\n他笑了笑,語氣裡帶著一絲複雜的釋然。「但這也沒什麼好怕的——這座山丘,幾百年來本來就一直在教我們重新學習它。」",
+              "grants_badge": "柯通丘氣候展望",
+              "choices": [
+                {
+                  "label": "「謝謝你,Thibault,這趟收穫太多了。」",
+                  "next": "waypoint_end_hill_future"
+                }
+              ]
+            },
+            "quiz_hill_future_wrong": {
+              "text": "Thibault 搖頭。「法律邊界確實有慣性,但『適配關係』本身,禁得起長期氣候變化的考驗嗎?再想想。」",
+              "sets_fog": "quiz_hill_future",
+              "choices": [
+                {
+                  "label": "重新思考氣候變遷對邊界適配性的長期影響",
+                  "next": "quiz_hill_future"
+                }
+              ]
+            },
+            "waypoint_end_hill_future": {
+              "text": "你告別 Thibault,走下柯通丘。從熱夫雷的一瓶神秘酒,到夜丘的四代人繼承糾紛,到酒窖裡的工藝取捨,到 Isabelle 的年份筆記,再到這座紅白並存的山丘——風土的故事,始終是一部尚未寫完的書,而你,何其有幸,參與了其中幾頁。\n\n【支線完 · 已獲得知識印記:柯通丘氣候展望】",
               "choices": [],
               "is_ending": true
             }
