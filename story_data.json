@@ -90,20 +90,20 @@
             },
             "quiz_01": {
               "type": "quiz",
-              "text": "濕土與蘑菇氣息通常在陳年後更明顯,但你注意到單寧還很緊緻、酒體集中度高。這比較像——",
+              "text": "濕土與蘑菇氣息通常在陳年後更明顯,但你注意到單寧還很緊緻、酒體集中度高。這比較像——\n\nA. Village 等級,年輕早飲型\n\nB. Premier Cru,如 Clos St-Jacques\n\nC. Grand Cru,如 Chambertin Clos de Bèze",
               "choices": [
                 {
-                  "label": "A. Village 等級,年輕早飲型",
+                  "label": "A",
                   "next": "quiz_01_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. Premier Cru,如 Clos St-Jacques",
+                  "label": "B",
                   "next": "quiz_01_wrong",
                   "correct": false
                 },
                 {
-                  "label": "C. Grand Cru,如 Chambertin Clos de Bèze",
+                  "label": "C",
                   "next": "quiz_01_correct",
                   "correct": true
                 }
@@ -202,20 +202,20 @@
             },
             "quiz_02": {
               "type": "quiz",
-              "text": "淺石榴紅、絲滑單寧、紫羅蘭與紅櫻桃香氣,對比你在熱夫雷嚐過的深色、緊緻、土壤氣息——這杯比較像:",
+              "text": "淺石榴紅、絲滑單寧、紫羅蘭與紅櫻桃香氣,對比你在熱夫雷嚐過的深色、緊緻、土壤氣息——這杯比較像:\n\nA. 香波-蜜思妮 Village 等級\n\nB. Premier Cru,如 Les Amoureuses\n\nC. Grand Cru Musigny",
               "choices": [
                 {
-                  "label": "A. 香波-蜜思妮 Village 等級",
+                  "label": "A",
                   "next": "quiz_02_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. Premier Cru,如 Les Amoureuses",
+                  "label": "B",
                   "next": "quiz_02_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. Grand Cru Musigny",
+                  "label": "C",
                   "next": "quiz_02_wrong",
                   "correct": false
                 }
@@ -314,20 +314,20 @@
             },
             "quiz_03": {
               "type": "quiz",
-              "text": "杯 1 單寧紮實、礦物感強、尾韻緊緻;杯 2 果香奔放但單寧鬆散、略顯肥厚;杯 3 結構中等但缺乏礦物尾韻。排水好、日照足的坡頂地塊,通常會呈現哪一種特徵組合?",
+              "text": "杯 1 單寧紮實、礦物感強、尾韻緊緻;杯 2 果香奔放但單寧鬆散、略顯肥厚;杯 3 結構中等但缺乏礦物尾韻。排水好、日照足的坡頂地塊,通常會呈現哪一種特徵組合?\n\nA. 杯 2 —— 果香奔放代表最好的成熟度\n\nB. 杯 1 —— 排水好帶來的緊緻結構與礦物感\n\nC. 杯 3 —— 中庸就是最安全的答案",
               "choices": [
                 {
-                  "label": "A. 杯 2 —— 果香奔放代表最好的成熟度",
+                  "label": "A",
                   "next": "quiz_03_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 杯 1 —— 排水好帶來的緊緻結構與礦物感",
+                  "label": "B",
                   "next": "quiz_03_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 杯 3 —— 中庸就是最安全的答案",
+                  "label": "C",
                   "next": "quiz_03_wrong",
                   "correct": false
                 }
@@ -426,20 +426,20 @@
             },
             "quiz_final": {
               "type": "quiz",
-              "text": "野莓與玫瑰香氣、丁香肉桂般的異國香料尾韻、綢緞般滑順卻仍有支撐力的單寧——這塊地籍上只登記為「Village」等級的無名小園,你認為它真正的份量是:",
+              "text": "野莓與玫瑰香氣、丁香肉桂般的異國香料尾韻、綢緞般滑順卻仍有支撐力的單寧——這塊地籍上只登記為「Village」等級的無名小園,你認為它真正的份量是:\n\nA. 官方等級寫 Village,葡萄本身普通,判斷應該完全依照分級\n\nB. 即使掛著 Village 等級,細膩質地與複雜香料尾韻,顯示這塊地被人用特級園的心力悉心對待——分級之外,還有人的用心\n\nC. 香氣太複雜了,一定是偷偷跟別村的酒調配過",
               "choices": [
                 {
-                  "label": "A. 官方等級寫 Village,葡萄本身普通,判斷應該完全依照分級",
+                  "label": "A",
                   "next": "quiz_final_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 即使掛著 Village 等級,細膩質地與複雜香料尾韻,顯示這塊地被人用特級園的心力悉心對待——分級之外,還有人的用心",
+                  "label": "B",
                   "next": "quiz_final_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 香氣太複雜了,一定是偷偷跟別村的酒調配過",
+                  "label": "C",
                   "next": "quiz_final_wrong",
                   "correct": false
                 }
@@ -537,20 +537,20 @@
             },
             "quiz_msd": {
               "type": "quiz",
-              "text": "深色漿果與泥土氣息(熱夫雷特徵),但單寧滑順、帶紫羅蘭尾韻(香波特徵)。這種「兩邊都沾一點」的表現,最適合怎麼理解莫瑞-聖丹尼?",
+              "text": "深色漿果與泥土氣息(熱夫雷特徵),但單寧滑順、帶紫羅蘭尾韻(香波特徵)。這種「兩邊都沾一點」的表現,最適合怎麼理解莫瑞-聖丹尼?\n\nA. 這代表釀酒師技術不穩定,風格抓不定\n\nB. 這是地理過渡帶土壤造成的真實風土特徵,不是缺點,是這個村莊獨有的身份\n\nC. 一定是刻意調配了兩村的葡萄",
               "choices": [
                 {
-                  "label": "A. 這代表釀酒師技術不穩定,風格抓不定",
+                  "label": "A",
                   "next": "quiz_msd_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 這是地理過渡帶土壤造成的真實風土特徵,不是缺點,是這個村莊獨有的身份",
+                  "label": "B",
                   "next": "quiz_msd_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 一定是刻意調配了兩村的葡萄",
+                  "label": "C",
                   "next": "quiz_msd_wrong",
                   "correct": false
                 }
@@ -606,20 +606,20 @@
             },
             "quiz_marsannay": {
               "type": "quiz",
-              "text": "馬沙內粉紅酒用黑皮諾短暫浸皮釀成,顏色比一般粉紅酒深,帶有紅莓果香與一絲夜丘特有的礦物感。這款酒在勃根地分級系統裡,通常屬於:",
+              "text": "馬沙內粉紅酒用黑皮諾短暫浸皮釀成,顏色比一般粉紅酒深,帶有紅莓果香與一絲夜丘特有的礦物感。這款酒在勃根地分級系統裡,通常屬於:\n\nA. 一種特殊的獨立分級系統,不算在村莊等級內\n\nB. 就是馬沙內的 Village 等級 AOC,只是用了粉紅酒的釀法\n\nC. 這其實是失敗的紅酒,顏色太淺才拿去賣",
               "choices": [
                 {
-                  "label": "A. 一種特殊的獨立分級系統,不算在村莊等級內",
+                  "label": "A",
                   "next": "quiz_marsannay_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 就是馬沙內的 Village 等級 AOC,只是用了粉紅酒的釀法",
+                  "label": "B",
                   "next": "quiz_marsannay_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 這其實是失敗的紅酒,顏色太淺才拿去賣",
+                  "label": "C",
                   "next": "quiz_marsannay_wrong",
                   "correct": false
                 }
@@ -666,20 +666,20 @@
             },
             "quiz_fixin": {
               "type": "quiz",
-              "text": "菲仙的酒風格扎實、單寧偏粗獷,結構不輸熱夫雷,卻長期被當地酒商借名銷售。二十世紀 AOC 法定產區制度建立後,這種「借鄰村名氣賣酒」的做法,理論上會如何被規範?",
+              "text": "菲仙的酒風格扎實、單寧偏粗獷,結構不輸熱夫雷,卻長期被當地酒商借名銷售。二十世紀 AOC 法定產區制度建立後,這種「借鄰村名氣賣酒」的做法,理論上會如何被規範?\n\nA. AOC 制度允許只要風格相似,就能繼續借用鄰村名字\n\nB. AOC 制度明確劃定地理邊界,菲仙從此只能以自己村名申報,不得再借用熱夫雷之名\n\nC. 菲仙因此被強制併入熱夫雷-香貝丹產區",
               "choices": [
                 {
-                  "label": "A. AOC 制度允許只要風格相似,就能繼續借用鄰村名字",
+                  "label": "A",
                   "next": "quiz_fixin_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. AOC 制度明確劃定地理邊界,菲仙從此只能以自己村名申報,不得再借用熱夫雷之名",
+                  "label": "B",
                   "next": "quiz_fixin_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 菲仙因此被強制併入熱夫雷-香貝丹產區",
+                  "label": "C",
                   "next": "quiz_fixin_wrong",
                   "correct": false
                 }
@@ -726,20 +726,20 @@
             },
             "quiz_cnv": {
               "type": "quiz",
-              "text": "Côte de Nuits-Villages 允許來自多個指定小村莊的葡萄混合釀造,共用同一個產區名。這種「聯合產區」設計,對這些小村莊的酒農來說,最主要的實際好處是什麼?",
+              "text": "Côte de Nuits-Villages 允許來自多個指定小村莊的葡萄混合釀造,共用同一個產區名。這種「聯合產區」設計,對這些小村莊的酒農來說,最主要的實際好處是什麼?\n\nA. 可以偽裝成更知名的村莊酒款賣高價\n\nB. 單一小村莊產量太小、難以獨立行銷,聯合起來能有穩定的產區識別度與市場能見度\n\nC. 這是政府強制規定,酒農沒有選擇權",
               "choices": [
                 {
-                  "label": "A. 可以偽裝成更知名的村莊酒款賣高價",
+                  "label": "A",
                   "next": "quiz_cnv_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 單一小村莊產量太小、難以獨立行銷,聯合起來能有穩定的產區識別度與市場能見度",
+                  "label": "B",
                   "next": "quiz_cnv_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 這是政府強制規定,酒農沒有選擇權",
+                  "label": "C",
                   "next": "quiz_cnv_wrong",
                   "correct": false
                 }
@@ -810,20 +810,20 @@
             },
             "quiz_nsg": {
               "type": "quiz",
-              "text": "皮革、煙燻氣息,單寧硬朗、尾韻悠長,但沒有任何官方 Grand Cru 加持。這款酒告訴你關於「分級」與「品質」的關係,最貼切的理解是:",
+              "text": "皮革、煙燻氣息,單寧硬朗、尾韻悠長,但沒有任何官方 Grand Cru 加持。這款酒告訴你關於「分級」與「品質」的關係,最貼切的理解是:\n\nA. 沒有 Grand Cru,代表這村莊的風土先天不足\n\nB. Grand Cru 是歷史評選與制度的產物,不是唯一衡量品質的標準,村莊等級一樣能展現風土實力\n\nC. 沒有 Grand Cru 的村莊,酒商應該爭取把整村升級",
               "choices": [
                 {
-                  "label": "A. 沒有 Grand Cru,代表這村莊的風土先天不足",
+                  "label": "A",
                   "next": "quiz_nsg_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. Grand Cru 是歷史評選與制度的產物,不是唯一衡量品質的標準,村莊等級一樣能展現風土實力",
+                  "label": "B",
                   "next": "quiz_nsg_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 沒有 Grand Cru 的村莊,酒商應該爭取把整村升級",
+                  "label": "C",
                   "next": "quiz_nsg_wrong",
                   "correct": false
                 }
@@ -881,20 +881,20 @@
             },
             "quiz_flagey": {
               "type": "quiz",
-              "text": "弗拉吉村擁有兩座法定 Grand Cru(Échézeaux、Grands Échézeaux),但村莊等級以下的酒,歷史上被規劃併入哪個鄰近村莊的 AOC 申報?",
+              "text": "弗拉吉村擁有兩座法定 Grand Cru(Échézeaux、Grands Échézeaux),但村莊等級以下的酒,歷史上被規劃併入哪個鄰近村莊的 AOC 申報?\n\nA. 併入梧玖(Vougeot)申報\n\nB. 併入馮內-侯瑪內(Vosne-Romanée)申報,村莊酒可掛「Vosne-Romanée」之名\n\nC. 完全沒有分級,只能標示成日常餐酒",
               "choices": [
                 {
-                  "label": "A. 併入梧玖(Vougeot)申報",
+                  "label": "A",
                   "next": "quiz_flagey_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 併入馮內-侯瑪內(Vosne-Romanée)申報,村莊酒可掛「Vosne-Romanée」之名",
+                  "label": "B",
                   "next": "quiz_flagey_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 完全沒有分級,只能標示成日常餐酒",
+                  "label": "C",
                   "next": "quiz_flagey_wrong",
                   "correct": false
                 }
@@ -980,20 +980,20 @@
             },
             "quiz_inheritance_01": {
               "type": "quiz",
-              "text": "假設一塊地由一個家族持有,每一代都有三個子女均分繼承,經過三代之後,理論上這塊地最多會被切成幾份獨立持分?(提示:每一代都是前一代持分數 × 3)",
+              "text": "假設一塊地由一個家族持有,每一代都有三個子女均分繼承,經過三代之後,理論上這塊地最多會被切成幾份獨立持分?(提示:每一代都是前一代持分數 × 3)\n\nA. 9 份\n\nB. 27 份\n\nC. 3 份,因為法律只規定第一代要均分",
               "choices": [
                 {
-                  "label": "A. 9 份",
+                  "label": "A",
                   "next": "quiz_01_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 27 份",
+                  "label": "B",
                   "next": "quiz_01_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 3 份,因為法律只規定第一代要均分",
+                  "label": "C",
                   "next": "quiz_01_wrong",
                   "correct": false
                 }
@@ -1070,20 +1070,20 @@
             },
             "quiz_inheritance_02": {
               "type": "quiz",
-              "text": "同一塊 0.3 公頃的 Premier Cru 地,一部分持分主人成立 GFA 自己監督種植與釀造,另一部分持分主人把葡萄直接賣給 négociant。市面上如果同時看到這塊地的「domaine 裝瓶」與「négociant 裝瓶」兩款酒,品質與風格最可能出現什麼狀況?",
+              "text": "同一塊 0.3 公頃的 Premier Cru 地,一部分持分主人成立 GFA 自己監督種植與釀造,另一部分持分主人把葡萄直接賣給 négociant。市面上如果同時看到這塊地的「domaine 裝瓶」與「négociant 裝瓶」兩款酒,品質與風格最可能出現什麼狀況?\n\nA. 兩瓶一定完全一樣,因為葡萄長在同一塊地上\n\nB. 兩瓶可能差異明顯——domaine 版本從種植到裝瓶全程可控,négociant 版本則取決於酒商收購後的處理與調配方式\n\nC. négociant 裝瓶的酒法律上不能用同一個 Premier Cru 名稱",
               "choices": [
                 {
-                  "label": "A. 兩瓶一定完全一樣,因為葡萄長在同一塊地上",
+                  "label": "A",
                   "next": "quiz_02_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 兩瓶可能差異明顯——domaine 版本從種植到裝瓶全程可控,négociant 版本則取決於酒商收購後的處理與調配方式",
+                  "label": "B",
                   "next": "quiz_02_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. négociant 裝瓶的酒法律上不能用同一個 Premier Cru 名稱",
+                  "label": "C",
                   "next": "quiz_02_wrong",
                   "correct": false
                 }
@@ -1111,7 +1111,7 @@
               ]
             },
             "chapter_end_2": {
-              "text": "Rousset / Vionnet 卷宗裡,一份 1961 年的公證文件寫得清清楚楚:Vionnet 家因債務,將梧玖坡頂持分全數移轉給 Rousset 家,移轉條件欄位只有簡短一句:「以土地清償全部債務,雙方無異議。」\n\n沒有你原本以為的曲折劇情,只有一份乾淨俐落的法律文件。Fabienne 看著你的表情,輕聲說:「有時候,法律紀錄講的是事實的骨架,但骨架撐不撐得起一整段人生的重量,那是另一回事了——你已經知道那段重量是什麼形狀了,不是嗎?」\n\n【第二章完 · 已獲得知識印記:GFA 與裝瓶制度】\n【下一章尚未解鎖:待續】",
+              "text": "Rousset / Vionnet 卷宗裡,一份 1961 年的公證文件寫得清清楚楚:Vionnet 家因債務,將梧玖坡頂持分全數移轉給 Rousset 家,移轉條件欄位只有簡短一句:「以土地清償全部債務,雙方無異議。」\n\n沒有你原本以為的曲折劇情,只有一份乾淨俐落的法律文件。Fabienne 看著你的表情,輕聲說:「有時候,法律紀錄講的是事實的骨架,但骨架撐不撐得起一整段人生的重量,那是另一回事了——你已經知道那段重量是什麼形狀了,不是嗎?」\n\n【第二章完 · 已獲得知識印記:GFA 與裝瓶制度】\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。",
               "choices": [],
               "is_ending": true
             }
@@ -1139,20 +1139,20 @@
             },
             "quiz_metayage": {
               "type": "quiz",
-              "text": "在美塔亞制度下,佃農(métayer)不擁有土地所有權,只憑契約分享收成。這種安排,對於「地主是誰」跟「酒標上寫什麼」這兩件事,最準確的理解是:",
+              "text": "在美塔亞制度下,佃農(métayer)不擁有土地所有權,只憑契約分享收成。這種安排,對於「地主是誰」跟「酒標上寫什麼」這兩件事,最準確的理解是:\n\nA. 佃農種得好,土地所有權就會自動轉移給他\n\nB. 土地所有權與分級認定始終歸屬地主,佃農只分享收成利益,不影響酒標上的產區與等級標示\n\nC. 美塔亞制度下釀的酒,法律上不能標示正式產區名稱",
               "choices": [
                 {
-                  "label": "A. 佃農種得好,土地所有權就會自動轉移給他",
+                  "label": "A",
                   "next": "quiz_metayage_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 土地所有權與分級認定始終歸屬地主,佃農只分享收成利益,不影響酒標上的產區與等級標示",
+                  "label": "B",
                   "next": "quiz_metayage_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 美塔亞制度下釀的酒,法律上不能標示正式產區名稱",
+                  "label": "C",
                   "next": "quiz_metayage_wrong",
                   "correct": false
                 }
@@ -1199,20 +1199,20 @@
             },
             "quiz_price": {
               "type": "quiz",
-              "text": "勃根地分級金字塔由下而上是:大區級 → 村莊級 → 一級園 → 特級園,地價隨等級遞增,頂級的特級園地價可能是大區級的數十倍甚至上百倍。這種懸殊價差,對均分繼承制底下的家族糾紛,最可能造成什麼影響?",
+              "text": "勃根地分級金字塔由下而上是:大區級 → 村莊級 → 一級園 → 特級園,地價隨等級遞增,頂級的特級園地價可能是大區級的數十倍甚至上百倍。這種懸殊價差,對均分繼承制底下的家族糾紛,最可能造成什麼影響?\n\nA. 反正大家都均分,價差不會影響家族關係\n\nB. 等級越高的地塊,持分即使很小,實質價值仍然巨大,使得高階地塊的繼承分配特別容易引發家族糾紛與訴訟\n\nC. 特級園因為太值錢,法律規定不能被均分繼承",
               "choices": [
                 {
-                  "label": "A. 反正大家都均分,價差不會影響家族關係",
+                  "label": "A",
                   "next": "quiz_price_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 等級越高的地塊,持分即使很小,實質價值仍然巨大,使得高階地塊的繼承分配特別容易引發家族糾紛與訴訟",
+                  "label": "B",
                   "next": "quiz_price_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 特級園因為太值錢,法律規定不能被均分繼承",
+                  "label": "C",
                   "next": "quiz_price_wrong",
                   "correct": false
                 }
@@ -1283,20 +1283,20 @@
             },
             "quiz_phylloxera": {
               "type": "quiz",
-              "text": "均分繼承制持續切割地塊,而十九世紀末的根瘤蚜蟲害重建潮,又對持分過小的家族造成資金壓力。這兩股力量疊加,對勃根地地籍地圖的長期演變,最準確的描述是:",
+              "text": "均分繼承制持續切割地塊,而十九世紀末的根瘤蚜蟲害重建潮,又對持分過小的家族造成資金壓力。這兩股力量疊加,對勃根地地籍地圖的長期演變,最準確的描述是:\n\nA. 兩者互相抵銷,地塊分布最後回到蟲害前的樣貌\n\nB. 繼承制持續切割地塊,重建潮則淘汰掉撐不住的小持分,兩者共同形塑出今日極度複雜、持分持有者能力落差很大的地籍現況\n\nC. 政府在蟲害後強制徵收所有小持分,重新平均分配",
               "choices": [
                 {
-                  "label": "A. 兩者互相抵銷,地塊分布最後回到蟲害前的樣貌",
+                  "label": "A",
                   "next": "quiz_phylloxera_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 繼承制持續切割地塊,重建潮則淘汰掉撐不住的小持分,兩者共同形塑出今日極度複雜、持分持有者能力落差很大的地籍現況",
+                  "label": "B",
                   "next": "quiz_phylloxera_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 政府在蟲害後強制徵收所有小持分,重新平均分配",
+                  "label": "C",
                   "next": "quiz_phylloxera_wrong",
                   "correct": false
                 }
@@ -1354,20 +1354,20 @@
             },
             "quiz_indivision": {
               "type": "quiz",
-              "text": "「Indivision」狀態下,土地由多位繼承人共有,但重大決定(例如出售、成立 GFA、重新規劃種植)通常需要全體或高比例共有人一致同意才能執行。這種制度設計,最可能造成的實際後果是:",
+              "text": "「Indivision」狀態下,土地由多位繼承人共有,但重大決定(例如出售、成立 GFA、重新規劃種植)通常需要全體或高比例共有人一致同意才能執行。這種制度設計,最可能造成的實際後果是:\n\nA. 反正大家都是家人,實務上很少真的僵持不下\n\nB. 只要有一位共有人不同意或消極不配合,整塊地的處置就可能長期卡住,甚至導致土地缺乏管理、品質下滑\n\nC. Indivision 狀態超過五年,土地會自動收歸國有",
               "choices": [
                 {
-                  "label": "A. 反正大家都是家人,實務上很少真的僵持不下",
+                  "label": "A",
                   "next": "quiz_indivision_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 只要有一位共有人不同意或消極不配合,整塊地的處置就可能長期卡住,甚至導致土地缺乏管理、品質下滑",
+                  "label": "B",
                   "next": "quiz_indivision_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. Indivision 狀態超過五年,土地會自動收歸國有",
+                  "label": "C",
                   "next": "quiz_indivision_wrong",
                   "correct": false
                 }
@@ -1456,20 +1456,20 @@
             },
             "quiz_hospices": {
               "type": "quiz",
-              "text": "濟貧院的酒款,酒標上常常不是單純的村莊或地塊名稱,而是像「Cuvée Nicolas Rolin」這種「地塊名 + 人名」的組合命名方式。這種命名邏輯,最準確的理解是:",
+              "text": "濟貧院的酒款,酒標上常常不是單純的村莊或地塊名稱,而是像「Cuvée Nicolas Rolin」這種「地塊名 + 人名」的組合命名方式。這種命名邏輯,最準確的理解是:\n\nA. 人名只是行銷噱頭,跟土地本身的歷史無關\n\nB. 人名通常是當初把這塊地捐給濟貧院的捐贈人,酒標記錄的是地塊的捐贈起源,而非單純地理位置\n\nC. 人名是現任莊主的名字,跟其他酒莊的命名邏輯完全一樣",
               "choices": [
                 {
-                  "label": "A. 人名只是行銷噱頭,跟土地本身的歷史無關",
+                  "label": "A",
                   "next": "quiz_hospices_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 人名通常是當初把這塊地捐給濟貧院的捐贈人,酒標記錄的是地塊的捐贈起源,而非單純地理位置",
+                  "label": "B",
                   "next": "quiz_hospices_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 人名是現任莊主的名字,跟其他酒莊的命名邏輯完全一樣",
+                  "label": "C",
                   "next": "quiz_hospices_wrong",
                   "correct": false
                 }
@@ -1564,20 +1564,20 @@
             },
             "quiz_whole_cluster": {
               "type": "quiz",
-              "text": "杯 A:純淨黑櫻桃與紅莓香氣,單寧細緻集中,風格直接明亮。\n杯 B:除了果香,還帶一絲黑胡椒與丁香般的辛香料氣息,單寧結構稍微粗獷一點,尾韻有些微植物系的草本尾勁。\n哪一杯比較可能是整串發酵的成果?",
+              "text": "杯 A:純淨黑櫻桃與紅莓香氣,單寧細緻集中,風格直接明亮。\n杯 B:除了果香,還帶一絲黑胡椒與丁香般的辛香料氣息,單寧結構稍微粗獷一點,尾韻有些微植物系的草本尾勁。\n哪一杯比較可能是整串發酵的成果?\n\nA. 杯 A,因為整串發酵風格應該更純淨\n\nB. 杯 B,辛香料與草本尾勁是梗參與發酵的典型痕跡\n\nC. 無法判斷,兩種做法喝起來應該完全一樣",
               "choices": [
                 {
-                  "label": "A. 杯 A,因為整串發酵風格應該更純淨",
+                  "label": "A",
                   "next": "quiz_wc_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 杯 B,辛香料與草本尾勁是梗參與發酵的典型痕跡",
+                  "label": "B",
                   "next": "quiz_wc_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 無法判斷,兩種做法喝起來應該完全一樣",
+                  "label": "C",
                   "next": "quiz_wc_wrong",
                   "correct": false
                 }
@@ -1672,20 +1672,20 @@
             },
             "quiz_oak": {
               "type": "quiz",
-              "text": "如果這批酒來自一個風格纖細優雅、香氣導向的地塊(例如香波-蜜思妮這類地塊),在橡木桶與萃取的搭配上,比較合理的方向是:",
+              "text": "如果這批酒來自一個風格纖細優雅、香氣導向的地塊(例如香波-蜜思妮這類地塊),在橡木桶與萃取的搭配上,比較合理的方向是:\n\nA. 用高比例全新橡木桶 + 重萃取,才能展現「頂級」氣勢\n\nB. 用較低比例新桶(以舊桶為主)+ 溫和萃取,保留地塊本身的細緻香氣與質地\n\nC. 完全不進橡木桶,用不鏽鋼槽陳年最能保留風土",
               "choices": [
                 {
-                  "label": "A. 用高比例全新橡木桶 + 重萃取,才能展現「頂級」氣勢",
+                  "label": "A",
                   "next": "quiz_oak_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 用較低比例新桶(以舊桶為主)+ 溫和萃取,保留地塊本身的細緻香氣與質地",
+                  "label": "B",
                   "next": "quiz_oak_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 完全不進橡木桶,用不鏽鋼槽陳年最能保留風土",
+                  "label": "C",
                   "next": "quiz_oak_wrong",
                   "correct": false
                 }
@@ -1758,20 +1758,20 @@
             },
             "quiz_fault_1": {
               "type": "quiz",
-              "text": "濕紙板、發霉地下室氣味,果香被完全壓制,酒體乾扁——這是哪一種常見缺陷?",
+              "text": "濕紙板、發霉地下室氣味,果香被完全壓制,酒體乾扁——這是哪一種常見缺陷?\n\nA. 揮發酸過高(醋酸味)\n\nB. 木塞污染(TCA,俗稱「軟木塞味」)\n\nC. 還原(硫化物氣味)",
               "choices": [
                 {
-                  "label": "A. 揮發酸過高(醋酸味)",
+                  "label": "A",
                   "next": "quiz_fault_1_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 木塞污染(TCA,俗稱「軟木塞味」)",
+                  "label": "B",
                   "next": "quiz_fault_1_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 還原(硫化物氣味)",
+                  "label": "C",
                   "next": "quiz_fault_1_wrong",
                   "correct": false
                 }
@@ -1809,20 +1809,20 @@
             },
             "quiz_fault_2": {
               "type": "quiz",
-              "text": "臭雞蛋、燒焦火柴氣味,搖晃醒酒後氣味明顯減弱——這是哪一種缺陷,而且有可能透過什麼方式緩解?",
+              "text": "臭雞蛋、燒焦火柴氣味,搖晃醒酒後氣味明顯減弱——這是哪一種缺陷,而且有可能透過什麼方式緩解?\n\nA. 還原(硫化物氣味),適度醒酒接觸空氣通常能改善\n\nB. Brettanomyces 酵母污染,無法透過醒酒改善\n\nC. 木塞污染,搖晃醒酒沒有任何幫助",
               "choices": [
                 {
-                  "label": "A. 還原(硫化物氣味),適度醒酒接觸空氣通常能改善",
+                  "label": "A",
                   "next": "quiz_fault_2_correct",
                   "correct": true
                 },
                 {
-                  "label": "B. Brettanomyces 酵母污染,無法透過醒酒改善",
+                  "label": "B",
                   "next": "quiz_fault_2_wrong",
                   "correct": false
                 },
                 {
-                  "label": "C. 木塞污染,搖晃醒酒沒有任何幫助",
+                  "label": "C",
                   "next": "quiz_fault_2_wrong",
                   "correct": false
                 }
@@ -1860,20 +1860,20 @@
             },
             "quiz_fault_3": {
               "type": "quiz",
-              "text": "馬廄、汗濕皮革、藥用 OK 繃氣味,混雜在果香中——這是哪一種缺陷?",
+              "text": "馬廄、汗濕皮革、藥用 OK 繃氣味,混雜在果香中——這是哪一種缺陷?\n\nA. Brettanomyces(俗稱「馬味」)酵母污染\n\nB. 揮發酸過高\n\nC. 木塞污染",
               "choices": [
                 {
-                  "label": "A. Brettanomyces(俗稱「馬味」)酵母污染",
+                  "label": "A",
                   "next": "quiz_fault_3_correct",
                   "correct": true
                 },
                 {
-                  "label": "B. 揮發酸過高",
+                  "label": "B",
                   "next": "quiz_fault_3_wrong",
                   "correct": false
                 },
                 {
-                  "label": "C. 木塞污染",
+                  "label": "C",
                   "next": "quiz_fault_3_wrong",
                   "correct": false
                 }
@@ -1911,20 +1911,20 @@
             },
             "quiz_fault_4": {
               "type": "quiz",
-              "text": "指甲油去光水、醋一般的刺鼻氣味,帶灼熱刺激感——這是哪一種缺陷?",
+              "text": "指甲油去光水、醋一般的刺鼻氣味,帶灼熱刺激感——這是哪一種缺陷?\n\nA. 揮發酸(VA)過高,醋酸菌污染或發酵管理不當\n\nB. 還原氣味\n\nC. 整串發酵梗參與過多",
               "choices": [
                 {
-                  "label": "A. 揮發酸(VA)過高,醋酸菌污染或發酵管理不當",
+                  "label": "A",
                   "next": "quiz_fault_4_correct",
                   "correct": true
                 },
                 {
-                  "label": "B. 還原氣味",
+                  "label": "B",
                   "next": "quiz_fault_4_wrong",
                   "correct": false
                 },
                 {
-                  "label": "C. 整串發酵梗參與過多",
+                  "label": "C",
                   "next": "quiz_fault_4_wrong",
                   "correct": false
                 }
@@ -1952,7 +1952,7 @@
               ]
             },
             "chapter_end_3": {
-              "text": "酒窖外,夜色已深,發酵槽的氣泡聲漸漸安靜下來。Léa 鎖上酒窖大門,回頭看了看你。「下次的裝瓶跟調配,你要不要也一起參與?那又是另一套完全不同的判斷邏輯了。」\n\n你點頭應下,走進夜丘深秋清冷的空氣裡,身上還帶著淡淡的橡木與發酵果香。\n\n【第三章完 · 已獲得知識印記:揮發酸辨識】\n【下一章尚未解鎖:調配的藝術】",
+              "text": "酒窖外,夜色已深,發酵槽的氣泡聲漸漸安靜下來。Léa 鎖上酒窖大門,回頭看了看你。「下次的裝瓶跟調配,你要不要也一起參與?那又是另一套完全不同的判斷邏輯了。」\n\n你點頭應下,走進夜丘深秋清冷的空氣裡,身上還帶著淡淡的橡木與發酵果香。\n\n【第三章完 · 已獲得知識印記:揮發酸辨識】\n\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。",
               "choices": [],
               "is_ending": true
             }
@@ -1980,20 +1980,20 @@
             },
             "quiz_so2": {
               "type": "quiz",
-              "text": "二氧化硫加入酒中後,會分成「游離態」(free SO2)與「結合態」(bound SO2,已跟酒中其他成分結合)。真正具備抗氧化與抗菌防護力的是游離態,而游離態裡又只有一部分(分子態 SO2)真正有效。這個有效比例,主要受下列哪個因素影響最大?",
+              "text": "二氧化硫加入酒中後,會分成「游離態」(free SO2)與「結合態」(bound SO2,已跟酒中其他成分結合)。真正具備抗氧化與抗菌防護力的是游離態,而游離態裡又只有一部分(分子態 SO2)真正有效。這個有效比例,主要受下列哪個因素影響最大?\n\nA. 加入 SO2 的總量,量越多有效比例越高\n\nB. 酒液的 pH 值,pH 越低,同樣游離態 SO2 裡的有效分子態比例越高\n\nC. 酒精濃度,酒精越高,SO2 防護力越強",
               "choices": [
                 {
-                  "label": "A. 加入 SO2 的總量,量越多有效比例越高",
+                  "label": "A",
                   "next": "quiz_so2_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 酒液的 pH 值,pH 越低,同樣游離態 SO2 裡的有效分子態比例越高",
+                  "label": "B",
                   "next": "quiz_so2_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 酒精濃度,酒精越高,SO2 防護力越強",
+                  "label": "C",
                   "next": "quiz_so2_wrong",
                   "correct": false
                 }
@@ -2040,20 +2040,20 @@
             },
             "quiz_filtration": {
               "type": "quiz",
-              "text": "關於裝瓶前是否過濾(filtration)與下膠澄清(fining),業界存在真實的立場分歧。以下哪一種描述,最公允地呈現雙方的論點?",
+              "text": "關於裝瓶前是否過濾(filtration)與下膠澄清(fining),業界存在真實的立場分歧。以下哪一種描述,最公允地呈現雙方的論點?\n\nA. 過濾派完全正確,不過濾的酒都有衛生風險,不該上市\n\nB. 過濾/澄清能提升穩定性與外觀清澈度,但支持者認為可能移除部分風味與質地層次;不過濾則保留更多原始質地與複雜度,但反對者認為增加沉澱、渾濁與微生物不穩定的風險——兩者是取捨,不是對錯\n\nC. 不過濾派完全正確,過濾會讓所有酒都變得平淡無趣",
               "choices": [
                 {
-                  "label": "A. 過濾派完全正確,不過濾的酒都有衛生風險,不該上市",
+                  "label": "A",
                   "next": "quiz_filtration_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 過濾/澄清能提升穩定性與外觀清澈度,但支持者認為可能移除部分風味與質地層次;不過濾則保留更多原始質地與複雜度,但反對者認為增加沉澱、渾濁與微生物不穩定的風險——兩者是取捨,不是對錯",
+                  "label": "B",
                   "next": "quiz_filtration_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 不過濾派完全正確,過濾會讓所有酒都變得平淡無趣",
+                  "label": "C",
                   "next": "quiz_filtration_wrong",
                   "correct": false
                 }
@@ -2124,20 +2124,20 @@
             },
             "quiz_blending": {
               "type": "quiz",
-              "text": "三桶原酒單獨喝都有明顯缺點(整串發酵桶個性強但粗獷、去梗桶純淨但單薄、新桶那桶結構夠但果香被壓過)。調配的核心邏輯,最準確的描述是:",
+              "text": "三桶原酒單獨喝都有明顯缺點(整串發酵桶個性強但粗獷、去梗桶純淨但單薄、新桶那桶結構夠但果香被壓過)。調配的核心邏輯,最準確的描述是:\n\nA. 找出「最好」的那一桶,盡量提高它在調配裡的比例\n\nB. 讓每桶各自的優點互相補強、缺點互相稀釋,組成單一桶次做不到的完整性,而不是選出「最好的一桶」\n\nC. 平均分配三桶的比例,永遠是最安全的調配方式",
               "choices": [
                 {
-                  "label": "A. 找出「最好」的那一桶,盡量提高它在調配裡的比例",
+                  "label": "A",
                   "next": "quiz_blending_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 讓每桶各自的優點互相補強、缺點互相稀釋,組成單一桶次做不到的完整性,而不是選出「最好的一桶」",
+                  "label": "B",
                   "next": "quiz_blending_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 平均分配三桶的比例,永遠是最安全的調配方式",
+                  "label": "C",
                   "next": "quiz_blending_wrong",
                   "correct": false
                 }
@@ -2217,20 +2217,20 @@
             },
             "quiz_elevage": {
               "type": "quiz",
-              "text": "單寧已柔順、橡木氣息與果香融合自然、結構穩定不再有明顯稜角——這種狀態,對「該不該延長陳年」這個問題,最合理的判斷邏輯是:",
+              "text": "單寧已柔順、橡木氣息與果香融合自然、結構穩定不再有明顯稜角——這種狀態,對「該不該延長陳年」這個問題,最合理的判斷邏輯是:\n\nA. 不管酒現在的狀態如何,一定要陳滿業界公認的「標準月數」才能裝瓶\n\nB. 陳年時長應該以酒本身的實際融合狀態為主要判斷依據,而非機械套用固定月數,現在的狀態顯示可能已經到了適合裝瓶的時間點\n\nC. 陳越久一定越好,應該盡量延長陳年時間",
               "choices": [
                 {
-                  "label": "A. 不管酒現在的狀態如何,一定要陳滿業界公認的「標準月數」才能裝瓶",
+                  "label": "A",
                   "next": "quiz_elevage_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 陳年時長應該以酒本身的實際融合狀態為主要判斷依據,而非機械套用固定月數,現在的狀態顯示可能已經到了適合裝瓶的時間點",
+                  "label": "B",
                   "next": "quiz_elevage_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 陳越久一定越好,應該盡量延長陳年時間",
+                  "label": "C",
                   "next": "quiz_elevage_wrong",
                   "correct": false
                 }
@@ -2335,20 +2335,20 @@
             },
             "quiz_vintage_type": {
               "type": "quiz",
-              "text": "第一杯:顏色深、酒精感溫暖明顯、果乾感濃縮成熟、酸度偏低。第二杯:顏色較淺、酸度銳利、新鮮紅色漿果香氣、單寧緊瘦。哪一杯比較可能來自溫暖乾燥的年份?",
+              "text": "第一杯:顏色深、酒精感溫暖明顯、果乾感濃縮成熟、酸度偏低。第二杯:顏色較淺、酸度銳利、新鮮紅色漿果香氣、單寧緊瘦。哪一杯比較可能來自溫暖乾燥的年份?\n\nA. 第一杯,酒精感與濃縮度是溫暖年份的典型特徵\n\nB. 第二杯,酸度銳利代表陽光充足、糖分轉化完全\n\nC. 無法判斷,顏色深淺與氣候類型沒有關聯",
               "choices": [
                 {
-                  "label": "A. 第一杯,酒精感與濃縮度是溫暖年份的典型特徵",
+                  "label": "A",
                   "next": "quiz_vt_correct",
                   "correct": true
                 },
                 {
-                  "label": "B. 第二杯,酸度銳利代表陽光充足、糖分轉化完全",
+                  "label": "B",
                   "next": "quiz_vt_wrong",
                   "correct": false
                 },
                 {
-                  "label": "C. 無法判斷,顏色深淺與氣候類型沒有關聯",
+                  "label": "C",
                   "next": "quiz_vt_wrong",
                   "correct": false
                 }
@@ -2443,20 +2443,20 @@
             },
             "quiz_1976": {
               "type": "quiz",
-              "text": "顏色深沉、果乾蜜餞氣息集中、酒精感溫暖飽滿,但單寧顆粒感偏粗、帶硬朗稜角而非圓潤——這種「濃縮卻不一定圓潤」的特徵組合,最可能反映哪一種年份逆境?",
+              "text": "顏色深沉、果乾蜜餞氣息集中、酒精感溫暖飽滿,但單寧顆粒感偏粗、帶硬朗稜角而非圓潤——這種「濃縮卻不一定圓潤」的特徵組合,最可能反映哪一種年份逆境?\n\nA. 涼爽多雨,葡萄成熟不足\n\nB. 嚴重乾旱,果粒過小導致皮肉比例失衡,糖分成熟快於單寧成熟\n\nC. 採收前突發冰雹,果實大量損傷",
               "choices": [
                 {
-                  "label": "A. 涼爽多雨,葡萄成熟不足",
+                  "label": "A",
                   "next": "quiz_1976_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 嚴重乾旱,果粒過小導致皮肉比例失衡,糖分成熟快於單寧成熟",
+                  "label": "B",
                   "next": "quiz_1976_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 採收前突發冰雹,果實大量損傷",
+                  "label": "C",
                   "next": "quiz_1976_wrong",
                   "correct": false
                 }
@@ -2542,20 +2542,20 @@
             },
             "quiz_climate_trend": {
               "type": "quiz",
-              "text": "四十年間,採收日期從九月底、十月初,逐漸提早到八月底;酒精濃度從 12%-12.5% 上升到普遍 13.5% 以上。這個長期趨勢,最直接反映的是:",
+              "text": "四十年間,採收日期從九月底、十月初,逐漸提早到八月底;酒精濃度從 12%-12.5% 上升到普遍 13.5% 以上。這個長期趨勢,最直接反映的是:\n\nA. 純粹是釀酒師偏好改變,想做更濃郁的風格\n\nB. 生長季平均氣溫的長期上升趨勢,加快葡萄糖分累積速度,是氣候變遷在葡萄種植上的具體體現\n\nC. 葡萄品種在四十年間發生了基因突變",
               "choices": [
                 {
-                  "label": "A. 純粹是釀酒師偏好改變,想做更濃郁的風格",
+                  "label": "A",
                   "next": "quiz_climate_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 生長季平均氣溫的長期上升趨勢,加快葡萄糖分累積速度,是氣候變遷在葡萄種植上的具體體現",
+                  "label": "B",
                   "next": "quiz_climate_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 葡萄品種在四十年間發生了基因突變",
+                  "label": "C",
                   "next": "quiz_climate_wrong",
                   "correct": false
                 }
@@ -2583,7 +2583,7 @@
               ]
             },
             "chapter_end_3": {
-              "text": "你走出 Isabelle 家的地窖,手裡捧著那本磨損的皮革筆記本,心裡忽然浮現這幾個月一路走來遇過的所有人——Étienne、Solange、Albert、Marie-Claude、Fabienne、Léa……每個人手上都握著一小片拼圖,土地的、法律的、工藝的、如今還加上了氣候的。\n\n風土從來不是一個靜止的答案,而是無數層時間疊在一起的結果。\n\n【第三章完 · 已獲得知識印記:氣候變遷長期趨勢】\n【下一章尚未解鎖:待續】",
+              "text": "你走出 Isabelle 家的地窖,手裡捧著那本磨損的皮革筆記本,心裡忽然浮現這幾個月一路走來遇過的所有人——Étienne、Solange、Albert、Marie-Claude、Fabienne、Léa……每個人手上都握著一小片拼圖,土地的、法律的、工藝的、如今還加上了氣候的。\n\n風土從來不是一個靜止的答案,而是無數層時間疊在一起的結果。\n\n【第三章完 · 已獲得知識印記:氣候變遷長期趨勢】\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。",
               "choices": [],
               "is_ending": true
             }
@@ -2611,20 +2611,20 @@
             },
             "quiz_frost": {
               "type": "quiz",
-              "text": "春季輻射霜(radiative frost)最容易發生在晴朗、無風、濕度低的夜晚,而不是陰天或有風的夜晚。這是為什麼?",
+              "text": "春季輻射霜(radiative frost)最容易發生在晴朗、無風、濕度低的夜晚,而不是陰天或有風的夜晚。這是為什麼?\n\nA. 晴朗無雲的夜晚,地表熱量會直接輻射散失到大氣中,沒有雲層或風來阻擋或攪動冷空氣,地表溫度急速下降\n\nB. 晴朗夜晚代表白天日照強烈,葡萄藤消耗過多水分,更容易凍傷\n\nC. 有風的夜晚溫度其實更低,只是感覺不出來",
               "choices": [
                 {
-                  "label": "A. 晴朗無雲的夜晚,地表熱量會直接輻射散失到大氣中,沒有雲層或風來阻擋或攪動冷空氣,地表溫度急速下降",
+                  "label": "A",
                   "next": "quiz_frost_correct",
                   "correct": true
                 },
                 {
-                  "label": "B. 晴朗夜晚代表白天日照強烈,葡萄藤消耗過多水分,更容易凍傷",
+                  "label": "B",
                   "next": "quiz_frost_wrong",
                   "correct": false
                 },
                 {
-                  "label": "C. 有風的夜晚溫度其實更低,只是感覺不出來",
+                  "label": "C",
                   "next": "quiz_frost_wrong",
                   "correct": false
                 }
@@ -2671,20 +2671,20 @@
             },
             "quiz_hail": {
               "type": "quiz",
-              "text": "冰雹打中葡萄園時,除了直接打落果實造成減產,對倖存下來、外觀受損的果實,最主要的後續風險是什麼?",
+              "text": "冰雹打中葡萄園時,除了直接打落果實造成減產,對倖存下來、外觀受損的果實,最主要的後續風險是什麼?\n\nA. 幾乎沒有後續影響,只要外觀完整就沒問題\n\nB. 果皮傷口成為黴菌與腐爛菌感染的入口,採收前的濕度若偏高,容易引發灰黴病等腐爛問題\n\nC. 冰雹會讓果實提前成熟,反而提升品質",
               "choices": [
                 {
-                  "label": "A. 幾乎沒有後續影響,只要外觀完整就沒問題",
+                  "label": "A",
                   "next": "quiz_hail_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 果皮傷口成為黴菌與腐爛菌感染的入口,採收前的濕度若偏高,容易引發灰黴病等腐爛問題",
+                  "label": "B",
                   "next": "quiz_hail_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 冰雹會讓果實提前成熟,反而提升品質",
+                  "label": "C",
                   "next": "quiz_hail_wrong",
                   "correct": false
                 }
@@ -2733,20 +2733,20 @@
             },
             "quiz_vintage_chart": {
               "type": "quiz",
-              "text": "市面上常見的「年份評分圖表」,用單一分數為整個產區、整個年份打分。這種圖表最主要的侷限是什麼?",
+              "text": "市面上常見的「年份評分圖表」,用單一分數為整個產區、整個年份打分。這種圖表最主要的侷限是什麼?\n\nA. 圖表本身數據造假,完全不可信\n\nB. 單一分數是整個大區域的平均印象,忽略了同一年份裡不同村莊、不同地塊、甚至不同釀酒師之間可能存在的巨大差異\n\nC. 年份圖表只適用於波爾多,勃根地沒有年份差異",
               "choices": [
                 {
-                  "label": "A. 圖表本身數據造假,完全不可信",
+                  "label": "A",
                   "next": "quiz_vc_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 單一分數是整個大區域的平均印象,忽略了同一年份裡不同村莊、不同地塊、甚至不同釀酒師之間可能存在的巨大差異",
+                  "label": "B",
                   "next": "quiz_vc_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 年份圖表只適用於波爾多,勃根地沒有年份差異",
+                  "label": "C",
                   "next": "quiz_vc_wrong",
                   "correct": false
                 }
@@ -2804,20 +2804,20 @@
             },
             "quiz_adaptation": {
               "type": "quiz",
-              "text": "面對生長季氣溫上升、成熟速度加快的長期趨勢,葡萄園管理上刻意增加葉幕遮蔭、減少果串直接曝曬,主要目的是什麼?",
+              "text": "面對生長季氣溫上升、成熟速度加快的長期趨勢,葡萄園管理上刻意增加葉幕遮蔭、減少果串直接曝曬,主要目的是什麼?\n\nA. 遮蔭會讓葡萄長得更快、提早採收,加速適應暖化\n\nB. 減少果串直接日照與熱累積,延緩糖分成熟速度,幫助保留更多酸度,對抗暖化導致的採收提早與酒精過高問題\n\nC. 純粹是為了美觀,跟氣候調適無關",
               "choices": [
                 {
-                  "label": "A. 遮蔭會讓葡萄長得更快、提早採收,加速適應暖化",
+                  "label": "A",
                   "next": "quiz_adapt_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 減少果串直接日照與熱累積,延緩糖分成熟速度,幫助保留更多酸度,對抗暖化導致的採收提早與酒精過高問題",
+                  "label": "B",
                   "next": "quiz_adapt_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 純粹是為了美觀,跟氣候調適無關",
+                  "label": "C",
                   "next": "quiz_adapt_wrong",
                   "correct": false
                 }
@@ -2882,20 +2882,20 @@
             },
             "quiz_premox": {
               "type": "quiz",
-              "text": "兩瓶年份相近的白酒:一瓶顏色淺金、果香清新有活力;另一瓶顏色深至琥珀、雪莉般氧化調性明顯、果香幾乎消失。這種「年份相近卻氧化程度天差地遠」的狀況,最可能反映什麼?",
+              "text": "兩瓶年份相近的白酒:一瓶顏色淺金、果香清新有活力;另一瓶顏色深至琥珀、雪莉般氧化調性明顯、果香幾乎消失。這種「年份相近卻氧化程度天差地遠」的狀況,最可能反映什麼?\n\nA. 兩瓶都是正常陳年的結果,只是風格不同\n\nB. 第二瓶可能是「早期氧化」(premox)的案例——遠比預期更快出現氧化跡象,是勃根地優質白酒曾經面臨的真實品質爭議\n\nC. 白酒本來就不會因為氧化而變色,顏色差異單純是品種不同",
               "choices": [
                 {
-                  "label": "A. 兩瓶都是正常陳年的結果,只是風格不同",
+                  "label": "A",
                   "next": "quiz_premox_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 第二瓶可能是「早期氧化」(premox)的案例——遠比預期更快出現氧化跡象,是勃根地優質白酒曾經面臨的真實品質爭議",
+                  "label": "B",
                   "next": "quiz_premox_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 白酒本來就不會因為氧化而變色,顏色差異單純是品種不同",
+                  "label": "C",
                   "next": "quiz_premox_wrong",
                   "correct": false
                 }
@@ -2980,20 +2980,20 @@
             },
             "quiz_meursault": {
               "type": "quiz",
-              "text": "默爾索風格圓潤豐厚(奶油、堅果、蜂蜜氣息),普里尼-蒙哈榭風格緊瘦礦物(柑橘、白花)。攪桶(bâtonnage)這個工藝手法,最主要的作用邏輯是什麼?",
+              "text": "默爾索風格圓潤豐厚(奶油、堅果、蜂蜜氣息),普里尼-蒙哈榭風格緊瘦礦物(柑橘、白花)。攪桶(bâtonnage)這個工藝手法,最主要的作用邏輯是什麼?\n\nA. 攪桶單純是為了防止酒液變質,跟風格無關\n\nB. 攪桶把沉澱的酒渣重新懸浮,讓酒液吸收更多酒渣帶來的質地與風味,增添圓潤厚實感,是塑造默爾索豐厚風格的工藝手段之一\n\nC. 攪桶會讓酒的顏色變深,是純粹的視覺效果",
               "choices": [
                 {
-                  "label": "A. 攪桶單純是為了防止酒液變質,跟風格無關",
+                  "label": "A",
                   "next": "quiz_meursault_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 攪桶把沉澱的酒渣重新懸浮,讓酒液吸收更多酒渣帶來的質地與風味,增添圓潤厚實感,是塑造默爾索豐厚風格的工藝手段之一",
+                  "label": "B",
                   "next": "quiz_meursault_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 攪桶會讓酒的顏色變深,是純粹的視覺效果",
+                  "label": "C",
                   "next": "quiz_meursault_wrong",
                   "correct": false
                 }
@@ -3063,7 +3063,7 @@
               "text": "你注意到她壓榨葡萄的動作特別快,幾乎是搶時間般地把果汁快速轉移到桶裡,過程中還小心翼翼地避免果汁接觸太多空氣。",
               "choices": [
                 {
-                  "label": "「妳這麼小心翼翼避免接觸空氣,是為了防止 premox 嗎?」",
+                  "label": "「這是為了防止 premox 嗎?」",
                   "next": "ask_b"
                 }
               ]
@@ -3088,20 +3088,20 @@
             },
             "quiz_oxidative": {
               "type": "quiz",
-              "text": "關於「氧化型」與「還原型」白酒釀造哲學孰優孰劣、以及何者更能有效預防 premox,以下哪一種描述最公允?",
+              "text": "關於「氧化型」與「還原型」白酒釀造哲學孰優孰劣、以及何者更能有效預防 premox,以下哪一種描述最公允?\n\nA. 還原型工藝已被證實是 premox 的唯一元凶,業界應全面禁止\n\nB. 兩種哲學各有支持者與邏輯依據,premox 的確切成因目前業界仍無定論,可能涉及封瓶材料、抗氧化操作等多重因素,不能簡化成單一路線的對錯\n\nC. 氧化型工藝已被證實完全無效,現代酒莊都該改用還原型",
               "choices": [
                 {
-                  "label": "A. 還原型工藝已被證實是 premox 的唯一元凶,業界應全面禁止",
+                  "label": "A",
                   "next": "quiz_oxidative_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 兩種哲學各有支持者與邏輯依據,premox 的確切成因目前業界仍無定論,可能涉及封瓶材料、抗氧化操作等多重因素,不能簡化成單一路線的對錯",
+                  "label": "B",
                   "next": "quiz_oxidative_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 氧化型工藝已被證實完全無效,現代酒莊都該改用還原型",
+                  "label": "C",
                   "next": "quiz_oxidative_wrong",
                   "correct": false
                 }
@@ -3129,7 +3129,7 @@
               ]
             },
             "chapter_end_2": {
-              "text": "你走出默爾索的酒窖時,夕陽正把整片緩坡染成金黃色。黑皮諾教會你的那套「土壤、坡位、單寧」的判斷邏輯,在這裡只能算半套——夏多內有自己的一套規則,而規則裡最誠實的部分,往往是「還沒有標準答案」這幾個字。\n\n【第二章完 · 已獲得知識印記:氧化還原釀造哲學】\n【下一章尚未解鎖:待續】",
+              "text": "你走出默爾索的酒窖時,夕陽正把整片緩坡染成金黃色。黑皮諾教會你的那套「土壤、坡位、單寧」的判斷邏輯,在這裡只能算半套——夏多內有自己的一套規則,而規則裡最誠實的部分,往往是「還沒有標準答案」這幾個字。\n\n【第二章完 · 已獲得知識印記:氧化還原釀造哲學】\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。",
               "choices": [],
               "is_ending": true
             }
@@ -3157,20 +3157,20 @@
             },
             "quiz_naming": {
               "type": "quiz",
-              "text": "Puligny 與 Chassagne 這兩個村莊,在十九世紀分別把自己的村名改成「Puligny-Montrachet」與「Chassagne-Montrachet」。這種改名做法,最主要的目的是什麼?",
+              "text": "Puligny 與 Chassagne 這兩個村莊,在十九世紀分別把自己的村名改成「Puligny-Montrachet」與「Chassagne-Montrachet」。這種改名做法,最主要的目的是什麼?\n\nA. 純粹是行政區劃合併的結果,跟行銷無關\n\nB. 借用境內最負盛名的特級園 Montrachet 之名,提升整個村莊的知名度與酒款辨識度,是勃根地常見的「借名升級」做法,熱夫雷-香貝丹也是同樣邏輯\n\nC. Montrachet 特級園本身要求所有周邊村莊都必須改名才能使用其名稱釀酒",
               "choices": [
                 {
-                  "label": "A. 純粹是行政區劃合併的結果,跟行銷無關",
+                  "label": "A",
                   "next": "quiz_naming_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 借用境內最負盛名的特級園 Montrachet 之名,提升整個村莊的知名度與酒款辨識度,是勃根地常見的「借名升級」做法,熱夫雷-香貝丹也是同樣邏輯",
+                  "label": "B",
                   "next": "quiz_naming_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. Montrachet 特級園本身要求所有周邊村莊都必須改名才能使用其名稱釀酒",
+                  "label": "C",
                   "next": "quiz_naming_wrong",
                   "correct": false
                 }
@@ -3217,20 +3217,20 @@
             },
             "quiz_mlf": {
               "type": "quiz",
-              "text": "乳酸發酵(malolactic fermentation, MLF)會把酒中尖銳的蘋果酸轉化為較柔和的乳酸。紅酒幾乎必然進行 MLF,但白酒(尤其夏多內)是否進行 MLF,是一個真正的風格選擇題。完整 MLF 的白酒,通常會呈現什麼傾向?",
+              "text": "乳酸發酵(malolactic fermentation, MLF)會把酒中尖銳的蘋果酸轉化為較柔和的乳酸。紅酒幾乎必然進行 MLF,但白酒(尤其夏多內)是否進行 MLF,是一個真正的風格選擇題。完整 MLF 的白酒,通常會呈現什麼傾向?\n\nA. 酸度更銳利、更接近未成熟蘋果的尖酸感\n\nB. 酸度變柔和圓潤,常帶有奶油般的質地與氣息,但同時會犧牲部分新鮮爽脆的果酸表現\n\nC. 酒精濃度會因此明顯升高",
               "choices": [
                 {
-                  "label": "A. 酸度更銳利、更接近未成熟蘋果的尖酸感",
+                  "label": "A",
                   "next": "quiz_mlf_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 酸度變柔和圓潤,常帶有奶油般的質地與氣息,但同時會犧牲部分新鮮爽脆的果酸表現",
+                  "label": "B",
                   "next": "quiz_mlf_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 酒精濃度會因此明顯升高",
+                  "label": "C",
                   "next": "quiz_mlf_wrong",
                   "correct": false
                 }
@@ -3279,20 +3279,20 @@
             },
             "quiz_chard_oak": {
               "type": "quiz",
-              "text": "白酒(尤其夏多內)相較於紅酒,對新橡木桶比例的容忍度通常如何?",
+              "text": "白酒(尤其夏多內)相較於紅酒,對新橡木桶比例的容忍度通常如何?\n\nA. 白酒的果香與質地相對細膩,容易被高比例新桶的香草、烤吐司氣息蓋過,新桶比例通常需要更謹慎控制\n\nB. 白酒沒有單寧,所以可以無限制使用全新橡木桶,完全不用擔心\n\nC. 白酒完全不適合進橡木桶,只能用不鏽鋼槽",
               "choices": [
                 {
-                  "label": "A. 白酒的果香與質地相對細膩,容易被高比例新桶的香草、烤吐司氣息蓋過,新桶比例通常需要更謹慎控制",
+                  "label": "A",
                   "next": "quiz_chard_oak_correct",
                   "correct": true
                 },
                 {
-                  "label": "B. 白酒沒有單寧,所以可以無限制使用全新橡木桶,完全不用擔心",
+                  "label": "B",
                   "next": "quiz_chard_oak_wrong",
                   "correct": false
                 },
                 {
-                  "label": "C. 白酒完全不適合進橡木桶,只能用不鏽鋼槽",
+                  "label": "C",
                   "next": "quiz_chard_oak_wrong",
                   "correct": false
                 }
@@ -3350,20 +3350,20 @@
             },
             "quiz_puligny": {
               "type": "quiz",
-              "text": "Marc 的極簡工藝哲學(少攪桶、少新桶),跟普里尼-蒙哈榭本身講究地塊精準表現的風格傳統,兩者之間的邏輯關係是:",
+              "text": "Marc 的極簡工藝哲學(少攪桶、少新桶),跟普里尼-蒙哈榭本身講究地塊精準表現的風格傳統,兩者之間的邏輯關係是:\n\nA. 極簡工藝跟地塊表現力沒有關係,純粹是個人偏好\n\nB. 減少工藝介入(少攪桶、少新桶),能讓地塊本身的礦物感與細微差異更清晰地顯現,契合普里尼一帶強調「精準表達地塊」的風格傳統\n\nC. 極簡工藝會讓所有地塊喝起來變得一模一樣,反而抹平差異",
               "choices": [
                 {
-                  "label": "A. 極簡工藝跟地塊表現力沒有關係,純粹是個人偏好",
+                  "label": "A",
                   "next": "quiz_puligny_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 減少工藝介入(少攪桶、少新桶),能讓地塊本身的礦物感與細微差異更清晰地顯現,契合普里尼一帶強調「精準表達地塊」的風格傳統",
+                  "label": "B",
                   "next": "quiz_puligny_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 極簡工藝會讓所有地塊喝起來變得一模一樣,反而抹平差異",
+                  "label": "C",
                   "next": "quiz_puligny_wrong",
                   "correct": false
                 }
@@ -3457,20 +3457,20 @@
             },
             "quiz_corton": {
               "type": "quiz",
-              "text": "柯通丘上,Corton-Charlemagne(白酒特級園)主要位於坡地上段、石灰岩含量高的區域;Corton(紅酒特級園)則位於中下段、黏土比例較高的區域。這種紅白特級園在同一座山丘上並存的邊界劃分,最準確的理解是:",
+              "text": "柯通丘上,Corton-Charlemagne(白酒特級園)主要位於坡地上段、石灰岩含量高的區域;Corton(紅酒特級園)則位於中下段、黏土比例較高的區域。這種紅白特級園在同一座山丘上並存的邊界劃分,最準確的理解是:\n\nA. 純粹是歷史上行政區劃的偶然結果,跟土壤或坡位沒有必然關係\n\nB. 邊界大致反映了不同坡位土壤與排水條件對品種適應性的長期經驗——石灰岩上段適合夏多內,黏土中下段適合黑皮諾,法定分級是這種經驗的制度化結果\n\nC. 柯通丘其實只有一種土壤,紅白特級園的差異純粹來自釀酒師的選擇",
               "choices": [
                 {
-                  "label": "A. 純粹是歷史上行政區劃的偶然結果,跟土壤或坡位沒有必然關係",
+                  "label": "A",
                   "next": "quiz_corton_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 邊界大致反映了不同坡位土壤與排水條件對品種適應性的長期經驗——石灰岩上段適合夏多內,黏土中下段適合黑皮諾,法定分級是這種經驗的制度化結果",
+                  "label": "B",
                   "next": "quiz_corton_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 柯通丘其實只有一種土壤,紅白特級園的差異純粹來自釀酒師的選擇",
+                  "label": "C",
                   "next": "quiz_corton_wrong",
                   "correct": false
                 }
@@ -3534,20 +3534,20 @@
             },
             "quiz_asymmetry": {
               "type": "quiz",
-              "text": "伯恩丘白酒特級園數量明顯多於紅酒特級園(紅酒僅 Corton 一塊,白酒則有 Corton-Charlemagne、蒙哈榭家族等多塊)。這種不對稱現象,最主要跟以下哪個因素有關?",
+              "text": "伯恩丘白酒特級園數量明顯多於紅酒特級園(紅酒僅 Corton 一塊,白酒則有 Corton-Charlemagne、蒙哈榭家族等多塊)。這種不對稱現象,最主要跟以下哪個因素有關?\n\nA. 伯恩丘的紅酒品質整體不如夜丘,所以評選標準特別嚴格\n\nB. 伯恩丘南段(默爾索、普里尼-蒙哈榭、夏山-蒙哈榭一帶)的石灰岩與坡向條件特別適合夏多內表現出頂級複雜度,而歷史上被評選為特級園的地塊,自然集中在這類優越的白酒風土上\n\nC. 純粹是命名巧合,伯恩丘紅酒地塊其實也有很多特級園,只是名字上沒有標明",
               "choices": [
                 {
-                  "label": "A. 伯恩丘的紅酒品質整體不如夜丘,所以評選標準特別嚴格",
+                  "label": "A",
                   "next": "quiz_asymmetry_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 伯恩丘南段(默爾索、普里尼-蒙哈榭、夏山-蒙哈榭一帶)的石灰岩與坡向條件特別適合夏多內表現出頂級複雜度,而歷史上被評選為特級園的地塊,自然集中在這類優越的白酒風土上",
+                  "label": "B",
                   "next": "quiz_asymmetry_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 純粹是命名巧合,伯恩丘紅酒地塊其實也有很多特級園,只是名字上沒有標明",
+                  "label": "C",
                   "next": "quiz_asymmetry_wrong",
                   "correct": false
                 }
@@ -3575,7 +3575,7 @@
               ]
             },
             "chapter_end_2": {
-              "text": "你告別 Thibault,走下柯通丘。回頭望去,山頂那圈樹林像一頂王冠,把紅與白兩個世界穩穩地戴在同一座山上。\n\n從熱夫雷的一瓶神秘酒開始,到這座紅白並存的山丘,風土的故事一直在提醒你同一件事:地圖上的每一條分級界線背後,都是土地自己畫出來的。\n\n【第二章完 · 已獲得知識印記:伯恩丘紅白特級園格局】\n【下一章尚未解鎖:待續】",
+              "text": "你告別 Thibault,走下柯通丘。回頭望去,山頂那圈樹林像一頂王冠,把紅與白兩個世界穩穩地戴在同一座山上。\n\n從熱夫雷的一瓶神秘酒開始,到這座紅白並存的山丘,風土的故事一直在提醒你同一件事:地圖上的每一條分級界線背後,都是土地自己畫出來的。\n\n【第二章完 · 已獲得知識印記:伯恩丘紅白特級園格局】\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。",
               "choices": [],
               "is_ending": true
             }
@@ -3603,20 +3603,20 @@
             },
             "quiz_pernand": {
               "type": "quiz",
-              "text": "帕娜-維哲雷斯跟阿羅斯-科通一樣,境內都有柯通丘的特級園地塊,但村莊本身的知名度明顯較低。這種現象最主要的原因是什麼?",
+              "text": "帕娜-維哲雷斯跟阿羅斯-科通一樣,境內都有柯通丘的特級園地塊,但村莊本身的知名度明顯較低。這種現象最主要的原因是什麼?\n\nA. 帕娜-維哲雷斯境內的柯通丘地塊,法律上不能標示 Corton 或 Corton-Charlemagne 之名\n\nB. 特級園酒標本身通常只標示特級園名稱(如 Corton-Charlemagne),不會特別強調背後屬於哪個行政村莊,加上阿羅斯村名本身跟「柯通」的關聯性在歷史行銷上更早被建立,久而久之外界印象自然集中在阿羅斯\n\nC. 帕娜-維哲雷斯的葡萄園面積遠小於阿羅斯,幾乎可以忽略",
               "choices": [
                 {
-                  "label": "A. 帕娜-維哲雷斯境內的柯通丘地塊,法律上不能標示 Corton 或 Corton-Charlemagne 之名",
+                  "label": "A",
                   "next": "quiz_pernand_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 特級園酒標本身通常只標示特級園名稱(如 Corton-Charlemagne),不會特別強調背後屬於哪個行政村莊,加上阿羅斯村名本身跟「柯通」的關聯性在歷史行銷上更早被建立,久而久之外界印象自然集中在阿羅斯",
+                  "label": "B",
                   "next": "quiz_pernand_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 帕娜-維哲雷斯的葡萄園面積遠小於阿羅斯,幾乎可以忽略",
+                  "label": "C",
                   "next": "quiz_pernand_wrong",
                   "correct": false
                 }
@@ -3663,20 +3663,20 @@
             },
             "quiz_ladoix": {
               "type": "quiz",
-              "text": "拉多瓦-塞里尼同時位於夜丘與伯恩丘的行政交界處,境內葡萄園橫跨柯通丘的一部分,也有屬於自己村莊等級與一級園的地塊。這種行政與地理雙重交界的位置,對理解勃根地分級系統帶來什麼提醒?",
+              "text": "拉多瓦-塞里尼同時位於夜丘與伯恩丘的行政交界處,境內葡萄園橫跨柯通丘的一部分,也有屬於自己村莊等級與一級園的地塊。這種行政與地理雙重交界的位置,對理解勃根地分級系統帶來什麼提醒?\n\nA. 這證明勃根地的產區劃分毫無邏輯,完全隨意\n\nB. 產區邊界劃分是地理條件(土壤、坡向)與歷史行政沿革交織的結果,像拉多瓦這樣橫跨多重交界的村莊,提醒我們「夜丘/伯恩丘」這種大分類本身也是相對而非絕對的概念\n\nC. 拉多瓦其實不屬於任何官方分級系統,是法律漏洞",
               "choices": [
                 {
-                  "label": "A. 這證明勃根地的產區劃分毫無邏輯,完全隨意",
+                  "label": "A",
                   "next": "quiz_ladoix_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 產區邊界劃分是地理條件(土壤、坡向)與歷史行政沿革交織的結果,像拉多瓦這樣橫跨多重交界的村莊,提醒我們「夜丘/伯恩丘」這種大分類本身也是相對而非絕對的概念",
+                  "label": "B",
                   "next": "quiz_ladoix_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 拉多瓦其實不屬於任何官方分級系統,是法律漏洞",
+                  "label": "C",
                   "next": "quiz_ladoix_wrong",
                   "correct": false
                 }
@@ -3725,20 +3725,20 @@
             },
             "quiz_charlemagne": {
               "type": "quiz",
-              "text": "關於 Corton-Charlemagne 名稱由來,流傳最廣的民間傳說版本是:查理曼大帝曾在柯通丘擁有葡萄園,因為擔心紅酒弄髒自己的白鬍子,下令改種白葡萄。這個傳說最適合用什麼態度來看待?",
+              "text": "關於 Corton-Charlemagne 名稱由來,流傳最廣的民間傳說版本是:查理曼大帝曾在柯通丘擁有葡萄園,因為擔心紅酒弄髒自己的白鬍子,下令改種白葡萄。這個傳說最適合用什麼態度來看待?\n\nA. 這是經過嚴謹史料考證、百分之百確認的正式歷史事實\n\nB. 這是流傳已久、廣為人知的民間傳說,增添了地名的文化色彩與故事性,但並非經過嚴謹史料考證的確鑿史實,學習時應該把它當作傳說而非定論來欣賞\n\nC. 這個傳說已經被證實完全是現代行銷公司捏造,毫無歷史根據",
               "choices": [
                 {
-                  "label": "A. 這是經過嚴謹史料考證、百分之百確認的正式歷史事實",
+                  "label": "A",
                   "next": "quiz_charlemagne_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 這是流傳已久、廣為人知的民間傳說,增添了地名的文化色彩與故事性,但並非經過嚴謹史料考證的確鑿史實,學習時應該把它當作傳說而非定論來欣賞",
+                  "label": "B",
                   "next": "quiz_charlemagne_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 這個傳說已經被證實完全是現代行銷公司捏造,毫無歷史根據",
+                  "label": "C",
                   "next": "quiz_charlemagne_wrong",
                   "correct": false
                 }
@@ -3796,20 +3796,20 @@
             },
             "quiz_hill_future": {
               "type": "quiz",
-              "text": "柯通丘的紅白特級園邊界,長期以來由土壤與坡位條件決定。如果生長季氣溫持續上升的長期趨勢延續,對這條邊界最合理的推測方向是什麼?",
+              "text": "柯通丘的紅白特級園邊界,長期以來由土壤與坡位條件決定。如果生長季氣溫持續上升的長期趨勢延續,對這條邊界最合理的推測方向是什麼?\n\nA. 邊界是法律劃定的,不管氣候怎麼變,實際種植品種永遠不會受影響\n\nB. 雖然法定邊界不會輕易更動,但長期而言,原本偏冷、較晚成熟的坡位條件可能變得更適合品種調整,種植者的實務選擇有可能逐漸偏離歷史邊界背後的原始氣候假設\n\nC. 暖化只會影響採收日期,對品種與坡位的適配關係完全沒有影響",
               "choices": [
                 {
-                  "label": "A. 邊界是法律劃定的,不管氣候怎麼變,實際種植品種永遠不會受影響",
+                  "label": "A",
                   "next": "quiz_hill_future_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 雖然法定邊界不會輕易更動,但長期而言,原本偏冷、較晚成熟的坡位條件可能變得更適合品種調整,種植者的實務選擇有可能逐漸偏離歷史邊界背後的原始氣候假設",
+                  "label": "B",
                   "next": "quiz_hill_future_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 暖化只會影響採收日期,對品種與坡位的適配關係完全沒有影響",
+                  "label": "C",
                   "next": "quiz_hill_future_wrong",
                   "correct": false
                 }
@@ -3903,20 +3903,20 @@
             },
             "quiz_pommard": {
               "type": "quiz",
-              "text": "第一杯:單寧紮實有稜角、黑色漿果與皮革氣息、酒體厚重。第二杯:單寧細滑、紅色漿果與花香、線條輕盈優雅。哪一杯是玻馬,哪一杯是渥爾內?",
+              "text": "第一杯:單寧紮實有稜角、黑色漿果與皮革氣息、酒體厚重。第二杯:單寧細滑、紅色漿果與花香、線條輕盈優雅。哪一杯是玻馬,哪一杯是渥爾內?\n\nA. 第一杯是渥爾內,第二杯是玻馬——優雅的地方通常結構更飽滿\n\nB. 第一杯是玻馬(鐵質黏土帶來紮實單寧與厚重酒體),第二杯是渥爾內(石灰岩薄土帶來輕盈優雅)\n\nC. 無法判斷,兩個村莊風格其實幾乎一樣",
               "choices": [
                 {
-                  "label": "A. 第一杯是渥爾內,第二杯是玻馬——優雅的地方通常結構更飽滿",
+                  "label": "A",
                   "next": "quiz_pommard_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 第一杯是玻馬(鐵質黏土帶來紮實單寧與厚重酒體),第二杯是渥爾內(石灰岩薄土帶來輕盈優雅)",
+                  "label": "B",
                   "next": "quiz_pommard_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 無法判斷,兩個村莊風格其實幾乎一樣",
+                  "label": "C",
                   "next": "quiz_pommard_wrong",
                   "correct": false
                 }
@@ -3995,27 +3995,27 @@
               "text": "「就是這樣,」Odile 說,「在正式的 AOC 產區法定保護制度確立之前,地理名稱幾乎沒有法律約束力,誰都可以拿知名產區的名字包裝自己的酒。我爺爺那一輩,花了很大力氣參與遊說跟訴訟,爭取讓『Pommard』這個名字受到法律實質保護。」\n\n她指著其中一份文件。「這也是為什麼,你之前在菲仙學到的那個 AOC 制度史,對我們家來說不是課本知識,是真實打過的仗。」",
               "choices": [
                 {
-                  "label": "「所以 AOC 制度,某種程度上是被這種仿冒問題逼出來的?」",
+                  "label": "「AOC 制度是被仿冒問題逼出來的?」",
                   "next": "quiz_counterfeit"
                 }
               ]
             },
             "quiz_counterfeit": {
               "type": "quiz",
-              "text": "玻馬在二十世紀初面臨的海外仿冒問題(名字被廣泛盜用、產地與品質毫無保障),對後來 AOC(法定產區)制度的建立與強化,最合理的歷史關聯是:",
+              "text": "玻馬在二十世紀初面臨的海外仿冒問題(名字被廣泛盜用、產地與品質毫無保障),對後來 AOC(法定產區)制度的建立與強化,最合理的歷史關聯是:\n\nA. 兩者完全無關,AOC 制度純粹是政府主動的行政規劃\n\nB. 像玻馬這樣知名產區地理名稱遭到大規模仿冒濫用的真實案例,正是推動生產者團結遊說、促成 AOC 制度建立與強化地理名稱法律保護的重要現實壓力之一\n\nC. 仿冒問題只發生在玻馬,勃根地其他產區完全沒遇過類似狀況",
               "choices": [
                 {
-                  "label": "A. 兩者完全無關,AOC 制度純粹是政府主動的行政規劃",
+                  "label": "A",
                   "next": "quiz_counterfeit_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 像玻馬這樣知名產區地理名稱遭到大規模仿冒濫用的真實案例,正是推動生產者團結遊說、促成 AOC 制度建立與強化地理名稱法律保護的重要現實壓力之一",
+                  "label": "B",
                   "next": "quiz_counterfeit_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 仿冒問題只發生在玻馬,勃根地其他產區完全沒遇過類似狀況",
+                  "label": "C",
                   "next": "quiz_counterfeit_wrong",
                   "correct": false
                 }
@@ -4043,7 +4043,7 @@
               ]
             },
             "chapter_end_2": {
-              "text": "你走出 Odile 的酒莊,手裡還留著那杯玻馬的餘味——紮實、有稜角,像這個村子花了一整代人才守住的名字。\n\n風土的故事,原來不只寫在土壤跟氣候裡,也寫在一場場為了名字本身打過的仗。\n\n【第二章完 · 已獲得知識印記:玻馬仿冒史】\n【下一章尚未解鎖:待續】",
+              "text": "你走出 Odile 的酒莊,手裡還留著那杯玻馬的餘味——紮實、有稜角,像這個村子花了一整代人才守住的名字。\n\n風土的故事,原來不只寫在土壤跟氣候裡,也寫在一場場為了名字本身打過的仗。\n\n【第二章完 · 已獲得知識印記:玻馬仿冒史】\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。",
               "choices": [],
               "is_ending": true
             }
@@ -4071,20 +4071,20 @@
             },
             "quiz_monopole": {
               "type": "quiz",
-              "text": "像 Clos des Epeneaux 這樣完整由單一家族/酒莊持有的地塊,勃根地稱為「monopole」(獨家單一持有園)。這種持有型態,跟你之前學過 Clos de Vougeot 那種橫跨八十幾位地主的地塊相比,最主要的實務差異是什麼?",
+              "text": "像 Clos des Epeneaux 這樣完整由單一家族/酒莊持有的地塊,勃根地稱為「monopole」(獨家單一持有園)。這種持有型態,跟你之前學過 Clos de Vougeot 那種橫跨八十幾位地主的地塊相比,最主要的實務差異是什麼?\n\nA. Monopole 一定是特級園等級,一般地塊不可能是 monopole\n\nB. Monopole 由單一持有者全權決定種植與釀造決策,不需要像多地主地塊那樣協調不同持分主人的意見,風格一致性通常更容易掌控\n\nC. Monopole 表示這塊地禁止對外銷售,只能自用",
               "choices": [
                 {
-                  "label": "A. Monopole 一定是特級園等級,一般地塊不可能是 monopole",
+                  "label": "A",
                   "next": "quiz_monopole_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. Monopole 由單一持有者全權決定種植與釀造決策,不需要像多地主地塊那樣協調不同持分主人的意見,風格一致性通常更容易掌控",
+                  "label": "B",
                   "next": "quiz_monopole_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. Monopole 表示這塊地禁止對外銷售,只能自用",
+                  "label": "C",
                   "next": "quiz_monopole_wrong",
                   "correct": false
                 }
@@ -4131,20 +4131,20 @@
             },
             "quiz_english": {
               "type": "quiz",
-              "text": "英國長期是勃根地酒重要的出口市場,這段貿易淵源最主要可以追溯到什麼樣的歷史脈絡?",
+              "text": "英國長期是勃根地酒重要的出口市場,這段貿易淵源最主要可以追溯到什麼樣的歷史脈絡?\n\nA. 純粹是二十世紀後半才興起的現代貿易關係,沒有更早的歷史根源\n\nB. 這段貿易關係有相當久遠的歷史淵源,英國酒商與消費市場長期以來就是法國葡萄酒(包括勃根地)重要的海外通路,是延續數百年的傳統出口關係\n\nC. 英國市場其實從未真正重視勃根地酒,主要出口對象一直是美國",
               "choices": [
                 {
-                  "label": "A. 純粹是二十世紀後半才興起的現代貿易關係,沒有更早的歷史根源",
+                  "label": "A",
                   "next": "quiz_english_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 這段貿易關係有相當久遠的歷史淵源,英國酒商與消費市場長期以來就是法國葡萄酒(包括勃根地)重要的海外通路,是延續數百年的傳統出口關係",
+                  "label": "B",
                   "next": "quiz_english_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 英國市場其實從未真正重視勃根地酒,主要出口對象一直是美國",
+                  "label": "C",
                   "next": "quiz_english_wrong",
                   "correct": false
                 }
@@ -4186,27 +4186,27 @@
               "text": "你再訪玻馬時,Odile 正站在一片藤蔓稀疏、明顯年邁的葡萄園前發愁。「這片藤有六十年了,」她說,「產量一年比一年低,但釀出來的酒濃縮度跟複雜度,是年輕藤比不上的。我在猶豫要不要挖掉重種。」",
               "choices": [
                 {
-                  "label": "「酒標上常看到『Vieilles Vignes』老藤,這個標示有法定標準嗎?」",
+                  "label": "「『老藤』標示有法定標準嗎?」",
                   "next": "quiz_old_vines"
                 }
               ]
             },
             "quiz_old_vines": {
               "type": "quiz",
-              "text": "酒標上常見的「Vieilles Vignes」(老藤)標示,在法國 AOC 法規裡,有沒有法定的最低樹齡規範?",
+              "text": "酒標上常見的「Vieilles Vignes」(老藤)標示,在法國 AOC 法規裡,有沒有法定的最低樹齡規範?\n\nA. 有,法規明確規定至少要 35 年以上才能標示\n\nB. 沒有法定規範,「Vieilles Vignes」是各酒莊自行認定使用的行銷用語,不同酒莊對「老藤」的樹齡標準可能差異很大\n\nC. 有,但只適用於特級園等級的酒款",
               "choices": [
                 {
-                  "label": "A. 有,法規明確規定至少要 35 年以上才能標示",
+                  "label": "A",
                   "next": "quiz_old_vines_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 沒有法定規範,「Vieilles Vignes」是各酒莊自行認定使用的行銷用語,不同酒莊對「老藤」的樹齡標準可能差異很大",
+                  "label": "B",
                   "next": "quiz_old_vines_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 有,但只適用於特級園等級的酒款",
+                  "label": "C",
                   "next": "quiz_old_vines_wrong",
                   "correct": false
                 }
@@ -4264,20 +4264,20 @@
             },
             "quiz_succession": {
               "type": "quiz",
-              "text": "面對「傳統風格辨識度」與「市場口味變化」之間的張力,最貼近成熟釀酒思維的態度應該是:",
+              "text": "面對「傳統風格辨識度」與「市場口味變化」之間的張力,最貼近成熟釀酒思維的態度應該是:\n\nA. 完全不理會市場變化,永遠只做傳統風格,拒絕任何調整\n\nB. 在保留核心風土辨識度(玻馬的結構與力量感)的前提下,理解並謹慎回應市場品味的變化,而不是全盤否定傳統或全盤迎合市場——找到兩者之間可持續的平衡點\n\nC. 完全放棄傳統風格,徹底改做市場當下最流行的口味",
               "choices": [
                 {
-                  "label": "A. 完全不理會市場變化,永遠只做傳統風格,拒絕任何調整",
+                  "label": "A",
                   "next": "quiz_succession_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 在保留核心風土辨識度(玻馬的結構與力量感)的前提下,理解並謹慎回應市場品味的變化,而不是全盤否定傳統或全盤迎合市場——找到兩者之間可持續的平衡點",
+                  "label": "B",
                   "next": "quiz_succession_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 完全放棄傳統風格,徹底改做市場當下最流行的口味",
+                  "label": "C",
                   "next": "quiz_succession_wrong",
                   "correct": false
                 }
@@ -4373,27 +4373,27 @@
               "text": "「規模不一樣,」Aurélie 說,「桶次調配是同一塊地、不同處理方式的原酒互相截長補短。我這裡調的,是完全不同村莊、不同種植者的葡萄或酒液,規模大得多,而且年年都要重新找到能『複製』去年風格的組合——這比單一莊園的調配難得多,因為每年的原料供應商跟成熟度都在變。」",
               "choices": [
                 {
-                  "label": "思考 négociant 調配跟 domaine 調配的核心差異",
+                  "label": "思考兩種調配邏輯的核心差異",
                   "next": "quiz_beaune"
                 }
               ]
             },
             "quiz_beaune": {
               "type": "quiz",
-              "text": "domaine 裝瓶追求「忠實呈現特定地塊當年的真實樣貌」,négociant 品牌調配追求「年復一年維持消費者熟悉的一貫風格」。這兩種邏輯的根本差異最準確的描述是:",
+              "text": "domaine 裝瓶追求「忠實呈現特定地塊當年的真實樣貌」,négociant 品牌調配追求「年復一年維持消費者熟悉的一貫風格」。這兩種邏輯的根本差異最準確的描述是:\n\nA. négociant 調配的酒品質一定比 domaine 差,因為不是單一地塊\n\nB. 兩者服務的目標不同——domaine 忠於「土地與年份的真實變化」,négociant 忠於「消費者對品牌風格的穩定期待」,不是品質高低之分,是不同的誠實方式\n\nC. 兩者其實做的是完全一樣的事,只是行銷說法不同",
               "choices": [
                 {
-                  "label": "A. négociant 調配的酒品質一定比 domaine 差,因為不是單一地塊",
+                  "label": "A",
                   "next": "quiz_beaune_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 兩者服務的目標不同——domaine 忠於「土地與年份的真實變化」,négociant 忠於「消費者對品牌風格的穩定期待」,不是品質高低之分,是不同的誠實方式",
+                  "label": "B",
                   "next": "quiz_beaune_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 兩者其實做的是完全一樣的事,只是行銷說法不同",
+                  "label": "C",
                   "next": "quiz_beaune_wrong",
                   "correct": false
                 }
@@ -4479,20 +4479,20 @@
             },
             "quiz_power_map": {
               "type": "quiz",
-              "text": "大型 négociant 酒商歷史上多半選擇在伯恩(而非玻馬、默爾索等種植村莊)設立總部,最主要的原因組合是什麼?",
+              "text": "大型 négociant 酒商歷史上多半選擇在伯恩(而非玻馬、默爾索等種植村莊)設立總部,最主要的原因組合是什麼?\n\nA. 伯恩本身的葡萄園品質遠勝周邊所有村莊,酒商當然要設在最好的產區\n\nB. 伯恩具備防禦城牆帶來的安全性、石灰岩地層挖鑿出的大規模天然酒窖儲存條件,加上作為商業與交通節點的區位優勢——這些是跨村莊調配、長期陳年、對外貿易所需要的基礎設施,不是單純的種植條件\n\nC. 純粹是歷史偶然,沒有任何實際地理或商業因素",
               "choices": [
                 {
-                  "label": "A. 伯恩本身的葡萄園品質遠勝周邊所有村莊,酒商當然要設在最好的產區",
+                  "label": "A",
                   "next": "quiz_power_map_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 伯恩具備防禦城牆帶來的安全性、石灰岩地層挖鑿出的大規模天然酒窖儲存條件,加上作為商業與交通節點的區位優勢——這些是跨村莊調配、長期陳年、對外貿易所需要的基礎設施,不是單純的種植條件",
+                  "label": "B",
                   "next": "quiz_power_map_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 純粹是歷史偶然,沒有任何實際地理或商業因素",
+                  "label": "C",
                   "next": "quiz_power_map_wrong",
                   "correct": false
                 }
@@ -4504,7 +4504,7 @@
               "grants_badge": "伯恩商業權力地圖",
               "choices": [
                 {
-                  "label": "「謝謝妳,Aurélie,這趟徹底補上了我對勃根地產業結構的理解。」",
+                  "label": "「謝謝妳,這趟收穫很多。」",
                   "next": "chapter_end_2"
                 }
               ]
@@ -4520,7 +4520,7 @@
               ]
             },
             "chapter_end_2": {
-              "text": "你告別 Aurélie,走在伯恩舊城的石板路上。城牆內外,種植的權力與商業的權力,幾百年來各自生長,又始終緊密交織——就像這片土地上每一段故事,最終都指向同一件事:風土從來不是一個人的事。\n\n【第二章完 · 已獲得知識印記:伯恩商業權力地圖】\n【下一章尚未解鎖:待續】",
+              "text": "你告別 Aurélie,走在伯恩舊城的石板路上。城牆內外,種植的權力與商業的權力,幾百年來各自生長,又始終緊密交織——就像這片土地上每一段故事,最終都指向同一件事:風土從來不是一個人的事。\n\n【第二章完 · 已獲得知識印記:伯恩商業權力地圖】\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。",
               "choices": [],
               "is_ending": true
             }
@@ -4548,20 +4548,20 @@
             },
             "quiz_regional": {
               "type": "quiz",
-              "text": "「Bourgogne」大區級 AOC,是勃根地分級金字塔最基礎的一層。這個等級的酒,葡萄來源範圍最準確的理解是:",
+              "text": "「Bourgogne」大區級 AOC,是勃根地分級金字塔最基礎的一層。這個等級的酒,葡萄來源範圍最準確的理解是:\n\nA. 只能來自夜丘與伯恩丘,不包括夏布利或馬貢內\n\nB. 可以來自整個勃根地產區範圍內符合規範的地塊,不限定特定村莊或坡位,是分級金字塔裡地理範圍最廣、風格彈性也最大的一層\n\nC. 大區級其實不算正式 AOC,只是行銷用詞",
               "choices": [
                 {
-                  "label": "A. 只能來自夜丘與伯恩丘,不包括夏布利或馬貢內",
+                  "label": "A",
                   "next": "quiz_regional_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 可以來自整個勃根地產區範圍內符合規範的地塊,不限定特定村莊或坡位,是分級金字塔裡地理範圍最廣、風格彈性也最大的一層",
+                  "label": "B",
                   "next": "quiz_regional_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 大區級其實不算正式 AOC,只是行銷用詞",
+                  "label": "C",
                   "next": "quiz_regional_wrong",
                   "correct": false
                 }
@@ -4608,20 +4608,20 @@
             },
             "quiz_trust": {
               "type": "quiz",
-              "text": "相較於單一 domaine 的信譽主要繫於「這塊地、這位釀酒師」,négociant 品牌信譽的累積邏輯最主要建立在什麼基礎上?",
+              "text": "相較於單一 domaine 的信譽主要繫於「這塊地、這位釀酒師」,négociant 品牌信譽的累積邏輯最主要建立在什麼基礎上?\n\nA. 純粹依賴廣告行銷,跟實際品質無關\n\nB. 跨世代持續維持穩定的採購與調配品質標準,讓消費者累積起「這個牌子,年年都值得信賴」的長期信心,信譽本身成為一種需要長期經營、難以速成的無形資產\n\nC. négociant 品牌信譽完全來自法律強制認證,消費者不需要自行判斷",
               "choices": [
                 {
-                  "label": "A. 純粹依賴廣告行銷,跟實際品質無關",
+                  "label": "A",
                   "next": "quiz_trust_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 跨世代持續維持穩定的採購與調配品質標準,讓消費者累積起「這個牌子,年年都值得信賴」的長期信心,信譽本身成為一種需要長期經營、難以速成的無形資產",
+                  "label": "B",
                   "next": "quiz_trust_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. négociant 品牌信譽完全來自法律強制認證,消費者不需要自行判斷",
+                  "label": "C",
                   "next": "quiz_trust_wrong",
                   "correct": false
                 }
@@ -4670,20 +4670,20 @@
             },
             "quiz_negotiation": {
               "type": "quiz",
-              "text": "négociant 跟種植者之間的葡萄/酒液收購價格談判,通常會受到哪些因素影響?",
+              "text": "négociant 跟種植者之間的葡萄/酒液收購價格談判,通常會受到哪些因素影響?\n\nA. 完全由政府統一定價,雙方沒有議價空間\n\nB. 受當年產量、品質、市場需求、雙方長期合作關係與信任基礎等多重因素影響,是真實的商業議價過程,長期穩定合作的關係往往能換得更好的條件\n\nC. 只看地塊的官方分級等級,其他因素完全不重要",
               "choices": [
                 {
-                  "label": "A. 完全由政府統一定價,雙方沒有議價空間",
+                  "label": "A",
                   "next": "quiz_negotiation_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 受當年產量、品質、市場需求、雙方長期合作關係與信任基礎等多重因素影響,是真實的商業議價過程,長期穩定合作的關係往往能換得更好的條件",
+                  "label": "B",
                   "next": "quiz_negotiation_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 只看地塊的官方分級等級,其他因素完全不重要",
+                  "label": "C",
                   "next": "quiz_negotiation_wrong",
                   "correct": false
                 }
@@ -4741,20 +4741,20 @@
             },
             "quiz_evolution": {
               "type": "quiz",
-              "text": "近年不少傳統 négociant 酒商,除了原本的跨村莊品牌調配酒款,也開始推出單一村莊甚至單一地塊裝瓶的「négociant-éleveur」酒款。這種轉變最準確的理解是:",
+              "text": "近年不少傳統 négociant 酒商,除了原本的跨村莊品牌調配酒款,也開始推出單一村莊甚至單一地塊裝瓶的「négociant-éleveur」酒款。這種轉變最準確的理解是:\n\nA. 這證明 négociant 傳統調配模式已經徹底過時,即將被淘汰\n\nB. 這是 négociant 模式的擴展而非取代——酒商同時經營跨村莊品牌調配酒(滿足穩定風格需求)與單一地塊裝瓶(滿足消費者對特定風土表現的興趣),兩種商業模式並存,domaine 與 négociant 之間的界線也因此變得更模糊\n\nC. 單一地塊裝瓶只是行銷噱頭,酒液來源其實跟品牌調配酒完全一樣",
               "choices": [
                 {
-                  "label": "A. 這證明 négociant 傳統調配模式已經徹底過時,即將被淘汰",
+                  "label": "A",
                   "next": "quiz_evolution_wrong",
                   "correct": false
                 },
                 {
-                  "label": "B. 這是 négociant 模式的擴展而非取代——酒商同時經營跨村莊品牌調配酒(滿足穩定風格需求)與單一地塊裝瓶(滿足消費者對特定風土表現的興趣),兩種商業模式並存,domaine 與 négociant 之間的界線也因此變得更模糊",
+                  "label": "B",
                   "next": "quiz_evolution_correct",
                   "correct": true
                 },
                 {
-                  "label": "C. 單一地塊裝瓶只是行銷噱頭,酒液來源其實跟品牌調配酒完全一樣",
+                  "label": "C",
                   "next": "quiz_evolution_wrong",
                   "correct": false
                 }
@@ -4766,7 +4766,7 @@
               "grants_badge": "négociant-éleveur 現代演變",
               "choices": [
                 {
-                  "label": "「謝謝妳,Aurélie,這趟旅程讓我看懂了整個產業的全貌。」",
+                  "label": "「謝謝妳,Aurélie。」",
                   "next": "waypoint_end_evolution"
                 }
               ]
@@ -4783,6 +4783,483 @@
             },
             "waypoint_end_evolution": {
               "text": "你走出伯恩的酒商總部,夕陽把舊城牆染成溫暖的橘紅色。從調配師的鼻子,到城市的權力地圖,到採購季的談判,再到品牌自身的演變——這條旅程讓你明白,勃根地的故事從來不是「地塊 vs 品牌」的二選一,而是兩套邏輯幾百年來,始終在同一片土地上並肩生長。\n\n【支線完 · 已獲得知識印記:négociant-éleveur 現代演變】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      }
+    },
+    "chablis_backbone": {
+      "title": "夏布利的骨架",
+      "tagline": "沒有橡木桶幫忙掩護,這裡的酒必須直接面對自己——石頭的味道,騙不了人",
+      "knowledge_focus": "契馬利階石灰岩與牡蠣化石地質、冷涼氣候不進桶傳統、單一特級園法定產區橫跨七個 climat 的特殊結構",
+      "region": "夏布利與歐塞瓦 Chablis & Auxerrois",
+      "chapter_order": [
+        "oyster_fossils_01",
+        "irancy_exception_outpost",
+        "one_appellation_seven_names_02",
+        "saint_bris_outpost",
+        "diluted_name_wp",
+        "river_trade_wp"
+      ],
+      "chapters": {
+        "oyster_fossils_01": {
+          "title": "第一章:牡蠣化石與石頭的記憶",
+          "meta": {
+            "village": "Chablis",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "契馬利階石灰岩地質與冷涼氣候不進桶傳統",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "夏布利村外一片被削出來的坡地斷面前,Margaux Testard 蹲下身,從土裡撿起一小塊灰白色的石頭,遞到你面前。「看仔細點,」她說,「那個螺旋狀的痕跡,是牡蠣化石。」",
+              "choices": [
+                {
+                  "label": "「葡萄園裡怎麼會有牡蠣化石?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🪨 先仔細看看這塊石頭的紋理",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "你把石頭拿近了看,確實能辨認出一圈圈螺旋狀的殼形痕跡,密密麻麻嵌在灰白色的岩層裡,彷彿整片山坡是由無數細小的貝殼堆疊壓實而成。",
+              "choices": [
+                {
+                  "label": "「這些痕跡,是真正的化石嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「是真的,」Margaux 說,「一億五千萬年前,這裡是一片淺海,叫『契馬利階』(Kimmeridgian)海。這種螺旋牡蠣化石學名 Exogyra virgula,整片夏布利的土壤,基本上就是遠古海床壓實形成的石灰質泥灰岩。」\n\n她把石頭放回土裡。「這也是為什麼,夏布利的酒喝起來常有人形容『有海味』、『礦物感強烈』——某種程度上,你喝的真的是一片古老海洋留下的痕跡。」",
+              "choices": [
+                {
+                  "label": "「這種土壤,對酒的風格有什麼直接影響?」",
+                  "next": "climate_c"
+                }
+              ]
+            },
+            "climate_c": {
+              "text": "「石灰質土壤排水良好、保水又適中,加上夏布利氣候比伯恩丘更冷涼,葡萄成熟得更慢、保留更多天然酸度,」Margaux 繼續說,「你在默爾索應該喝過那種圓潤豐厚、帶奶油堅果氣息的夏多內吧?我們這裡,傳統上幾乎不進橡木桶,追求的是完全相反的方向——銳利、純淨、直接把石頭的味道端給你,沒有任何工藝去修飾它。」",
+              "choices": [
+                {
+                  "label": "「不進橡木桶,是因為工藝比較簡單嗎?」",
+                  "next": "quiz_chablis"
+                }
+              ]
+            },
+            "quiz_chablis": {
+              "type": "quiz",
+              "text": "夏布利傳統風格幾乎不使用橡木桶,採用不鏽鋼槽發酵陳年,追求銳利酸度與純淨礦物感。這種做法最準確的理解是:\n\nA. 不進橡木桶代表工藝層次比較低,是因為當地技術或資金不足\n\nB. 這是刻意的風格選擇——冷涼氣候與契馬利階石灰岩本身已經賦予酒款鮮明的酸度與礦物個性,不鏽鋼槽發酵能完整保留這種特質,不被橡木桶的香草、烤吐司氣息掩蓋\n\nC. 夏布利的葡萄品種天生不適合進橡木桶,法規明文禁止",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_chablis_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_chablis_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_chablis_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "夏布利產區位於勃根地最北端,氣候明顯比伯恩丘更冷涼,加上獨特的契馬利階(Kimmeridgian)石灰質泥灰岩土壤——這種土壤由約一億五千萬年前的淺海沉積物壓實而成,富含牡蠣等海洋生物化石(如 Exogyra virgula)——共同造就夏多內在此地展現出銳利酸度與鮮明礦物感的風格。夏布利傳統上偏好使用不鏽鋼槽而非橡木桶進行發酵與培養,這是刻意的風格選擇而非工藝限制:冷涼氣候與石灰岩風土本身已經賦予酒款強烈的個性,不鏽鋼槽能完整保留這種銳利純淨的表現,避免橡木桶的香草、烤吐司氣息掩蓋風土本身的聲音。這跟默爾索積極運用攪桶與新橡木桶塑造圓潤風格,形成夏多內光譜的另一端。"
+            },
+            "quiz_chablis_correct": {
+              "text": "Margaux 滿意地點頭。「就是這樣。不進橡木桶不是偷懶,是我們相信,這片古老海床已經把該說的話都說完了,不需要木頭再插嘴。」\n\n她望向遠方層層疊疊的坡地。「而且你知道嗎,夏布利的特級園,結構也跟你在夜丘、伯恩丘看過的完全不一樣。」",
+              "grants_badge": "契馬利階風土邏輯",
+              "choices": [
+                {
+                  "label": "「怎麼個不一樣法?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_chablis_wrong": {
+              "text": "Margaux 搖搖頭。「不是技術不足,法規也沒有禁止進橡木桶——再想想,冷涼氣候跟石灰岩土壤,本身已經給了酒什麼樣的個性?」",
+              "sets_fog": "quiz_chablis",
+              "choices": [
+                {
+                  "label": "重新思考不進橡木桶的風格選擇邏輯",
+                  "next": "quiz_chablis"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Margaux 領你走向山坡上緣,一片朝南的斜坡在陽光下泛著淺色的光澤。「這整片,才是真正的夏布利特級園,」她說,「但它的分級結構,會讓你之前學過的東西,得重新想一遍。」\n\n【第一章完 · 已獲得知識印記:契馬利階風土邏輯】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:一座特級園,七個名字",
+                  "next": "opening",
+                  "chapter": "one_appellation_seven_names_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "one_appellation_seven_names_02": {
+          "title": "第二章:一座特級園,七個名字",
+          "meta": {
+            "village": "Chablis",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "夏布利特級園單一產區橫跨七個 climat 的特殊結構",
+            "requires_badges": [
+              "契馬利階風土邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "站在山坡上緣,Margaux 指向眼前連綿的整片朝南斜坡。「你在夜丘看過的特級園,像 Chambertin、Musigny,每一個都是各自獨立的法定產區,對吧?」她問,「夏布利特級園不是這樣運作的。」",
+              "choices": [
+                {
+                  "label": "「夏布利特級園,是怎麼運作的?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🗺️ 先看看眼前這片山坡的分區",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "你順著她手指的方向看去,整片朝南山坡雖然連成一片,但地圖上卻標示出七段不同的名字:Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchot,由西向東一路排開。",
+              "choices": [
+                {
+                  "label": "「這七個名字,各自是獨立的特級園嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「不是,」Margaux 說,「法定產區上,『Chablis Grand Cru』是單獨一個 AOC,你剛剛看到的七個名字——Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchot——是這一個產區底下的『climat』(地塊命名),法律上可以選擇標示整個『Chablis Grand Cru』,也可以進一步標示是哪一塊 climat,但它們共享同一個法定產區身份,不是七個各自獨立的特級園。」",
+              "choices": [
+                {
+                  "label": "「這跟夜丘、伯恩丘的特級園結構,差別在哪?」",
+                  "next": "quiz_seven_names"
+                }
+              ]
+            },
+            "quiz_seven_names": {
+              "type": "quiz",
+              "text": "夏布利特級園(Chablis Grand Cru)的結構,跟夜丘的 Chambertin、伯恩丘的 Montrachet 這類「各自獨立的特級園產區」相比,最主要的差異是什麼?\n\nA. 完全沒有差異,只是命名方式不同而已\n\nB. Chablis Grand Cru 是單一法定產區,底下的七個名字是這個產區內部的 climat 命名,不是七個各自獨立的法定特級園;而夜丘、伯恩丘的特級園(如 Chambertin、Montrachet)則各自是獨立的法定產區\n\nC. 夏布利的七個 climat,其實每一個都比 Chambertin 或 Montrachet 等級更高",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_seven_names_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_seven_names_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_seven_names_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "勃根地特級園的法定結構其實存在不同模式:夜丘與伯恩丘多數特級園(如 Chambertin、Musigny、Montrachet)各自是獨立的法定 AOC 產區;夏布利特級園則採取不同模式——「Chablis Grand Cru」本身是單一法定產區,涵蓋一整片連續的朝南山坡,底下再細分七個 climat 名稱(Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchot),生產者可以選擇只標示「Chablis Grand Cru」,也可以進一步標明是哪一塊 climat,但法律上這七塊地共享同一個特級園身份,不是七個互相獨立的特級園產區。這是理解勃根地分級系統時容易忽略的結構性差異——「特級園」這個詞底下,其實藏著不只一種法定運作模式。"
+            },
+            "quiz_seven_names_correct": {
+              "text": "Margaux 點頭。「沒錯,而且老實說,懂行的人都知道,這七塊 climat 彼此風格還是有差異——像 Les Clos 通常被認為結構最紮實、陳年潛力最強,但法律上,它們就是同一個產區的一部分。」\n\n她望向整片斜坡。「有時候我覺得,這比夜丘那種一塊地八十個地主的複雜,還更耐人尋味——同一個名字底下,藏著七種微妙的個性。」",
+              "grants_badge": "夏布利特級園結構",
+              "choices": [
+                {
+                  "label": "「謝謝妳,Margaux,收穫很多。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_seven_names_wrong": {
+              "text": "Margaux 搖頭。「不是等級高低的問題,也不只是命名方式——再想想,『單一產區底下細分 climat』,跟『七個各自獨立的產區』,法律地位有什麼不同?」",
+              "sets_fog": "quiz_seven_names",
+              "choices": [
+                {
+                  "label": "重新思考兩種特級園結構模式的差異",
+                  "next": "quiz_seven_names"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "夕陽西下,契馬利階的石灰岩坡地在餘暉裡泛著淡淡的金色。你想起手心裡那塊牡蠣化石的觸感,忽然覺得,這整片土地就像一本攤開的書——只是大部分人喝酒的時候,從沒想過要低頭看看腳下踩著的,究竟是什麼。\n\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。\n\n【第二章完 · 已獲得知識印記:夏布利特級園結構】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "irancy_exception_outpost": {
+          "title": "驛站:伊朗希的例外",
+          "meta": {
+            "village": "Irancy",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "歐塞瓦地區唯一的紅酒法定產區,以及罕見的 César 品種",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "歐塞瓦地區一片朝南的小山谷裡,伊朗希村的酒農遞給你一杯顏色深沉的紅酒。「大家都以為這一帶只產夏多內,」他笑著說,「我們村,是個例外。」",
+              "choices": [
+                {
+                  "label": "「伊朗希為什麼能種紅葡萄?」",
+                  "next": "quiz_irancy"
+                }
+              ]
+            },
+            "quiz_irancy": {
+              "type": "quiz",
+              "text": "伊朗希(Irancy)是歐塞瓦地區唯一的紅酒法定產區,主要種植黑皮諾,法規還允許摻入一種罕見的本地品種 César。這個案例最主要說明了什麼?\n\nA. 勃根地所有產區其實都能自由選擇任何品種,伊朗希並不特殊\n\nB. 勃根地的品種規範是依照各法定產區個別制定的,伊朗希在以白酒(夏多內)為主流的歐塞瓦地區裡,是少數獲准且適合種植紅葡萄品種的例外產區\n\nC. César 品種其實是夏多內的別名,伊朗希實際上仍是白酒產區",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_irancy_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_irancy_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_irancy_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "勃根地各法定產區允許種植的品種,是依照個別產區規範個別制定,不是全區統一。歐塞瓦地區(涵蓋夏布利周邊)整體以夏多內白酒為主流,伊朗希(Irancy)卻是這個區域裡少數獲准且適合種植紅葡萄品種的例外產區,主要種黑皮諾,法規還允許摻入一種歷史悠久、如今已相當罕見的本地品種 César(通常占比不高,用來增添顏色與結構)。這提醒學習者:「某產區以某品種聞名」不代表整個大區域毫無例外,勃根地的品種版圖裡,總有幾個像伊朗希這樣打破刻板印象的角落。"
+            },
+            "quiz_irancy_correct": {
+              "text": "酒農點頭。「沒錯,César 加得不多,但少了它,伊朗希的酒會少一點骨架跟顏色。這是我們村獨有的秘密武器。」\n\n【驛站完 · 已獲得知識印記:伊朗希的例外】",
+              "grants_badge": "伊朗希的例外",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_irancy_wrong": {
+              "text": "酒農搖頭。「品種規範是每個產區各自訂的,不是全區統一,César 也是真實存在的品種——再想想。」",
+              "sets_fog": "quiz_irancy",
+              "choices": [
+                {
+                  "label": "重新思考伊朗希的例外意義",
+                  "next": "quiz_irancy"
+                }
+              ]
+            }
+          }
+        },
+        "saint_bris_outpost": {
+          "title": "驛站:聖布里的白蘇維濃",
+          "meta": {
+            "village": "Saint-Bris",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "勃根地唯一以白蘇維濃為主要品種的法定產區",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "一場品飲會上,主持人倒了一杯氣味鮮明的白酒,香氣是青草與百香果,完全不像夏多內。「猜猜這是哪裡產的,」她說,「提示:這是勃根地的酒。」",
+              "choices": [
+                {
+                  "label": "「這香氣完全不像夏多內,是哪個品種?」",
+                  "next": "quiz_saint_bris"
+                }
+              ]
+            },
+            "quiz_saint_bris": {
+              "type": "quiz",
+              "text": "青草與百香果氣息強烈,完全不是夏多內的典型香氣特徵。這款來自勃根地聖布里(Saint-Bris)產區的酒,最可能的品種與意義是:\n\nA. 這是夏布利的一款特殊夏多內,只是發酵方式不同\n\nB. 這是白蘇維濃,聖布里是勃根地唯一以白蘇維濃為主要品種的法定產區,徹底打破「勃根地=夏多內」的刻板印象\n\nC. 這是黑皮諾去皮釀成的白酒,顏色才會這麼淺",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_saint_bris_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_saint_bris_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_saint_bris_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "聖布里(Saint-Bris)是勃根地產區裡一個罕見的例外:全區絕大多數白酒法定產區以夏多內為核心品種,聖布里卻是唯一以白蘇維濃(Sauvignon Blanc)為主要品種的法定產區,風格上帶有典型白蘇維濃的青草、百香果、柑橘類香氣,跟夏多內的表現截然不同。這個案例是「勃根地=夏多內+黑皮諾」這個簡化印象之外,另一個值得記住的品種版圖例外,也提醒學習者法定產區的品種規範,終究是依歷史與地方傳統個別累積形成,而非一套放諸整個大區皆準的公式。"
+            },
+            "quiz_saint_bris_correct": {
+              "text": "主持人笑著點頭。「答對了。很多人喝完才發現,原來勃根地也有白蘇維濃,聖布里就是那個唯一。」\n\n【驛站完 · 已獲得知識印記:聖布里的白蘇維濃】",
+              "grants_badge": "聖布里的白蘇維濃",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_saint_bris_wrong": {
+              "text": "主持人搖頭。「香氣特徵不對,顏色也不是這個原因——再想想,青草與百香果香氣,是哪個品種的典型特徵?」",
+              "sets_fog": "quiz_saint_bris",
+              "choices": [
+                {
+                  "label": "重新思考這款酒的品種",
+                  "next": "quiz_saint_bris"
+                }
+              ]
+            }
+          }
+        },
+        "diluted_name_wp": {
+          "title": "支線:被稀釋的名字",
+          "meta": {
+            "village": "Chablis",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "Chablis 名字在海外市場被泛稱濫用的歷史",
+            "requires_badges": [
+              "契馬利階風土邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你再訪 Margaux 時,她正氣呼呼地翻著一份美國超市的舊酒單影本。「你知道嗎,」她說,「有好幾十年,美國市場上隨便一款便宜盒裝白酒,都敢自稱『Chablis』,跟我們這裡毫無關係。」",
+              "choices": [
+                {
+                  "label": "「這跟仿冒不一樣嗎?」",
+                  "next": "quiz_dilution"
+                }
+              ]
+            },
+            "quiz_dilution": {
+              "type": "quiz",
+              "text": "「Chablis」曾在美國市場長期被當成廉價白酒的通用代名詞使用,跟產地毫無關係。這種「名字被泛稱化」的傷害機制,跟你之前在玻馬學過的「仿冒」案例相比,最主要的差異是什麼?\n\nA. 兩者完全一樣,都是直接盜用地理名稱標示在假冒產品上\n\nB. 仿冒通常是刻意在酒標上冒用產區名稱誤導消費者;泛稱化則是名字被長期當成一種「風格類別代稱」使用(不一定刻意標示為特定產區來源),讓消費者逐漸忘記這原本是一個具體地理名稱,兩者傷害機制不同但都稀釋了地理名稱的意義\n\nC. 泛稱化其實對產區有利,因為代表這個名字家喻戶曉",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_dilution_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_dilution_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_dilution_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "地理名稱遭受的傷害,不只有直接仿冒一種形式。玻馬(Pommard)案例是典型的仿冒——酒標直接冒用產區名稱誤導消費者;「Chablis」在美國市場的遭遇則是另一種機制:這個名字長期被當成一種「淡雅乾型白酒」的風格類別代稱使用(常見於廉價盒裝酒或散裝酒),不一定刻意宣稱來自法國夏布利,卻讓消費者逐漸忘記這原本是一個具體地理名稱。兩種機制都會稀釋、傷害地理名稱的意義與價值,也都是推動歐盟與國際間強化地理標示(Geographical Indication)法律保護的現實案例——保護的不只是防止「假冒」,也包括防止「泛稱化」這種更隱性、更長期的侵蝕。"
+            },
+            "quiz_dilution_correct": {
+              "text": "Margaux 點頭,語氣稍微緩和。「就是這樣——防仿冒,大家都懂;但要跟消費者解釋『這個字不是一種酒的類型,是一個地方的名字』,反而更累。」\n\n她把那份舊酒單收起來。「現在情況好多了,國際上對地理標示的保護意識提升不少,但這段歷史,我們沒忘記。」",
+              "grants_badge": "名字泛稱化的傷害",
+              "choices": [
+                {
+                  "label": "帶著這份理解,結束今天的拜訪",
+                  "next": "waypoint_end_dilution"
+                }
+              ]
+            },
+            "quiz_dilution_wrong": {
+              "text": "Margaux 搖頭。「不是一樣的機制,泛稱化也對我們毫無好處——再想想,『被當成風格類別代稱』,跟『被直接冒用產區名稱』,傷害方式有什麼不同?」",
+              "sets_fog": "quiz_dilution",
+              "choices": [
+                {
+                  "label": "重新思考兩種傷害機制的差異",
+                  "next": "quiz_dilution"
+                }
+              ]
+            },
+            "waypoint_end_dilution": {
+              "text": "你告別 Margaux,走在夏布利安靜的村莊小路上,忽然明白——這片土地要守住的,不只是土壤跟氣候的真實,還有一個名字承載的全部重量。\n\n【支線完 · 已獲得知識印記:名字泛稱化的傷害】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "river_trade_wp": {
+          "title": "支線:巴黎水路上的酒",
+          "meta": {
+            "village": "Chablis",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "約訥河水路貿易對夏布利歷史地位的影響",
+            "requires_badges": [
+              "名字泛稱化的傷害"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Margaux 帶你走到村外的約訥河邊。「鐵路出現之前,」她說,「這條河,是夏布利酒能不能賣到巴黎的關鍵。」",
+              "choices": [
+                {
+                  "label": "「河運對夏布利的歷史地位,有多重要?」",
+                  "next": "quiz_river"
+                }
+              ]
+            },
+            "quiz_river": {
+              "type": "quiz",
+              "text": "在鐵路與現代公路運輸普及之前,約訥河(Yonne)水路運輸對夏布利酒歷史上能大量銷往巴黎市場,扮演了什麼角色?\n\nA. 完全沒有影響,夏布利歷史上一直靠陸運銷往巴黎\n\nB. 約訥河提供了相對高效、低成本的水路運輸管道,讓夏布利在鐵路時代來臨前,就已經是巴黎重要的日常餐酒來源之一,這也是夏布利歷史知名度的重要基礎\n\nC. 約訥河運輸的主要是穀物,跟葡萄酒貿易完全無關",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_river_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_river_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_river_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "在鐵路與現代公路運輸普及之前,水路一直是歐洲內陸最有效率、成本相對較低的大宗貨物運輸方式。夏布利鄰近約訥河(Yonne river),歷史上得以透過水路將酒運送到巴黎市場,是夏布利成為歷史上巴黎重要日常餐酒來源之一的重要基礎設施因素——這跟你在伯恩學過的「陸路商業節點」邏輯是同一套原理的不同版本:交通運輸基礎設施,往往跟葡萄園品質同等重要,共同決定了一個產區能不能把酒賣出去、賣得多遠。"
+            },
+            "quiz_river_correct": {
+              "text": "Margaux 望著緩緩流動的河水。「鐵路來了以後,水路的重要性慢慢降低,但夏布利的名聲,很大一部分是那個水運年代打下的基礎。」\n\n她轉頭看你。「這趟旅程,你從石頭底下的化石,一路聽到河水上的貿易史——風土從來不只是土壤,還有這片土地怎麼跟外面的世界連起來。」",
+              "grants_badge": "約訥河貿易史",
+              "choices": [
+                {
+                  "label": "「謝謝妳,Margaux,這趟收穫太多了。」",
+                  "next": "waypoint_end_river"
+                }
+              ]
+            },
+            "quiz_river_wrong": {
+              "text": "Margaux 搖頭。「陸運在當時效率遠不如水運,而且水路運的絕對不只穀物——再想想,鐵路出現之前,大宗貨物運輸最依賴什麼?」",
+              "sets_fog": "quiz_river",
+              "choices": [
+                {
+                  "label": "重新思考約訥河水運的歷史角色",
+                  "next": "quiz_river"
+                }
+              ]
+            },
+            "waypoint_end_river": {
+              "text": "你告別 Margaux,望著約訥河靜靜流向遠方。從一塊牡蠣化石,到一座橫跨七個名字的特級園,到一個曾被稀釋的名字,再到一條承載歷史貿易的河——夏布利教會你的最後一課是:風土的邊界,從來不只是地圖上畫出來的線,還有水流過的方向。\n\n【支線完 · 已獲得知識印記:約訥河貿易史】",
               "choices": [],
               "is_ending": true
             }
