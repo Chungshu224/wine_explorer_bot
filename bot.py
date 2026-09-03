@@ -273,6 +273,12 @@ async def send_node(
         await append_unique(user_id, campaign_id, "badges", node["grants_badge"])
         text += f"\n\n🏅 獲得知識印記:{node['grants_badge']}"
 
+    # 玩到某個節點的結尾(沒有劇情選項可以繼續按下去)時,build_keyboard 會
+    # 回傳 None——這種情況改附上導覽按鈕(回本故事線章節地圖 / 回所有故事線
+    # 選單),不然玩家玩完一段只能手動打指令,體驗不好。
+    if keyboard is None:
+        keyboard = build_ending_navigation_keyboard(story, campaign_id)
+
     await update_campaign_state(user_id, campaign_id, current_chapter=chapter_id, current_node=node_id)
 
     if hasattr(update_or_query, "message") and update_or_query.message:
@@ -411,27 +417,38 @@ async def handle_region_menu(update: Update, context: ContextTypes.DEFAULT_TYPE)
     await query.edit_message_text(text, reply_markup=keyboard)
 
 
-async def chapters(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def handle_chapter_list_button(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """「📖 本故事線其他章節」按鈕:出現在結尾節點,回到目前這條故事線的章節地圖。"""
+    query = update.callback_query
+    await query.answer()
+
     user_id = update.effective_user.id
+    campaign_idx = int(query.data.split(":", 1)[1])
+
     story = load_story()
-    active_campaign = await get_active_campaign(user_id)
-
-    if active_campaign is None:
-        await update.message.reply_text("你還沒選擇故事線喔,先輸入 /start 選一條吧。")
-        return
-
-    campaign_state = await get_campaign_state(user_id, active_campaign)
+    campaign_id = get_campaign_order(story)[campaign_idx]
+    campaign_state = await get_campaign_state(user_id, campaign_id)
     badges = campaign_state.get("badges") or []
-    campaign = story["campaigns"][active_campaign]
+
+    text, keyboard = build_chapter_list(story, campaign_id, badges)
+    await query.edit_message_text(text, reply_markup=keyboard)
+
+
+def build_chapter_list(
+    story: dict[str, Any], campaign_id: str, badges: list[str]
+) -> tuple[str, InlineKeyboardMarkup]:
+    """建立某條故事線的章節地圖(文字+按鈕),/chapters 指令跟「本故事線其他
+    章節」按鈕共用這份邏輯,避免兩處各寫一份、之後改一邊忘了改另一邊。"""
+    campaign = story["campaigns"][campaign_id]
+    campaign_idx = get_campaign_order(story).index(campaign_id)
 
     lines = [f"🗺️ {campaign['title']} · 章節地圖\n"]
     buttons = []
-    campaign_idx = get_campaign_order(story).index(active_campaign)
 
-    for chapter_idx, chapter_id in enumerate(get_chapter_order(story, active_campaign)):
+    for chapter_idx, chapter_id in enumerate(get_chapter_order(story, campaign_id)):
         chapter = campaign["chapters"][chapter_id]
         meta = chapter.get("meta", {})
-        unlocked = chapter_is_unlocked(story, active_campaign, chapter_id, badges)
+        unlocked = chapter_is_unlocked(story, campaign_id, chapter_id, badges)
         tier_label = meta.get("tier_label", "")
         village = meta.get("village", "")
 
@@ -446,8 +463,34 @@ async def chapters(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             missing = [b for b in required if b not in badges]
             lines.append(f"🔒 {chapter['title']}({tier_label} · {village})\n   需要印記:{', '.join(missing)}")
 
-    keyboard = InlineKeyboardMarkup(buttons) if buttons else None
-    await update.message.reply_text("\n\n".join(lines), reply_markup=keyboard)
+    buttons.append([InlineKeyboardButton("🗺️ 所有故事線", callback_data="regionmenu:c")])
+    return "\n\n".join(lines), InlineKeyboardMarkup(buttons)
+
+
+def build_ending_navigation_keyboard(story: dict[str, Any], campaign_id: str) -> InlineKeyboardMarkup:
+    """玩到某個節點的結尾(is_ending,沒有劇情選項可以按)時,附上的導覽按鈕:
+    可以回本故事線的章節地圖,或直接回到最上層的產區選單。"""
+    campaign_idx = get_campaign_order(story).index(campaign_id)
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton("📖 本故事線其他章節", callback_data=f"chapterlist:{campaign_idx}")],
+        [InlineKeyboardButton("🗺️ 所有故事線", callback_data="regionmenu:c")],
+    ])
+
+
+async def chapters(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    user_id = update.effective_user.id
+    story = load_story()
+    active_campaign = await get_active_campaign(user_id)
+
+    if active_campaign is None:
+        await update.message.reply_text("你還沒選擇故事線喔,先輸入 /start 選一條吧。")
+        return
+
+    campaign_state = await get_campaign_state(user_id, active_campaign)
+    badges = campaign_state.get("badges") or []
+
+    text, keyboard = build_chapter_list(story, active_campaign, badges)
+    await update.message.reply_text(text, reply_markup=keyboard)
 
 
 async def status(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -594,6 +637,7 @@ def main() -> None:
     app.add_handler(CallbackQueryHandler(handle_start_chapter, pattern=r"^startchapter:"))
     app.add_handler(CallbackQueryHandler(handle_select_region, pattern=r"^selectregion:"))
     app.add_handler(CallbackQueryHandler(handle_region_menu, pattern=r"^regionmenu:"))
+    app.add_handler(CallbackQueryHandler(handle_chapter_list_button, pattern=r"^chapterlist:"))
     app.add_handler(CallbackQueryHandler(handle_choice, pattern=r"^goto:"))
 
     logger.info("風土探勘者 bot(Supabase 持久化版)啟動中...")

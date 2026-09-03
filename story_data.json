@@ -5266,6 +5266,1887 @@
           }
         }
       }
+    },
+    "coop_line": {
+      "title": "共同的酒窖",
+      "tagline": "不是自己裝瓶,也不是賣斷給酒商——第三條路,靠的是一群人一起扛",
+      "knowledge_focus": "合作社(coopérative)生產模式的運作邏輯、如何解決地塊碎片化下小農的生存困境",
+      "region": "夏布利與歐塞瓦 Chablis & Auxerrois",
+      "chapter_order": [
+        "shared_cellar_01",
+        "governance_outpost",
+        "path_for_tiny_plots_02",
+        "brand_perception_outpost",
+        "quality_dilemma_wp",
+        "freedom_to_leave_wp"
+      ],
+      "chapters": {
+        "shared_cellar_01": {
+          "title": "第一章:共同的酒窖",
+          "meta": {
+            "village": "Chablis",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "合作社生產模式的基本運作邏輯",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "夏布利郊外一棟巨大的現代化廠房裡,發酵槽一排排延伸到看不見盡頭。Sophie Berger 是這裡的技術總監,身後跟著一整面牆的葡萄交貨紀錄。「我們這裡,」她說,「同時處理三百多位小農送來的葡萄,但這不是 négociant。」",
+              "choices": [
+                {
+                  "label": "「不是酒商,那是什麼?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📋 先看看那面交貨紀錄牆",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "牆上密密麻麻列著每位種植者的名字、地塊、送交的重量與糖度數據,旁邊還有一欄「累計分潤點數」。",
+              "choices": [
+                {
+                  "label": "「這些種植者,是把葡萄賣給你們嗎?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「不完全是,」Sophie 解釋,「négociant 是一次性的商業交易——農民把葡萄或酒賣斷,價格談定就結束了,风险跟後續利潤都跟農民無關。我們這裡是『合作社』(coopérative):種植者本身就是合作社的共同持有人,不是單純的賣方。」\n\n她指著那面分潤點數牆。「他們把葡萄交來,我們集中處理、統一釀造、統一裝瓶銷售,最後的利潤,依照每個人交貨的品質跟數量,按比例分回去——賺了大家一起賺,虧了也一起扛。」",
+              "choices": [
+                {
+                  "label": "「這跟直接賣給酒商,最大的差別是什麼?」",
+                  "next": "quiz_coop"
+                }
+              ]
+            },
+            "quiz_coop": {
+              "type": "quiz",
+              "text": "合作社模式下,種植者交出葡萄後,跟 négociant(酒商)一次性收購的商業關係相比,最核心的差異是什麼?\n\nA. 合作社其實就是換個名字的 négociant,運作方式完全一樣\n\nB. 合作社的種植者是共同持有人而非單純賣方,交出葡萄後仍然共同承擔最終銷售的風險與利潤(依品質數量按比例分潤),而非一次性收固定價格、後續盈虧與己無關\n\nC. 合作社只服務大型莊園,小農無法加入",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_coop_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_coop_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_coop_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "合作社(coopérative)是勃根地(乃至全球葡萄酒產業)常見卻常被忽略的第三種生產型態,跟 domaine(酒莊自行種植、釀造、裝瓶)與 négociant(酒商向種植者一次性收購葡萄或酒液,後續盈虧與原種植者無關)都不同:合作社的種植者本身是合作社的共同持有人(常以合作社股份或會員身份呈現),交出葡萄後,仍然共同承擔集中釀造、裝瓶、銷售之後的最終盈虧,通常依照交貨品質與數量按比例分配利潤。這種模式讓沒有能力獨立負擔釀酒設備與品牌經營成本的小農,能透過集體力量分攤風險、共享規模經濟效益,是夏布利地區(以及全球許多葡萄酒產區)相當具代表性的生產組織形式。"
+            },
+            "quiz_coop_correct": {
+              "text": "Sophie 點頭。「沒錯,风险共擔是關鍵。景氣好,大家一起分紅;年份差,大家一起扛,不會有人because簽了固定收購價就置身事外。」\n\n她望向窗外連綿的葡萄園。「你之前應該學過均分繼承制,讓地塊被切得又小又碎——很多加入我們的農民,手上的地,小到連自己蓋一間像樣的酒窖都不划算。」",
+              "grants_badge": "合作社運作邏輯",
+              "choices": [
+                {
+                  "label": "「所以合作社,是這些破碎小地塊的另一條活路?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_coop_wrong": {
+              "text": "Sophie 搖頭。「運作方式完全不一樣,我們也歡迎各種規模的農民加入——再想想,種植者跟合作社之間,是『賣斷』還是『共同承擔』的關係?」",
+              "sets_fog": "quiz_coop",
+              "choices": [
+                {
+                  "label": "重新思考合作社跟 négociant 的核心差異",
+                  "next": "quiz_coop"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Sophie 笑了笑。「算是吧。明天你要不要跟我一起去見一位剛加入合作社的農民?她的故事,大概能讓你更具體理解這件事的意義。」\n\n【第一章完 · 已獲得知識印記:合作社運作邏輯】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:小地塊的活路",
+                  "next": "opening",
+                  "chapter": "path_for_tiny_plots_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "path_for_tiny_plots_02": {
+          "title": "第二章:小地塊的活路",
+          "meta": {
+            "village": "Chablis",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "合作社如何解決地塊碎片化下小農的生存困境",
+            "requires_badges": [
+              "合作社運作邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Sophie 帶你去見一位年輕農民,她剛從祖母手上繼承了一小塊夏布利村莊級地,面積小得可憐——「不到半公頃,」她苦笑著說,「三個表兄弟姊妹分完祖母的地,我拿到這一小條。自己蓋酒窖?想都別想。」",
+              "choices": [
+                {
+                  "label": "「加入合作社之後,妳的選擇變得怎麼樣?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🌱 先問問她這塊地過去是怎麼處理的",
+                  "next": "history_a"
+                }
+              ]
+            },
+            "history_a": {
+              "text": "「我祖母那一輩,」她說,「這塊地一直是零散賣給附近的酒商,價格很看酒商臉色。我不想繼續這樣,但憑我自己,也做不出一款像樣的裝瓶酒。」",
+              "choices": [
+                {
+                  "label": "「所以妳選擇加入合作社,不是賣給酒商?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「對,」她說,「合作社讓我不用一次性把葡萄的未來賣斷,我還是這塊地的主人,只是把種植以外的事,交給大家共同分攤。設備、技術、品牌行銷,我一個人負擔不起的東西,加入合作社之後,突然都有了。」\n\nSophie 補充:「而且不是只有『小』農民受益——我們合作社裡,也有面積不小的家族,選擇加入是為了穩定的品質控管跟行銷通路,不是每個人加入都是因為地太小。」",
+              "choices": [
+                {
+                  "label": "思考合作社模式解決了什麼樣的結構性問題",
+                  "next": "quiz_tiny_plots"
+                }
+              ]
+            },
+            "quiz_tiny_plots": {
+              "type": "quiz",
+              "text": "均分繼承制長期造成地塊碎片化,許多小農手上的地塊小到難以獨立負擔釀酒設備與品牌經營成本。合作社模式對這個結構性問題,最主要提供了什麼解方?\n\nA. 合作社強制買斷小農的土地所有權,讓地塊重新合併\n\nB. 合作社讓小農得以保有土地所有權與種植主導權,同時透過集體共享釀酒設備、技術與行銷通路,分攤原本個別小農難以負擔的規模經濟成本,是碎片化地塊下,介於「賣斷給酒商」與「獨立裝瓶」之間的第三條路\n\nC. 合作社只解決大型莊園的行銷問題,對小地塊碎片化毫無幫助",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_tiny_plots_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_tiny_plots_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_tiny_plots_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "均分繼承制長期造成的地塊碎片化,讓許多小農面臨結構性困境:地塊太小,獨立負擔釀酒設備、酒窖、品牌經營與行銷通路的成本並不划算,但賣斷給 négociant 又意味著失去對自己土地未來的主導權與後續利潤參與。合作社模式提供了介於兩者之間的第三條路:小農保有土地所有權與種植決策,同時透過集體共享釀酒設備、技術資源與統一行銷通路,分攤原本個別難以負擔的規模經濟成本,最終利潤依貢獻按比例回饋。這也是為什麼合作社在夏布利這類歷史上地塊高度分散的產區特別具代表性——它不是取代小農,而是讓破碎化的土地版圖,依然能長出集體的生存能力。"
+            },
+            "quiz_tiny_plots_correct": {
+              "text": "Sophie 欣慰地點頭。「妳解釋得比我還清楚。」\n\n年輕農民也笑了。「對我來說,這不只是生意選擇,是我能繼續守著祖母留下的地,又不用一個人扛下所有風險的方式。」",
+              "grants_badge": "碎片化地塊的第三條路",
+              "choices": [
+                {
+                  "label": "「謝謝妳們分享這段故事。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_tiny_plots_wrong": {
+              "text": "Sophie 搖頭。「合作社不強制買斷所有權,也不是只服務大莊園——再想想,對小農來說,『保有土地』跟『分攤成本』,合作社怎麼同時做到這兩件事?」",
+              "sets_fog": "quiz_tiny_plots",
+              "choices": [
+                {
+                  "label": "重新思考合作社解決的結構性問題",
+                  "next": "quiz_tiny_plots"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你走出合作社的廠房,夕陽把夏布利的坡地染成一片溫柔的金色。從均分繼承制切碎的地圖,到 négociant 的跨村莊調配,再到眼前這座眾人共同撐起的酒窖——你終於看懂,勃根地能撐過一次又一次的碎片化衝擊,靠的從來不只是土地本身,還有一代又一代人,想出來的各種「一起活下去」的方法。\n\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。\n\n【第二章完 · 已獲得知識印記:碎片化地塊的第三條路】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "governance_outpost": {
+          "title": "驛站:投票權與治理",
+          "meta": {
+            "village": "Chablis",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "合作社的治理結構:一人一票 vs 依貢獻比例",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "合作社的年度大會上,一位擁有大面積地塊的成員跟一位僅有零星小地塊的成員,投票時各自只投了一張票。旁觀的你有些疑惑。",
+              "choices": [
+                {
+                  "label": "「地塊大小差這麼多,投票權不該有差別嗎?」",
+                  "next": "quiz_governance"
+                }
+              ]
+            },
+            "quiz_governance": {
+              "type": "quiz",
+              "text": "傳統合作社(coopérative)治理結構,通常採取「一人一票」原則,不論成員貢獻的葡萄數量或地塊面積大小。這種治理設計最主要的意義是什麼?\n\nA. 這是行政疏失,大股東理論上應該有更多票數才合理\n\nB. 一人一票體現合作社「成員平等參與決策」的核心精神,確保決策不會被少數大規模成員壟斷,即使貢獻比例不同,每個成員在治理層面的話語權是平等的\n\nC. 合作社其實沒有投票機制,所有決策由外部管理公司決定",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_governance_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_governance_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_governance_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "合作社(coopérative)的治理結構,傳統上奉行「一人一票」(one member, one vote)原則,不論個別成員貢獻的葡萄數量、地塊面積或出資比例大小。這跟一般公司「股份越多、投票權越大」的邏輯截然不同,體現的是合作社「成員平等參與決策」的核心精神——確保治理權不會被少數大規模成員壟斷,即使利潤分配依貢獻比例計算,治理層面的話語權每個成員一律平等。這種設計是合作社作為一種獨特組織形式的核心特徵之一,也是理解它跟一般企業本質差異的關鍵。"
+            },
+            "quiz_governance_correct": {
+              "text": "旁邊一位資深成員笑著補充:「利潤分配看貢獻,但誰來決定合作社怎麼經營,大家一樣大。這才是『合作』兩個字的重點。」\n\n【驛站完 · 已獲得知識印記:合作社治理原則】",
+              "grants_badge": "合作社治理原則",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_governance_wrong": {
+              "text": "旁邊一位資深成員搖頭。「不是疏失,也不是沒有投票機制——再想想,『一人一票』想保護的,是哪種平等?」",
+              "sets_fog": "quiz_governance",
+              "choices": [
+                {
+                  "label": "重新思考一人一票制度的意義",
+                  "next": "quiz_governance"
+                }
+              ]
+            }
+          }
+        },
+        "brand_perception_outpost": {
+          "title": "驛站:品牌背後的集體",
+          "meta": {
+            "village": "Chablis",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "消費者對合作社酒款品牌的認知落差",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "一間酒鋪裡,顧客拿起一瓶包裝精美的夏布利,讚嘆:「這款酒莊做得真好。」店員笑而不答,你注意到酒標背面小字寫著合作社的名稱。",
+              "choices": [
+                {
+                  "label": "「為什麼合作社的酒,酒標上不特別強調『合作社』三個字?」",
+                  "next": "quiz_brand"
+                }
+              ]
+            },
+            "quiz_brand": {
+              "type": "quiz",
+              "text": "許多合作社出品的酒款,行銷與酒標設計上往往不特別突顯「合作社」身份,反而包裝成類似獨立酒莊的品牌形象。這種做法最合理的解釋是什麼?\n\nA. 這是刻意欺騙消費者,酒的實際來源跟酒標宣稱的完全不符\n\nB. 消費市場對「合作社」品牌形象存在認知落差(部分消費者可能誤以為合作社等同於「廉價量產」),因此許多合作社選擇用類似獨立酒莊的品牌包裝方式呈現旗下酒款,但產地與品質資訊在法規要求下依然誠實揭露,只是不作為行銷重點\n\nC. 法律禁止合作社在酒標上標示「合作社」字樣",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_brand_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_brand_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_brand_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "許多合作社出品的酒款,在行銷與酒標設計上,傾向以類似獨立酒莊的品牌形象呈現,不特別突顯「合作社」身份,產地、生產者等法規要求資訊依然誠實標示,只是不作為主要行銷訴求。這反映的是市場端存在的一種認知落差:部分消費者可能對「合作社」一詞有「廉價量產、缺乏個性」的刻板印象,儘管實際上不少合作社出品的酒款品質相當優異,甚至來自嚴格篩選的優質地塊。這種品牌包裝策略,某種程度上也呼應你已經學過的 négociant 品牌信譽邏輯——最終消費者買的是「這瓶酒喝起來的品質與風格」,至於背後是 domaine、négociant 還是合作社在運作,同樣值得理性看待,而非被單一詞彙的刻板印象左右判斷。"
+            },
+            "quiz_brand_correct": {
+              "text": "店員這時笑著加入對話。「很多人喝完才發現是合作社做的,通常都很驚訝——品質從來不是由『誰在背後生產』單方面決定的。」\n\n【驛站完 · 已獲得知識印記:合作社品牌認知落差】",
+              "grants_badge": "合作社品牌認知落差",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_brand_wrong": {
+              "text": "店員搖頭。「產地資訊法規要求一定要揭露,也沒有禁止標示合作社——再想想,消費者對『合作社』這個詞,可能存在什麼樣的刻板印象?」",
+              "sets_fog": "quiz_brand",
+              "choices": [
+                {
+                  "label": "重新思考酒標設計背後的行銷考量",
+                  "next": "quiz_brand"
+                }
+              ]
+            }
+          }
+        },
+        "quality_dilemma_wp": {
+          "title": "支線:品質門檻的兩難",
+          "meta": {
+            "village": "Chablis",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "合作社如何在包容性與品質標準之間取得平衡",
+            "requires_badges": [
+              "合作社運作邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你再訪合作社時,Sophie 正在跟品管部門開會,氣氛有點緊繃。「今年有幾位成員交來的葡萄,糖度跟健康度都不太理想,」她事後跟你說,「但他們一樣是合作社成員,我們不能說不收就不收。」",
+              "choices": [
+                {
+                  "label": "「這樣不會拖累整個合作社的品質嗎?」",
+                  "next": "quiz_quality"
+                }
+              ]
+            },
+            "quiz_quality": {
+              "type": "quiz",
+              "text": "合作社原則上必須接受所有成員交來的葡萄(不能任意拒收),但成員之間葡萄品質難免存在落差。合作社通常怎麼處理這種「包容性」與「整體品質標準」之間的張力?\n\nA. 完全不處理,把所有葡萄不分品質混在一起釀造,品質參差不齊是必然代價\n\nB. 透過分級收購制度(依糖度、健康度等客觀標準分級計價與分別處理)、技術輔導協助成員提升種植品質,以及依品質分別裝瓶成不同等級產品線等方式,在維持成員權益的同時管理整體品質\n\nC. 直接開除品質不佳的成員,不允許他們繼續交貨",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_quality_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_quality_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_quality_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "合作社面對成員間葡萄品質落差的張力,通常不會簡單地「照單全收混釀」或「直接淘汰成員」,而是透過幾種機制管理:依糖度、健康度等客觀標準建立分級收購計價制度(品質較好的葡萄獲得較高分潤,形成品質誘因);提供種植技術輔導協助成員提升水準;以及依品質將酒液分別裝瓶成不同產品線(例如基礎款與精選款)。這種做法既維持了合作社「成員平等參與」的核心精神,又能透過制度設計管理整體品質水準,是合作社模式在包容性與商業競爭力之間,長期演化出來的務實平衡方式。"
+            },
+            "quiz_quality_correct": {
+              "text": "Sophie 點頭。「就是這樣。我們有分級收購價,也有專門的種植顧問去輔導交貨品質不穩定的成員——目標不是排除誰,是讓大家一起變好。」\n\n她嘆了口氣。「說起來簡單,實際執行起來,每年都要重新磨合一次。」",
+              "grants_badge": "品質與包容性的平衡",
+              "choices": [
+                {
+                  "label": "「這聽起來比我想像中複雜得多。」",
+                  "next": "waypoint_end_quality"
+                }
+              ]
+            },
+            "quiz_quality_wrong": {
+              "text": "Sophie 搖頭。「不是照單全收混釀,也不會直接開除成員——再想想,有沒有辦法用『分級計價』跟『技術輔導』同時兼顧公平與品質?」",
+              "sets_fog": "quiz_quality",
+              "choices": [
+                {
+                  "label": "重新思考合作社管理品質的方式",
+                  "next": "quiz_quality"
+                }
+              ]
+            },
+            "waypoint_end_quality": {
+              "text": "「確實複雜,」Sophie 說,「但這也是合作社存在的意義——不是找一群條件一模一樣的人合作,是想辦法讓條件不同的人,依然能一起走下去。」\n\n【支線完 · 已獲得知識印記:品質與包容性的平衡】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "freedom_to_leave_wp": {
+          "title": "支線:退出的自由",
+          "meta": {
+            "village": "Chablis",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "合作社成員的進退彈性,與長期承諾之間的張力",
+            "requires_badges": [
+              "品質與包容性的平衡"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Sophie 提到一件事:「上個月,有位加入合作社十幾年的成員決定退出,自己開始獨立裝瓶。這種事,每年都會發生幾次。」",
+              "choices": [
+                {
+                  "label": "「合作社成員可以隨時退出嗎?」",
+                  "next": "quiz_freedom"
+                }
+              ]
+            },
+            "quiz_freedom": {
+              "type": "quiz",
+              "text": "跟長期投入自建酒莊(domaine)的路徑相比,加入合作社的成員通常保有相對較高的進退彈性(可以選擇退出、轉為獨立裝瓶或轉投其他合作社)。這種彈性最主要反映了什麼?\n\nA. 合作社成員資格毫無約束力,今天加入明天退出都毫無影響,形同虛設\n\nB. 合作社成員通常保留土地所有權(只是共享後續加工銷售資源),退出時主要是結束「共同加工銷售」的合作關係而非放棄土地本身,這種進退彈性是合作社模式相對於長期綁定的獨立建莊路徑的一項特徵,但退出通常仍有一定的通知期或合約條件\n\nC. 退出合作社在法律上是不被允許的,一旦加入就必須終身參與",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_freedom_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_freedom_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_freedom_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "合作社成員通常保留自己土地的所有權,加入合作社主要是共享後續的釀造、裝瓶、行銷等加工銷售資源與風險,而非讓渡土地本身。這意味著相對於從零開始長期投入建立獨立酒莊(domaine)的路徑,合作社模式提供了較高的進退彈性——成員可以選擇退出合作社、轉為獨立裝瓶,或轉投其他合作社,但實務上退出通常仍受合約條款約束(例如需要提前一定期限通知、或有最低參與年限規定),並非完全無約束的任意進出。這種彈性也是合作社對許多猶豫是否要長期投入獨立建莊的種植者,具有吸引力的原因之一——先透過合作社累積資源與經驗,未來若條件成熟,仍保有轉型獨立的選項。"
+            },
+            "quiz_freedom_correct": {
+              "text": "Sophie 點頭。「沒錯,我們不強留人,合作社的意義是提供一個選項,不是綁住誰。有些人在這裡待一輩子,有些人待幾年就翅膀硬了自己飛,都很正常。」\n\n她望向窗外連綿的葡萄園。「這片土地能撐過這麼多次危機,靠的就是這種彈性——沒有一種活法,是唯一正確的答案。」",
+              "grants_badge": "合作社的進退彈性",
+              "choices": [
+                {
+                  "label": "「謝謝妳,Sophie,這趟收穫很多。」",
+                  "next": "waypoint_end_freedom"
+                }
+              ]
+            },
+            "quiz_freedom_wrong": {
+              "text": "Sophie 搖頭。「不是毫無約束,也不是終身綁定——再想想,合作社共享的是『後續加工銷售』,還是『土地所有權本身』?」",
+              "sets_fog": "quiz_freedom",
+              "choices": [
+                {
+                  "label": "重新思考合作社成員的進退彈性",
+                  "next": "quiz_freedom"
+                }
+              ]
+            },
+            "waypoint_end_freedom": {
+              "text": "你告別 Sophie,走出合作社的廠房。從共同的酒窖,到小地塊的活路,到治理的平等,再到進退的自由——這趟旅程讓你明白,合作從來不是失去自主,而是在保有自主的前提下,學會怎麼跟別人一起把路走得更遠。\n\n【支線完 · 已獲得知識印記:合作社的進退彈性】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      }
+    },
+    "chablis_revival": {
+      "title": "谷底與重生",
+      "tagline": "這片山坡曾經幾乎從地圖上消失——現在你看到的每一株藤,都是一場豪賭贏回來的",
+      "knowledge_focus": "夏布利葡萄園二十世紀的谷底與復興史、Petit Chablis 的地質成因與四層分級金字塔",
+      "region": "夏布利與歐塞瓦 Chablis & Auxerrois",
+      "chapter_order": [
+        "bottom_of_the_valley_01",
+        "aspersion_outpost",
+        "four_steps_02",
+        "eu_subsidy_outpost",
+        "first_new_vine_wp",
+        "trust_to_next_gen_wp"
+      ],
+      "chapters": {
+        "bottom_of_the_valley_01": {
+          "title": "第一章:谷底的記憶",
+          "meta": {
+            "village": "Chablis",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "二十世紀夏布利葡萄園面積的劇烈萎縮史",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Henri Roblin 今年八十多歲,是村裡少數還記得那個年代的人。「我父親跟我說過,」他坐在自家老屋的門廊上,聲音緩慢卻清晰,「他年輕的時候,夏布利的葡萄園,幾乎快要消失了。」",
+              "choices": [
+                {
+                  "label": "「消失?怎麼會?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📉 先問問當時葡萄園面積縮小到什麼程度",
+                  "next": "scale_a"
+                }
+              ]
+            },
+            "scale_a": {
+              "text": "「歷史上最盛的時候,夏布利周邊的葡萄園廣達四萬公頃,」Henri 說,「但到了二十世紀中葉,只剩下不到一千五百公頃——不到巔峰時期的二十分之一。」",
+              "choices": [
+                {
+                  "label": "「怎麼會萎縮得這麼嚴重?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「好幾波打擊疊在一起,」Henri 說,「先是十九世紀末的根瘤蚜蟲害,毀掉大部分老藤,重新嫁接種植的成本壓垮不少小農。接著鐵路開通,南部產區的便宜酒大量運進巴黎市場,夏布利的價格優勢消失了。再來是兩次世界大戰,青壯年被徵召上戰場,葡萄園沒人照顧,很多地直接荒廢改種別的作物,或是乾脆被放棄。」\n\n他望向窗外的坡地。「我父親那一代,常常說『這行沒有未來』,勸孩子去城市找別的工作。」",
+              "choices": [
+                {
+                  "label": "思考這幾股力量疊加造成的結果",
+                  "next": "quiz_bottom"
+                }
+              ]
+            },
+            "quiz_bottom": {
+              "type": "quiz",
+              "text": "夏布利葡萄園在二十世紀中葉萎縮到歷史巔峰不到二十分之一的規模。這個劇烈衰退,最主要是由哪些因素疊加造成?\n\nA. 純粹是氣候突然變得不適合種植葡萄\n\nB. 根瘤蚜蟲害重建成本、鐵路開通後外地便宜酒的競爭、兩次世界大戰造成的人力流失與土地荒廢,多重歷史衝擊疊加,讓這個產區長期陷入經濟不划算、缺乏勞動力的困境\n\nC. 政府強制要求夏布利農民全面轉種其他作物",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_bottom_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_bottom_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_bottom_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "夏布利葡萄園在二十世紀中葉的劇烈萎縮(從歷史盛期約四萬公頃,縮減到僅約一千五百公頃左右),是多重歷史因素疊加的結果:十九世紀末根瘤蚜蟲害摧毀大量老藤,重新嫁接種植所需的高昂成本壓垮許多小農;鐵路運輸網絡的發展,讓法國南部產量更大、成本更低的酒得以大量進入巴黎市場,削弱夏布利原本仰賴水路運輸建立的價格優勢;兩次世界大戰造成青壯年勞動力大量流失,許多葡萄園因無人照料而荒廢,甚至改種其他經濟作物。這幾股力量疊加,讓夏布利在二十世紀中葉一度瀕臨作為葡萄酒產區的存續邊緣。"
+            },
+            "quiz_bottom_correct": {
+              "text": "Henri 點頭,眼神裡帶著複雜的情緒。「是啊,那個年代,誰也不敢保證這片山坡,還能不能繼續叫『夏布利』。」\n\n他頓了頓,嘴角浮現一絲微笑。「但你現在看到的這一切——後來發生的事,你可能更難相信。」",
+              "grants_badge": "谷底歲月",
+              "choices": [
+                {
+                  "label": "「後來發生了什麼?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_bottom_wrong": {
+              "text": "Henri 搖搖頭。「不是氣候問題,也沒有政府強制轉作——再想想,蟲害重建成本、外地競爭、戰爭人力流失,這幾件事疊加起來,會對一個產區造成什麼樣的長期壓力?」",
+              "sets_fog": "quiz_bottom",
+              "choices": [
+                {
+                  "label": "重新思考萎縮的成因",
+                  "next": "quiz_bottom"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Henri 起身,示意你跟他一起走到門外。眼前層層疊疊的葡萄園,一路延伸到山坡盡頭,在陽光下綠意盎然。「這一切,」他說,「是從幾乎歸零開始,重新種回來的。」\n\n【第一章完 · 已獲得知識印記:谷底歲月】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:四層階梯",
+                  "next": "opening",
+                  "chapter": "four_steps_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "four_steps_02": {
+          "title": "第二章:四層階梯",
+          "meta": {
+            "village": "Chablis",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "夏布利葡萄園的復興史與 Petit Chablis 的地質成因",
+            "requires_badges": [
+              "谷底歲月"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「1960 年代開始,情況慢慢翻轉,」Henri 說,「戰後經濟復甦,國際市場對品質白酒的需求成長,加上防霜技術進步,原本因為風險太高而被放棄的地塊,重新有了被種植的價值。」\n\n他指向遠處地勢較高、坡度較平緩的一片台地。「你看那邊——那片地,以前沒人要種,現在成了新擴張的核心區域之一。」",
+              "choices": [
+                {
+                  "label": "「那片地跟核心夏布利坡地,土壤一樣嗎?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📊 先問問復興的規模有多大",
+                  "next": "scale_a"
+                }
+              ]
+            },
+            "scale_a": {
+              "text": "「從二十世紀中葉的低點,到現在,」Henri 說,「種植面積擴張了將近十倍。這速度,連我父親那一代都不敢想像。」",
+              "choices": [
+                {
+                  "label": "「這麼大規模的擴張,新增的地都是哪來的?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「不完全一樣,」Henri 解釋,「你在第一章學過的契馬利階石灰岩,主要分布在核心坡地。但復興擴張的地塊裡,有不少是地勢較高、屬於『波特蘭階』石灰岩的台地——地質年代比契馬利階稍晚,結構也稍有差異,傳統上被認為風土條件稍遜一籌。」\n\n他頓了頓。「這也是為什麼,夏布利的分級系統,在其他勃根地產區常見的三層——村莊級、一級園、特級園——之下,還多了一層『Petit Chablis』。」",
+              "choices": [
+                {
+                  "label": "思考 Petit Chablis 這一層存在的地質意義",
+                  "next": "quiz_four_steps"
+                }
+              ]
+            },
+            "quiz_four_steps": {
+              "type": "quiz",
+              "text": "夏布利的分級金字塔比其他勃根地產區多了一層「Petit Chablis」,位於村莊級「Chablis」之下。這一層存在的最主要地質意義是什麼?\n\nA. Petit Chablis 純粹是行銷用的次級品牌名稱,跟地質條件無關\n\nB. Petit Chablis 對應的地塊,多屬於波特蘭階(Portlandian)石灰岩台地,地質年代與結構跟核心坡地的契馬利階石灰岩略有差異,傳統上被認為風土表現稍遜於契馬利階地塊,因此在分級系統裡獨立成一層,也是二十世紀後半復興擴張時被納入種植的主要新增區域之一\n\nC. Petit Chablis 專門指種植面積小於一公頃的迷你地塊,是面積分類而非品質分級",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_four_steps_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_four_steps_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_four_steps_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "夏布利的分級金字塔獨樹一格,在村莊級「Chablis」之下,還有一層「Petit Chablis」——這是勃根地其他核心產區沒有的額外層級。Petit Chablis 對應的地塊,地質上多屬於波特蘭階(Portlandian)石灰岩,年代與結構跟核心坡地的契馬利階(Kimmeridgian)石灰岩略有差異,傳統上被認為排水與礦物表現稍遜一籌,因此在分級系統裡被獨立劃為較低一層。這層地塊,也正是二十世紀後半夏布利葡萄園大規模復興擴張時,被大量納入種植的主要新增區域之一——復興不只是「種回原本的地」,也包含把原本因風險或風土條件被判定次要的土地,重新賦予價值。"
+            },
+            "quiz_four_steps_correct": {
+              "text": "Henri 滿意地點頭。「沒錯。這片復興,不只是把老地重新種回來,也是把新的地方,重新畫進夏布利的地圖裡。」\n\n他望向那片曾經被放棄、如今生機盎然的台地。「這行教會我最深的一課是——沒有什麼是永遠回不去的,只要有人願意重新開始。」",
+              "grants_badge": "夏布利復興史與四層分級",
+              "choices": [
+                {
+                  "label": "「謝謝你,Henri,這趟聽完你的故事,收穫太多了。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_four_steps_wrong": {
+              "text": "Henri 搖搖頭。「不是行銷名稱,也不是面積分類——再想想,波特蘭階跟契馬利階,這兩種石灰岩的地質年代跟結構差異,對應到分級系統上,代表什麼?」",
+              "sets_fog": "quiz_four_steps",
+              "choices": [
+                {
+                  "label": "重新思考 Petit Chablis 存在的地質意義",
+                  "next": "quiz_four_steps"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你告別 Henri,走在夏布利的坡地間,夕陽把整片葡萄園染成溫暖的金黃色。從谷底幾乎消失的年代,到眼前這片十倍擴張的生機——這片土地教會你的最後一課,或許是所有風土故事裡最動人的一課:衰敗從來不是終點,只要還有人願意相信,土地就永遠留著重新開始的機會。\n\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。\n\n【第二章完 · 已獲得知識印記:夏布利復興史與四層分級】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "aspersion_outpost": {
+          "title": "驛站:防霜噴灑系統",
+          "meta": {
+            "village": "Chablis",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "夏布利標誌性的噴水防霜技術原理",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "春天清晨,葡萄園裡數百個灑水器同時啟動,細密的水霧灑落在剛發芽的枝條上,很快在表面結成一層薄冰。技師解釋:「這是夏布利最著名的防霜方式,跟你可能聽過的點蠟燭不一樣。」",
+              "choices": [
+                {
+                  "label": "「往芽上噴水結冰,不是更冷嗎?」",
+                  "next": "quiz_aspersion"
+                }
+              ]
+            },
+            "quiz_aspersion": {
+              "type": "quiz",
+              "text": "噴水防霜法(aspersion)刻意讓水在葡萄新芽表面結冰,而不是設法讓芽保持乾燥。這種看似違反直覺的做法,背後的物理原理是什麼?\n\nA. 冰層本身沒有保溫作用,這個方法其實只是心理安慰,沒有實際效果\n\nB. 水結冰的過程會釋放潛熱,只要持續噴水維持結冰狀態,冰層內部的芽溫能穩定維持在攝氏零度左右,不會繼續下探到造成凍傷的更低溫度\n\nC. 噴水的目的是把芽表面的空氣完全隔絕,防止低溫空氣接觸",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_aspersion_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_aspersion_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_aspersion_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "噴水防霜法(aspersion / sprinkler frost protection)的物理原理是「結冰潛熱釋放」:水從液態轉變為固態(結冰)的過程中會釋放熱量,只要持續噴灑水霧維持芽表面不斷結冰,這個持續釋放的潛熱就能讓冰層內部的芽溫穩定維持在攝氏零度左右,不會繼續下探到造成組織凍傷的更低溫度——關鍵是必須持續噴水直到氣溫回升到冰點以上才能停止,中途停止反而會讓冰層快速蒸發散熱、溫度驟降,造成更嚴重的凍傷。這是夏布利產區在葡萄園復興擴張過程中發展成熟、如今最具代表性的防霜技術之一,跟傳統蠟燭防霜法相比,適合大面積、地勢平緩的葡萄園使用。"
+            },
+            "quiz_aspersion_correct": {
+              "text": "技師點頭。「沒錯,重點是撐到最後一刻——氣溫回升之前絕對不能停水,不然前功盡棄。」\n\n【驛站完 · 已獲得知識印記:噴水防霜原理】",
+              "grants_badge": "噴水防霜原理",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_aspersion_wrong": {
+              "text": "技師搖頭。「冰層絕對有實際作用,也不是為了隔絕空氣——再想想,水結成冰的過程,會不會釋放什麼東西?」",
+              "sets_fog": "quiz_aspersion",
+              "choices": [
+                {
+                  "label": "重新思考噴水防霜的物理原理",
+                  "next": "quiz_aspersion"
+                }
+              ]
+            }
+          }
+        },
+        "eu_subsidy_outpost": {
+          "title": "驛站:補助與現代復興",
+          "meta": {
+            "village": "Chablis",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "政策補助對夏布利葡萄園復興擴張的助力",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "產區發展協會的一位官員翻著舊檔案。「復興不是憑空發生的,」她說,「土地重新有價值只是條件之一,還需要有人願意提供資金,讓農民真的敢下手重新種植。」",
+              "choices": [
+                {
+                  "label": "「重新種植的資金,是從哪裡來的?」",
+                  "next": "quiz_subsidy"
+                }
+              ]
+            },
+            "quiz_subsidy": {
+              "type": "quiz",
+              "text": "戰後夏布利葡萄園得以大規模復興擴張,除了市場需求成長與防霜技術進步,還仰賴什麼樣的助力,才能讓農民真正敢投入重新種植的高昂成本?\n\nA. 完全仰賴農民自有資金,沒有任何外部政策支持\n\nB. 法國政府與後來的歐洲共同體(以及其共同農業政策)提供的農業補助與土地重劃整理支持,降低了農民重新種植與擴張的資金門檻與風險\n\nC. 資金全部來自海外投資客直接買下葡萄園,跟本地農民無關",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_subsidy_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_subsidy_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_subsidy_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "戰後夏布利葡萄園的大規模復興擴張,除了市場需求成長與防霜技術進步等條件,也仰賴法國政府與後來歐洲共同體(及其共同農業政策)提供的農業補助與土地重劃整理支持——這類政策工具降低了個別農民重新種植葡萄藤(從整地、購買砧木嫁接苗到數年無收成期的資金壓力)所需承擔的財務風險與門檻。這提醒學習者:一個產區的復興,往往不只是土地本身條件改善或市場需求回升這麼單純,制度與政策層面的支持,往往是背後不可或缺卻容易被忽略的助力,跟你在地契與繼承線學過的 AOC 制度、合作社模式一樣,都是「人為制度」形塑風土產業版圖的例證。"
+            },
+            "quiz_subsidy_correct": {
+              "text": "官員點頭。「沒錯,光靠信心是不夠的,得有實際的資金支持,農民才敢真的把賭注押下去。」\n\n【驛站完 · 已獲得知識印記:政策補助的角色】",
+              "grants_badge": "政策補助的角色",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_subsidy_wrong": {
+              "text": "官員搖頭。「沒有外部支持,復興速度不可能這麼快,也不是海外投資客主導——再想想,政府或跨國政策機制,能為農民提供什麼樣的資金助力?」",
+              "sets_fog": "quiz_subsidy",
+              "choices": [
+                {
+                  "label": "重新思考復興背後的資金助力",
+                  "next": "quiz_subsidy"
+                }
+              ]
+            }
+          }
+        },
+        "first_new_vine_wp": {
+          "title": "支線:誰種下了第一株新藤",
+          "meta": {
+            "village": "Chablis",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "Henri 自身參與復興初期的親身經歷",
+            "requires_badges": [
+              "谷底歲月"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你再訪 Henri,問起他自己的故事。「我二十歲那年,」他說,「我父親已經放棄了,他覺得種葡萄沒有未來。但我偷偷跟銀行借了一小筆錢,在他不知情的情況下,重新種下了幾排新藤。」",
+              "choices": [
+                {
+                  "label": "「你父親後來發現了嗎?他怎麼反應?」",
+                  "next": "quiz_first_vine"
+                }
+              ]
+            },
+            "quiz_first_vine": {
+              "type": "quiz",
+              "text": "Henri 在整個村莊、包括自己父親都對這個產業喪失信心的年代,選擇冒險借貸重新種植。這種在集體悲觀氣氛裡逆勢投入的個人決定,對理解一個產區的「復興」,提供了什麼樣的視角?\n\nA. 純粹是年輕人衝動不懂事,復興完全跟這種個人冒險無關,只是大環境自然回暖的結果\n\nB. 大環境條件(市場需求、技術進步、政策支持)固然重要,但復興的起點,往往仍需要少數個人在悲觀氣氛裡率先做出逆勢投入的決定,個人的信念與冒險精神,是把「有利條件」真正轉化為「實際行動」的關鍵一環\n\nC. Henri 的故事只是特例,夏布利的復興完全沒有其他類似的個人案例",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_first_vine_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_first_vine_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_first_vine_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "一個產區的復興,固然需要市場需求回升、防霜技術進步、政策補助等大環境條件配合,但這些條件如何真正轉化為實際的重新種植行動,往往仍仰賴少數個人在集體悲觀氣氛裡率先做出逆勢投入的決定。像 Henri 這樣在父輩已經放棄信心的年代,選擇冒險借貸重新種植的個人故事,在夏布利復興史裡並非孤例——正是這些早期的「第一批新藤」,累積成後來規模化擴張的基礎。這提醒學習者:產業史經常被簡化成抽象的統計曲線(面積成長十倍),但曲線背後,是無數個像 Henri 這樣具體的個人選擇堆疊而成。"
+            },
+            "quiz_first_vine_correct": {
+              "text": "Henri 笑了,眼神帶著回憶的溫度。「我父親發現的時候氣壞了,罵了我整整一星期。但三年後,那幾排藤結出第一批果實,他一句話也沒說,只是默默幫我一起採收。」\n\n他望向遠方。「後來很多人問我,當初哪來的膽子。我說,不是膽子,是我就是不相信這片地會這樣被放棄。」",
+              "grants_badge": "第一批新藤",
+              "choices": [
+                {
+                  "label": "帶著這份感動,結束今天的拜訪",
+                  "next": "waypoint_end_first_vine"
+                }
+              ]
+            },
+            "quiz_first_vine_wrong": {
+              "text": "Henri 搖頭。「不是衝動,復興也不只是大環境自然回暖——而且我的故事,絕對不是唯一的例子。再想想,個人的決定,在『條件』跟『行動』之間扮演什麼角色?」",
+              "sets_fog": "quiz_first_vine",
+              "choices": [
+                {
+                  "label": "重新思考個人決定在復興過程中的意義",
+                  "next": "quiz_first_vine"
+                }
+              ]
+            },
+            "waypoint_end_first_vine": {
+              "text": "你告別 Henri,心裡想著那個二十歲的年輕人,在整個村莊都放棄希望的年代,獨自借錢種下幾排新藤的畫面。\n\n【支線完 · 已獲得知識印記:第一批新藤】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "trust_to_next_gen_wp": {
+          "title": "支線:傳給下一代的信任",
+          "meta": {
+            "village": "Chablis",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "復興成果的世代交接與長期警覺",
+            "requires_badges": [
+              "第一批新藤"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Henri 的孫子也在場,正準備接手家族的地。「爺爺常說,」孫子有點感慨地說,「復興不是終點,是另一場考驗的開始。」",
+              "choices": [
+                {
+                  "label": "「復興已經成功了,還有什麼好擔心的?」",
+                  "next": "quiz_trust"
+                }
+              ]
+            },
+            "quiz_trust": {
+              "type": "quiz",
+              "text": "Henri 認為即使夏布利葡萄園面積已經復興擴張近十倍,這段歷史依然不能被當成「已經徹底解決」的終點。這種持續警覺的態度,最主要提醒的是什麼?\n\nA. 過去的谷底教訓,加上你已經學過的氣候變遷長期趨勢等新挑戰,說明一個產區的興衰從來不是一次性解決的問題,而是需要每一代人持續面對新條件、做出新判斷的過程\n\nB. 復興已經完成,夏布利未來只會穩定成長,不需要任何警覺心\n\nC. Henri 只是老一輩人習慣性的悲觀,對年輕一代的接班沒有實質參考價值",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_trust_correct",
+                  "correct": true
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_trust_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_trust_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "夏布利從谷底到復興的歷史,不該被簡化理解成一個「已經徹底解決的問題」。你在其他故事線已經學過,氣候變遷正在為全勃根地帶來新的長期挑戰(採收期提早、風格演變、甚至可能鬆動百年分級邊界背後的氣候假設);而歷史上曾經摧毀夏布利的力量(市場競爭、成本壓力、人力流失),換一種形式,隨時可能以新的樣貌重新出現。Henri 對下一代強調「復興不是終點」的態度,反映的是一種務實的長期警覺——一個產區的存續,從來不是一次性解決就一勞永逸的問題,而是需要每一代人持續面對當下的具體條件,重新做出判斷與行動的過程。"
+            },
+            "quiz_trust_correct": {
+              "text": "Henri 對孫子點頭。「你聽懂了。這片地能撐過那個幾乎消失的年代,不是因為運氣好,是因為每一代人,都願意重新扛起責任。」\n\n他看向你。「你這趟旅程聽了這麼多故事,現在應該明白——風土從來不是一個『完成式』,它永遠是『進行式』。」",
+              "grants_badge": "世代交接的警覺",
+              "choices": [
+                {
+                  "label": "「謝謝你們,Henri,這趟旅程,我會永遠記得。」",
+                  "next": "waypoint_end_trust"
+                }
+              ]
+            },
+            "quiz_trust_wrong": {
+              "text": "Henri 搖頭。「不是盲目樂觀,也不是老一輩的悲觀習慣——再想想,歷史上摧毀過夏布利的那些力量,真的完全不可能以新的形式再次出現嗎?」",
+              "sets_fog": "quiz_trust",
+              "choices": [
+                {
+                  "label": "重新思考持續警覺的意義",
+                  "next": "quiz_trust"
+                }
+              ]
+            },
+            "waypoint_end_trust": {
+              "text": "你走出 Henri 家的院子,夕陽把整片復興而來的葡萄園染成溫暖的金色。從谷底的記憶,到四層階梯的地質,到噴水防霜的技術,到政策補助的助力,再到一株株由個人信念種下的新藤——這趟旅程的終點,或許正是它的起點:風土的故事,永遠有下一章等著被寫下去。\n\n【支線完 · 已獲得知識印記:世代交接的警覺】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      }
+    },
+    "bouzeron_line": {
+      "title": "被低估的品種",
+      "tagline": "大家都說 Aligoté 只是雞尾酒的配角——布哲宏用一整個村莊的堅持,證明事情沒那麼簡單",
+      "knowledge_focus": "Aligoté 品種的刻板印象與潛力、布哲宏作為勃根地唯一 Aligoté 村莊級 AOC 的成因",
+      "region": "夏隆內丘 Côte Chalonnaise",
+      "chapter_order": [
+        "underrated_grape_01",
+        "kir_truth_outpost",
+        "the_only_village_02",
+        "chalonnaise_value_outpost",
+        "old_vine_aligote_wp",
+        "next_generation_grape_wp"
+      ],
+      "chapters": {
+        "underrated_grape_01": {
+          "title": "第一章:被低估的品種",
+          "meta": {
+            "village": "Bouzeron",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "Aligoté 品種的刻板印象與實際潛力",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "布哲宏村一間小酒莊裡,Élise Vachon 倒了兩杯酒給你。「猜猜看,」她說,「你手上這杯,大部分人聽到品種名字,第一反應是『那不是拿去調基爾酒(Kir)的嗎』?」",
+              "choices": [
+                {
+                  "label": "「Aligoté 一直都只是配角品種嗎?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍷 先嚐嚐這杯酒的實際表現",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "你嚐了一口。酸度銳利明亮,帶著青蘋果與檸檬皮的氣息,質地卻比你預期的更有份量,尾韻甚至浮現一絲礦物鹹感,完全不像「拿去加黑醋栗利口酒調雞尾酒就好」的簡單印象。",
+              "choices": [
+                {
+                  "label": "「這跟我對 Aligoté 的印象完全不一樣。」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「大部分人對 Aligoté 的印象,」Élise 說,「是酸度高、香氣簡單、不耐久放,拿來加基爾酒(黑醋栗利口酒調成的雞尾酒)剛好能掩蓋它的缺點。這個印象不是空穴來風——在肥沃、高產量的地塊上隨便種,Aligoté 確實容易長成這樣。」\n\n她指向窗外的坡地。「但布哲宏這裡,土壤跟坡位條件其實不輸給隔壁種夏多內的地塊,只是歷史上被指定種 Aligoté。低產量、認真對待,這個品種能長出的東西,遠比刻板印象豐富。」",
+              "choices": [
+                {
+                  "label": "「所以品種本身的評價,很大程度取決於怎麼種?」",
+                  "next": "quiz_underrated"
+                }
+              ]
+            },
+            "quiz_underrated": {
+              "type": "quiz",
+              "text": "Aligoté 普遍給人「簡單、不耐久放、適合當雞尾酒基酒」的刻板印象,但在布哲宏這類條件優良、低產量認真對待的地塊上,能展現出遠超過刻板印象的複雜度與陳年潛力。這說明了什麼?\n\nA. Aligoté 的品種特性其實跟夏多內完全一樣,兩者沒有本質差異\n\nB. 品種本身的刻板印象,往往來自「普遍、隨意種植下的平均表現」,而非品種的絕對潛力上限——優良地塊搭配低產量與認真釀造,能讓一個普遍被低估的品種,展現出遠超過刻板印象的複雜度\n\nC. 布哲宏的酒其實摻了夏多內,並非純種 Aligoté",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_underrated_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_underrated_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_underrated_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Aligoté 是勃根地歷史悠久的白葡萄品種,長期背負「簡單、酸度過高、不耐久放」的刻板印象,這種印象很大程度來自它普遍被種植在肥沃、產量控制寬鬆的地塊上作為次要品種,而非反映品種本身的絕對潛力上限。布哲宏(Bouzeron)是一個重要的反例:當地土壤與坡位條件優良,搭配低產量與認真的種植釀造態度,Aligoté 能展現出銳利卻有份量的酸度結構、礦物鹹感,以及超過刻板印象的陳年潛力。這是理解「品種評價」時值得記住的一課——很多品種的名聲,反映的是「大部分人怎麼種它」,而不是「這個品種能長成什麼樣子」的天花板。"
+            },
+            "quiz_underrated_correct": {
+              "text": "Élise 滿意地點頭。「就是這樣。我這輩子最想做的一件事,就是讓更多人知道,Aligoté 不欠夏多內什麼。」\n\n她望向窗外。「而且我們村,是整個勃根地唯一一個,官方正式承認這件事的地方。」",
+              "grants_badge": "Aligoté 的潛力",
+              "choices": [
+                {
+                  "label": "「官方承認是什麼意思?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_underrated_wrong": {
+              "text": "Élise 搖頭。「Aligoté 跟夏多內是完全不同的品種,這杯也是純種 Aligoté,沒有摻混——再想想,品種的刻板印象,反映的是品種本身,還是『大部分人怎麼種它』?」",
+              "sets_fog": "quiz_underrated",
+              "choices": [
+                {
+                  "label": "重新思考品種刻板印象的成因",
+                  "next": "quiz_underrated"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Élise 從架上取出一份法定產區公告文件影本。「1998 年,布哲宏拿到了一個全勃根地獨一無二的身份——你等一下就會明白,這件事有多罕見。」\n\n【第一章完 · 已獲得知識印記:Aligoté 的潛力】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:唯一的村莊",
+                  "next": "opening",
+                  "chapter": "the_only_village_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "the_only_village_02": {
+          "title": "第二章:唯一的村莊",
+          "meta": {
+            "village": "Bouzeron",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "布哲宏作為勃根地唯一 Aligoté 村莊級 AOC 的意義",
+            "requires_badges": [
+              "Aligoté 的潛力"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "「在勃根地其他任何地方,」Élise 說,「Aligoté 頂多只能標示成『Bourgogne Aligoté』——大區級,不管你的地塊條件多好,都不能標示成更高的等級。」",
+              "choices": [
+                {
+                  "label": "「布哲宏為什麼是例外?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📜 先看看那份 1998 年的公告文件",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "文件上寫著,布哲宏在 1998 年正式獲准設立獨立的村莊級 AOC「Bouzeron」,法定品種明確指定為 Aligoté——這在勃根地所有村莊級 AOC 裡,是唯一一個以 Aligoté 而非夏多內或黑皮諾為主要法定品種的案例。",
+              "choices": [
+                {
+                  "label": "「這個特殊身份,是怎麼爭取來的?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「靠的是好幾代種植者長期堅持,」Élise 說,「反覆證明布哲宏這裡的 Aligoté,品質穩定、有辨識度,值得跟夏多內、黑皮諾一樣,擁有自己村莊等級的身份,而不是永遠被歸在『大區級』這個最低門檻的分類裡。這個過程花了很長時間才被官方正式承認。」\n\n她替你倒上最後一杯。「你之前學過,勃根地大部分村莊級以上的 AOC,法定品種不是夏多內就是黑皮諾。布哲宏證明,這條規則不是鐵律,只是需要有人願意堅持得夠久。」",
+              "choices": [
+                {
+                  "label": "思考布哲宏這個案例的教學意義",
+                  "next": "quiz_only_village"
+                }
+              ]
+            },
+            "quiz_only_village": {
+              "type": "quiz",
+              "text": "布哲宏(Bouzeron)是勃根地唯一以 Aligoté 為法定品種的村莊級 AOC,其他地區的 Aligoté 只能標示為大區級「Bourgogne Aligoté」。這個案例對理解勃根地分級制度,提供了什麼重要提醒?\n\nA. 勃根地村莊級以上的 AOC,法定品種規則是完全固定不變的鐵律,布哲宏其實是行政疏失造成的例外\n\nB. 分級制度雖然長期以夏多內、黑皮諾為主流預設,但並非不可撼動的鐵律——只要能長期證明特定品種在特定地塊有穩定且具辨識度的品質表現,透過持續倡議與制度程序,依然有機會爭取到與主流品種同等的村莊級身份\n\nC. 布哲宏這個特例,代表勃根地未來會全面開放各村莊自由選擇任何品種申請村莊級 AOC",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_only_village_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_only_village_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_only_village_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "布哲宏(Bouzeron)於 1998 年正式獲准設立獨立村莊級 AOC,法定品種明確指定為 Aligoté,是勃根地所有村莊級以上 AOC 裡唯一一個主要品種不是夏多內或黑皮諾的案例。這個案例的教學意義在於:勃根地分級制度雖然長期以夏多內(白)、黑皮諾(紅)為主流預設,但這不是不可撼動的鐵律——透過長期累積的品質證明與持續倡議,一個原本被視為次要或配角的品種,依然有機會透過正式制度程序,爭取到與主流品種同等的村莊級身份。這也呼應了你在整個系列已經學過的多個案例:分級系統從來不是一次性定案的化石,而是隨著人的堅持與時代條件,持續演變的活制度。"
+            },
+            "quiz_only_village_correct": {
+              "text": "Élise 眼中閃著光。「沒錯。我常跟人說,布哲宏這個名字,不只是一個地方,是一整個關於『不服輸』的證明。」\n\n她舉起杯子,示意你一起乾杯。「敬所有曾經被低估、卻沒有因此放棄的東西。」",
+              "grants_badge": "布哲宏的唯一性",
+              "choices": [
+                {
+                  "label": "「謝謝妳,Élise,這趟收穫很多。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_only_village_wrong": {
+              "text": "Élise 搖頭。「不是行政疏失,也不代表未來會全面開放——再想想,布哲宏爭取到的,是『鐵律不可撼動』還是『透過堅持依然有機會』的證明?」",
+              "sets_fog": "quiz_only_village",
+              "choices": [
+                {
+                  "label": "重新思考布哲宏案例的教學意義",
+                  "next": "quiz_only_village"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你走出 Élise 的酒莊,手裡還留著那杯 Aligoté 的餘韻——銳利卻有份量,像這個村莊本身的性格。從熱夫雷的一瓶神秘酒,到夜聖喬治的無冕之王,再到布哲宏這杯被低估卻不肯服輸的酒,你漸漸明白,風土的故事裡,最動人的往往不是那些天生就被捧在手心的名字,而是這些花了一整代人才被看見的堅持。\n\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。\n\n【第二章完 · 已獲得知識印記:布哲宏的唯一性】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "kir_truth_outpost": {
+          "title": "驛站:基爾酒的真相",
+          "meta": {
+            "village": "Bourgogne",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "基爾酒(Kir)名稱由來的真實歷史",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "一間第戎的酒吧裡,調酒師正把黑醋栗利口酒跟白酒調在一起。「這杯叫『基爾』,」他說,「很多人不知道,這個名字其實是一個真實存在的人。」",
+              "choices": [
+                {
+                  "label": "「基爾這個名字,是怎麼來的?」",
+                  "next": "quiz_kir"
+                }
+              ]
+            },
+            "quiz_kir": {
+              "type": "quiz",
+              "text": "「Kir」這款用白酒調黑醋栗利口酒的雞尾酒,名稱由來最準確的說法是:\n\nA. 純粹是調酒師隨意取的品牌名稱,沒有真實人物背景\n\nB. 得名自二十世紀第戎市長 Félix Kir,他大力推廣這款用當地 Aligoté 白酒調黑醋栗利口酒的飲品,這個習慣後來也連帶影響外界對 Aligoté「適合拿來調酒」的印象\n\nC. Kir 是一種特殊釀酒工藝的縮寫,跟人名無關",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_kir_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_kir_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_kir_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "「Kir」這款雞尾酒得名自 Félix Kir(1876–1968),他曾任第戎市長,大力推廣以當地 Aligoté 白酒調和黑醋栗利口酒(crème de cassis)的飲品,這款調酒後來以他的名字廣為流傳。這段歷史也連帶塑造了外界對 Aligoté「適合拿來調雞尾酒」的長期印象——但這個印象反映的是當時普遍 Aligoté 的酸度特性適合搭配利口酒調飲,而非代表所有 Aligoté 都只有這個用途,布哲宏這類優質產地的表現,正是這個刻板印象之外的重要例外。"
+            },
+            "quiz_kir_correct": {
+              "text": "調酒師點頭。「沒錯,這位市長大概沒想到,他的名字會跟這個品種綁在一起這麼久。」\n\n【驛站完 · 已獲得知識印記:基爾酒的由來】",
+              "grants_badge": "基爾酒的由來",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_kir_wrong": {
+              "text": "調酒師搖頭。「不是隨意命名,也不是工藝縮寫——這背後真的有個歷史人物,再想想是誰把這個喝法推廣開來的?」",
+              "sets_fog": "quiz_kir",
+              "choices": [
+                {
+                  "label": "重新思考基爾酒名稱的由來",
+                  "next": "quiz_kir"
+                }
+              ]
+            }
+          }
+        },
+        "chalonnaise_value_outpost": {
+          "title": "驛站:夏隆內丘的性價比",
+          "meta": {
+            "village": "Mercurey",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "夏隆內丘作為市場公認高性價比產區的定位",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "一位侍酒師在餐酒單上圈出幾款酒。「客人想要好喝又不貴的勃根地,」她說,「我通常會推薦夏隆內丘——梅克雷、日夫里這些村莊,沒有特級園,但性價比公認很高。」",
+              "choices": [
+                {
+                  "label": "「沒有特級園,為什麼還能有高性價比的名聲?」",
+                  "next": "quiz_value"
+                }
+              ]
+            },
+            "quiz_value": {
+              "type": "quiz",
+              "text": "夏隆內丘(涵蓋梅克雷 Mercurey、日夫里 Givry、蒙塔尼 Montagny 等村莊)整體沒有特級園等級,卻在市場上享有「高性價比」的公認名聲。這個現象最主要說明了什麼?\n\nA. 官方分級等級,是市場實際定價與消費者評價的唯一決定因素,沒有特級園就不可能有好名聲\n\nB. 市場對一款酒的實際評價,除了官方分級之外,也高度取決於「品質與價格之間的相對關係」——夏隆內丘的酒款品質水準穩定,但因為缺乏特級園光環,價格普遍低於夜丘伯恩丘同等品質的酒款,因此建立起「高性價比」的市場口碑\n\nC. 夏隆內丘其實暗地裡也有特級園,只是官方紀錄從未正式公開",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_value_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_value_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_value_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "夏隆內丘(Côte Chalonnaise,涵蓋 Mercurey、Givry、Montagny、Rully 等村莊)是勃根地少數整體沒有特級園等級的次產區,卻在市場上建立起穩固的「高性價比」口碑。這反映了一個重要原則:市場對一款酒的實際評價與定價,除了官方分級高低,也高度取決於「品質與價格之間的相對關係」——夏隆內丘的酒款整體品質水準穩定可靠,但因為缺乏特級園光環帶來的行銷溢價,價格普遍遠低於夜丘、伯恩丘同等實際品質的酒款,長期累積下來,建立起「花較少的錢,喝到不錯品質」的市場定位。這提醒學習者:官方分級系統是重要參考,但不是評估一款酒「值不值得買」的唯一依據。"
+            },
+            "quiz_value_correct": {
+              "text": "侍酒師點頭。「沒錯,懂行的客人,反而特別喜歡我推薦這一區——性價比這件事,分級證書可證明不了。」\n\n【驛站完 · 已獲得知識印記:分級之外的市場定位】",
+              "grants_badge": "分級之外的市場定位",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_value_wrong": {
+              "text": "侍酒師搖頭。「分級不是唯一決定因素,夏隆內丘也沒有隱藏的特級園——再想想,『性價比』評價,除了分級高低,還會受什麼因素影響?」",
+              "sets_fog": "quiz_value",
+              "choices": [
+                {
+                  "label": "重新思考性價比名聲的成因",
+                  "next": "quiz_value"
+                }
+              ]
+            }
+          }
+        },
+        "old_vine_aligote_wp": {
+          "title": "支線:老藤 Aligoté 的堅持",
+          "meta": {
+            "village": "Bouzeron",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "Aligoté Doré 老藤無性繁殖系與產量的取捨",
+            "requires_badges": [
+              "Aligoté 的潛力"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你再訪 Élise 時,她正站在一片產量明顯偏低的老藤前。「這片是 Aligoté Doré,」她說,「比較老式的無性繁殖系,產量比現在更普遍種植的高產量品系低得多,但我說什麼都不換。」",
+              "choices": [
+                {
+                  "label": "「產量差這麼多,為什麼堅持種老品系?」",
+                  "next": "quiz_old_vine"
+                }
+              ]
+            },
+            "quiz_old_vine": {
+              "type": "quiz",
+              "text": "Aligoté Doré 是一種較老式、產量較低的無性繁殖系(clone),相對於後來培育出的高產量品系。Élise 堅持種植 Aligoté Doré,最主要的考量邏輯是什麼?\n\nA. Aligoté Doré 完全是行銷噱頭,實際品質跟高產量品系毫無差異\n\nB. 一般而言,較低產量的無性繁殖系,單株葡萄能分配到的養分與風味物質相對集中,普遍被認為品質潛力優於刻意培育出的高產量品系,即使這意味著犧牲產量與收益\n\nC. 法規強制規定布哲宏只能種植 Aligoté Doré,沒有選擇空間",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_old_vine_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_old_vine_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_old_vine_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "無性繁殖系(clone)選擇是葡萄種植裡經常被忽略卻影響深遠的決策:同一個品種底下,不同無性繁殖系可能在產量、風味濃縮度、抗病性等特性上有明顯差異。Aligoté Doré 是一種較老式、產量普遍偏低的無性繁殖系,相對於後來為提升產量而培育的品系,單株葡萄藤能分配到的養分與風味物質更為集中,普遍被認為品質潛力更高——這是典型的「產量 vs 濃縮度」取捨,跟你在酒窖裡的抉擇線學過的萃取邏輯是同一套原理的不同層次應用。Élise 願意犧牲產量堅持種植 Aligoté Doré,反映的正是她想證明 Aligoté 潛力的核心信念。"
+            },
+            "quiz_old_vine_correct": {
+              "text": "Élise 點頭。「沒錯,產量少一半,但每一顆果實的濃縮度,完全不一樣。我要證明的,就是這個品種認真對待能有多好。」",
+              "grants_badge": "無性繁殖系的取捨",
+              "choices": [
+                {
+                  "label": "「這片老藤,你打算種到什麼時候?」",
+                  "next": "waypoint_end_old_vine"
+                }
+              ]
+            },
+            "quiz_old_vine_wrong": {
+              "text": "Élise 搖頭。「不是行銷噱頭,法規也沒有強制規定品系——再想想,產量低的無性繁殖系,單株養分會相對集中還是分散?」",
+              "sets_fog": "quiz_old_vine",
+              "choices": [
+                {
+                  "label": "重新思考老品系的品質邏輯",
+                  "next": "quiz_old_vine"
+                }
+              ]
+            },
+            "waypoint_end_old_vine": {
+              "text": "「種到我種不動為止,」Élise 笑著說,「然後交給下一個相信這件事的人。」\n\n【支線完 · 已獲得知識印記:無性繁殖系的取捨】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "next_generation_grape_wp": {
+          "title": "支線:下一代的品種",
+          "meta": {
+            "village": "Bouzeron",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "Aligoté 市場認可度的世代累積",
+            "requires_badges": [
+              "無性繁殖系的取捨"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Élise 帶你參加一場鄰近幾位年輕釀酒師的聚會,大家手上都拿著自己釀的 Aligoté。「十年前,」她說,「像這樣的聚會根本辦不起來,現在願意認真對待這個品種的人,一年比一年多。」",
+              "choices": [
+                {
+                  "label": "「這個轉變,是怎麼發生的?」",
+                  "next": "quiz_next_gen"
+                }
+              ]
+            },
+            "quiz_next_gen": {
+              "type": "quiz",
+              "text": "Aligoté 這幾年在市場上獲得的認可度逐漸提升,越來越多年輕釀酒師願意認真對待這個品種。這種轉變最合理的解釋邏輯是什麼?\n\nA. 純粹是流行趨勢的偶然,跟布哲宏這類先驅者的長期努力沒有實質關聯\n\nB. 像布哲宏這樣的先驅案例,長期累積具體的品質證明與市場認可,逐漸改變了整體市場與同行對這個品種的認知,吸引更多年輕釀酒師願意投入認真對待這個原本被低估的品種,形成正向的世代累積效應\n\nC. 這種轉變完全由政府政策強制推動,跟市場需求或個別釀酒師的努力無關",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_next_gen_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_next_gen_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_next_gen_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "一個原本被低估品種的市場認可度提升,往往不是偶然的流行趨勢,也很少單靠政策強制推動,而是像布哲宏這樣的先驅案例,透過長期累積具體的品質證明與市場口碑,逐漸改變整體產業與消費者對這個品種的認知天花板,進而吸引更多同行(尤其是年輕一代釀酒師)願意投入認真對待,形成正向的世代累積效應。這個模式在葡萄酒產業裡反覆出現——無論是特定品種、特定產區,或是特定釀造理念的市場地位提升,經常都能追溯到幾個關鍵先驅者長期堅持所奠定的基礎。"
+            },
+            "quiz_next_gen_correct": {
+              "text": "Élise 露出欣慰的笑容。「沒錯,我這輩子大概看不到 Aligoté 真正跟夏多內平起平坐的那一天,但只要方向是對的,總有一天會到。」\n\n她舉起酒杯,示意在場所有人一起。「敬這個品種的下一代——你們會做得比我更好。」",
+              "grants_badge": "世代累積的力量",
+              "choices": [
+                {
+                  "label": "「謝謝你們,這趟旅程讓我看見了風土故事裡最動人的一面。」",
+                  "next": "waypoint_end_next_gen"
+                }
+              ]
+            },
+            "quiz_next_gen_wrong": {
+              "text": "Élise 搖頭。「不是偶然，也不是政策強制——再想想，先驅者長期累積的品質證明，會怎麼影響同行跟市場的認知?」",
+              "sets_fog": "quiz_next_gen",
+              "choices": [
+                {
+                  "label": "重新思考這種轉變的成因",
+                  "next": "quiz_next_gen"
+                }
+              ]
+            },
+            "waypoint_end_next_gen": {
+              "text": "你走出聚會的酒窖,夜色下的布哲宏安靜而溫柔。從一杯被誤解的酒,到一整個村莊的堅持,再到一代又一代人接力傳下去的信念——這趟旅程教會你,風土的價值,從來不是天生註定,而是無數個像 Élise 這樣的人,一年又一年,親手種出來的。\n\n【支線完 · 已獲得知識印記:世代累積的力量】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      }
+    },
+    "macon_line": {
+      "title": "南方的氣泡",
+      "tagline": "整個勃根地最溫暖的角落,釀的卻是需要最多耐心的酒——氣泡不是奇蹟,是等出來的",
+      "knowledge_focus": "傳統法氣泡酒(Crémant de Bourgogne)工藝、普依-富塞 2020 年新設一級園的近代分級案例",
+      "region": "馬貢內 Mâconnais",
+      "chapter_order": [
+        "bubbles_from_the_south_01",
+        "dosage_spectrum_outpost",
+        "pouilly_fuisse_new_title_02",
+        "macon_villages_outpost",
+        "timing_of_disgorgement_wp",
+        "warming_in_the_south_wp"
+      ],
+      "chapters": {
+        "bubbles_from_the_south_01": {
+          "title": "第一章:南方的氣泡",
+          "meta": {
+            "village": "Mâconnais",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "傳統法氣泡酒(Crémant de Bourgogne)工藝邏輯",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "馬貢內的酒窖裡,溫度比你去過的任何一間都更深沉陰涼。Fabrice Lenoir 拿起一瓶瓶頸朝下、插在木架上的酒,輕輕轉動。「你之前學的都是靜態酒,」他說,「氣泡酒,是完全不同的耐心遊戲。」",
+              "choices": [
+                {
+                  "label": "「氣泡酒的釀造邏輯,哪裡不一樣?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍾 先看看這些瓶子插在架子上的樣子",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "整面牆的木架上,插滿了瓶頸朝下、傾斜角度不一的酒瓶,每隔幾天,Fabrice 就會走過去,逐瓶輕輕轉動一點角度。",
+              "choices": [
+                {
+                  "label": "「這個轉瓶的動作,是在做什麼?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「這是傳統法(méthode traditionnelle)氣泡酒釀造的核心步驟,」Fabrice 解釋,「先釀出一款基酒,通常刻意提早採收、保留較高酸度,裝瓶時加入糖與酵母(這個步驟叫 tirage),讓它在瓶中進行第二次發酵——這次發酵產生的二氧化碳沒有地方跑,就溶進酒裡變成氣泡。」\n\n他指向那些傾斜的瓶子。「第二次發酵完,死酵母會沉澱在瓶內,我們要靠轉瓶(remuage)慢慢把沉澱集中到瓶口,最後透過『除渣』(dégorgement)把它排出去,才能得到清澈的氣泡酒。」",
+              "choices": [
+                {
+                  "label": "「這個過程要花多久時間?」",
+                  "next": "grapes_c"
+                }
+              ]
+            },
+            "grapes_c": {
+              "text": "「短則一年多,講究一點的,瓶中陳年三五年都有,」Fabrice 說,「而且你會發現,Crémant de Bourgogne 用的葡萄,常常不是單一村莊,可能夏布利、馬貢內、夜丘的基酒都會拿來調配——因為這是大區級的法定產區,地理彈性比你之前學過的村莊級酒款大得多。」",
+              "choices": [
+                {
+                  "label": "思考氣泡酒生產跟靜態酒的核心差異",
+                  "next": "quiz_cremant"
+                }
+              ]
+            },
+            "quiz_cremant": {
+              "type": "quiz",
+              "text": "傳統法氣泡酒(如 Crémant de Bourgogne)的釀造流程,加入瓶中二次發酵(tirage)、轉瓶(remuage)、除渣(dégorgement)等步驟,跟你之前學過的靜態酒釀造邏輯相比,最核心的差異是什麼?\n\nA. 氣泡酒完全不需要基酒發酵,直接把糖水跟酵母裝進瓶子就能做出氣泡\n\nB. 氣泡酒是在基酒完成後,額外進行一次瓶中二次發酵產生天然氣泡,並透過轉瓶、除渣移除發酵沉澱物,整個流程比靜態酒多了一層時間與工序門檻,對耐心與精準度的要求更高\n\nC. 除渣(dégorgement)的目的是加入更多糖分讓酒更甜,跟移除沉澱物無關",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_cremant_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_cremant_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_cremant_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "傳統法(méthode traditionnelle,香檳區稱 méthode champenoise)氣泡酒釀造,是在基酒完成正常發酵後,額外進行一次「瓶中二次發酵」:裝瓶時加入糖與酵母(tirage),讓酵母在密封瓶中再次發酵,產生的二氧化碳因無處逸散而溶入酒液形成氣泡。二次發酵完成後,死酵母沉澱物需要透過長期轉瓶(remuage,逐步調整瓶身角度讓沉澱集中到瓶口)與除渣(dégorgement,凍結瓶口沉澱物後開瓶排出)移除,才能得到清澈的成品。Crémant de Bourgogne 作為大區級法定產區,葡萄來源可以跨越勃根地多個次產區調配,地理彈性遠大於村莊級以上的靜態酒——整個流程從基酒到成品,普遍需要一年以上、講究者甚至數年的時間,是對耐心與精準工序要求都遠高於靜態酒的釀造邏輯。"
+            },
+            "quiz_cremant_correct": {
+              "text": "Fabrice 滿意地點頭。「沒錯,這行沒有捷徑,每一顆氣泡,都是時間換來的。」\n\n他望向酒窖深處另一區,那裡擺著幾瓶插著木塞、標籤上寫著陌生年份的酒。「說到時間,你知道普依-富塞前陣子發生了一件大事嗎?」",
+              "grants_badge": "傳統法氣泡酒工藝",
+              "choices": [
+                {
+                  "label": "「普依-富塞?發生了什麼事?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_cremant_wrong": {
+              "text": "Fabrice 搖搖頭。「基酒發酵是必要的第一步,除渣也不是為了加糖——再想想,瓶中二次發酵產生的沉澱物,最後要怎麼處理掉?」",
+              "sets_fog": "quiz_cremant",
+              "choices": [
+                {
+                  "label": "重新思考傳統法氣泡酒的釀造流程",
+                  "next": "quiz_cremant"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Fabrice 帶你走出氣泡酒的專屬酒窖,陽光重新灑在臉上。「這是馬貢內少數幾件,連夜丘伯恩丘都沒有的東西,」他笑著說,「不過普依-富塞那件事,你得自己去問問看。」\n\n【第一章完 · 已獲得知識印記:傳統法氣泡酒工藝】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:普依-富塞的新頭銜",
+                  "next": "opening",
+                  "chapter": "pouilly_fuisse_new_title_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "pouilly_fuisse_new_title_02": {
+          "title": "第二章:普依-富塞的新頭銜",
+          "meta": {
+            "village": "Pouilly-Fuissé",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "普依-富塞 2020 年新設一級園的近代分級案例",
+            "requires_badges": [
+              "傳統法氣泡酒工藝"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "普依-富塞的葡萄園裡,一位莊主指著一塊新立起的告示牌,上面標示著地塊名稱與「Premier Cru」字樣。「這塊牌子,」他說,「幾年前根本不存在。」",
+              "choices": [
+                {
+                  "label": "「普依-富塞是最近才有一級園的嗎?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📜 先看看這塊新立的告示牌內容",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "告示牌上寫著這塊地塊的正式名稱,以及「Premier Cru」的認證年份——標示的日期相當晚近,晚到你意識到,這不是幾百年前就定型的歷史分級。",
+              "choices": [
+                {
+                  "label": "「這麼晚才設立一級園,是怎麼發生的?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「普依-富塞從 1936 年成為村莊級 AOC 以來,長期沒有一級園分級,」莊主解釋,「一直到 2020 年,經過官方機構(INAO)長時間審核當地種植者提出的申請,才正式批准設立一級園——這是勃根地近幾十年來,少數真正『新增』的一級園分級案例,不是幾百年前留下來的歷史結果。」",
+              "choices": [
+                {
+                  "label": "「這個案例,對理解勃根地分級制度有什麼意義?」",
+                  "next": "quiz_pouilly"
+                }
+              ]
+            },
+            "quiz_pouilly": {
+              "type": "quiz",
+              "text": "普依-富塞在 2020 年才正式獲准設立一級園分級,是勃根地近代少數真正新增的一級園案例。這個案例對理解整個勃根地分級制度,提供了什麼重要提醒?\n\nA. 這證明勃根地分級制度長期停滯,普依-富塞是唯一的例外,未來不會再有類似案例\n\nB. 勃根地分級系統雖然大部分核心產區的分級架構在幾十年甚至幾百年前就已定型,但這不代表整個制度徹底靜止——像普依-富塞這樣透過長期申請審核程序,依然有機會新增分級,說明這是一套持續運作、而非完全封閉的活制度\n\nC. 普依-富塞的新分級,其實只是行銷宣傳,沒有經過任何正式審核程序",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_pouilly_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_pouilly_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_pouilly_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "普依-富塞(Pouilly-Fuissé)自 1936 年成為村莊級 AOC 以來,長期沒有一級園分級,直到 2020 年才經法國國家原產地與品質研究院(INAO)正式核准設立一級園,是勃根地近代少數真正「新增」一級園分級的案例——跟你在其他故事線學過的、幾百年前就已定型的歷史分級架構(如熱夫雷-香貝丹、Chambertin 等)形成鮮明對比。這個案例證明勃根地分級系統並非完全封閉、一成不變的歷史化石,而是一套仍在運作、有明確申請審核程序的活制度,只是核心產區的分級架構因為歷史悠久、早已相對穩定,新增變動的案例相對罕見而顯得格外值得關注。"
+            },
+            "quiz_pouilly_correct": {
+              "text": "莊主眼神發亮。「就是這樣。我父親那一輩申請了好多年,終於在我這一代等到了。」\n\n他望向那塊嶄新的告示牌。「有時候我覺得,這比繼承一塊百年特級園還讓人驕傲——因為這是我們這一代人,親手爭取來的。」",
+              "grants_badge": "普依-富塞的新分級",
+              "choices": [
+                {
+                  "label": "「謝謝你分享這段故事,這趟旅程真的收穫很多。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_pouilly_wrong": {
+              "text": "莊主搖頭。「不是唯一的例外,也絕對經過正式審核程序——再想想,這個案例說明的是『制度徹底停滯』,還是『制度仍在運作,只是變動罕見』?」",
+              "sets_fog": "quiz_pouilly",
+              "choices": [
+                {
+                  "label": "重新思考普依-富塞案例的教學意義",
+                  "next": "quiz_pouilly"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你走出普依-富塞的葡萄園,夕陽把馬貢內溫暖的南方氣候染成一片柔和的金橙色。從契馬利階的牡蠣化石,到均分繼承制切碎的地圖,到酒窖裡的取捨,到氣泡酒瓶中緩慢流逝的時間,再到這塊剛剛掛上的嶄新告示牌——你終於明白,勃根地從來不是一本寫完的書,而是一部仍在被續寫的長篇故事,而你何其有幸,讀到了其中這麼多章。\n\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。\n\n【第二章完 · 已獲得知識印記:普依-富塞的新分級】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "dosage_spectrum_outpost": {
+          "title": "驛站:甜度的光譜",
+          "meta": {
+            "village": "Mâconnais",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "氣泡酒除渣後的補液(dosage)與甜度分級",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "酒鋪架上,幾瓶氣泡酒標籤上分別寫著「Brut」「Extra Brut」「Demi-Sec」。顧客疑惑地問店員:「這些字,到底代表什麼差別?」",
+              "choices": [
+                {
+                  "label": "「氣泡酒的甜度標示,是怎麼決定的?」",
+                  "next": "quiz_dosage"
+                }
+              ]
+            },
+            "quiz_dosage": {
+              "type": "quiz",
+              "text": "傳統法氣泡酒除渣(dégorgement)完成後,通常會補入少量「補液」(dosage,又稱 liqueur d'expédition)來調整最終甜度,標籤上的 Brut、Extra Brut、Demi-Sec 等字樣,反映的正是這個補液添加的含糖量差異。這代表什麼?\n\nA. 除渣完成的氣泡酒本身已經固定甜度,標籤字樣只是行銷分類,跟實際成分無關\n\nB. 除渣移除死酵母沉澱物後,酒液會出現些微空隙,補入含糖量不同的補液來填補並調整最終甜度,標籤上的甜度分級(Brut、Extra Brut、Demi-Sec 等)直接對應這個補液的含糖濃度\n\nC. 甜度分級只跟基酒本身的糖分有關,除渣後完全不會再添加任何東西",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_dosage_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_dosage_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_dosage_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "傳統法氣泡酒完成除渣(dégorgement)後,瓶內會因為排出沉澱物而出現些微空隙,釀酒師通常會補入「補液」(dosage / liqueur d'expédition,通常是酒與糖的混合液)來填補空隙並調整最終甜度。標籤上常見的甜度分級,由不甜到甜大致依序為:Brut Nature / Zero Dosage(幾乎不補糖)、Extra Brut、Brut(最常見)、Extra Dry(其實比 Brut 略甜,命名容易讓人誤解)、Sec、Demi-Sec、Doux(最甜)。這個補液添加的含糖濃度,直接決定了成品氣泡酒最終呈現的甜度分級,是傳統法氣泡酒釀造流程裡,除了基酒與瓶中發酵之外,另一個影響最終風格的關鍵決策點。"
+            },
+            "quiz_dosage_correct": {
+              "text": "店員點頭。「沒錯,而且『Extra Dry』其實比『Brut』甜,很多人第一次聽都會愣一下。」\n\n【驛站完 · 已獲得知識印記:補液與甜度分級】",
+              "grants_badge": "補液與甜度分級",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_dosage_wrong": {
+              "text": "店員搖頭。「除渣後確實還會補東西進去,不是行銷分類,基酒糖分也不是唯一因素——再想想,除渣留下的空隙,通常會補進什麼?」",
+              "sets_fog": "quiz_dosage",
+              "choices": [
+                {
+                  "label": "重新思考甜度分級的成因",
+                  "next": "quiz_dosage"
+                }
+              ]
+            }
+          }
+        },
+        "macon_villages_outpost": {
+          "title": "驛站:馬貢村的名字",
+          "meta": {
+            "village": "Mâcon-Villages",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "馬貢內的複合村名命名系統",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "酒標上寫著「Mâcon-Lugny」,遊客疑惑地問:「這是『馬貢』村,還是『呂尼』村?還是兩個地方的酒混在一起?」",
+              "choices": [
+                {
+                  "label": "「這種『馬貢-某某』的命名方式,是什麼意思?」",
+                  "next": "quiz_villages"
+                }
+              ]
+            },
+            "quiz_villages": {
+              "type": "quiz",
+              "text": "馬貢內產區常見「Mâcon-Villages」或「Mâcon-呂尼(Lugny)」「Mâcon-維列(Villages)」這類複合命名。這種命名方式最準確的理解是:\n\nA. 這是兩個不同村莊的酒混合裝瓶的標示\n\nB. 「Mâcon」加上特定村莊名,代表這款酒來自馬貢內產區裡符合較高標準的特定村莊,允許在基礎「Mâcon」大區級之上,再標明來源村莊以彰顯品質區隔,是介於單純「Mâcon」與更精細村莊級 AOC(如普依-富塞)之間的中間層級命名邏輯\n\nC. 「Mâcon-Villages」純粹是一個獨立村莊的正式名稱,不是複合命名",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_villages_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_villages_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_villages_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "馬貢內產區的命名系統,在基礎「Mâcon」(大區級)之上,設有「Mâcon-Villages」這個中間層級,允許符合較高種植與釀造標準的特定村莊,在「Mâcon」後面加上自己的村名(例如 Mâcon-Lugny、Mâcon-Viré 等),藉此在酒標上彰顯品質區隔,而非單純使用最基礎的「Mâcon」標示。這種複合命名邏輯,是馬貢內產區特有的中間層級設計,介於最基礎的大區級標示,與普依-富塞這類擁有獨立完整村莊級 AOC 身份的產區之間,提供了一種漸進式的品質分級表達方式。"
+            },
+            "quiz_villages_correct": {
+              "text": "遊客恍然大悟。「原來如此,所以看到後面加了村名,大概能猜到品質水準比單純『Mâcon』再講究一點。」\n\n【驛站完 · 已獲得知識印記:馬貢複合命名邏輯】",
+              "grants_badge": "馬貢複合命名邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_villages_wrong": {
+              "text": "「不是混合裝瓶,也不是獨立村莊名稱——再想想,『Mâcon』後面加上特定村名,通常想表達什麼樣的品質區隔?」",
+              "sets_fog": "quiz_villages",
+              "choices": [
+                {
+                  "label": "重新思考這種複合命名的邏輯",
+                  "next": "quiz_villages"
+                }
+              ]
+            }
+          }
+        },
+        "timing_of_disgorgement_wp": {
+          "title": "支線:除渣的時機",
+          "meta": {
+            "village": "Mâconnais",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "瓶中陳年時長對氣泡酒風格的影響與抉擇",
+            "requires_badges": [
+              "傳統法氣泡酒工藝"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你再訪 Fabrice 時,他正在比對兩批瓶中陳年時間不同的氣泡酒——一批十八個月,一批四年。「除渣的時機,」他說,「是這行最考驗耐心的決定之一。」",
+              "choices": [
+                {
+                  "label": "「瓶中陳年時間長短,會有什麼差別?」",
+                  "next": "quiz_timing"
+                }
+              ]
+            },
+            "quiz_timing": {
+              "type": "quiz",
+              "text": "傳統法氣泡酒在除渣(dégorgement)之前,會在瓶中與死酵母沉澱物一起陳年一段時間(法規通常有最低陳年時長要求,講究者常遠超過此門檻)。延長瓶中陳年時間,對成品風格最主要的影響是什麼?\n\nA. 陳年時間長短完全不影響風格,純粹是為了符合法規最低要求\n\nB. 延長與死酵母沉澱物接觸的時間(常稱 sur lie 陳年),能讓酒液吸收更多酵母自溶釋放的風味物質,增添烤麵包、堅果、餅乾等複雜氣息與更細膩綿密的氣泡質地,是提升氣泡酒複雜度的重要工藝手段\n\nC. 瓶中陳年時間越長,氣泡就會越少、越容易消失",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_timing_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_timing_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_timing_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "傳統法氣泡酒在瓶中二次發酵完成後、除渣之前,與死酵母沉澱物長時間接觸陳年(常稱 sur lie 陳年或 lees ageing),是提升複雜度的關鍵工藝環節:死酵母細胞逐漸自溶(autolysis),釋放出胺基酸、多醣體等風味物質,為酒款增添烤麵包、堅果、餅乾等經典氣泡酒香氣特徵,同時也普遍認為能讓氣泡質地更細膩綿密。各法定產區通常訂有最低陳年時長規範,但許多講究品質的生產者會遠超過法規門檻,自願延長陳年時間以追求更高複雜度——這也是為什麼同樣是傳統法氣泡酒,不同生產者、不同陳年時長的成品,風味複雜度可能有顯著差異。"
+            },
+            "quiz_timing_correct": {
+              "text": "Fabrice 點頭。「沒錯,十八個月的那批清新直接,四年的這批,烤吐司跟堅果氣息明顯豐富得多——但相對的,資金積壓的時間也更長,這是很實際的商業取捨。」",
+              "grants_badge": "瓶中陳年的取捨",
+              "choices": [
+                {
+                  "label": "「這種等待,值得嗎?」",
+                  "next": "waypoint_end_timing"
+                }
+              ]
+            },
+            "quiz_timing_wrong": {
+              "text": "Fabrice 搖頭。「不是純粹符合法規,氣泡也不會因此消失——再想想,長時間跟死酵母沉澱物接觸,會讓酒液吸收到什麼?」",
+              "sets_fog": "quiz_timing",
+              "choices": [
+                {
+                  "label": "重新思考瓶中陳年時間的影響",
+                  "next": "quiz_timing"
+                }
+              ]
+            },
+            "waypoint_end_timing": {
+              "text": "「當然值得,」Fabrice 笑著說,「氣泡酒教會我最深的一課,就是好東西通常急不來。」\n\n【支線完 · 已獲得知識印記:瓶中陳年的取捨】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "warming_in_the_south_wp": {
+          "title": "支線:南方的暖化",
+          "meta": {
+            "village": "Mâconnais",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "氣候暖化對馬貢內基酒酸度的特殊風險",
+            "requires_badges": [
+              "瓶中陳年的取捨"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Fabrice 望著葡萄園,語氣少了平常的從容。「馬貢內本來就是勃根地最溫暖的角落,」他說,「氣候持續變暖,對我們氣泡酒生產者來說,風險比其他地方更直接。」",
+              "choices": [
+                {
+                  "label": "「氣泡酒生產者,為什麼對暖化特別敏感?」",
+                  "next": "quiz_warming"
+                }
+              ]
+            },
+            "quiz_warming": {
+              "type": "quiz",
+              "text": "馬貢內身為勃根地氣候最溫暖的次產區,對於氣候暖化長期趨勢,身為氣泡酒基酒生產者的 Fabrice 特別感到憂慮。這種特別的敏感度,最合理的解釋是什麼?\n\nA. 氣泡酒生產完全不需要考慮基酒酸度,暖化對氣泡酒毫無影響\n\nB. 傳統法氣泡酒的基酒,傳統上需要刻意提早採收以保留足夠的天然酸度作為結構支撐,馬貢內本來就是勃根地最溫暖的產區,暖化趨勢會讓「保留足夠酸度」這件事變得更困難,基酒風格可能被迫改變,對氣泡酒生產者形成比靜態酒生產者更直接的結構性壓力\n\nC. 暖化只會影響紅酒產區,對馬貢內這種以白酒與氣泡酒為主的產區沒有任何實質影響",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_warming_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_warming_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_warming_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "傳統法氣泡酒的基酒生產,傳統上仰賴刻意提早採收(在糖分尚未過度累積、天然酸度仍然充足時採收),以保留足夠的酸度作為氣泡酒結構與新鮮感的支撐。馬貢內身為勃根地氣候本就最溫暖的次產區,在生長季氣溫持續上升的長期趨勢下,「維持基酒足夠酸度」這個前提條件,面臨的壓力比其他更冷涼的次產區更直接、更迫切——這是你在其他故事線學過的氣候變遷長期趨勢,在氣泡酒生產這個特定工藝脈絡下,展現出的一種特殊且格外具體的風險形式。"
+            },
+            "quiz_warming_correct": {
+              "text": "Fabrice 點頭,語氣沉重了些。「沒錯,我們可能要開始考慮更早採收,或者尋找地勢更高、更涼的新地塊——這不是遙遠的假設,是我這幾年每年都在認真面對的問題。」\n\n他望向遠方溫暖的坡地,語氣重新找回一絲堅定。「但這行教會我的最後一課,大概就是——不管風土怎麼變,人總會找到辦法,繼續把好東西做出來。」",
+              "grants_badge": "氣泡酒生產的氣候壓力",
+              "choices": [
+                {
+                  "label": "「謝謝你,Fabrice。」",
+                  "next": "waypoint_end_warming"
+                }
+              ]
+            },
+            "quiz_warming_wrong": {
+              "text": "Fabrice 搖頭。「氣泡酒需要基酒酸度,馬貢內也不是不受影響的例外——再想想,提早採收保留酸度的傳統做法,在持續暖化的趨勢下會遇到什麼挑戰?」",
+              "sets_fog": "quiz_warming",
+              "choices": [
+                {
+                  "label": "重新思考暖化對氣泡酒生產的特殊風險",
+                  "next": "quiz_warming"
+                }
+              ]
+            },
+            "waypoint_end_warming": {
+              "text": "你告別 Fabrice,走出馬貢內溫暖的葡萄園。從第一瓶帶著謎團的酒,到十三條交織的故事線,你終於明白——風土從來不是一個答案,是一個不斷被重新提出、被每一代人重新回答的問題。\n\n【支線完 · 已獲得知識印記:氣泡酒生產的氣候壓力】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      }
     }
   }
 }
