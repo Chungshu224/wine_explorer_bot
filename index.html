@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>風土探勘者 · 產區地圖</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif; }
+  #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+  #title-bar {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(20, 24, 20, 0.82); color: #fff;
+    padding: 10px 14px; font-size: 15px; font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  #legend {
+    position: absolute; bottom: 20px; left: 10px; z-index: 1000;
+    background: rgba(20, 24, 20, 0.82); color: #fff;
+    padding: 10px 14px; border-radius: 8px; font-size: 13px; line-height: 1.8;
+  }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-swatch { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+  #error-box {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    z-index: 2000; background: #fff; padding: 16px 20px; border-radius: 8px;
+    max-width: 80%; text-align: center; font-size: 14px; display: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="title-bar">載入中…</div>
+<div id="map"></div>
+<div id="legend"></div>
+<div id="error-box"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+// ---------------------------------------------------------------------------
+// 資料來源:直接讀取 Chungshu 的 bordeaux-map repo 裡,布根地官方 AOC 邊界資料
+// (INAO 原始資料,經過整理分類存放)
+// ---------------------------------------------------------------------------
+const GEOJSON_BASE =
+  "https://raw.githubusercontent.com/Chungshu224/bordeaux-map/master/public/bourgogne/geojson/";
+
+// 每個章節對應的地圖設定,用網址參數 ?map=corton 這樣的 key 查表
+// 之後要加新村莊,只要在這裡新增一筆設定,不用改其他程式碼
+const PRESETS = {
+  corton: {
+    title: "柯通丘:紅白特級園並存的邊界",
+    center: [47.072, 4.862],
+    zoom: 14,
+    layers: [
+      {
+        label: "Corton(紅酒特級園)",
+        color: "#e24b4a",
+        files: [
+          "Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton Grand Cru(Aloxe).geojson",
+          "Cote-de-Beaune/01Pernand-Vergelesses/Grand Cru/AOC Corton Grand Cru(Pernand).geojson",
+          "Cote-de-Beaune/02Ladoix/Grand Cru/AOC Corton Grand Cru(Ladoix).geojson",
+        ],
+      },
+      {
+        label: "Corton-Charlemagne(白酒特級園)",
+        color: "#1d9e75",
+        files: [
+          "Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Corton-Charlemagne Grand Cru(Aloxe).geojson",
+          "Cote-de-Beaune/01Pernand-Vergelesses/Grand Cru/AOC Corton-Charlemagne Grand Cru(Pernand).geojson",
+          "Cote-de-Beaune/02Ladoix/Grand Cru/AOC Corton-Charlemagne Grand Cru(Ladoix).geojson",
+        ],
+      },
+      {
+        label: "Charlemagne(白酒特級園)",
+        color: "#378add",
+        files: [
+          "Cote-de-Beaune/03Aloxe-Corton/Grand Cru/AOC Charlemagne Grand Cru (Aloxe).geojson",
+          "Cote-de-Beaune/01Pernand-Vergelesses/Grand Cru/AOC Charlemagne Grand Cru(Pernand).geojson",
+        ],
+      },
+    ],
+  },
+};
+
+function getParam(name) {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(name);
+}
+
+function showError(msg) {
+  const box = document.getElementById("error-box");
+  box.textContent = msg;
+  box.style.display = "block";
+}
+
+async function fetchGeojson(relativePath) {
+  const url = GEOJSON_BASE + relativePath.split("/").map(encodeURIComponent).join("/");
+  const resp = await fetch(url);
+  if (!resp.ok) {
+    throw new Error(`讀取失敗(${resp.status}):${relativePath}`);
+  }
+  return resp.json();
+}
+
+async function main() {
+  const presetKey = getParam("map");
+  const preset = PRESETS[presetKey];
+
+  if (!preset) {
+    document.getElementById("title-bar").textContent = "找不到這個地圖設定";
+    showError(`網址參數 map=${presetKey || "(空白)"} 沒有對應的設定,請確認連結是否正確。`);
+    return;
+  }
+
+  document.getElementById("title-bar").textContent = preset.title;
+
+  const map = L.map("map", { zoomControl: true }).setView(preset.center, preset.zoom);
+
+  // 衛星影像底圖(Esri World Imagery,免費、不需要 API key)
+  L.tileLayer(
+    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    {
+      attribution:
+        "Tiles &copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+      maxZoom: 19,
+    }
+  ).addTo(map);
+
+  const legendEl = document.getElementById("legend");
+  const allBounds = [];
+
+  for (const layer of preset.layers) {
+    let mergedFeatures = [];
+    for (const file of layer.files) {
+      try {
+        const geo = await fetchGeojson(file);
+        mergedFeatures = mergedFeatures.concat(geo.features || []);
+      } catch (err) {
+        console.error(err);
+        showError(err.message);
+      }
+    }
+
+    if (mergedFeatures.length === 0) continue;
+
+    const geoLayer = L.geoJSON(
+      { type: "FeatureCollection", features: mergedFeatures },
+      {
+        style: {
+          color: layer.color,
+          weight: 2,
+          fillColor: layer.color,
+          fillOpacity: 0.45,
+        },
+      }
+    ).addTo(map);
+
+    allBounds.push(geoLayer.getBounds());
+
+    const item = document.createElement("div");
+    item.className = "legend-item";
+    item.innerHTML = `<span class="legend-swatch" style="background:${layer.color}"></span><span>${layer.label}</span>`;
+    legendEl.appendChild(item);
+  }
+
+  if (allBounds.length > 0) {
+    let combined = allBounds[0];
+    for (let i = 1; i < allBounds.length; i++) {
+      combined = combined.extend(allBounds[i]);
+    }
+    map.fitBounds(combined, { padding: [30, 30] });
+  }
+}
+
+main();
+</script>
+</body>
+</html>
