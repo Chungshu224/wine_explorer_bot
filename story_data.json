@@ -335,7 +335,7 @@
               "knowledge_card": "Clos de Vougeot 的坡位邏輯:整塊 Clos de Vougeot 橫跨整個山坡,坡頂鄰近香波-蜜思妮與馮內-侯瑪內的特級園帶,排水佳、石灰岩淺露,酒款結構緊緻、礦物感明顯;坡底鄰近公路,土壤黏重、排水差,酒款容易顯得鬆散肥厚。同一片 Grand Cru 裡,坡位造成的風格差異,常常比村莊之間的差異還要大——這也是為什麼『Clos de Vougeot』的評價從來不是單一標準。"
             },
             "quiz_03_correct": {
-              "text": "Albert 露出讚許的表情。「杯 1,坡頂靠城堡那側,離香波-蜜思妮的特級園帶只隔著一條小路。」\n\n他翻開檔案室裡一本厚重的地籍登記簿,手指劃過一長串姓名,忽然停住。「找到了——Rousset。1961 年,你朋友的父親,買下坡頂一小塊地,登記人共同簽署欄裡,還有另一個姓氏:Vionnet。」\n\n他抬頭看你。「這塊地,是兩個家族共同持有的,直到某一年,Vionnet 的簽名忽然消失,土地全部轉到 Rousset 名下——附帶條件,是一筆『債務清償』。」\n\n你終於拼湊出全貌:Marguerite 家族的債務,用這塊坡頂好地抵償給了 Marcel 家,而 Marcel 因為愧疚,終生沒有動用這塊地一滴酒,直到用另一塊「戀人的葡萄園」默默償還一段感情的虧欠。\n\n🗺️ 想親眼看看這片八十幾位地主共有的葡萄園?\nhttps://chungshu224.github.io/wine_explorer_bot/?map=vougeot",
+              "text": "Albert 露出讚許的表情。「杯 1,坡頂靠城堡那側,離香波-蜜思妮的特級園帶只隔著一條小路。」\n\n他翻開檔案室裡一本厚重的地籍登記簿,手指劃過一長串姓名,忽然停住。「找到了——Rousset。1961 年,你朋友的父親,買下坡頂一小塊地,登記人共同簽署欄裡,還有另一個姓氏:Vionnet。」\n\n他抬頭看你。「這塊地,是兩個家族共同持有的,直到某一年,Vionnet 的簽名忽然消失,土地全部轉到 Rousset 名下——附帶條件,是一筆『債務清償』。」\n\n你終於拼湊出全貌:Marguerite 家族的債務,用這塊坡頂好地抵償給了 Marcel 家,而 Marcel 因為愧疚,終生沒有動用這塊地一滴酒,直到用另一塊「戀人的葡萄園」默默償還一段感情的虧欠。\n\n🗺️ 想親眼看看這片八十幾位地主共有的葡萄園?\nhttps://wineacademy.vercel.app/bourgogne/map-embed?map=vougeot",
               "grants_badge": "Clos de Vougeot",
               "choices": [
                 {
@@ -3483,7 +3483,7 @@
               "knowledge_card": "Aloxe-Corton(以及相鄰的 Ladoix-Serrigny、Pernand-Vergelesses)共享的柯通丘,是勃根地少數紅白特級園並存於同一座山丘的案例。Corton-Charlemagne(白酒特級園)大致分布在坡地上段,石灰岩含量較高、排水良好,適合夏多內;Corton(紅酒特級園,勃根地伯恩丘唯一的紅酒特級園)則多位於中下段坡地,黏土比例較高,適合黑皮諾扎根發展。這種邊界劃分並非行政上的隨意決定,而是數百年來種植者實務經驗與土壤特性長期磨合的結果,最終才反映進法定分級地圖——是理解「風土決定分級,而非分級決定風土」這個原則的絕佳案例。"
             },
             "quiz_corton_correct": {
-              "text": "Thibault 點頭。「就是這個道理。我爺爺常說,這座山丘自己會『告訴』你哪裡該種什麼,人只是花了幾百年才聽懂。」\n\n他望向山頂的樹林。「不過,你知道嗎,整個伯恩丘的紅酒產區裡,能被列為特級園的,只有柯通這一塊。」\n\n🗺️ 想親眼看看這座山丘的真實邊界?\nhttps://chungshu224.github.io/wine_explorer_bot/?map=corton",
+              "text": "Thibault 點頭。「就是這個道理。我爺爺常說,這座山丘自己會『告訴』你哪裡該種什麼,人只是花了幾百年才聽懂。」\n\n他望向山頂的樹林。「不過,你知道嗎,整個伯恩丘的紅酒產區裡,能被列為特級園的,只有柯通這一塊。」\n\n🗺️ 想親眼看看這座山丘的真實邊界?\nhttps://wineacademy.vercel.app/bourgogne/map-embed?map=corton",
               "grants_badge": "柯通丘邊界邏輯",
               "choices": [
                 {
@@ -3560,7 +3560,7 @@
               "knowledge_card": "伯恩丘的特級園分布呈現明顯的紅白不對稱:紅酒特級園僅有 Corton 一塊(且是勃根地伯恩丘唯一的紅酒特級園),白酒特級園卻有 Corton-Charlemagne 以及默爾索以南、以蒙哈榭(Montrachet)為核心的一整組頂級白酒地塊(包括跨越普里尼-蒙哈榭與夏山-蒙哈榭兩村邊界的 Montrachet 本身,以及周邊的 Bâtard-Montrachet、Chevalier-Montrachet 等)。這種不對稱反映的是地理現實:伯恩丘南段的石灰岩坡地與朝向條件,長期被認為特別能讓夏多內展現出頂級複雜度與陳年潛力,歷史上的分級評選也因此自然集中在這類白酒風土上,形塑出今天「伯恩丘以白酒特級園見長,紅酒僅柯通一枝獨秀」的格局。"
             },
             "quiz_asymmetry_correct": {
-              "text": "Thibault 露出讚許的笑容。「沒錯。這也是為什麼我們家在柯通這座山丘上特別自豪——我們同時擁有那『唯一一塊』紅酒特級園的地塊,也擁有白酒特級園的地塊。整個伯恩丘,能同時說這句話的家族不多。」\n\n他舉杯。「風土不會說謊,只是需要很長的時間,才會被人類的分級制度追上。」\n\n🗺️ 想親眼看看蒙哈榭家族橫跨兩村的邊界?\nhttps://chungshu224.github.io/wine_explorer_bot/?map=montrachet",
+              "text": "Thibault 露出讚許的笑容。「沒錯。這也是為什麼我們家在柯通這座山丘上特別自豪——我們同時擁有那『唯一一塊』紅酒特級園的地塊,也擁有白酒特級園的地塊。整個伯恩丘,能同時說這句話的家族不多。」\n\n他舉杯。「風土不會說謊,只是需要很長的時間,才會被人類的分級制度追上。」\n\n🗺️ 想親眼看看蒙哈榭家族橫跨兩村的邊界?\nhttps://wineacademy.vercel.app/bourgogne/map-embed?map=montrachet",
               "grants_badge": "伯恩丘紅白特級園格局",
               "choices": [
                 {
@@ -4985,7 +4985,7 @@
               "knowledge_card": "勃根地特級園的法定結構其實存在不同模式:夜丘與伯恩丘多數特級園(如 Chambertin、Musigny、Montrachet)各自是獨立的法定 AOC 產區;夏布利特級園則採取不同模式——「Chablis Grand Cru」本身是單一法定產區,涵蓋一整片連續的朝南山坡,底下再細分七個 climat 名稱(Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchot),生產者可以選擇只標示「Chablis Grand Cru」,也可以進一步標明是哪一塊 climat,但法律上這七塊地共享同一個特級園身份,不是七個互相獨立的特級園產區。這是理解勃根地分級系統時容易忽略的結構性差異——「特級園」這個詞底下,其實藏著不只一種法定運作模式。"
             },
             "quiz_seven_names_correct": {
-              "text": "Margaux 點頭。「沒錯,而且老實說,懂行的人都知道,這七塊 climat 彼此風格還是有差異——像 Les Clos 通常被認為結構最紮實、陳年潛力最強,但法律上,它們就是同一個產區的一部分。」\n\n她望向整片斜坡。「有時候我覺得,這比夜丘那種一塊地八十個地主的複雜,還更耐人尋味——同一個名字底下,藏著七種微妙的個性。」\n\n🗺️ 想親眼看看這七個 climat 實際排列的樣子?\nhttps://chungshu224.github.io/wine_explorer_bot/?map=chablis_gc",
+              "text": "Margaux 點頭。「沒錯,而且老實說,懂行的人都知道,這七塊 climat 彼此風格還是有差異——像 Les Clos 通常被認為結構最紮實、陳年潛力最強,但法律上,它們就是同一個產區的一部分。」\n\n她望向整片斜坡。「有時候我覺得,這比夜丘那種一塊地八十個地主的複雜,還更耐人尋味——同一個名字底下,藏著七種微妙的個性。」\n\n🗺️ 想親眼看看這七個 climat 實際排列的樣子?\nhttps://wineacademy.vercel.app/bourgogne/map-embed?map=chablis_gc",
               "grants_badge": "夏布利特級園結構",
               "choices": [
                 {
