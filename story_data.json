@@ -335,7 +335,7 @@
               "knowledge_card": "Clos de Vougeot 的坡位邏輯:整塊 Clos de Vougeot 橫跨整個山坡,坡頂鄰近香波-蜜思妮與馮內-侯瑪內的特級園帶,排水佳、石灰岩淺露,酒款結構緊緻、礦物感明顯;坡底鄰近公路,土壤黏重、排水差,酒款容易顯得鬆散肥厚。同一片 Grand Cru 裡,坡位造成的風格差異,常常比村莊之間的差異還要大——這也是為什麼『Clos de Vougeot』的評價從來不是單一標準。"
             },
             "quiz_03_correct": {
-              "text": "Albert 露出讚許的表情。「杯 1,坡頂靠城堡那側,離香波-蜜思妮的特級園帶只隔著一條小路。」\n\n他翻開檔案室裡一本厚重的地籍登記簿,手指劃過一長串姓名,忽然停住。「找到了——Rousset。1961 年,你朋友的父親,買下坡頂一小塊地,登記人共同簽署欄裡,還有另一個姓氏:Vionnet。」\n\n他抬頭看你。「這塊地,是兩個家族共同持有的,直到某一年,Vionnet 的簽名忽然消失,土地全部轉到 Rousset 名下——附帶條件,是一筆『債務清償』。」\n\n你終於拼湊出全貌:Marguerite 家族的債務,用這塊坡頂好地抵償給了 Marcel 家,而 Marcel 因為愧疚,終生沒有動用這塊地一滴酒,直到用另一塊「戀人的葡萄園」默默償還一段感情的虧欠。",
+              "text": "Albert 露出讚許的表情。「杯 1,坡頂靠城堡那側,離香波-蜜思妮的特級園帶只隔著一條小路。」\n\n他翻開檔案室裡一本厚重的地籍登記簿,手指劃過一長串姓名,忽然停住。「找到了——Rousset。1961 年,你朋友的父親,買下坡頂一小塊地,登記人共同簽署欄裡,還有另一個姓氏:Vionnet。」\n\n他抬頭看你。「這塊地,是兩個家族共同持有的,直到某一年,Vionnet 的簽名忽然消失,土地全部轉到 Rousset 名下——附帶條件,是一筆『債務清償』。」\n\n你終於拼湊出全貌:Marguerite 家族的債務,用這塊坡頂好地抵償給了 Marcel 家,而 Marcel 因為愧疚,終生沒有動用這塊地一滴酒,直到用另一塊「戀人的葡萄園」默默償還一段感情的虧欠。\n\n🗺️ 想親眼看看這片八十幾位地主共有的葡萄園?\nhttps://chungshu224.github.io/wine_explorer_bot/?map=vougeot",
               "grants_badge": "Clos de Vougeot",
               "choices": [
                 {
@@ -3560,7 +3560,7 @@
               "knowledge_card": "伯恩丘的特級園分布呈現明顯的紅白不對稱:紅酒特級園僅有 Corton 一塊(且是勃根地伯恩丘唯一的紅酒特級園),白酒特級園卻有 Corton-Charlemagne 以及默爾索以南、以蒙哈榭(Montrachet)為核心的一整組頂級白酒地塊(包括跨越普里尼-蒙哈榭與夏山-蒙哈榭兩村邊界的 Montrachet 本身,以及周邊的 Bâtard-Montrachet、Chevalier-Montrachet 等)。這種不對稱反映的是地理現實:伯恩丘南段的石灰岩坡地與朝向條件,長期被認為特別能讓夏多內展現出頂級複雜度與陳年潛力,歷史上的分級評選也因此自然集中在這類白酒風土上,形塑出今天「伯恩丘以白酒特級園見長,紅酒僅柯通一枝獨秀」的格局。"
             },
             "quiz_asymmetry_correct": {
-              "text": "Thibault 露出讚許的笑容。「沒錯。這也是為什麼我們家在柯通這座山丘上特別自豪——我們同時擁有那『唯一一塊』紅酒特級園的地塊,也擁有白酒特級園的地塊。整個伯恩丘,能同時說這句話的家族不多。」\n\n他舉杯。「風土不會說謊,只是需要很長的時間,才會被人類的分級制度追上。」",
+              "text": "Thibault 露出讚許的笑容。「沒錯。這也是為什麼我們家在柯通這座山丘上特別自豪——我們同時擁有那『唯一一塊』紅酒特級園的地塊,也擁有白酒特級園的地塊。整個伯恩丘,能同時說這句話的家族不多。」\n\n他舉杯。「風土不會說謊,只是需要很長的時間,才會被人類的分級制度追上。」\n\n🗺️ 想親眼看看蒙哈榭家族橫跨兩村的邊界?\nhttps://chungshu224.github.io/wine_explorer_bot/?map=montrachet",
               "grants_badge": "伯恩丘紅白特級園格局",
               "choices": [
                 {
@@ -4985,7 +4985,7 @@
               "knowledge_card": "勃根地特級園的法定結構其實存在不同模式:夜丘與伯恩丘多數特級園(如 Chambertin、Musigny、Montrachet)各自是獨立的法定 AOC 產區;夏布利特級園則採取不同模式——「Chablis Grand Cru」本身是單一法定產區,涵蓋一整片連續的朝南山坡,底下再細分七個 climat 名稱(Bougros、Preuses、Vaudésir、Grenouilles、Valmur、Les Clos、Blanchot),生產者可以選擇只標示「Chablis Grand Cru」,也可以進一步標明是哪一塊 climat,但法律上這七塊地共享同一個特級園身份,不是七個互相獨立的特級園產區。這是理解勃根地分級系統時容易忽略的結構性差異——「特級園」這個詞底下,其實藏著不只一種法定運作模式。"
             },
             "quiz_seven_names_correct": {
-              "text": "Margaux 點頭。「沒錯,而且老實說,懂行的人都知道,這七塊 climat 彼此風格還是有差異——像 Les Clos 通常被認為結構最紮實、陳年潛力最強,但法律上,它們就是同一個產區的一部分。」\n\n她望向整片斜坡。「有時候我覺得,這比夜丘那種一塊地八十個地主的複雜,還更耐人尋味——同一個名字底下,藏著七種微妙的個性。」",
+              "text": "Margaux 點頭。「沒錯,而且老實說,懂行的人都知道,這七塊 climat 彼此風格還是有差異——像 Les Clos 通常被認為結構最紮實、陳年潛力最強,但法律上,它們就是同一個產區的一部分。」\n\n她望向整片斜坡。「有時候我覺得,這比夜丘那種一塊地八十個地主的複雜,還更耐人尋味——同一個名字底下,藏著七種微妙的個性。」\n\n🗺️ 想親眼看看這七個 climat 實際排列的樣子?\nhttps://chungshu224.github.io/wine_explorer_bot/?map=chablis_gc",
               "grants_badge": "夏布利特級園結構",
               "choices": [
                 {
@@ -7153,6 +7153,484 @@
             },
             "waypoint_end_warming": {
               "text": "你告別 Fabrice,走出馬貢內溫暖的葡萄園。從第一瓶帶著謎團的酒,到十三條交織的故事線,你終於明白——風土從來不是一個答案,是一個不斷被重新提出、被每一代人重新回答的問題。\n\n【支線完 · 已獲得知識印記:氣泡酒生產的氣候壓力】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        }
+      },
+      "major_region": "布根地 Bourgogne"
+    },
+    "beaujolais_line": {
+      "title": "整串的祕密",
+      "tagline": "同一種工藝,一邊釀出能陳年十年的特級村莊酒,一邊釀出採收後三週就上市的新酒——這中間,是整個薄酒萊的故事",
+      "knowledge_focus": "加美品種與二氧化碳浸漬法、薄酒萊新酒的行銷史、薄酒萊算不算勃根地的行政歸屬問題",
+      "region": "薄酒萊 Beaujolais",
+      "chapter_order": [
+        "carbonic_secret_01",
+        "ten_names_outpost",
+        "third_thursday_02",
+        "granite_backbone_outpost",
+        "independence_day_wp",
+        "life_after_nouveau_wp"
+      ],
+      "chapters": {
+        "carbonic_secret_01": {
+          "title": "第一章:二氧化碳浸漬的祕密",
+          "meta": {
+            "village": "Morgon",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "加美品種與二氧化碳浸漬法的釀造邏輯",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "摩恭村(Morgon)一間酒窖裡,Julien Chabert 掀開一個密閉水泥槽的蓋子,裡面塞滿完整未破皮的葡萄串。「這裡面正在發生的事,」他說,「跟你之前學過的釀造邏輯完全不一樣——連品種都不一樣,這是加美(Gamay),不是黑皮諾。」",
+              "choices": [
+                {
+                  "label": "「這個密閉槽裡,葡萄在做什麼?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "🍇 先看看槽裡完整葡萄串的狀態",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "你湊近看,槽裡的葡萄串完好無損,沒有破皮擠壓的痕跡,槽口用重物密封,隱約能聽到內部氣體流動的聲音。",
+              "choices": [
+                {
+                  "label": "「完整的葡萄串,是怎麼發酵出酒的?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「這叫二氧化碳浸漬法(macération carbonique),」Julien 解釋,「把完整、未破皮的葡萄串放進密閉容器,先灌入二氧化碳把氧氣趕走,葡萄粒在無氧環境下,會靠自己果實內部的酵素,進行一種『細胞內發酵』——不需要酵母介入的第一階段,會把部分糖分轉化成酒精,還會產生獨特的香蕉、糖果般的香氣。」\n\n他敲了敲槽壁。「你之前學過整串發酵帶來的部分二氧化碳浸漬效果,那是『順便發生』的次要效果;這裡,這是整個釀造邏輯的核心,不是配角。」",
+              "choices": [
+                {
+                  "label": "「這種工藝,是薄酒萊特有的嗎?」",
+                  "next": "risk_c"
+                }
+              ]
+            },
+            "risk_c": {
+              "text": "「不算獨家,但薄酒萊確實是把這個技法用得最徹底、最出名的地方,」Julien 說,「而且我們這裡還分兩條路——像我這種堅持傳統的,會用完整的二氧化碳浸漬法,釀出結構扎實、能陳年十年以上的特級村莊酒;但也有簡化、加速版本的做法,專門用來釀那種採收完幾週就要上市的新酒。」",
+              "choices": [
+                {
+                  "label": "思考二氧化碳浸漬法的核心運作邏輯",
+                  "next": "quiz_carbonic"
+                }
+              ]
+            },
+            "quiz_carbonic": {
+              "type": "quiz",
+              "text": "二氧化碳浸漬法(macération carbonique)的核心運作邏輯,最準確的描述是:\n\nA. 跟一般釀造完全一樣,只是額外多灌入二氧化碳氣體增添風味,葡萄本身還是先破皮榨汁再發酵\n\nB. 完整未破皮的葡萄串在無氧密閉環境下,靠果實自身酵素進行細胞內發酵,把部分糖分轉化為酒精並產生獨特的香蕉、糖果般香氣,是不同於一般破皮發酵的釀造邏輯\n\nC. 二氧化碳浸漬法只能用來釀造薄酒萊新酒,無法用於任何講究陳年潛力的酒款",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_carbonic_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_carbonic_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_carbonic_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "二氧化碳浸漬法(macération carbonique)是薄酒萊產區最具代表性的釀造技法:完整、未破皮的葡萄串放入密閉容器,先灌入二氧化碳排除氧氣,葡萄粒在缺氧環境下靠果實自身酵素進行「細胞內發酵」(intracellular fermentation)——一種不需要酵母直接接觸果肉的初期發酵反應,會把部分糖分轉化為酒精,同時產生香蕉、糖果、櫻桃硬糖般的獨特香氣。這個技法有完整版與簡化加速版(常稱半二氧化碳浸漬法,semi-carbonique)之分:前者常用於講究結構與陳年潛力的特級村莊酒,後者則是釀造薄酒萊新酒(Beaujolais Nouveau)這類採收後極短時間就上市酒款的核心工藝。加美(Gamay)這個品種天生單寧與果香特質,也特別適合這種釀造邏輯發揮效果。"
+            },
+            "quiz_carbonic_correct": {
+              "text": "Julien 滿意地點頭。「就是這樣。同一套原理,一邊能釀出十年後依然精彩的酒,一邊能釀出三個星期後就要上市的酒——差別在於你怎麼用這套原理,還有你要不要給時間讓它慢慢完成。」\n\n他望向酒窖深處另一批標示著不同年份的酒。「說到新酒,我對它的感情,比你想像的複雜得多。」",
+              "grants_badge": "加美與二氧化碳浸漬邏輯",
+              "choices": [
+                {
+                  "label": "「怎麼個複雜法?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_carbonic_wrong": {
+              "text": "Julien 搖頭。「不是額外加味,也不是只能用在新酒上——再想想,完整未破皮的葡萄,在無氧環境下,靠什麼在進行發酵?」",
+              "sets_fog": "quiz_carbonic",
+              "choices": [
+                {
+                  "label": "重新思考二氧化碳浸漬法的運作邏輯",
+                  "next": "quiz_carbonic"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "Julien 苦笑了一下。「我痛恨外界一提到薄酒萊就只想到新酒,好像我們釀不出別的東西——但每年秋天,如果沒有新酒那筆提早入帳的現金,我這種小農莊,撐不過淡季。」\n\n【第一章完 · 已獲得知識印記:加美與二氧化碳浸漬邏輯】",
+              "choices": [
+                {
+                  "label": "▶️ 前往下一章:十一月的第三個星期四",
+                  "next": "opening",
+                  "chapter": "third_thursday_02"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "third_thursday_02": {
+          "title": "第二章:十一月的第三個星期四",
+          "meta": {
+            "village": "Beaujolais",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "薄酒萊新酒行銷史、薄酒萊算不算勃根地的行政歸屬問題",
+            "requires_badges": [
+              "加美與二氧化碳浸漬邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Julien 翻出一張泛黃的家族照片,是他祖母 Marthe 年輕時站在一整排酒桶前的合影。「我奶奶那一輩,見證了薄酒萊從『勃根地底下一個產區』,變成現在這樣自成一格的過程,」他說。",
+              "choices": [
+                {
+                  "label": "「薄酒萊本來算是勃根地的一部分?」",
+                  "next": "ask_b"
+                },
+                {
+                  "label": "📷 先看看這張老照片的細節",
+                  "next": "observe_a"
+                }
+              ]
+            },
+            "observe_a": {
+              "text": "照片背面,Marthe 用鋼筆寫了一行小字,日期停在薄酒萊新酒最初開始受到全國矚目的那個年代前後。",
+              "choices": [
+                {
+                  "label": "「這個時期,發生了什麼關鍵轉變?」",
+                  "next": "ask_b"
+                }
+              ]
+            },
+            "ask_b": {
+              "text": "「地理上,薄酒萊緊鄰馬貢內南邊,歷史上確實跟勃根地的區域組織有過重疊,」Julien 說,「但我們的主力品種是加美,不是夏多內或黑皮諾,風格、釀法都自成一格。慢慢地,薄酒萊發展出自己獨立的產區推廣機構,現在你要說它『算不算勃根地』,其實是個沒有簡單答案的問題——地理相鄰,但品種、風格、行政機構都各走各的路。」\n\n他把照片小心收好。「差不多同一個年代,我奶奶說,村裡開始有酒商推廣『新酒』這個概念——採收完幾週就裝瓶上市,搶在耶誕節前的市場買氣。」",
+              "choices": [
+                {
+                  "label": "「這個新酒行銷概念,後來怎麼變成全球現象?」",
+                  "next": "quiz_beaujolais"
+                }
+              ]
+            },
+            "quiz_beaujolais": {
+              "type": "quiz",
+              "text": "薄酒萊新酒(Beaujolais Nouveau)發展成每年十一月第三個星期四全球同步上市的現象,加上薄酒萊本身「算不算勃根地」的行政歸屬模糊性。這兩件事最合理的理解方式是:\n\nA. 兩者毫無關聯,新酒行銷純粹是酒商的偶然創意,跟產區身份認同無關\n\nB. 兩者某種程度上互相呼應——薄酒萊逐漸從勃根地大架構下發展出自己獨立的產區身份與推廣機制,新酒全球同步上市這種大膽、統一的行銷操作,某種程度上也是這個產區建立自身獨特識別度、脫離「勃根地附屬品」印象的具體展現\n\nC. 「算不算勃根地」這個問題早已有官方明確定論,不存在任何模糊空間",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_beaujolais_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_beaujolais_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_beaujolais_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "薄酒萊新酒(Beaujolais Nouveau)每年十一月第三個星期四全球同步上市的行銷操作,是二十世紀後半發展成熟、極具代表性的葡萄酒行銷現象——採收後極短時間內完成發酵裝瓶,搶在年底節慶市場推出,對急需現金流的小農莊尤其重要。這個現象的發展時期,某種程度上跟薄酒萊逐漸建立自身獨立產區身份(脫離早期跟勃根地區域組織重疊的架構,發展出專屬的產區推廣機制)的歷程互相呼應——薄酒萊「算不算勃根地」至今仍是地理相鄰、卻品種風格與行政推廣自成一格的模糊地帶,沒有簡單一刀切的答案,而新酒這種大膽統一的全球行銷操作,某種程度上也是這個產區型塑自身獨特識別度的具體展現。"
+            },
+            "quiz_beaujolais_correct": {
+              "text": "Julien 點頭,眼神裡帶著複雜的驕傲。「我奶奶說得好——『我們不是勃根地的附屬品,但我們也不否認,曾經是那個大家庭的一部分。』這句話,我到現在還記得。」\n\n他望向酒窖外連綿的加美葡萄園。「新酒讓全世界記住了薄酒萊這個名字,即使很多人記住的,只是故事的一小部分。」",
+              "grants_badge": "薄酒萊新酒行銷史",
+              "choices": [
+                {
+                  "label": "「謝謝你,Julien,還有你奶奶的故事,這趟收穫很多。」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_beaujolais_wrong": {
+              "text": "Julien 搖頭。「不是毫無關聯,行政歸屬也絕對不是有簡單定論的事——再想想,建立獨立產區身份,跟大膽統一的全球行銷操作,兩者會不會互相呼應?」",
+              "sets_fog": "quiz_beaujolais",
+              "choices": [
+                {
+                  "label": "重新思考新酒行銷史跟行政歸屬問題的關聯",
+                  "next": "quiz_beaujolais"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "你走出 Julien 的酒窖,夕陽把摩恭村的葡萄園染成溫暖的橘紅色。從一串完整葡萄在密閉槽裡的無聲發酵,到一張祖母年輕時的老照片,再到一個全球同步舉杯的星期四——你終於明白,薄酒萊這個名字裡,裝著的不只是一種釀法,還有整整一個家族、一整個產區,想在勃根地的巨大身影旁邊,找到自己聲音的故事。\n\n想繼續探索這條故事線?輸入 /chapters 看看還有哪些支線可以走。\n\n【第二章完 · 已獲得知識印記:薄酒萊新酒行銷史】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "ten_names_outpost": {
+          "title": "驛站:十個名字,一個共通點",
+          "meta": {
+            "village": "Beaujolais",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "薄酒萊十大特級村莊(Cru)酒標從不寫「Beaujolais」的規則",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "酒鋪架上一瓶酒,標籤上大大寫著「Morgon」,遊客翻遍整瓶酒都找不到「Beaujolais」這幾個字。「這不是薄酒萊的酒嗎?」他疑惑地問老闆。",
+              "choices": [
+                {
+                  "label": "「特級村莊的酒,為什麼不寫『Beaujolais』?」",
+                  "next": "quiz_ten_names"
+                }
+              ]
+            },
+            "quiz_ten_names": {
+              "type": "quiz",
+              "text": "薄酒萊最高等級的十個特級村莊(Cru,包括 Morgon、Moulin-à-Vent、Fleurie、Brouilly 等),酒標上的命名慣例,最準確的描述是:\n\nA. 十大特級村莊的酒標一定要同時標示「Beaujolais」跟村莊名,兩者缺一不可\n\nB. 十大特級村莊的酒款,酒標上通常只標示村莊名稱本身(如 Morgon),完全不出現「Beaujolais」字樣,是這個等級刻意建立獨立識別度的命名慣例\n\nC. 「Beaujolais」這個詞在法規上禁止出現在任何酒標上",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_ten_names_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_ten_names_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_ten_names_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "薄酒萊分級金字塔最頂層的十個特級村莊(Cru du Beaujolais:Brouilly、Chénas、Chiroubles、Côte de Brouilly、Fleurie、Juliénas、Morgon、Moulin-à-Vent、Régnié、Saint-Amour),酒標命名慣例上通常只標示村莊名稱本身,完全不出現「Beaujolais」字樣——這是刻意的品牌區隔策略,讓最頂級的十個村莊,建立起獨立於「薄酒萊」這個廣泛印象(常被聯想到新酒的輕快簡單風格)之外的專屬識別度。這跟你在其他故事線學過的「借名升級」(如熱夫雷借用 Chambertin 之名)恰好相反——這裡是刻意「隱去」大區域名稱,凸顯村莊本身的獨立地位。"
+            },
+            "quiz_ten_names_correct": {
+              "text": "老闆點頭。「沒錯,懂行的人一看到單純的村莊名,就知道這是十大特級村莊等級,比普通薄酒萊講究得多。」\n\n【驛站完 · 已獲得知識印記:十大特級村莊命名慣例】",
+              "grants_badge": "十大特級村莊命名慣例",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_ten_names_wrong": {
+              "text": "老闆搖頭。「沒有強制同時標示,『Beaujolais』也沒有被法規禁止使用——再想想,只標村莊名而不寫大區名稱,是想達到什麼效果?」",
+              "sets_fog": "quiz_ten_names",
+              "choices": [
+                {
+                  "label": "重新思考十大特級村莊的命名邏輯",
+                  "next": "quiz_ten_names"
+                }
+              ]
+            }
+          }
+        },
+        "granite_backbone_outpost": {
+          "title": "驛站:花崗岩的骨架",
+          "meta": {
+            "village": "Beaujolais",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "薄酒萊花崗岩土壤與勃根地石灰岩的地質差異",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "地質學家蹲在薄酒萊特級村莊的坡地上,撿起一塊帶著粉紅色顆粒感的石頭。「你之前在夜丘、伯恩丘看到的都是石灰岩,」她說,「這裡完全不一樣。」",
+              "choices": [
+                {
+                  "label": "「薄酒萊的土壤,跟勃根地其他地方差在哪?」",
+                  "next": "quiz_granite"
+                }
+              ]
+            },
+            "quiz_granite": {
+              "type": "quiz",
+              "text": "薄酒萊特級村莊(尤其北部的 Morgon、Fleurie、Moulin-à-Vent 等)的土壤基礎,跟你之前學過的夜丘、伯恩丘石灰岩土壤相比,最主要的地質差異是什麼?\n\nA. 完全沒有差異,薄酒萊的土壤也是石灰岩為主\n\nB. 薄酒萊特級村莊的土壤基礎多為花崗岩,是完全不同的地質類型,這種排水良好、礦物質組成不同的土壤,搭配加美品種,造就跟勃根地石灰岩區域截然不同的風土表現\n\nC. 薄酒萊完全沒有土壤,葡萄直接種在沙地上",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_granite_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_granite_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_granite_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "薄酒萊特級村莊(尤其北部的 Morgon、Fleurie、Moulin-à-Vent、Chénas 等)的土壤基礎,跟勃根地夜丘、伯恩丘以石灰岩為主的地質完全不同,多為花崗岩(granite)為主的土壤結構,排水性佳、礦物質組成也不同。這種花崗岩土壤搭配加美品種,是造就薄酒萊風格(通常果香奔放、單寧相對輕盈,但頂級特級村莊酒依然能展現扎實結構)的重要地質基礎之一。這個地質差異也是「薄酒萊算不算勃根地」這個行政歸屬問題背後,一個實質的風土論據——地理相鄰,但腳下的土地完全是不同的故事。"
+            },
+            "quiz_granite_correct": {
+              "text": "地質學家點頭。「沒錯,土地會說實話——就算行政上劃在一起,腳下的石頭不會說謊。」\n\n【驛站完 · 已獲得知識印記:花崗岩土壤基礎】",
+              "grants_badge": "花崗岩土壤基礎",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_granite_wrong": {
+              "text": "地質學家搖頭。「不是石灰岩,也不是沒有土壤——再想想,排水良好、礦物質組成獨特的岩石類型,是哪一種?」",
+              "sets_fog": "quiz_granite",
+              "choices": [
+                {
+                  "label": "重新思考薄酒萊的地質基礎",
+                  "next": "quiz_granite"
+                }
+              ]
+            }
+          }
+        },
+        "independence_day_wp": {
+          "title": "支線:行政獨立的那一天",
+          "meta": {
+            "village": "Beaujolais",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "薄酒萊建立獨立產區推廣機制的歷史細節",
+            "requires_badges": [
+              "加美與二氧化碳浸漬邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你再訪 Julien 時,他又翻出一份家族保存的舊文件——是薄酒萊獨立產區推廣機構成立時的紀錄。「我奶奶當年參與過遊說,」他說,「這不是一夜之間發生的事。」",
+              "choices": [
+                {
+                  "label": "「建立獨立推廣機制,遇到什麼樣的阻力?」",
+                  "next": "quiz_independence"
+                }
+              ]
+            },
+            "quiz_independence": {
+              "type": "quiz",
+              "text": "薄酒萊逐漸建立自身獨立的產區推廣機制(脫離早期跟勃根地區域組織重疊的架構),這個過程最合理的理解方式是什麼?\n\nA. 這是一夜之間透過單一法規強制劃分完成的,沒有經過任何漸進協商過程\n\nB. 這是一個長期、漸進的過程,牽涉品種與風格差異的實際考量、在地生產者的倡議,以及跟既有勃根地區域組織協調資源分配等現實因素,類似的產區身份調整在葡萄酒世界並不罕見\n\nC. 薄酒萊至今在行政上完全沒有任何獨立機制,仍然完全隸屬勃根地區域組織管轄",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_independence_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_independence_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_independence_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "薄酒萊建立自身獨立產區推廣機制的過程,是長期漸進的歷史發展,而非一夜之間的行政劃分——牽涉品種與風格差異的實際考量(加美 vs 夏多內/黑皮諾)、在地生產者長期的倡議與遊說、以及跟既有勃根地區域組織之間資源分配與代表性的協調。這類「產區身份逐漸自主化」的過程,在葡萄酒世界並不罕見,反映的是地理相鄰、歷史淵源重疊的區域,如何隨著自身產業特色日益明確,逐步發展出更貼近自身需求的治理與推廣架構。"
+            },
+            "quiz_independence_correct": {
+              "text": "Julien 點頭,眼神裡帶著對家族歷史的敬意。「我奶奶說,那幾年開了無數次會,吵過很多次架——但最後大家都同意,薄酒萊需要一個真正懂加美、懂我們風格的組織,而不是被淹沒在勃根地那些更知名產區的陰影底下。」",
+              "grants_badge": "薄酒萊行政獨立史",
+              "choices": [
+                {
+                  "label": "「這段歷史,對你自己有什麼意義?」",
+                  "next": "waypoint_end_independence"
+                }
+              ]
+            },
+            "quiz_independence_wrong": {
+              "text": "Julien 搖頭。「不是一夜之間,薄酒萊現在確實有自己的推廣機制——再想想,這種身份調整,通常會是什麼樣的過程?」",
+              "sets_fog": "quiz_independence",
+              "choices": [
+                {
+                  "label": "重新思考行政獨立的歷史過程",
+                  "next": "quiz_independence"
+                }
+              ]
+            },
+            "waypoint_end_independence": {
+              "text": "「意義很大,」Julien 說,「每次有人瞧不起薄酒萊,我就會想起我奶奶當年吵架吵到臉紅脖子粗的樣子——那不是為了爭一個名字,是為了讓這片土地,有資格被認真對待。」\n\n【支線完 · 已獲得知識印記:薄酒萊行政獨立史】",
+              "choices": [],
+              "is_ending": true
+            }
+          }
+        },
+        "life_after_nouveau_wp": {
+          "title": "支線:新酒之後的人生",
+          "meta": {
+            "village": "Beaujolais",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "薄酒萊近年的品質復興與自然酒運動的淵源",
+            "requires_badges": [
+              "薄酒萊行政獨立史"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "最後一次拜訪,Julien 帶你參加一場鄰近幾位年輕酒農的聚會——大家聊的不是新酒,而是低干預、幾乎不添加二氧化硫的釀造理念。「你知道嗎,」他說,「自然酒運動最早的幾位重要推手,其實就是從薄酒萊這裡出來的。」",
+              "choices": [
+                {
+                  "label": "「薄酒萊跟自然酒運動,有什麼淵源?」",
+                  "next": "quiz_life_after"
+                }
+              ]
+            },
+            "quiz_life_after": {
+              "type": "quiz",
+              "text": "薄酒萊近年除了持續存在的新酒現象,也跟低干預、自然酒(natural wine)釀造理念的發展有著實質歷史淵源。這個現象最合理的理解是什麼?\n\nA. 薄酒萊跟自然酒運動完全無關,純粹是巧合的地理誤會\n\nB. 薄酒萊部分先驅生產者,長期實踐低干預、少添加二氧化硫的釀造理念,對後來被稱為「自然酒運動」的國際思潮發展產生了實質影響,這也讓薄酒萊在新酒印象之外,逐漸累積起品質與理念上的另一種聲望\n\nC. 自然酒運動只存在於法國以外的產區,跟薄酒萊毫無交集",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_life_after_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_life_after_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_life_after_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "薄酒萊在全球「新酒」印象之外,其實跟低干預、自然酒(natural wine / vin nature)釀造理念的發展有著實質歷史淵源——部分薄酒萊先驅生產者,長期實踐少添加或不添加二氧化硫、減少人工介入的釀造哲學,對後來發展成國際思潮的自然酒運動產生了具體影響。這讓薄酒萊近年逐漸累積起「新酒印象」之外的另一種聲望——不只是採收後幾週就上市的輕快飲品,也是低干預釀造理念的重要發源地之一,是理解這個產區複雜多面身份時,不該被忽略的一塊拼圖。"
+            },
+            "quiz_life_after_correct": {
+              "text": "Julien 露出欣慰的笑容。「就是這樣。新酒讓全世界記住我們的名字,但這些年輕人做的事,可能才是真正讓薄酒萊被『認真看待』的關鍵。」\n\n他舉起酒杯。「敬新酒,也敬新酒之外,薄酒萊還有的所有可能。」",
+              "grants_badge": "薄酒萊與自然酒淵源",
+              "choices": [
+                {
+                  "label": "「謝謝你,Julien。」",
+                  "next": "waypoint_end_life_after"
+                }
+              ]
+            },
+            "quiz_life_after_wrong": {
+              "text": "Julien 搖頭。「不是巧合,自然酒運動也不是只存在法國以外——再想想,長期實踐低干預釀造的先驅生產者,會對後來的國際思潮產生什麼影響?」",
+              "sets_fog": "quiz_life_after",
+              "choices": [
+                {
+                  "label": "重新思考薄酒萊與自然酒運動的淵源",
+                  "next": "quiz_life_after"
+                }
+              ]
+            },
+            "waypoint_end_life_after": {
+              "text": "你告別 Julien,走出摩恭村的酒窖。從一串完整葡萄的無聲發酵,到一張祖母的老照片,到一場行政獨立的漫長遊說,再到眼前這群談論低干預釀造的年輕人——這趟旅程讓你明白,薄酒萊從來不只是十一月第三個星期四那杯輕快的酒,是一整個產區,用了半個世紀,努力活出自己完整樣貌的故事。\n\n【支線完 · 已獲得知識印記:薄酒萊與自然酒淵源】",
               "choices": [],
               "is_ending": true
             }
