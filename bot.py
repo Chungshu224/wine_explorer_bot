@@ -63,22 +63,32 @@ def get_campaign_order(story: dict[str, Any]) -> list[str]:
     return list(story["campaigns"].keys())
 
 
-def group_campaigns_by_region(story: dict[str, Any]) -> list[tuple[str, list[tuple[int, str]]]]:
-    """把故事線依照 campaign["region"] 分組,方便 /campaigns 跟 /start 選單
-    用「夜丘」「伯恩丘」這種產區小標分區顯示,而不是一長串扁平列表。
-    回傳的每個 campaign_id 都附帶它在 get_campaign_order() 裡的原始索引,
-    因為按鈕的 callback_data 是用這個索引定位故事線,分組顯示不能打亂它。
+def group_campaigns_by_major_region(
+    story: dict[str, Any],
+) -> list[tuple[str, list[tuple[str, list[tuple[int, str]]]]]]:
+    """三層樹狀導覽的第一層分組:先按 campaign["major_region"](布根地/波爾多
+    這種國家級大產區)分組,組內再依 campaign["region"](次產區,例如夜丘、
+    梅多克)細分。沒有標 major_region 的故事線一律歸類到「布根地 Bourgogne」,
+    這樣舊資料不用全部手動補欄位也能正常運作。
+    回傳結構:[(major_region, [(region, [(idx, cid), ...]), ...]), ...]
     """
     order = get_campaign_order(story)
-    groups: dict[str, list[tuple[int, str]]] = {}
-    group_order: list[str] = []
+    major_groups: dict[str, dict[str, list[tuple[int, str]]]] = {}
+    major_order: list[str] = []
     for idx, cid in enumerate(order):
-        region = story["campaigns"][cid].get("region", "其他")
-        if region not in groups:
-            groups[region] = []
-            group_order.append(region)
-        groups[region].append((idx, cid))
-    return [(region, groups[region]) for region in group_order]
+        campaign = story["campaigns"][cid]
+        major = campaign.get("major_region", "布根地 Bourgogne")
+        region = campaign.get("region", "其他")
+        if major not in major_groups:
+            major_groups[major] = {}
+            major_order.append(major)
+        if region not in major_groups[major]:
+            major_groups[major][region] = []
+        major_groups[major][region].append((idx, cid))
+    return [
+        (major, [(region, major_groups[major][region]) for region in major_groups[major]])
+        for major in major_order
+    ]
 
 
 def get_chapter_order(story: dict[str, Any], campaign_id: str) -> list[str]:
@@ -288,44 +298,100 @@ async def send_node(
 
 
 # ---------------------------------------------------------------------------
-# 故事線選單(兩層樹狀導覽:先選產區,再選故事線)
+# 故事線選單(三層樹狀導覽:先選大產區,再選次產區,再選故事線)
+#
+# 大產區(major_region,例如「布根地」「波爾多」)是最外層分類;目前只有
+# 布根地有內容時,自動略過這一層,直接顯示次產區列表,避免玩家多點一次
+# 沒意義的按鈕。等波爾多的故事線上線、出現第二個 major_region 之後,這層
+# 選單會自動出現,不需要再改程式碼。
 # ---------------------------------------------------------------------------
 
-def build_region_menu(
+def build_top_menu(
     story: dict[str, Any],
     mode: str,
     active_campaign: str | None = None,
     all_states: dict[str, Any] | None = None,
 ) -> tuple[str, InlineKeyboardMarkup]:
-    """第一層選單:只列出產區(夜丘/伯恩丘/...),不展開個別故事線。
+    """導覽入口:只有一個大產區時直接跳到次產區列表,超過一個才顯示大產區選單。
+    /start、/campaigns,以及深層選單裡「回到總覽」的按鈕都從這裡進來。
+    """
+    groups = group_campaigns_by_major_region(story)
+    if len(groups) <= 1:
+        return build_region_menu(story, 0, mode, active_campaign, all_states)
+    return build_major_menu(story, mode, active_campaign, all_states)
+
+
+def build_major_menu(
+    story: dict[str, Any],
+    mode: str,
+    active_campaign: str | None = None,
+    all_states: dict[str, Any] | None = None,
+) -> tuple[str, InlineKeyboardMarkup]:
+    """第一層選單:只列出大產區(布根地/波爾多),不展開次產區或故事線。"""
+    groups = group_campaigns_by_major_region(story)
+    header = "🍷 選擇一個產區:" if mode == "p" else "🌍 所有故事線 · 選擇一個產區:"
+    lines = [header, ""]
+    buttons = []
+    for major_idx, (major, region_list) in enumerate(groups):
+        n_regions = len(region_list)
+        n_campaigns = sum(len(entries) for _, entries in region_list)
+        if mode == "c" and all_states is not None:
+            total_badges = sum(
+                len(all_states.get(cid, {}).get("badges") or [])
+                for _, entries in region_list
+                for _, cid in entries
+            )
+            lines.append(f"🌍 {major}({n_regions} 個次產區 · {n_campaigns} 條故事線,已獲得 {total_badges} 個印記)")
+        else:
+            lines.append(f"🌍 {major}({n_regions} 個次產區 · {n_campaigns} 條故事線)")
+        buttons.append([InlineKeyboardButton(f"🌍 {major}", callback_data=f"selectmajor:{mode}:{major_idx}")])
+    return "\n".join(lines), InlineKeyboardMarkup(buttons)
+
+
+def build_region_menu(
+    story: dict[str, Any],
+    major_idx: int,
+    mode: str,
+    active_campaign: str | None = None,
+    all_states: dict[str, Any] | None = None,
+) -> tuple[str, InlineKeyboardMarkup]:
+    """第二層選單:某個大產區底下的次產區列表(夜丘/伯恩丘/... 或未來的
+    梅多克/格拉夫/...),不展開個別故事線。
     mode 是 "p"(picker,/start 用,第一次選故事線)或 "c"(/campaigns 總覽用),
     差別只在標題文字跟要不要顯示已獲得印記數。
     """
-    groups = group_campaigns_by_region(story)
-    header = "🍇 選擇一個產區:" if mode == "p" else "🗺️ 所有故事線 · 選擇一個產區:"
+    groups = group_campaigns_by_major_region(story)
+    major, region_list = groups[major_idx]
+    header = f"🍇 {major} · 選擇一個次產區:" if mode == "p" else f"🗺️ {major} · 選擇一個次產區:"
     lines = [header, ""]
     buttons = []
-    for region_idx, (region, entries) in enumerate(groups):
+    for region_idx, (region, entries) in enumerate(region_list):
         n_campaigns = len(entries)
         if mode == "c" and all_states is not None:
             total_badges = sum(len(all_states.get(cid, {}).get("badges") or []) for _, cid in entries)
             lines.append(f"🗺️ {region}({n_campaigns} 條故事線,已獲得 {total_badges} 個印記)")
         else:
             lines.append(f"🗺️ {region}({n_campaigns} 條故事線)")
-        buttons.append([InlineKeyboardButton(f"📂 {region}", callback_data=f"selectregion:{mode}:{region_idx}")])
+        buttons.append([InlineKeyboardButton(
+            f"📂 {region}", callback_data=f"selectregion:{mode}:{major_idx}:{region_idx}",
+        )])
+    if len(groups) > 1:
+        buttons.append([InlineKeyboardButton("⬅️ 返回大產區選單", callback_data=f"majormenu:{mode}")])
     return "\n".join(lines), InlineKeyboardMarkup(buttons)
 
 
 def build_region_detail(
     story: dict[str, Any],
+    major_idx: int,
     region_idx: int,
     mode: str,
     active_campaign: str | None = None,
     all_states: dict[str, Any] | None = None,
 ) -> tuple[str, InlineKeyboardMarkup]:
-    """第二層選單:展開某個產區底下的故事線列表,附一顆返回按鈕。"""
-    groups = group_campaigns_by_region(story)
-    region, entries = groups[region_idx]
+    """第三層選單:展開某個次產區底下的故事線列表,附一顆返回按鈕。"""
+    groups = group_campaigns_by_major_region(story)
+    _, region_list = groups[major_idx]
+    region, entries = region_list[region_idx]
 
     lines = [f"🗺️ {region}\n"]
     buttons = []
@@ -341,7 +407,7 @@ def build_region_detail(
         # callback_data 有 64 bytes 硬性上限,用索引可以確保不管故事線
         # id 未來取得多長,按鈕資料都維持極短、不會有超過上限的風險。
         buttons.append([InlineKeyboardButton(f"▶️ {campaign['title']}", callback_data=f"startcampaign:{idx}")])
-    buttons.append([InlineKeyboardButton("⬅️ 返回產區選單", callback_data=f"regionmenu:{mode}")])
+    buttons.append([InlineKeyboardButton("⬅️ 返回次產區選單", callback_data=f"regionmenu:{mode}:{major_idx}")])
     return "\n".join(lines), InlineKeyboardMarkup(buttons)
 
 
@@ -355,7 +421,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     active_campaign = await get_active_campaign(user_id)
 
     if active_campaign is None:
-        text, keyboard = build_region_menu(story, mode="p")
+        text, keyboard = build_top_menu(story, mode="p")
         await update.message.reply_text(text, reply_markup=keyboard)
         return
 
@@ -380,29 +446,14 @@ async def campaigns_command(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     active_campaign = await get_active_campaign(user_id)
     all_states = await get_all_campaign_states(user_id)
 
-    text, keyboard = build_region_menu(story, mode="c", active_campaign=active_campaign, all_states=all_states)
+    text, keyboard = build_top_menu(story, mode="c", active_campaign=active_campaign, all_states=all_states)
     await update.message.reply_text(text, reply_markup=keyboard)
 
 
-async def handle_select_region(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """使用者點了「產區」按鈕,展開該產區底下的故事線列表。"""
-    query = update.callback_query
-    await query.answer()
-
-    user_id = update.effective_user.id
-    _, mode, region_idx_str = query.data.split(":")
-    region_idx = int(region_idx_str)
-
-    story = load_story()
-    active_campaign = await get_active_campaign(user_id) if mode == "c" else None
-    all_states = await get_all_campaign_states(user_id) if mode == "c" else None
-
-    text, keyboard = build_region_detail(story, region_idx, mode, active_campaign, all_states)
-    await query.edit_message_text(text, reply_markup=keyboard)
-
-
-async def handle_region_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """「返回產區選單」按鈕,回到第一層(只列產區)。"""
+async def handle_top_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """回到導覽最上層。只有一個大產區時等同次產區列表,超過一個則是大產區選單。
+    深層選單裡「回到總覽」的按鈕統一走這裡,不用管目前是在哪個大產區底下。
+    """
     query = update.callback_query
     await query.answer()
 
@@ -413,7 +464,75 @@ async def handle_region_menu(update: Update, context: ContextTypes.DEFAULT_TYPE)
     active_campaign = await get_active_campaign(user_id) if mode == "c" else None
     all_states = await get_all_campaign_states(user_id) if mode == "c" else None
 
-    text, keyboard = build_region_menu(story, mode, active_campaign, all_states)
+    text, keyboard = build_top_menu(story, mode, active_campaign, all_states)
+    await query.edit_message_text(text, reply_markup=keyboard)
+
+
+async def handle_select_major(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """使用者點了「大產區」按鈕(布根地/波爾多),展開該大產區底下的次產區列表。"""
+    query = update.callback_query
+    await query.answer()
+
+    user_id = update.effective_user.id
+    _, mode, major_idx_str = query.data.split(":")
+    major_idx = int(major_idx_str)
+
+    story = load_story()
+    active_campaign = await get_active_campaign(user_id) if mode == "c" else None
+    all_states = await get_all_campaign_states(user_id) if mode == "c" else None
+
+    text, keyboard = build_region_menu(story, major_idx, mode, active_campaign, all_states)
+    await query.edit_message_text(text, reply_markup=keyboard)
+
+
+async def handle_major_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """「返回大產區選單」按鈕,回到第一層(只列大產區)。"""
+    query = update.callback_query
+    await query.answer()
+
+    user_id = update.effective_user.id
+    mode = query.data.split(":", 1)[1]
+
+    story = load_story()
+    active_campaign = await get_active_campaign(user_id) if mode == "c" else None
+    all_states = await get_all_campaign_states(user_id) if mode == "c" else None
+
+    text, keyboard = build_major_menu(story, mode, active_campaign, all_states)
+    await query.edit_message_text(text, reply_markup=keyboard)
+
+
+async def handle_select_region(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """使用者點了「次產區」按鈕,展開該次產區底下的故事線列表。"""
+    query = update.callback_query
+    await query.answer()
+
+    user_id = update.effective_user.id
+    _, mode, major_idx_str, region_idx_str = query.data.split(":")
+    major_idx = int(major_idx_str)
+    region_idx = int(region_idx_str)
+
+    story = load_story()
+    active_campaign = await get_active_campaign(user_id) if mode == "c" else None
+    all_states = await get_all_campaign_states(user_id) if mode == "c" else None
+
+    text, keyboard = build_region_detail(story, major_idx, region_idx, mode, active_campaign, all_states)
+    await query.edit_message_text(text, reply_markup=keyboard)
+
+
+async def handle_region_menu(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """「返回次產區選單」按鈕,回到第二層(某個大產區底下的次產區列表)。"""
+    query = update.callback_query
+    await query.answer()
+
+    user_id = update.effective_user.id
+    _, mode, major_idx_str = query.data.split(":")
+    major_idx = int(major_idx_str)
+
+    story = load_story()
+    active_campaign = await get_active_campaign(user_id) if mode == "c" else None
+    all_states = await get_all_campaign_states(user_id) if mode == "c" else None
+
+    text, keyboard = build_region_menu(story, major_idx, mode, active_campaign, all_states)
     await query.edit_message_text(text, reply_markup=keyboard)
 
 
@@ -463,7 +582,7 @@ def build_chapter_list(
             missing = [b for b in required if b not in badges]
             lines.append(f"🔒 {chapter['title']}({tier_label} · {village})\n   需要印記:{', '.join(missing)}")
 
-    buttons.append([InlineKeyboardButton("🗺️ 所有故事線", callback_data="regionmenu:c")])
+    buttons.append([InlineKeyboardButton("🗺️ 所有故事線", callback_data="topmenu:c")])
     return "\n\n".join(lines), InlineKeyboardMarkup(buttons)
 
 
@@ -473,7 +592,7 @@ def build_ending_navigation_keyboard(story: dict[str, Any], campaign_id: str) ->
     campaign_idx = get_campaign_order(story).index(campaign_id)
     return InlineKeyboardMarkup([
         [InlineKeyboardButton("📖 本故事線其他章節", callback_data=f"chapterlist:{campaign_idx}")],
-        [InlineKeyboardButton("🗺️ 所有故事線", callback_data="regionmenu:c")],
+        [InlineKeyboardButton("🗺️ 所有故事線", callback_data="topmenu:c")],
     ])
 
 
@@ -635,6 +754,9 @@ def main() -> None:
     app.add_handler(CommandHandler("campaigns", campaigns_command))
     app.add_handler(CallbackQueryHandler(handle_start_campaign, pattern=r"^startcampaign:"))
     app.add_handler(CallbackQueryHandler(handle_start_chapter, pattern=r"^startchapter:"))
+    app.add_handler(CallbackQueryHandler(handle_top_menu, pattern=r"^topmenu:"))
+    app.add_handler(CallbackQueryHandler(handle_select_major, pattern=r"^selectmajor:"))
+    app.add_handler(CallbackQueryHandler(handle_major_menu, pattern=r"^majormenu:"))
     app.add_handler(CallbackQueryHandler(handle_select_region, pattern=r"^selectregion:"))
     app.add_handler(CallbackQueryHandler(handle_region_menu, pattern=r"^regionmenu:"))
     app.add_handler(CallbackQueryHandler(handle_chapter_list_button, pattern=r"^chapterlist:"))

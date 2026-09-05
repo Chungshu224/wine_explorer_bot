@@ -919,7 +919,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "inheritance_line": {
       "title": "地契與繼承",
@@ -1494,7 +1495,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "cellar_craft": {
       "title": "酒窖裡的抉擇",
@@ -2264,7 +2266,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "vintage_climate": {
       "title": "地窖裡的無名年份",
@@ -2920,7 +2923,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "white_wine_logic": {
       "title": "白酒的另一套邏輯",
@@ -3397,7 +3401,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "divided_corton": {
       "title": "分裂的柯通",
@@ -3843,7 +3848,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "pommard_line": {
       "title": "玻馬的鐵拳",
@@ -4311,7 +4317,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "beaune_negociant_line": {
       "title": "伯恩的調配師",
@@ -4788,7 +4795,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "chablis_backbone": {
       "title": "夏布利的骨架",
@@ -5265,7 +5273,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "coop_line": {
       "title": "共同的酒窖",
@@ -5733,7 +5742,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "chablis_revival": {
       "title": "谷底與重生",
@@ -6201,7 +6211,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "bouzeron_line": {
       "title": "被低估的品種",
@@ -6669,7 +6680,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     },
     "macon_line": {
       "title": "南方的氣泡",
@@ -7146,7 +7158,8 @@
             }
           }
         }
-      }
+      },
+      "major_region": "布根地 Bourgogne"
     }
   }
 }
