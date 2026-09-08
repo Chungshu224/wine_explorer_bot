@@ -9499,6 +9499,1220 @@
           }
         }
       }
+    },
+    "pauillac_line": {
+      "title": "三王之城",
+      "tagline": "全世界最深的砂礫層,擠出了整個梅多克三分之三的一級莊——波雅克本身卻只是一座安靜的小漁港,從沒把自己當回事",
+      "knowledge_focus": "波雅克最深厚砂礫層與結構強度、三座一級莊(拉菲/拉圖/木桐)比鄰群聚的地理事實、小鎮規模與全球聲望的反差、長期陳年潛力的成因",
+      "major_region": "波爾多 Bordeaux",
+      "region": "梅多克 Médoc",
+      "chapter_order": [
+        "deep_gravel_01",
+        "three_kings_outpost",
+        "small_town_02",
+        "pauillac_final_wp"
+      ],
+      "chapters": {
+        "deep_gravel_01": {
+          "title": "第一章:全梅多克最深的一層",
+          "meta": {
+            "village": "Pauillac",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "波雅克最深厚砂礫層與結構強度",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Antoine 帶你來到波雅克(Pauillac)一處露出剖面的葡萄園邊坡。「挖下去看看,」他說,「跟康特納克比,厚度完全不一樣。」",
+              "choices": [
+                {
+                  "label": "「這層砂礫,有多深?」",
+                  "next": "ask_depth"
+                }
+              ]
+            },
+            "ask_depth": {
+              "text": "「梅多克境內最深的地方,能達到好幾公尺厚,」Antoine 說,「這種深度,排水效果好到誇張,葡萄根系被逼著往下扎得極深,才找得到水分——這種『被逼出來的深根』,正是波雅克紅酒結構特別強勁、單寧特別扎實的關鍵成因之一。」",
+              "choices": [
+                {
+                  "label": "思考深厚砂礫層跟酒風格的關聯",
+                  "next": "quiz_depth"
+                }
+              ]
+            },
+            "quiz_depth": {
+              "type": "quiz",
+              "text": "波雅克(Pauillac)砂礫層厚度居全梅多克之冠,這個地質特徵跟當地酒款「結構強勁、單寧扎實」的風格,最合理的因果關係是:\n\nA. 砂礫層厚度跟酒款風格完全無關,純屬巧合\n\nB. 極深厚的砂礫層排水能力極強,逼迫葡萄根系必須往更深處扎根尋找水分,深根系統通常能吸收更豐富的礦物質、也讓葡萄藤在乾旱年份更穩定,這被認為是波雅克酒款結構特別強勁扎實的重要成因之一\n\nC. 深厚砂礫層會讓葡萄藤根系完全無法生長,波雅克的葡萄其實種在砂礫層之外的區域",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_depth_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_depth_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_depth_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "波雅克是梅多克境內砂礫層(graves)厚度最深的村莊,部分地塊深度可達數公尺。這種極端良好的排水能力,會逼迫葡萄根系向下扎得更深才能找到穩定水源,深層根系通常能吸收更豐富多元的礦物質,也讓葡萄藤在乾旱炎熱的年份表現更穩定、不易因缺水而中斷成熟過程。這被廣泛認為是波雅克紅酒普遍展現出強勁結構、扎實單寧與深厚陳年潛力的重要地質成因之一,也是波雅克能同時容納三座風格各異、卻都以結構力量著稱的一級莊的土壤基礎。"
+            },
+            "quiz_depth_correct": {
+              "text": "Antoine 點頭。「這片深砂礫,正是波雅克能同時撐起好幾座頂尖酒莊的地質本錢。你猜得到嗎——光是這個小村莊裡,就有幾座一級莊?」",
+              "grants_badge": "波雅克砂礫深度邏輯",
+              "choices": [
+                {
+                  "label": "「幾座?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_depth_wrong": {
+              "text": "Antoine 搖頭。「不是無關,葡萄也確實種在砂礫層裡——再想想,排水太好、水分留不住,會逼著葡萄根系往哪個方向發展?」",
+              "sets_fog": "quiz_depth",
+              "choices": [
+                {
+                  "label": "重新思考砂礫層深度跟酒款風格的關聯",
+                  "next": "quiz_depth"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「三座,」Antoine 說,「而且是全球知名度最高的三座之一——比鄰而居,這件事本身,就足夠寫一整章了。」\n\n【第一章完 · 已獲得知識印記:波雅克砂礫深度邏輯】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "three_kings_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "three_kings_outpost": {
+          "title": "驛站:三王比鄰",
+          "meta": {
+            "village": "Pauillac",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "三座一級莊(拉菲/拉圖/木桐)群聚的地理事實",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "地圖攤在桌上,波雅克的範圍其實不大,卻密密麻麻標著知名酒莊的位置。遊客數了數。「這麼小的範圍,裡面有幾座一級莊?」",
+              "choices": [
+                {
+                  "label": "「波雅克境內,有哪幾座一級莊?」",
+                  "next": "quiz_three_kings"
+                }
+              ]
+            },
+            "quiz_three_kings": {
+              "type": "quiz",
+              "text": "波雅克境內,同時擁有 1855 分級的哪三座一級莊(Premiers Crus)?\n\nA. 拉菲堡(Lafite Rothschild)、拉圖堡(Latour)、木桐堡(Mouton Rothschild)\n\nB. 瑪歌堡(Margaux)、歐布里雍堡(Haut-Brion)、白馬堡(Cheval Blanc)\n\nC. 拉菲堡、瑪歌堡、滴金堡(d'Yquem)",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_three_kings_correct",
+                  "correct": true
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_three_kings_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_three_kings_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "1855 年分級的五座一級莊(Premiers Crus)裡,拉菲堡(Château Lafite Rothschild)、拉圖堡(Château Latour)、木桐堡(Château Mouton Rothschild)三座,全部座落在波雅克境內,比鄰而居;剩下兩座——瑪歌堡在瑪歌村,歐布里雍堡則在格拉夫(而非梅多克)。也就是說,原始名單裡屬於梅多克的四座一級莊中,有整整三座集中在波雅克這一個小村莊裡,密度之高,在整個波爾多分級體系裡相當罕見,也是波雅克能被稱為「三王之城」的由來。"
+            },
+            "quiz_three_kings_correct": {
+              "text": "Antoine 在一旁補充。「三座風格還都不太一樣——拉圖以力量著稱,拉菲以優雅細膩見長,木桐則以藝術酒標跟濃郁華麗聞名。同一個村莊,同一套地質條件,卻能長出三種不太一樣的頂尖詮釋。」\n\n【驛站完 · 已獲得知識印記:波雅克一級莊群聚】",
+              "grants_badge": "波雅克一級莊群聚",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_three_kings_wrong": {
+              "text": "遊客搖搖頭。「瑪歌堡在瑪歌村,滴金堡則是索甸的甜酒莊——再想想,哪三座一級莊真正座落在波雅克境內?」",
+              "sets_fog": "quiz_three_kings",
+              "choices": [
+                {
+                  "label": "重新思考波雅克境內的三座一級莊",
+                  "next": "quiz_three_kings"
+                }
+              ]
+            }
+          }
+        },
+        "small_town_02": {
+          "title": "第二章:小漁港與巨頭們",
+          "meta": {
+            "village": "Pauillac",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "小鎮規模與全球聲望的反差",
+            "requires_badges": [
+              "波雅克砂礫深度邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "你們開車進入波雅克鎮上,街道安靜得出奇,幾間小商店,一個不起眼的碼頭。「就這樣?」你有點意外,「三座全世界最有名的酒莊,擠在這麼小的地方?」",
+              "choices": [
+                {
+                  "label": "「這種規模反差,不會很奇怪嗎?」",
+                  "next": "quiz_small_town"
+                }
+              ]
+            },
+            "quiz_small_town": {
+              "type": "quiz",
+              "text": "波雅克鎮本身規模小、外觀低調樸實,卻同時是全球知名度最高的葡萄酒產區之一,這種反差最合理的理解方式是:\n\nA. 波雅克鎮的低調規模,其實反映了當地酒莊財力薄弱、缺乏投資,跟聲望不成正比是一種假象\n\nB. 波雅克的全球聲望,建立在酒莊本身的品質與歷史地位上,跟城鎮本身的商業繁榮程度是兩件獨立的事——波雅克作為城鎮,長期以來規模一直不大,以葡萄酒貿易與漁港機能為主,酒莊的巨大聲望並沒有直接轉化為城鎮本身的擴張或觀光化\n\nC. 波雅克鎮其實是波爾多地區人口最多、商業最發達的城鎮,只是遊客通常不會注意到",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_small_town_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_small_town_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_small_town_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "波雅克鎮的城鎮規模與商業繁榮程度,跟它所擁有的葡萄酒聲望之間存在明顯反差,但這並不代表酒莊財力薄弱——恰恰相反,波雅克境內的一級莊是全球最昂貴的葡萄酒之一。這種反差反映的是:酒莊本身的品質、歷史地位與市場聲望,跟城鎮作為聚落的規模、商業機能發展,原本就是兩條不完全相關的軸線。波雅克長期以來以葡萄酒貿易港口機能為主,城鎮本身並未因酒莊的巨大聲望而顯著擴張或高度觀光化,至今仍保留著相對樸實安靜的小鎮樣貌,跟酒標上動輒天價的酒款,形成有趣的對比。"
+            },
+            "quiz_small_town_correct": {
+              "text": "Antoine 笑了。「這正是波雅克最迷人的地方——它從來不需要靠城鎮本身的排場,來證明自己的分量。地底下那層深砂礫,還有橡木桶裡那些酒,早就把話說完了。」",
+              "grants_badge": "波雅克規模反差",
+              "choices": [
+                {
+                  "label": "「所以波雅克的酒,真正的價值都在酒瓶裡?」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_small_town_wrong": {
+              "text": "Antoine 搖頭。「酒莊財力完全不薄弱,波雅克也絕對不是人口最多的城鎮——再想想,一座城鎮的商業規模,跟它境內酒莊的品質聲望,真的一定要成正比嗎?」",
+              "sets_fog": "quiz_small_town",
+              "choices": [
+                {
+                  "label": "重新思考波雅克規模與聲望的反差",
+                  "next": "quiz_small_town"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "「差不多是這個意思,」Antoine 說,「這也是為什麼波雅克的酒,不管年份好壞,通常都能陳放得特別久——那份深砂礫給的結構力,經得起時間。」\n\n【第二章完 · 已獲得知識印記:波雅克規模反差】",
+              "choices": [
+                {
+                  "label": "▶️ 前往支線:三種詮釋,一種土地",
+                  "next": "opening",
+                  "chapter": "pauillac_final_wp"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "pauillac_final_wp": {
+          "title": "支線:三種詮釋,一種土地",
+          "meta": {
+            "village": "Pauillac",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整合波雅克地質條件與長期陳年潛力的判斷",
+            "requires_badges": [
+              "波雅克一級莊群聚",
+              "波雅克規模反差"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Antoine 把三杯陳年多年的波雅克老酒擺在桌上。「同一個村莊,三種詮釋,但有一個共同點——這三杯酒,放到現在都還撐得住。你覺得,這種長期陳年的潛力,最核心的成因是什麼?」",
+              "choices": [
+                {
+                  "label": "思考波雅克酒款長期陳年潛力的核心成因",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "波雅克紅酒普遍展現出色的長期陳年潛力,最核心、最根本的成因是:\n\nA. 純粹是酒莊行銷包裝的結果,跟實際的土壤條件或釀造工藝沒有必然關係\n\nB. 深厚砂礫層帶來的強勁單寧結構,加上以晚熟、皮厚單寧重的卡本內蘇維濃為調配主軸,兩者結合,讓波雅克酒款年輕時通常結構緊實、單寧份量足,需要較長時間才能softening、展現複雜度,這正是支撐長期陳年潛力的根本基礎\n\nC. 波雅克的酒之所以能陳年,完全是因為裝瓶時額外添加了特殊的化學防腐劑",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "波雅克紅酒普遍具備出色的長期陳年潛力,根本成因來自土壤與品種兩個層面的疊加:極深厚的砂礫層賦予葡萄藤穩定深根、進而帶來扎實的單寧結構;調配上以晚熟、皮厚單寧重的卡本內蘇維濃為主軸,讓酒款年輕時往往單寧份量充足、結構緊實,需要長時間的瓶中陳年,單寧才會逐漸軟化、香氣才會發展出更複雜細膩的層次。這種「年輕時緊實有稜角、需要時間才能完全展現」的特質,正是波雅克(以及整個梅多克以卡本內蘇維濃為主導的產區)長期陳年潛力的根本基礎,不是行銷包裝,也跟人工添加防腐劑無關。"
+            },
+            "quiz_final_correct": {
+              "text": "Antoine 滿意地點頭。「答對了——深砂礫給結構,卡本內給骨架,兩件事疊在一起,才撐得起『放個二三十年還在進步』這種說法。」\n\n他把三杯酒收起來。「你現在應該懂了,波雅克這座安靜的小鎮,底下藏的是什麼分量。」\n\n【支線完 · 已獲得知識印記:波雅克陳年潛力邏輯】",
+              "grants_badge": "波雅克陳年潛力邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_final_wrong": {
+              "text": "Antoine 搖頭。「不是行銷包裝,更不是化學防腐劑——再想想,深厚砂礫帶來的單寧結構,加上卡本內蘇維濃本身皮厚單寧重的特性,兩者疊加會產生什麼樣的年輕酒款特質?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "重新思考波雅克酒款長期陳年潛力的成因",
+                  "next": "quiz_final"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "stjulien_line": {
+      "title": "沒有弱點的村莊",
+      "tagline": "沒有一級莊坐鎮,也是梅多克裡唯一一個完全沒有五級莊的分級村莊——聖朱利安贏的方式,不是誰的頂峰最高,是幾乎沒有失手的地塊",
+      "knowledge_focus": "聖朱利安分級酒莊佔葡萄園比例最高的密度事實、全梅多克唯一沒有五級莊的等級缺口、介於波雅克力量與瑪歌優雅之間的均衡風格",
+      "major_region": "波爾多 Bordeaux",
+      "region": "梅多克 Médoc",
+      "chapter_order": [
+        "density_01",
+        "no_fifth_outpost",
+        "balance_02",
+        "stjulien_final_wp"
+      ],
+      "chapters": {
+        "density_01": {
+          "title": "第一章:面積最小,密度最高",
+          "meta": {
+            "village": "Saint-Julien",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "聖朱利安分級酒莊佔葡萄園比例最高的密度事實",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Antoine 帶你走進聖朱利安(Saint-Julien),村莊範圍明顯比波雅克跟瑪歌都小。「別被面積騙了,」他說,「這裡才是梅多克裡,分級酒莊密度最高的地方。」",
+              "choices": [
+                {
+                  "label": "「密度最高是什麼意思?」",
+                  "next": "ask_density"
+                }
+              ]
+            },
+            "ask_density": {
+              "text": "「意思是,」Antoine 說,「聖朱利安境內,幾乎全村的葡萄園,都被劃進了 1855 分級酒莊的版圖裡——比例之高,是梅多克四個核心村莊裡最極端的一個。換句話說,這裡幾乎找不到『沒被分級照顧到』的閒置地塊。」",
+              "choices": [
+                {
+                  "label": "思考聖朱利安分級密度極高這件事的意義",
+                  "next": "quiz_density"
+                }
+              ]
+            },
+            "quiz_density": {
+              "type": "quiz",
+              "text": "聖朱利安(Saint-Julien)作為梅多克面積最小的核心分級村莊之一,卻擁有全梅多克「分級酒莊佔葡萄園總面積比例」最高的紀錄,這個現象最合理的解讀是:\n\nA. 這純粹是統計上的巧合,跟聖朱利安本身的土壤條件或酒莊品質均一程度沒有關聯\n\nB. 相較於瑪歌那種面積大、土壤條件較分歧的村莊,聖朱利安面積小且土壤條件相對均質,幾乎整個村莊的葡萄園都達到了 1855 年評鑑當時被認可的品質水準,因而幾乎全村都被納入分級版圖,形成極高的分級密度\n\nC. 聖朱利安其實沒有任何分級酒莊,這個說法完全錯誤",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_density_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_density_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_density_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "聖朱利安是梅多克面積最小的核心分級村莊之一,卻擁有全梅多克「分級酒莊佔葡萄園總面積比例」最高的紀錄——相較於瑪歌這種面積遼闊、土壤條件較為分歧(部分地塊含砂比例高、部分則否)的村莊,聖朱利安面積雖小,土壤條件卻相對均質一致,使得幾乎整個村莊的葡萄園,在 1855 年評鑑當時都達到了被認可納入分級體系的品質水準。這種「小而均質」的地理特質,讓聖朱利安幾乎找不到明顯低於分級水準的閒置地塊,分級密度因而成為全梅多克之最。"
+            },
+            "quiz_density_correct": {
+              "text": "Antoine 點頭。「而且更有趣的是,」他補充道,「這麼高的分級密度,卻獨獨缺了一個等級——你猜猜看,聖朱利安裡少了哪個等級的酒莊?」",
+              "grants_badge": "聖朱利安分級密度",
+              "choices": [
+                {
+                  "label": "「哪個等級?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_density_wrong": {
+              "text": "Antoine 搖頭。「不是巧合,聖朱利安也確實有多家分級酒莊——再想想,面積小、土壤相對均質的村莊,跟面積大、土壤條件分歧的村莊,在『整體品質水準是否一致』這件事上,會有什麼差異?」",
+              "sets_fog": "quiz_density",
+              "choices": [
+                {
+                  "label": "重新思考聖朱利安分級密度極高的原因",
+                  "next": "quiz_density"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「留給你去驛站找答案,」Antoine 笑著說,「這個缺口,其實也是聖朱利安性格的一部分。」\n\n【第一章完 · 已獲得知識印記:聖朱利安分級密度】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "no_fifth_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "no_fifth_outpost": {
+          "title": "驛站:缺席的等級",
+          "meta": {
+            "village": "Saint-Julien",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "全梅多克唯一沒有五級莊的等級缺口",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "分級名單複本上,聖朱利安那一欄,遊客的手指一路往下數,數到「五級莊」那一列,發現完全是空白。「這是名單印錯了嗎?」",
+              "choices": [
+                {
+                  "label": "「聖朱利安真的沒有五級莊?」",
+                  "next": "quiz_fifth"
+                }
+              ]
+            },
+            "quiz_fifth": {
+              "type": "quiz",
+              "text": "在梅多克 1855 分級名單中,聖朱利安(Saint-Julien)這個村莊最特別的等級組成是:\n\nA. 聖朱利安擁有一到五級莊全部五個等級的酒莊,是梅多克裡等級最齊全的村莊\n\nB. 聖朱利安是梅多克四個核心分級村莊裡,唯一完全沒有五級莊(Cinquièmes Crus)的村莊——酒莊集中在二到四級莊之間,沒有最低等級的分級代表\n\nC. 聖朱利安完全沒有任何 1855 分級酒莊,名單上是空白的",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_fifth_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_fifth_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_fifth_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "聖朱利安是梅多克四個核心分級村莊(瑪歌、波雅克、聖朱利安、聖艾斯泰夫)裡,唯一完全沒有五級莊(Cinquièmes Crus)的村莊——境內分級酒莊主要集中在二級莊到四級莊之間,沒有最低等級的代表。這個等級缺口,某種程度上呼應了聖朱利安「整體水準均質、幾乎沒有明顯弱項」的產區性格:當一個村莊的土壤條件相對一致、整體品質水準偏高時,自然較不容易出現被歸類到最低分級等級的酒莊。"
+            },
+            "quiz_fifth_correct": {
+              "text": "Antoine 補充。「沒有五級莊,不代表這裡沒有等級落差——二級莊跟四級莊之間,風格跟表現依然有差異。但比起其他村莊,聖朱利安確實是那種『你隨便挑一支,踩雷機率特別低』的地方。」\n\n【驛站完 · 已獲得知識印記:聖朱利安等級缺口】",
+              "grants_badge": "聖朱利安等級缺口",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_fifth_wrong": {
+              "text": "遊客還是困惑。「不是等級最齊全,也不是完全空白——再想想,名單上聖朱利安的分級酒莊,最低落在哪個等級,沒有再往下延伸到哪一級?」",
+              "sets_fog": "quiz_fifth",
+              "choices": [
+                {
+                  "label": "重新思考聖朱利安的等級組成",
+                  "next": "quiz_fifth"
+                }
+              ]
+            }
+          }
+        },
+        "balance_02": {
+          "title": "第二章:力量與優雅之間",
+          "meta": {
+            "village": "Saint-Julien",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "介於波雅克力量與瑪歌優雅之間的均衡風格",
+            "requires_badges": [
+              "聖朱利安分級密度"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "品飲桌上,Antoine 把波雅克、聖朱利安、瑪歌三杯酒一字排開。「波雅克你已經喝過了,力量強勁;瑪歌呢,以優雅細膩見長。聖朱利安夾在地理位置的正中間,風格上,你猜會是什麼結果?」",
+              "choices": [
+                {
+                  "label": "思考聖朱利安風格定位的意義",
+                  "next": "quiz_balance"
+                }
+              ]
+            },
+            "quiz_balance": {
+              "type": "quiz",
+              "text": "聖朱利安(地理位置介於波雅克與瑪歌之間)的風格定位,最貼切的描述是:\n\nA. 聖朱利安風格上完全等同波雅克,兩者沒有任何可辨識的差異\n\nB. 聖朱利安風格介於波雅克的結構力量與瑪歌的優雅細膩之間,以整體協調均衡著稱——酒款通常兼具一定的結構深度與細緻度,不像波雅克那樣極端強勁,也不像瑪歌那樣極致飄逸,而是兩種特質相對平衡的中間地帶\n\nC. 聖朱利安風格完全等同瑪歌,兩者沒有任何可辨識的差異",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_balance_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_balance_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_balance_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "聖朱利安地理位置正好介於波雅克與瑪歌之間,風格上也呈現出兩者之間的均衡特質:不像波雅克那樣極端強勁厚重,也不像瑪歌那樣極致飄逸細膩,而是兼具一定的結構深度與細緻度,以整體協調均衡著稱。這種「不走極端、但各方面都表現穩健」的風格定位,加上前面提到的高分級密度、幾乎沒有明顯弱項的產區特質,讓聖朱利安在葡萄酒愛好者與收藏家之間,長期享有「值得信賴」的口碑——不是最戲劇化的選擇,卻常常是最不容易讓人失望的選擇。"
+            },
+            "quiz_balance_correct": {
+              "text": "Antoine 點頭。「這就是聖朱利安真正的價值所在——它不需要靠某一種極端特質讓人驚艷,它靠的是幾乎每一支都不會讓人失望的穩定表現。」",
+              "grants_badge": "聖朱利安均衡風格",
+              "choices": [
+                {
+                  "label": "「這種『穩定』,對消費者來說重要嗎?」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_balance_wrong": {
+              "text": "Antoine 搖頭。「不是完全等同波雅克,也不是完全等同瑪歌——再想想,地理位置正好夾在兩者中間,風格上最有可能呈現出什麼樣的特質?」",
+              "sets_fog": "quiz_balance",
+              "choices": [
+                {
+                  "label": "重新思考聖朱利安的風格定位",
+                  "next": "quiz_balance"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "「當然重要,」Antoine 說,「不是每個人買酒,都在追求最戲劇化的體驗——有時候,你要的只是一支不會讓你後悔的選擇,聖朱利安剛好就是為這種需求而存在的地方。」\n\n【第二章完 · 已獲得知識印記:聖朱利安均衡風格】",
+              "choices": [
+                {
+                  "label": "▶️ 前往支線:沒有弱點的代價",
+                  "next": "opening",
+                  "chapter": "stjulien_final_wp"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "stjulien_final_wp": {
+          "title": "支線:沒有弱點的代價",
+          "meta": {
+            "village": "Saint-Julien",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整合聖朱利安均衡風格與市場定位的判斷",
+            "requires_badges": [
+              "聖朱利安等級缺口",
+              "聖朱利安均衡風格"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Antoine 問你一個問題。「聖朱利安沒有一級莊坐鎮,名氣通常比不上波雅克或瑪歌,但很多資深買家,反而特別偏愛聖朱利安。你覺得,這背後最合理的邏輯是什麼?」",
+              "choices": [
+                {
+                  "label": "思考資深買家偏愛聖朱利安的原因",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "許多資深葡萄酒買家特別偏愛聖朱利安,即使該村莊沒有一級莊、市場知名度也不如波雅克或瑪歌,最合理的解釋是:\n\nA. 純粹是因為聖朱利安的酒價格最便宜,跟品質或風格判斷完全無關\n\nB. 對追求穩定表現、風險相對可控的買家而言,聖朱利安「幾乎沒有明顯弱項、整體均衡協調」的產區特質,意味著即使不刻意挑選最頂尖的酒莊,買到令人失望酒款的機率也相對較低,這種可預期性本身就是一種被市場認可的價值\n\nC. 資深買家偏愛聖朱利安,是因為這裡其實擁有全梅多克最多的一級莊",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "聖朱利安受到資深買家青睞的核心邏輯,在於它「幾乎沒有明顯弱項、整體均衡協調」的產區特質所帶來的可預期性——高分級密度、沒有五級莊、介於波雅克與瑪歌之間的均衡風格,這些特質疊加在一起,意味著即使不刻意挑選村莊裡最頂尖的酒莊,買到令人明顯失望酒款的機率也相對較低。對於追求穩定表現、風險相對可控的買家而言,這種可預期性本身,就是一種被市場長期認可的價值——不需要靠最高知名度或最戲劇化的風格取勝,「不容易踩雷」本身就是聖朱利安最強的品牌承諾。"
+            },
+            "quiz_final_correct": {
+              "text": "Antoine 滿意地點頭。「答對了——這就是聖朱利安最迷人的地方。它從不需要靠一座一級莊撐場面,它靠的是整個村莊,幾乎沒有一塊地讓人失望。」\n\n他把三杯酒收好。「三座村莊,三種不同的贏法——波雅克贏在結構的極致,瑪歌贏在優雅的極致,聖朱利安贏的方式,是幾乎不輸。」\n\n【支線完 · 已獲得知識印記:聖朱利安市場定位邏輯】",
+              "grants_badge": "聖朱利安市場定位邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_final_wrong": {
+              "text": "Antoine 搖頭。「不是純粹因為便宜,聖朱利安也沒有任何一級莊——再想想,『整體均衡、幾乎沒有明顯弱項』這個特質,對追求穩定表現的買家來說,代表著什麼樣的價值?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "重新思考資深買家偏愛聖朱利安的原因",
+                  "next": "quiz_final"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "margaux_line": {
+      "title": "復興的賭注",
+      "tagline": "全梅多克面積最大、分級酒莊數量最多的村莊,卻也曾經是品質落差最大的村莊——瑪歌的優雅名聲,是靠一整代人重新賭回來的",
+      "knowledge_focus": "瑪歌土壤多樣性與優雅風格成因、全梅多克分級酒莊數量最多的事實、二十世紀中葉品質不均的歷史與1970年代後的復興浪潮",
+      "major_region": "波爾多 Bordeaux",
+      "region": "梅多克 Médoc",
+      "chapter_order": [
+        "soil_diversity_01",
+        "most_classified_outpost",
+        "renaissance_02",
+        "margaux_final_wp"
+      ],
+      "chapters": {
+        "soil_diversity_01": {
+          "title": "第一章:最不單純的土壤",
+          "meta": {
+            "village": "Margaux",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "瑪歌土壤多樣性與優雅風格成因",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "瑪歌村(Margaux)的葡萄園邊,Antoine 抓起一把土,質地明顯比波雅克那邊細緻、含砂比例更高。「這裡的土壤,是梅多克四個核心村莊裡最不單純的一個。」",
+              "choices": [
+                {
+                  "label": "「不單純是什麼意思?」",
+                  "next": "ask_diversity"
+                }
+              ]
+            },
+            "ask_diversity": {
+              "text": "「瑪歌是梅多克面積最大的核心分級村莊,」Antoine 說,「地塊之間土壤條件差異相當大——有些地方含砂比例極高、排水極佳,有些地方黏土成分較重。含砂比例高的地塊,通常會帶出瑪歌最著名的那種優雅、香氣細膩的風格;但這種多樣性,也意味著不是整個村莊每一塊地,都能穩定表現出同樣水準的優雅。」",
+              "choices": [
+                {
+                  "label": "思考瑪歌土壤多樣性帶來的雙面影響",
+                  "next": "quiz_diversity"
+                }
+              ]
+            },
+            "quiz_diversity": {
+              "type": "quiz",
+              "text": "瑪歌村土壤條件的高度多樣性,對整體產區帶來的影響,最合理的理解是:\n\nA. 土壤多樣性完全沒有影響,瑪歌所有地塊出產的酒款品質與風格永遠一致\n\nB. 土壤多樣性一方面孕育出瑪歌最著名的優雅細膩風格(尤其是高砂含量的地塊),另一方面也意味著村莊整體品質水準較難維持一致——不像聖朱利安那種土壤相對均質的村莊,瑪歌各地塊表現的落差可能較大,這也是理解瑪歌歷史上曾出現品質不均問題的關鍵背景\n\nC. 瑪歌所有地塊的土壤條件完全相同,不存在任何多樣性",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_diversity_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_diversity_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_diversity_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "瑪歌是梅多克面積最大的核心分級村莊,土壤條件的多樣性也是四村之中最高的——部分地塊含砂比例極高、排水極佳,孕育出瑪歌最著稱的優雅細膩、香氣繚繞的風格;但也有地塊黏土成分較重,風格表現較為厚實。這種高度多樣性,一方面成就了瑪歌獨特的優雅名聲,另一方面也意味著整個村莊要維持一致的高水準品質,難度高於土壤相對均質的聖朱利安。這正是理解瑪歌歷史上曾經歷過品質落差問題的關鍵地質背景。"
+            },
+            "quiz_diversity_correct": {
+              "text": "Antoine 點頭。「說到品質落差,瑪歌其實有一段不太光彩的歷史——二十世紀中葉,這裡曾經是梅多克裡,分級酒莊表現最不穩定的村莊之一。」",
+              "grants_badge": "瑪歌土壤多樣性",
+              "choices": [
+                {
+                  "label": "「後來發生了什麼事?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_diversity_wrong": {
+              "text": "Antoine 搖頭。「土壤條件絕對不是完全一致,更不是完全沒有影響——再想想,含砂比例高的地塊,跟黏土成分較重的地塊,可能會分別帶出什麼樣的風格差異?」",
+              "sets_fog": "quiz_diversity",
+              "choices": [
+                {
+                  "label": "重新思考瑪歌土壤多樣性帶來的影響",
+                  "next": "quiz_diversity"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「留到下一章再說,」Antoine 說,「但你會發現,瑪歌能重新站穩優雅產區的招牌,靠的不是運氣,是整整一代人重新投資、重新賭一次的結果。」\n\n【第一章完 · 已獲得知識印記:瑪歌土壤多樣性】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "most_classified_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "most_classified_outpost": {
+          "title": "驛站:最擁擠的分級榜",
+          "meta": {
+            "village": "Margaux",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "全梅多克分級酒莊數量最多的事實",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "分級名單複本上,瑪歌那一欄的酒莊數量,明顯比其他村莊都要長一大截。遊客數了數,忍不住問:「這是全梅多克裡,分級酒莊最多的村莊嗎?」",
+              "choices": [
+                {
+                  "label": "「瑪歌的分級酒莊數量,真的是梅多克之最?」",
+                  "next": "quiz_most"
+                }
+              ]
+            },
+            "quiz_most": {
+              "type": "quiz",
+              "text": "在梅多克 1855 分級名單中,瑪歌村的分級酒莊數量,最準確的描述是:\n\nA. 瑪歌是梅多克四個核心分級村莊裡,擁有分級酒莊數量最多的村莊(共二十餘家),數量上明顯超過波雅克、聖朱利安與聖艾斯泰夫\n\nB. 瑪歌是梅多克四個核心分級村莊裡,分級酒莊數量最少的村莊\n\nC. 分級酒莊數量在四個村莊之間完全平均分配,瑪歌並沒有特別突出",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_most_correct",
+                  "correct": true
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_most_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_most_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "瑪歌是梅多克四個核心分級村莊(瑪歌、波雅克、聖朱利安、聖艾斯泰夫)裡,分級酒莊數量最多的村莊,共有二十餘家酒莊入選 1855 分級,數量明顯超過其他三個村莊。這個現象跟瑪歌本身面積最大、涵蓋範圍最廣有直接關聯——涵蓋範圍越廣,自然有更多地塊、更多酒莊有機會達到當年評鑑認可的品質水準而入選,但也正如前一章提到的,面積廣、土壤多樣性高,同時也意味著這麼多分級酒莊之間,品質表現的落差可能比其他村莊更明顯。"
+            },
+            "quiz_most_correct": {
+              "text": "Antoine 補充。「數量最多聽起來很風光,但也代表水準要拉齊,難度更高——這也是為什麼瑪歌後來會經歷那一段品質重新整頓的過程。」\n\n【驛站完 · 已獲得知識印記:瑪歌分級酒莊數量】",
+              "grants_badge": "瑪歌分級酒莊數量",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_most_wrong": {
+              "text": "遊客還是搖頭。「不是最少,也不是完全平均分配——再想想,瑪歌本身面積最大,涵蓋範圍最廣,這對分級酒莊的數量,可能會有什麼樣的影響?」",
+              "sets_fog": "quiz_most",
+              "choices": [
+                {
+                  "label": "重新思考瑪歌分級酒莊的數量特色",
+                  "next": "quiz_most"
+                }
+              ]
+            }
+          }
+        },
+        "renaissance_02": {
+          "title": "第二章:重新賭一次的品質",
+          "meta": {
+            "village": "Margaux",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "二十世紀中葉品質不均的歷史與復興浪潮",
+            "requires_badges": [
+              "瑪歌土壤多樣性"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Antoine 拿出一份泛黃的老酒評論剪報。「二十世紀中葉,瑪歌村不少酒莊,包括瑪歌堡自己在內,都經歷過一段被酒評界公開質疑『表現配不上分級地位』的低潮期。」",
+              "choices": [
+                {
+                  "label": "「後來這個情況,是怎麼被扭轉的?」",
+                  "next": "ask_turnaround"
+                }
+              ]
+            },
+            "ask_turnaround": {
+              "text": "「靠的是重新投資,」Antoine 說,「最著名的例子是瑪歌堡本身——1977 年被新莊主買下之後,重金投資葡萄園管理跟酒窖設備,還請了當時最頂尖的釀酒顧問幫忙重新把關品質,才慢慢把口碑救回一級莊該有的水準。這股投資浪潮後來也帶動了瑪歌村其他酒莊,整體品質才明顯提升。」",
+              "choices": [
+                {
+                  "label": "思考瑪歌品質復興浪潮的核心邏輯",
+                  "next": "quiz_renaissance"
+                }
+              ]
+            },
+            "quiz_renaissance": {
+              "type": "quiz",
+              "text": "瑪歌村(尤其瑪歌堡本身)在二十世紀後期能扭轉品質不均的低潮、重新站穩優雅產區招牌,最核心的關鍵是:\n\nA. 完全是靠自然氣候變化,人為投資或釀造工藝改變沒有起到任何作用\n\nB. 透過新莊主重新投入資金,改善葡萄園管理與酒窖設備,並聘請頂尖釀酒顧問嚴格把關品質,這股投資浪潮帶動了整個瑪歌村的品質水準提升,逐步扭轉了村莊表現不均的歷史問題\n\nC. 瑪歌村其實從未經歷過任何品質問題,這整段歷史是後人編造出來的",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_renaissance_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_renaissance_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_renaissance_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "瑪歌村(以瑪歌堡本身的轉型最具代表性)在二十世紀後期能逐步扭轉品質不均的歷史問題,關鍵在於人為的重新投資與嚴格把關:1977 年瑪歌堡被新莊主買下後,重金投入葡萄園管理與酒窖設備的全面升級,並延攬當時業界最具權威的釀酒顧問參與品質把關,協助恢復並提升釀造水準。這股由重量級酒莊帶頭的投資浪潮,也帶動了瑪歌村其他分級酒莊跟進投資,整個村莊的整體品質水準因而在接下來的數十年間明顯提升,重新鞏固了瑪歌作為波爾多優雅風格代表產區的招牌地位。這段歷史清楚說明:分級地位本身不會自動保證品質,持續的投資與把關才是關鍵。"
+            },
+            "quiz_renaissance_correct": {
+              "text": "Antoine 點頭。「這就是我說的『重新賭一次』——分級名單一百七十年沒改過,但瑪歌能不能配得上名單上的位置,靠的從來不是那張紙,是一代又一代人願不願意重新投入。」",
+              "grants_badge": "瑪歌品質復興史",
+              "choices": [
+                {
+                  "label": "「這對你來說,是很重要的一課嗎?」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_renaissance_wrong": {
+              "text": "Antoine 搖頭。「不是靠氣候自然轉變,這段歷史也絕對真實發生過——再想想,重新投入資金、改善設備、聘請頂尖顧問,這些人為努力,對品質提升會有什麼樣的作用?」",
+              "sets_fog": "quiz_renaissance",
+              "choices": [
+                {
+                  "label": "重新思考瑪歌品質復興浪潮的關鍵",
+                  "next": "quiz_renaissance"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "「非常重要,」Antoine 說,「這提醒我,不管分級名單寫著什麼,酒莊每一年,都得靠自己重新證明配得上那個位置——這件事,梅多克裡沒有一個村莊能真正躺平。」\n\n【第二章完 · 已獲得知識印記:瑪歌品質復興史】",
+              "choices": [
+                {
+                  "label": "▶️ 前往支線:優雅需要付出的代價",
+                  "next": "opening",
+                  "chapter": "margaux_final_wp"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "margaux_final_wp": {
+          "title": "支線:優雅需要付出的代價",
+          "meta": {
+            "village": "Margaux",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整合瑪歌土壤多樣性與品質復興史的市場定位判斷",
+            "requires_badges": [
+              "瑪歌分級酒莊數量",
+              "瑪歌品質復興史"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Antoine 最後問了你一個問題。「瑪歌村分級酒莊最多、土壤最多樣、也曾經歷過最明顯的品質落差——如果要用一句話,總結瑪歌跟其他梅多克村莊最根本的不同,你會怎麼說?」",
+              "choices": [
+                {
+                  "label": "思考瑪歌村最根本的產區性格",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "綜合瑪歌村的土壤多樣性、分級酒莊數量最多、以及曾經歷的品質不均與後續復興史,最能概括瑪歌村產區性格的描述是:\n\nA. 瑪歌村先天條件完美無缺,從未面臨任何挑戰,是梅多克裡最容易維持品質的村莊\n\nB. 瑪歌村的優雅名聲,不是天生穩固的既定事實,而是建立在土壤多樣性帶來的潛力之上、又需要持續的人為投資與把關才能兌現的成果——瑪歌代表的不是「天生註定的優雅」,而是「潛力必須靠持續努力才能兌現」的產區故事\n\nC. 瑪歌村的優雅名聲純粹是行銷話術,實際品質跟其他村莊完全沒有差異",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "綜合瑪歌村的土壤多樣性(既是優雅風格的成因,也是品質落差的風險來源)、分級酒莊數量最多(意味著品質拉齊的難度更高)、以及二十世紀後期由重新投資帶動的品質復興史,瑪歌村的產區性格最貼切的概括是:它的優雅名聲並非天生穩固、一勞永逸的既定事實,而是建立在土壤條件帶來的潛力之上,又必須透過持續的人為投資、嚴格的品質把關才能真正兌現的成果。瑪歌代表的不是「天生註定的優雅」,而是一個關於「潛力必須靠一代又一代人持續努力,才能真正兌現」的產區故事——這也讓瑪歌成為梅多克四村裡,最能具體展現「分級地位不等於品質保證」這個道理的活教材。"
+            },
+            "quiz_final_correct": {
+              "text": "Antoine 露出讚許的表情。「答對了——這正是我最想讓你帶走的一課。梅多克教你調配的判斷力,波雅克教你土壤的重量,聖朱利安教你均衡的價值,瑪歌教你的,是沒有任何名聲,是真正可以永遠躺著收的。」\n\n他望向遠處的葡萄園。「四座村莊,四種性格,但每一種,都得靠自己每年重新證明。」\n\n【支線完 · 已獲得知識印記:瑪歌產區性格總結】",
+              "grants_badge": "瑪歌產區性格總結",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_final_wrong": {
+              "text": "Antoine 搖頭。「不是天生完美,也不是純粹行銷話術——再想想,土壤多樣性帶來的潛力,加上後來需要重新投資才能兌現的這段歷史,合起來說明了什麼樣的產區性格?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "重新思考瑪歌村最根本的產區性格",
+                  "next": "quiz_final"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "stestephe_line": {
+      "title": "沒有聚光燈的村莊",
+      "tagline": "黏土比例全梅多克最高,分級酒莊數量全梅多克最少——聖艾斯泰夫從沒站上聚光燈中央,卻可能是整個梅多克裡,最誠實的一塊地",
+      "knowledge_focus": "聖艾斯泰夫黏土比例最高的風格成因、全梅多克分級酒莊數量最少的事實、被低估的性價比邏輯",
+      "major_region": "波爾多 Bordeaux",
+      "region": "梅多克 Médoc",
+      "chapter_order": [
+        "clay_style_01",
+        "fewest_classified_outpost",
+        "value_logic_02",
+        "stestephe_final_wp"
+      ],
+      "chapters": {
+        "clay_style_01": {
+          "title": "第一章:黏在腳底的土",
+          "meta": {
+            "village": "Saint-Estèphe",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "聖艾斯泰夫黏土比例最高的風格成因",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "剛下過雨的聖艾斯泰夫(Saint-Estèphe)葡萄園,泥土黏在你的鞋底,怎麼甩都甩不乾淨。Antoine 笑著說:「歡迎來到梅多克黏土比例最高的村莊。」",
+              "choices": [
+                {
+                  "label": "「黏土比例高,對酒的風格有什麼影響?」",
+                  "next": "ask_clay"
+                }
+              ]
+            },
+            "ask_clay": {
+              "text": "「黏土保水力比砂礫強得多,」Antoine 說,「排水速度慢,葡萄根系不用像波雅克那樣拚命往深處扎,成熟速度通常也稍慢一些。反映到酒風格上,聖艾斯泰夫的酒普遍比其他三個村莊更粗獷紮實,單寧結構更硬朗,年輕時往往顯得比較封閉,需要更長時間才能軟化開來。」",
+              "choices": [
+                {
+                  "label": "思考黏土比例跟聖艾斯泰夫風格的關聯",
+                  "next": "quiz_clay"
+                }
+              ]
+            },
+            "quiz_clay": {
+              "type": "quiz",
+              "text": "聖艾斯泰夫(Saint-Estèphe)黏土比例居梅多克四個核心村莊之冠,這個土壤特徵跟當地酒款「風格較粗獷紮實、單寧硬朗、年輕時較封閉」的特質,最合理的因果關係是:\n\nA. 黏土比例跟酒款風格完全無關,純屬巧合\n\nB. 黏土保水力強、排水速度較慢,葡萄根系不需要像砂礫地那樣拚命深扎,加上黏土地塊通常成熟速度稍慢,這些因素共同導致聖艾斯泰夫酒款普遍呈現較粗獷紮實的單寧結構,年輕時顯得較封閉,需要更長時間陳放才能軟化開展\n\nC. 黏土比例越高,葡萄成熟速度反而會加快,聖艾斯泰夫的酒因此比其他村莊更早熟易飲",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_clay_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_clay_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_clay_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "聖艾斯泰夫是梅多克四個核心分級村莊裡黏土比例最高的一個。黏土保水能力遠強於砂礫,排水速度較慢,葡萄根系不需要像波雅克那種深厚砂礫地那樣拚命向下扎根尋找水源;加上黏土質地地塊的葡萄成熟速度通常也相對稍慢。這些因素共同作用,讓聖艾斯泰夫的紅酒普遍展現出比其他三個村莊更粗獷紮實的單寧結構,年輕時往往顯得較為封閉緊澀,需要比波雅克、聖朱利安或瑪歌更長的陳放時間,單寧才會逐漸軟化、香氣才會完全展開。"
+            },
+            "quiz_clay_correct": {
+              "text": "Antoine 點頭。「這種風格,在講究即飲、追求細膩優雅的市場氛圍裡,常常不太討喜——這也是為什麼聖艾斯泰夫這麼多年來,一直沒能站上聚光燈中央。」",
+              "grants_badge": "聖艾斯泰夫黏土風格",
+              "choices": [
+                {
+                  "label": "「這個村莊,分級酒莊多嗎?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_clay_wrong": {
+              "text": "Antoine 搖頭。「不是無關,成熟速度也不會因此加快——再想想,黏土保水力強、排水速度慢,對葡萄根系的生長方式跟成熟節奏,會帶來什麼樣的影響?」",
+              "sets_fog": "quiz_clay",
+              "choices": [
+                {
+                  "label": "重新思考黏土比例跟聖艾斯泰夫風格的關聯",
+                  "next": "quiz_clay"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「不多,」Antoine 說,「事實上,這裡是梅多克四村裡分級酒莊數量最少的一個——但這件事,反而藏著聖艾斯泰夫最有意思的故事。」\n\n【第一章完 · 已獲得知識印記:聖艾斯泰夫黏土風格】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "fewest_classified_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "fewest_classified_outpost": {
+          "title": "驛站:最短的名單",
+          "meta": {
+            "village": "Saint-Estèphe",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "全梅多克分級酒莊數量最少的事實",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "分級名單複本上,聖艾斯泰夫那一欄,只有寥寥幾個名字,跟瑪歌那長長一串形成強烈對比。遊客有點意外。「這麼少?」",
+              "choices": [
+                {
+                  "label": "「聖艾斯泰夫的分級酒莊,真的是梅多克最少的?」",
+                  "next": "quiz_fewest"
+                }
+              ]
+            },
+            "quiz_fewest": {
+              "type": "quiz",
+              "text": "在梅多克 1855 分級名單中,聖艾斯泰夫村的分級酒莊數量,最準確的描述是:\n\nA. 聖艾斯泰夫是梅多克四個核心分級村莊裡,分級酒莊數量最少的村莊,絕大多數葡萄園屬於分級體系之外的中級酒莊(Cru Bourgeois)\n\nB. 聖艾斯泰夫是梅多克四個核心分級村莊裡,分級酒莊數量最多的村莊\n\nC. 聖艾斯泰夫完全沒有任何 1855 分級酒莊",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_fewest_correct",
+                  "correct": true
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_fewest_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_fewest_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "聖艾斯泰夫是梅多克四個核心分級村莊(瑪歌、波雅克、聖朱利安、聖艾斯泰夫)裡,1855 分級酒莊數量最少的村莊,絕大多數葡萄園屬於分級體系之外的中級酒莊(Cru Bourgeois)。這個現象部分反映了 1855 年評鑑當時,聖艾斯泰夫的整體市場聲譽與交易價格,相對不如其他三個村莊突出——別忘了,1855 分級本質上是一份以市場價格為依據的商業排名,而非嚴格的土壤品質鑑定,聖艾斯泰夫在當年的市場能見度,某種程度上限制了它入選分級名單的酒莊數量。"
+            },
+            "quiz_fewest_correct": {
+              "text": "Antoine 補充。「別忘了 1855 分級的本質——它是市場價格排名,不是土壤鑑定。聖艾斯泰夫當年名氣沒那麼響亮,自然入選的酒莊就少。但這件事,恰恰也是理解聖艾斯泰夫下一個故事的關鍵。」\n\n【驛站完 · 已獲得知識印記:聖艾斯泰夫分級稀少性】",
+              "grants_badge": "聖艾斯泰夫分級稀少性",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_fewest_wrong": {
+              "text": "遊客還是不確定。「不是最多,也不是完全沒有——再想想,1855 分級本質上是市場價格排名,聖艾斯泰夫當年的市場聲譽,可能會如何影響它入選的酒莊數量?」",
+              "sets_fog": "quiz_fewest",
+              "choices": [
+                {
+                  "label": "重新思考聖艾斯泰夫分級酒莊數量的事實",
+                  "next": "quiz_fewest"
+                }
+              ]
+            }
+          }
+        },
+        "value_logic_02": {
+          "title": "第二章:被忽略的性價比",
+          "meta": {
+            "village": "Saint-Estèphe",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "聖艾斯泰夫被低估的性價比邏輯",
+            "requires_badges": [
+              "聖艾斯泰夫黏土風格"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Antoine 打開一瓶聖艾斯泰夫的中級酒莊(Cru Bourgeois)酒款,價格標籤明顯比波雅克、瑪歌的分級酒莊便宜不少。「嚐嚐看,」他說,「再告訴我,這支酒的表現,配不配得上這個價格。」",
+              "choices": [
+                {
+                  "label": "品嚐這支酒,思考它的性價比",
+                  "next": "taste_a"
+                }
+              ]
+            },
+            "taste_a": {
+              "text": "酒色深沉,單寧扎實有力,帶著黑色果香跟一絲泥土氣息,結構完全不輸你在波雅克喝過的分級酒莊酒款,價格卻低了一大截。",
+              "choices": [
+                {
+                  "label": "思考聖艾斯泰夫長期被視為高性價比產區的原因",
+                  "next": "quiz_value"
+                }
+              ]
+            },
+            "quiz_value": {
+              "type": "quiz",
+              "text": "聖艾斯泰夫長期以來被視為梅多克裡性價比相對突出的產區,最合理的成因組合是:\n\nA. 純粹是因為當地酒莊刻意壓低品質以換取低價,跟歷史市場地位或土壤條件沒有關係\n\nB. 由於 1855 分級酒莊數量少、歷史市場聲譽相對不如其他三村響亮,聖艾斯泰夫的酒款(尤其眾多優質中級酒莊)長期以來定價相對親民,但黏土帶來的紮實結構與陳年潛力,讓不少酒款的實際品質表現,超出其價格區間該有的水準,因而形成被低估的性價比優勢\n\nC. 聖艾斯泰夫的酒價格其實是梅多克四村裡最昂貴的,性價比的說法並不成立",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_value_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_value_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_value_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "聖艾斯泰夫長期被視為梅多克裡性價比相對突出的產區,成因來自歷史市場地位與實際釀造品質之間的落差:由於 1855 分級酒莊數量少、歷史市場聲譽不如波雅克、瑪歌響亮,聖艾斯泰夫的酒款(尤其占絕大多數的優質中級酒莊)長期以來定價相對親民;然而黏土帶來的紮實單寧結構與良好陳年潛力,讓不少酒款的實際品質表現,足以媲美價格高出許多的其他村莊分級酒莊。這種「市場聲譽相對不足、但實際品質經得起考驗」的落差,正是聖艾斯泰夫被葡萄酒愛好者視為高性價比之選的根本原因。"
+            },
+            "quiz_value_correct": {
+              "text": "Antoine 滿意地笑了。「這就是聖艾斯泰夫真正的價值——它從來不需要靠聚光燈證明自己,懂酒的人,自然會找到這裡來。」",
+              "grants_badge": "聖艾斯泰夫性價比邏輯",
+              "choices": [
+                {
+                  "label": "「這種『被忽略』,對酒莊來說是好事還是壞事?」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_value_wrong": {
+              "text": "Antoine 搖頭。「不是刻意壓低品質,聖艾斯泰夫的酒也絕對不是梅多克最貴的——再想想,歷史市場聲譽相對不足,跟實際釀造品質之間,如果出現落差,會對消費者的『划算程度』感受造成什麼影響?」",
+              "sets_fog": "quiz_value",
+              "choices": [
+                {
+                  "label": "重新思考聖艾斯泰夫性價比優勢的成因",
+                  "next": "quiz_value"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "「兩者都有,」Antoine 坦白說,「壞處是,酒莊沒辦法賣到跟品質相稱的高價;好處是,懂酒的人,反而會對這裡多一分信任跟感情——你現在,大概也算是懂酒的人之一了。」\n\n【第二章完 · 已獲得知識印記:聖艾斯泰夫性價比邏輯】",
+              "choices": [
+                {
+                  "label": "▶️ 前往支線:誠實的土地",
+                  "next": "opening",
+                  "chapter": "stestephe_final_wp"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "stestephe_final_wp": {
+          "title": "支線:誠實的土地",
+          "meta": {
+            "village": "Saint-Estèphe",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整合聖艾斯泰夫黏土風格與市場處境的總結判斷",
+            "requires_badges": [
+              "聖艾斯泰夫分級稀少性",
+              "聖艾斯泰夫性價比邏輯"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Antoine 最後帶你回顧四座村莊。「波雅克靠深砂礫贏得力量的名聲,瑪歌靠多樣土壤跟後來的重新投資贏回優雅的招牌,聖朱利安靠均質土壤贏得『不會失手』的信任。聖艾斯泰夫呢?它靠什麼站住腳?」",
+              "choices": [
+                {
+                  "label": "思考聖艾斯泰夫真正的立足之道",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "綜合聖艾斯泰夫的黏土風格特質(結構紮實但年輕時封閉)、1855 分級酒莊數量最少、以及長期被視為高性價比產區這幾點,最能概括聖艾斯泰夫立足之道的描述是:\n\nA. 聖艾斯泰夫完全沒有任何值得稱道的特色,只是單純比其他村莊差\n\nB. 聖艾斯泰夫沒有靠分級光環或市場聲量取勝,它靠的是黏土帶來的紮實結構與陳年潛力這種需要時間才能被驗證的「誠實品質」——它不追求短期的市場熱度,而是靠一瓶接一瓶經得起品嚐與陳放考驗的酒款,慢慢累積起真正懂酒的人的信任\n\nC. 聖艾斯泰夫其實完全依賴行銷手法,跟實際釀造品質沒有太大關係",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "綜合聖艾斯泰夫的黏土風格特質、1855 分級酒莊數量最少、以及長期被視為高性價比產區這幾個面向,可以歸納出這個村莊最核心的立足之道:它不像波雅克、瑪歌那樣擁有響亮的一級莊光環,也沒有聖朱利安那種「幾乎不失手」的均質招牌,聖艾斯泰夫靠的是黏土帶來的紮實結構與扎實陳年潛力——一種需要時間才能被充分驗證的「誠實品質」。它不追求短期的市場熱度或聚光燈,而是靠一瓶接一瓶經得起品嚐與長期陳放考驗的酒款,慢慢累積起真正懂酒、願意花時間等待的消費者的信任,這正是聖艾斯泰夫作為梅多克「沒有聚光燈的村莊」,最值得被認識的一面。"
+            },
+            "quiz_final_correct": {
+              "text": "Antoine 露出滿意的笑容。「答對了——這四座村莊,教你的其實是四種完全不同的『值得』的方式。波雅克的深度、瑪歌的重新投入、聖朱利安的均衡、聖艾斯泰夫的誠實,沒有哪一種比較高明,只是四種不同的活法。」\n\n他望向漸暗的天色。「你現在對梅多克的理解,應該比大多數只認一級莊名字的人,深得多了。」\n\n【支線完 · 已獲得知識印記:梅多克四村性格總結】",
+              "grants_badge": "梅多克四村性格總結",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_final_wrong": {
+              "text": "Antoine 搖頭。「不是完全沒有特色,也不是純粹依賴行銷——再想想,黏土帶來的紮實結構跟陳年潛力,這種需要時間才能驗證的品質,會替聖艾斯泰夫累積起什麼樣的口碑?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "重新思考聖艾斯泰夫真正的立足之道",
+                  "next": "quiz_final"
+                }
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }
