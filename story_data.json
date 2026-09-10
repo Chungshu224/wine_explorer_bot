@@ -10713,6 +10713,1482 @@
           }
         }
       }
+    },
+    "piemonte_line": {
+      "title": "國王的酒",
+      "tagline": "一位法國釀酒師,把一款又甜又帶氣泡的鄉土酒,改造成義大利建國史的一部分——一百多年後,同一個產區,兩代人又為了該不該回頭用老橡木桶,打了一場十年的仗",
+      "knowledge_focus": "加富爾伯爵與Louis Oudart將內比歐羅改造為乾型紅酒的歷史、巴羅洛與巴巴瑞斯科的命名邏輯、1980-90年代巴羅洛戰爭(傳統派vs現代派)、內比歐羅高酸高單寧的品種特性",
+      "major_region": "義大利 Italia",
+      "region": "皮蒙特 Piemonte",
+      "chapter_order": [
+        "cavour_oudart_01",
+        "naming_outpost",
+        "barolo_wars_02",
+        "nebbiolo_character_outpost",
+        "piemonte_final_wp"
+      ],
+      "chapters": {
+        "cavour_oudart_01": {
+          "title": "第一章:伯爵的請求",
+          "meta": {
+            "village": "Barolo",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "加富爾伯爵與Louis Oudart將內比歐羅改造為乾型紅酒的歷史",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "巴羅洛(Barolo)一間老酒莊的地窖裡,Elena Ferraris 指著牆上一張泛黃的肖像畫。「認得這個人嗎?」畫中人穿著十九世紀的正式西裝,眼神銳利。",
+              "choices": [
+                {
+                  "label": "「不認識,他跟酒有什麼關係?」",
+                  "next": "ask_who"
+                }
+              ]
+            },
+            "ask_who": {
+              "text": "「加富爾伯爵(Camillo Benso di Cavour),」Elena 說,「薩丁尼亞王國的首相,後來推動義大利統一的關鍵人物之一。你可能想不到,他也是把內比歐羅這個品種,從一款又甜又帶氣泡的鄉土酒,改造成能跟法國波爾多匹敵的嚴肅乾型紅酒的推手。」\n\n她翻開一本史料複本。「十九世紀中葉,加富爾為了改良自家酒莊的釀造技術,特地聘請了一位法國釀酒師,Louis Oudart,把當時法國已經成熟的乾型紅酒釀造技術帶進皮蒙特——把發酵徹底進行完全,不讓糖分殘留,才有了我們今天喝到的巴羅洛。」",
+              "choices": [
+                {
+                  "label": "思考這段歷史對巴羅洛風格轉變的意義",
+                  "next": "quiz_cavour"
+                }
+              ]
+            },
+            "quiz_cavour": {
+              "type": "quiz",
+              "text": "十九世紀,加富爾伯爵聘請法國釀酒師 Louis Oudart 協助改造內比歐羅釀造工藝,這段歷史最關鍵的轉變是:\n\nA. 只是單純引進法國葡萄品種取代內比歐羅,跟釀造技術無關\n\nB. 引進當時法國已成熟的乾型紅酒釀造技術,讓發酵徹底完成、糖分不殘留,把原本偏甜、常帶氣泡的鄉土風格內比歐羅酒,改造成結構嚴肅的乾型紅酒,奠定了今日巴羅洛的風格基礎\n\nC. 這段歷史純屬後人杜撰,加富爾伯爵從未參與過任何葡萄酒釀造相關事務",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_cavour_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_cavour_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_cavour_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "十九世紀中葉之前,皮蒙特的內比歐羅酒普遍偏甜、有時還帶有殘留氣泡,是相當鄉土化的風格。加富爾伯爵(後來成為義大利統一運動的關鍵推手)聘請法國釀酒師 Louis Oudart,將當時法國波爾多等產區已經成熟的乾型紅酒釀造技術引進皮蒙特——關鍵在於讓發酵徹底完成,不讓糖分殘留,同時搭配更嚴謹的釀造管理。這次技術轉型,直接奠定了今日巴羅洛(以及巴巴瑞斯科)作為結構嚴肅、單寧扎實、具長期陳年潛力的乾型紅酒風格基礎,也讓內比歐羅逐漸被視為足以跟法國頂尖紅酒匹敵的品種。"
+            },
+            "quiz_cavour_correct": {
+              "text": "Elena 點頭。「而且時間點很有意思——加富爾改造巴羅洛的同一段時期,正好也是他積極推動義大利統一的時候。有人說,巴羅洛能被稱為『國王的酒,酒中之王』,某種程度上也跟這段跟建國史糾纏在一起的身世有關。」",
+              "grants_badge": "加富爾與內比歐羅轉型",
+              "choices": [
+                {
+                  "label": "「『國王的酒』這個稱號,還有別的由來嗎?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_cavour_wrong": {
+              "text": "Elena 搖頭。「不是引進新品種取代內比歐羅,這段歷史也絕非杜撰——再想想,當時法國已經成熟的乾型紅酒釀造技術,核心改變的是發酵的哪個環節?」",
+              "sets_fog": "quiz_cavour",
+              "choices": [
+                {
+                  "label": "重新思考這段歷史對巴羅洛風格轉變的意義",
+                  "next": "quiz_cavour"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「有,」Elena 說,「巴羅洛跟巴巴瑞斯科這兩個名字的命名邏輯,其實也藏著一段有意思的故事,改天讓你去驛站看看。」\n\n【第一章完 · 已獲得知識印記:加富爾與內比歐羅轉型】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "naming_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "naming_outpost": {
+          "title": "驛站:兩座村莊,兩個名字",
+          "meta": {
+            "village": "Barbaresco",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "巴羅洛與巴巴瑞斯科的命名邏輯與風格差異",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "地圖攤在桌上,巴羅洛跟巴巴瑞斯科(Barbaresco)兩塊產區其實距離不遠,種的都是內比歐羅。遊客問:「同一個品種,為什麼要分成兩個不同名字的產區?」",
+              "choices": [
+                {
+                  "label": "「巴羅洛跟巴巴瑞斯科,差異在哪?」",
+                  "next": "quiz_naming"
+                }
+              ]
+            },
+            "quiz_naming": {
+              "type": "quiz",
+              "text": "巴羅洛(Barolo)與巴巴瑞斯科(Barbaresco)這兩個以內比歐羅為主的義大利 DOCG,最主要的差異是:\n\nA. 兩者其實是同一個產區的不同名稱,法規上完全沒有差異\n\nB. 兩者是地理位置相鄰但各自獨立的 DOCG,土壤與微氣候略有不同(巴巴瑞斯科整體氣候稍溫和),法定最低陳年時間也不同(巴羅洛規定的最低陳年時間通常長於巴巴瑞斯科),因此巴巴瑞斯科的酒款風格上普遍略顯柔和、成熟時間較早,巴羅洛則以更堅實的結構與更長的陳年需求著稱\n\nC. 巴羅洛只能用來稱呼白酒,巴巴瑞斯科只能用來稱呼紅酒",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_naming_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_naming_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_naming_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "巴羅洛與巴巴瑞斯科都是以內比歐羅為法定品種的義大利 DOCG,地理位置相鄰,但各自是獨立的法定產區:兩者土壤與微氣候略有差異,巴巴瑞斯科整體氣候相對溫和一些;法規上,巴羅洛規定的最低陳年時間通常長於巴巴瑞斯科。這些差異綜合下來,巴巴瑞斯科的酒款風格上普遍顯得略為柔和、成熟時間較早,常被形容為「內比歐羅的優雅面」;巴羅洛則以更堅實的單寧結構與更長的陳年需求著稱,長期被稱為「酒中之王」。兩者常被拿來跟波爾多梅多克裡瑪歌(優雅)與波雅克(力量)的對照類比。"
+            },
+            "quiz_naming_correct": {
+              "text": "Elena 在一旁補充。「你在梅多克學過瑪歌跟波雅克的對照吧?巴巴瑞斯科跟巴羅洛,某種程度上也是同一種邏輯的義大利版本——同一個品種,兩種截然不同的詮釋。」\n\n【驛站完 · 已獲得知識印記:巴羅洛與巴巴瑞斯科命名邏輯】",
+              "grants_badge": "巴羅洛與巴巴瑞斯科命名邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_naming_wrong": {
+              "text": "遊客還是不太確定。「不是同一個產區的別名,也不是紅白酒的區分——再想想,兩個地理位置相鄰但獨立的法定產區,土壤微氣候跟陳年規定上的差異,會如何反映在酒款風格上?」",
+              "sets_fog": "quiz_naming",
+              "choices": [
+                {
+                  "label": "重新思考巴羅洛與巴巴瑞斯科的差異",
+                  "next": "quiz_naming"
+                }
+              ]
+            }
+          }
+        },
+        "barolo_wars_02": {
+          "title": "第二章:巴羅洛戰爭",
+          "meta": {
+            "village": "Barolo",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "1980-90年代巴羅洛戰爭(傳統派vs現代派釀造風格之爭)",
+            "requires_badges": [
+              "加富爾與內比歐羅轉型"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Elena 帶你走進酒窖深處,一邊是巨大的老式斯拉夫尼亞橡木桶,散發著陳年木頭的氣味;另一邊,是一整排嶄新的小型法國橡木桶。「我祖父跟我,曾經為了這兩排桶子,吵了快十年。」",
+              "choices": [
+                {
+                  "label": "「這是怎麼回事?」",
+                  "next": "ask_wars"
+                }
+              ]
+            },
+            "ask_wars": {
+              "text": "「1980、90 年代,」Elena 說,「整個巴羅洛產區分裂成兩派。傳統派堅持用這種老式大型斯拉夫尼亞橡木桶,長時間浸皮數週,釀出來的酒單寧極重,年輕時幾乎不能喝,要放上十幾二十年才會開始迷人。現代派這邊,改用小型全新的法國橡木桶,浸皮時間縮短,追求更早熟、更圓潤、更國際化的風格,酒評界稱之為『巴羅洛戰爭』。」\n\n她拍拍那排新桶子。「我祖父屬於堅決的傳統派,我在國外學釀酒回來之後,一度想全面改用現代派做法——這場仗,我們家自己內部也打過。」",
+              "choices": [
+                {
+                  "label": "思考巴羅洛戰爭反映的核心爭議",
+                  "next": "quiz_wars"
+                }
+              ]
+            },
+            "quiz_wars": {
+              "type": "quiz",
+              "text": "1980-90 年代皮蒙特發生的「巴羅洛戰爭」(傳統派 vs 現代派),爭議的核心是:\n\nA. 兩派爭的是該不該繼續使用內比歐羅這個品種,現代派主張完全改種國際品種\n\nB. 傳統派堅持沿用老式大型斯拉夫尼亞橡木桶與長時間浸皮,釀出單寧極重、需長期陳放才適飲的風格;現代派改用小型全新法國橡木桶、縮短浸皮時間,追求更早熟圓潤、更國際化的風格——這是一場關於釀造工藝與風格取向的路線之爭,而非品種本身的爭論\n\nC. 這場爭議純屬酒評界誇大的行銷話題,實際上巴羅洛產區內部從未出現過真正的釀造工藝分歧",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_wars_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_wars_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_wars_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "「巴羅洛戰爭」是 1980 到 90 年代皮蒙特葡萄酒界真實發生的路線之爭,核心圍繞在釀造工藝的選擇:傳統派堅持沿用老式大型斯拉夫尼亞橡木桶(容量大、木質風味影響較淡),搭配長時間浸皮(數週),釀出的酒單寧份量極重、結構堅實,年輕時往往顯得封閉粗獷,需要長達十幾二十年的陳放才會逐漸展現迷人的複雜度;現代派則改用小型全新法國橡木桶(木質香氣影響更明顯)、縮短浸皮時間,追求顏色更深、單寧更柔順、年輕時就更容易入口的國際化風格。這場爭議不涉及品種本身,而是關於「巴羅洛究竟該堅守需要長期等待的傳統身分,還是該迎合更早熟易飲的當代市場」的哲學分歧,跟你在波爾多學過的車庫酒運動爭議,在精神上有相通之處。"
+            },
+            "quiz_wars_correct": {
+              "text": "Elena 露出複雜的笑容。「答對了——而且這場仗到今天都還沒真正結束,只是變得不那麼劍拔弩張了。」",
+              "grants_badge": "巴羅洛戰爭",
+              "choices": [
+                {
+                  "label": "「那你們家,最後怎麼解決的?」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_wars_wrong": {
+              "text": "Elena 搖頭。「不是品種之爭,這場衝突也絕對是真實發生過的——再想想,老式大型木桶長時間浸皮,跟小型新法國橡木桶短時間浸皮,分別會帶出什麼樣的風格差異?」",
+              "sets_fog": "quiz_wars",
+              "choices": [
+                {
+                  "label": "重新思考巴羅洛戰爭爭議的核心",
+                  "next": "quiz_wars"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "「留到最後再告訴你,」Elena 說,「但你現在應該猜得到,答案不會是『誰徹底贏了誰』這麼簡單。」\n\n【第二章完 · 已獲得知識印記:巴羅洛戰爭】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "nebbiolo_character_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "nebbiolo_character_outpost": {
+          "title": "驛站:霧一樣的葡萄",
+          "meta": {
+            "village": "Piemonte",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "內比歐羅的高酸高單寧品種特性與命名由來",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "品飲教室裡,老師倒了一杯年輕的巴羅洛。「內比歐羅(Nebbiolo)這個名字,你猜跟義大利文的『nebbia』(霧)有沒有關係?」",
+              "choices": [
+                {
+                  "label": "「內比歐羅為什麼會跟霧扯上關係?」",
+                  "next": "quiz_nebbiolo"
+                }
+              ]
+            },
+            "quiz_nebbiolo": {
+              "type": "quiz",
+              "text": "內比歐羅(Nebbiolo)這個品種名稱與其風味特性,最準確的描述是:\n\nA. 名稱源自葡萄成熟季節(十月)常籠罩皮蒙特丘陵的濃霧(nebbia),品種本身則以高酸度、高單寧著稱,顏色卻相對淺淡,常被形容為「披著淺色外衣的重量級拳手」\n\nB. 名稱跟霧完全無關,是以一位釀酒師的姓氏命名的\n\nC. 內比歐羅是一個低酸、低單寧、顏色極深的品種,風格上接近卡本內蘇維濃",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_nebbiolo_correct",
+                  "correct": true
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_nebbiolo_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_nebbiolo_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "內比歐羅(Nebbiolo)這個名稱,普遍認為源自義大利文「nebbia」(霧)——這個品種通常成熟得很晚,要到十月,皮蒙特丘陵地帶清晨常籠罩著濃霧時才採收,因而得名。品種本身的風味特性相當獨特:單寧與酸度都極高,結構強勁,卻因為果皮裡的花青素(色素)含量相對較低,顏色反而偏淺淡,常被形容為「披著淺色外衣的重量級拳手」——光看酒色容易誤判它的強度,但入口後的單寧與酸度會立刻顛覆這個第一印象。這種特性也是巴羅洛、巴巴瑞斯科需要長期陳年才能柔化單寧、讓香氣充分展現的根本原因。"
+            },
+            "quiz_nebbiolo_correct": {
+              "text": "老師點頭。「所以千萬別被顏色騙了——內比歐羅是義大利品種裡,少數『外表跟實力完全不成正比』的典型案例。」\n\n【驛站完 · 已獲得知識印記:內比歐羅品種特性】",
+              "grants_badge": "內比歐羅品種特性",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_nebbiolo_wrong": {
+              "text": "老師搖頭。「不是以釀酒師命名,內比歐羅也不是低酸低單寧的品種——再想想,這個品種通常在什麼季節、什麼天氣條件下採收?」",
+              "sets_fog": "quiz_nebbiolo",
+              "choices": [
+                {
+                  "label": "重新思考內比歐羅名稱由來與品種特性",
+                  "next": "quiz_nebbiolo"
+                }
+              ]
+            }
+          }
+        },
+        "piemonte_final_wp": {
+          "title": "支線:兩排桶子的和解",
+          "meta": {
+            "village": "Barolo",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整合巴羅洛戰爭與品種特性的現代融合判斷",
+            "requires_badges": [
+              "巴羅洛與巴巴瑞斯科命名邏輯",
+              "內比歐羅品種特性"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Elena 帶你回到那兩排桶子中間。「今天,越來越多巴羅洛酒莊,包括我們家在內,其實兩種桶子都在用——你猜得到,這種折衷做法背後的邏輯是什麼嗎?」",
+              "choices": [
+                {
+                  "label": "思考今日巴羅洛產區如何融合傳統與現代做法",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "今日不少巴羅洛酒莊同時使用大型老式木桶與小型新法國橡木桶(甚至混合陳年於兩種容器),這種做法最合理的解讀是:\n\nA. 純粹是酒莊資金不足、無法統一採購同一種桶具的權宜之計,跟釀造風格考量無關\n\nB. 巴羅洛戰爭的極端對立立場,隨著時間逐漸被更務實的思維取代——不少酒莊發現,大型老桶能保留內比歐羅本身細膩的香氣特質、避免過重的木質調性蓋過品種特色,小型新桶則能提供更柔順的單寧觸感與更早的適飲窗口,兩者搭配使用,能同時兼顧品種本色與市場對易飲度的期待\n\nC. 這種混合使用完全違反 DOCG 法規,是不被允許的做法",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "巴羅洛戰爭當年那種「傳統派 vs 現代派」的極端對立立場,隨著時間過去逐漸被更務實、更折衷的思維取代。不少酒莊(包括故事裡 Elena 所在的虛構酒莊)發現,大型老式木桶(不論是傳統的斯拉夫尼亞橡木桶或其他中性木桶)能較完整保留內比歐羅細膩的香氣特質,避免過度濃烈的新橡木調性蓋過品種本身的個性;而小型新法國橡木桶則能提供更柔順細緻的單寧觸感,讓酒款有更早的適飲窗口。將兩者依比例搭配使用(甚至分批陳年後再調配),讓酒莊能同時兼顧內比歐羅的品種本色與當代市場對於「年輕時也能親近」的期待,是巴羅洛戰爭這場路線之爭,最終走向的一種務實融合。"
+            },
+            "quiz_final_correct": {
+              "text": "Elena 滿意地點頭。「答對了——我後來想通的,不是選邊站,是想辦法讓兩種邏輯,一起替內比歐羅這個品種服務,而不是互相打架。」\n\n她望向兩排桶子。「加富爾伯爵當年,是為了讓內比歐羅配得上『國王』這個稱號,才引進外來技術;我們這一代,是為了讓它同時配得上『傳統』跟『現代』兩種期待,才學會不再非黑即白。」\n\n【支線完 · 已獲得知識印記:傳統與現代的融合邏輯】",
+              "grants_badge": "傳統與現代的融合邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_final_wrong": {
+              "text": "Elena 搖頭。「不是資金不足的權宜之計,這種混合使用也完全合法——再想想,兩種桶具各自的優點,搭配使用能不能同時滿足品種特色跟市場期待?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "重新思考今日巴羅洛產區融合傳統與現代的邏輯",
+                  "next": "quiz_final"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "toscana_line": {
+      "title": "黑公雞的邊界",
+      "tagline": "一隻故意餓瘦的黑公雞,幫佛羅倫斯多搶了一大片土地;七百年後,一群不服規則的釀酒師,又用一款連DOC資格都沒有的酒,逼出了整套義大利分級制度的新類別",
+      "knowledge_focus": "奇揚地黑公雞傳說與城邦邊界史、奇揚地分級結構、超級托斯卡尼的體制外叛逆、1992年IGT分類的誕生",
+      "major_region": "義大利 Italia",
+      "region": "托斯卡尼 Toscana",
+      "chapter_order": [
+        "black_rooster_01",
+        "chianti_tiers_outpost",
+        "super_tuscan_02",
+        "igt_birth_outpost",
+        "toscana_final_wp"
+      ],
+      "chapters": {
+        "black_rooster_01": {
+          "title": "第一章:提早啼叫的公雞",
+          "meta": {
+            "village": "Chianti Classico",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "奇揚地黑公雞傳說與中世紀城邦邊界戰爭史",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "奇揚地(Chianti)一間老酒莊的酒標架前,Lucia Bardi 拿起一瓶酒,指著標籤上一隻黑色公雞的圖案。「這隻雞,幫我們的祖先多搶了一大片地。」",
+              "choices": [
+                {
+                  "label": "「一隻雞,怎麼搶地?」",
+                  "next": "ask_rooster"
+                }
+              ]
+            },
+            "ask_rooster": {
+              "text": "「中世紀,佛羅倫斯跟錫耶納這兩個城邦,為了奇揚地這片土地的邊界爭了好幾百年,」Lucia 說,「傳說最後雙方協議,各自派一位騎士,在公雞啼叫的那一刻同時出發,兩位騎士相遇的地方,就是邊界。錫耶納選了一隻養得肥肥壯壯的白公雞;佛羅倫斯呢,故意把一隻黑公雞餓了好幾天,關在暗處。」\n\n她笑了笑。「天還沒亮,那隻又餓又慌的黑公雞就提早啼叫,佛羅倫斯的騎士立刻出發,幾乎一路騎到錫耶納城門口才被攔下——邊界就這樣,大幅往錫耶納那邊推了過去。」",
+              "choices": [
+                {
+                  "label": "思考這個傳說跟奇揚地黑公雞標誌的關聯",
+                  "next": "quiz_rooster"
+                }
+              ]
+            },
+            "quiz_rooster": {
+              "type": "quiz",
+              "text": "奇揚地經典區(Chianti Classico)酒標上的黑公雞標誌(Gallo Nero),跟中世紀傳說最直接的關聯是:\n\nA. 黑公雞純粹是現代行銷設計,跟任何歷史傳說都沒有關聯\n\nB. 傳說中佛羅倫斯選用故意餓瘦、提早啼叫的黑公雞,幫助佛羅倫斯騎士在邊界競賽中搶得先機、大幅推進領土邊界,這個故事後來被奇揚地經典區酒莊聯盟採用,成為代表這片土地歷史身分的黑公雞標誌\n\nC. 黑公雞傳說裡,黑公雞其實代表的是錫耶納城邦,不是佛羅倫斯",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_rooster_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_rooster_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_rooster_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "奇揚地經典區(Chianti Classico)酒標上常見的黑公雞標誌(Gallo Nero),源自一則流傳已久的中世紀傳說:佛羅倫斯與錫耶納兩個城邦為了奇揚地這片土地的邊界長期爭執,最終協議透過一場「公雞啼叫、騎士出發」的競賽來劃定邊界。傳說佛羅倫斯選用了一隻故意餓瘦、關在暗處的黑公雞,天未亮便因飢餓與焦慮提早啼叫,讓佛羅倫斯的騎士得以提早出發,大幅推進了邊界。這個故事後來被奇揚地經典區的酒莊聯盟(Consorzio del Gallo Nero)採用作為品質認證標誌,黑公雞從此成為這片土地歷史身分與地方認同的重要象徵。"
+            },
+            "quiz_rooster_correct": {
+              "text": "Lucia 點頭。「這個傳說,某種程度上也預示了托斯卡尼後來的性格——這裡的人,一直很擅長用不按牌理出牌的方式,替自己爭取更多空間。」\n\n她放下酒瓶。「七百年後,又有一批人,用同樣的精神,幹了一件更誇張的事。」",
+              "grants_badge": "黑公雞傳說與城邦邊界史",
+              "choices": [
+                {
+                  "label": "「他們做了什麼?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_rooster_wrong": {
+              "text": "Lucia 搖頭。「不是純粹的現代行銷設計,黑公雞在傳說裡代表的也是佛羅倫斯,不是錫耶納——再想想,一隻故意餓瘦、提早啼叫的公雞,在這場邊界競賽裡扮演了什麼角色?」",
+              "sets_fog": "quiz_rooster",
+              "choices": [
+                {
+                  "label": "重新思考黑公雞傳說跟酒標標誌的關聯",
+                  "next": "quiz_rooster"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「留到後面告訴你,」Lucia 說,「但在那之前,先搞懂奇揚地現在的分級結構,故事才接得起來。」\n\n【第一章完 · 已獲得知識印記:黑公雞傳說與城邦邊界史】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "chianti_tiers_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "chianti_tiers_outpost": {
+          "title": "驛站:三層樓的奇揚地",
+          "meta": {
+            "village": "Chianti Classico",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "奇揚地分級結構(Classico/Riserva/Gran Selezione)",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "酒標展示架上,三瓶都寫著「Chianti Classico」的酒,底下卻分別標著「annata」、「Riserva」、「Gran Selezione」。遊客問:「這三種標示,差在哪?」",
+              "choices": [
+                {
+                  "label": "「奇揚地經典區的分級結構是怎麼分的?」",
+                  "next": "quiz_tiers"
+                }
+              ]
+            },
+            "quiz_tiers": {
+              "type": "quiz",
+              "text": "奇揚地經典區(Chianti Classico)內部的品質分級結構(由基本款到最高階),最準確的描述是:\n\nA. Chianti Classico annata(基本款,陳年要求相對較短)→ Riserva(需要更長的最低陳年時間)→ Gran Selezione(2014年才新設的最高等級,要求更長陳年、且原則上須使用自有莊園葡萄園的葡萄,品質審核也更嚴格)\n\nB. 三個名稱其實代表完全不同的法定產區,彼此沒有分級高低的關係\n\nC. Gran Selezione 是最低階的入門款,Riserva 才是最高等級",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_tiers_correct",
+                  "correct": true
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_tiers_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_tiers_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "奇揚地經典區(Chianti Classico)內部設有三個品質分級:基本款(annata)陳年要求相對較短,適合較早飲用;Riserva 則要求更長的最低陳年時間,風格更為濃縮扎實;Gran Selezione 是 2014 年才新增設立的最高等級,不僅要求比 Riserva 更長的陳年時間,原則上還要求使用酒莊自有葡萄園(而非外購葡萄)所產的葡萄,品質審核標準也更為嚴格。這套三層結構,是奇揚地經典區近年來為了強化品質形象、跟大量生產的一般「Chianti」(非經典區)做出更清楚市場區隔而逐步建立起來的分級系統。"
+            },
+            "quiz_tiers_correct": {
+              "text": "Lucia 補充。「Gran Selezione 是相對晚近才有的等級,某種程度上也算是奇揚地經典區,對外面世界重新證明自己品質決心的方式。」\n\n【驛站完 · 已獲得知識印記:奇揚地分級結構】",
+              "grants_badge": "奇揚地分級結構",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_tiers_wrong": {
+              "text": "遊客還是搞不清楚。「不是三個獨立產區,Gran Selezione 也不是最低階——再想想,哪一個等級聽起來門檻最高、要求最嚴格?」",
+              "sets_fog": "quiz_tiers",
+              "choices": [
+                {
+                  "label": "重新思考奇揚地經典區的分級結構",
+                  "next": "quiz_tiers"
+                }
+              ]
+            }
+          }
+        },
+        "super_tuscan_02": {
+          "title": "第二章:標成餐酒的傳奇",
+          "meta": {
+            "village": "Bolgheri",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "超級托斯卡尼的體制外叛逆與傳統奇揚地法定配方的限制",
+            "requires_badges": [
+              "黑公雞傳說與城邦邊界史"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Lucia 帶你去看她父親那一代留下的舊酒標——上面竟然只印著義大利最低階的「Vino da Tavola」(日常餐酒)字樣。「猜猜這瓶酒,當年賣得比多少 DOCG 還貴?」",
+              "choices": [
+                {
+                  "label": "「日常餐酒怎麼會賣得比 DOCG 貴?」",
+                  "next": "ask_super"
+                }
+              ]
+            },
+            "ask_super": {
+              "text": "「1996 年之前,」Lucia 說,「奇揚地的法定配方,其實規定必須混入一定比例的白葡萄品種,像特雷比亞諾(Trebbiano),就算你想釀一款完全用山吉歐維榭(Sangiovese)、或加入卡本內蘇維濃調配的嚴肅紅酒,只要不符合法定配方,就沒有資格標示『Chianti』或任何 DOCG 名稱,只能標成最低階的日常餐酒。」\n\n她指著酒標。「但像西施佳雅(Sassicaia)、天娜(Tignanello)這些酒,就是刻意跳出法定配方限制,改用卡本內蘇維濃等國際品種調配——市場很快就認出了它們的品質,價格衝得比很多正牌 DOCG 都高,這就是後來被稱為『超級托斯卡尼』的現象。」",
+              "choices": [
+                {
+                  "label": "思考超級托斯卡尼這個現象的核心意義",
+                  "next": "quiz_super"
+                }
+              ]
+            },
+            "quiz_super": {
+              "type": "quiz",
+              "text": "「超級托斯卡尼」(Super Tuscan)這個現象最核心的意義是:\n\nA. 這些酒莊只是單純想製造行銷噱頭,實際酒款品質其實低於同期的正牌 DOCG 奇揚地\n\nB. 部分酒莊為了突破當時奇揚地法定配方的限制(如強制混入白葡萄品種),刻意選擇不申請 DOCG 資格,改用卡本內蘇維濃等國際品種自由調配,即使因此只能標示最低階的日常餐酒等級,市場依然認可其品質,價格甚至超越多數正牌 DOCG,這證明了法定分級高低,不必然等同於實際品質高低\n\nC. 超級托斯卡尼酒款其實完全符合當時的奇揚地法定配方規定,跟法規限制沒有任何關係",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_super_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_super_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_super_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "「超級托斯卡尼」現象源於部分托斯卡尼酒莊(以西施佳雅、天娜等酒款最具代表性)不願受限於當時奇揚地嚴格的法定配方規定(尤其是強制混入特雷比亞諾等白葡萄品種的要求),刻意選擇改用卡本內蘇維濃等國際品種自由調配,追求更符合自身理念的品質風格。這樣的選擇代價是無法申請 DOCG 資格,酒標上只能標示義大利分級體系裡最低階的「日常餐酒」(Vino da Tavola)等級。然而市場很快認可了這些酒款的實際品質,價格與聲望甚至超越同期多數正牌 DOCG 奇揚地,形成「分級最低、身價最高」的強烈反差,這正是超級托斯卡尼現象最核心的意義——法定分級等級,並不必然等同於實際的釀造品質。"
+            },
+            "quiz_super_correct": {
+              "text": "Lucia 點頭,語氣裡帶著一絲驕傲。「我父親當年也是這樣賭的——寧可標成最低階,也不願意為了一張分級證書,妥協自己相信的釀造理念。這場賭注,後來逼得整個義大利的分級制度,不得不做出改變。」",
+              "grants_badge": "超級托斯卡尼的叛逆",
+              "choices": [
+                {
+                  "label": "「後來義大利分級制度,是怎麼改變的?」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_super_wrong": {
+              "text": "Lucia 搖頭。「不是行銷噱頭,也不是完全符合當時的法定配方——再想想,如果酒款品質受到市場高度認可,卻因為配方不符法規只能標最低階等級,這代表了什麼樣的落差?」",
+              "sets_fog": "quiz_super",
+              "choices": [
+                {
+                  "label": "重新思考超級托斯卡尼現象的核心意義",
+                  "next": "quiz_super"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "「改天帶你去驛站看看,」Lucia 說,「1992 年,義大利正式因此新增了一整個分級類別。」\n\n【第二章完 · 已獲得知識印記:超級托斯卡尼的叛逆】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "igt_birth_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "igt_birth_outpost": {
+          "title": "驛站:為叛逆量身打造的分類",
+          "meta": {
+            "village": "Toscana",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "1992年IGT分類的誕生",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "義大利葡萄酒法規文件複本上,一個 1992 年才出現的新分類名稱格外醒目:IGT(Indicazione Geografica Tipica)。遊客問:「這個分類,是專門為了誰而設的?」",
+              "choices": [
+                {
+                  "label": "「IGT 分類的出現,跟超級托斯卡尼有關嗎?」",
+                  "next": "quiz_igt"
+                }
+              ]
+            },
+            "quiz_igt": {
+              "type": "quiz",
+              "text": "1992 年義大利新增的 IGT(Indicazione Geografica Tipica)分類,跟超級托斯卡尼現象最直接的關係是:\n\nA. IGT 分類的誕生,很大程度上正是為了因應像超級托斯卡尼這類酒款——它們品質受市場高度認可,卻因不符法定配方而被迫標示為最低階日常餐酒;IGT 提供了一個介於日常餐酒與 DOC/DOCG 之間的中間地帶,允許酒莊標示地理來源、同時享有較大的釀造彈性\n\nB. IGT 分類跟超級托斯卡尼完全無關,是同一時期為了處理另一個議題而設立的巧合\n\nC. IGT 是義大利分級體系裡最高等級,高於 DOCG",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_igt_correct",
+                  "correct": true
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_igt_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_igt_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "1992 年義大利葡萄酒法規新增的 IGT(Indicazione Geografica Tipica)分類,設立的重要背景之一,正是為了回應超級托斯卡尼這類現象:這些酒款品質受到市場高度認可,卻因為不符合傳統 DOC/DOCG 的法定配方規定,只能被迫標示為最低階的日常餐酒(Vino da Tavola),完全無法在酒標上標明具體的地理來源(如「托斯卡尼」)。IGT 分類提供了一個介於日常餐酒與 DOC/DOCG 之間的中間地帶,允許酒莊標示較具體的地理來源,同時享有比 DOC/DOCG 更大的品種與釀造彈性。許多原本的超級托斯卡尼酒款,後來也改標為 IGT Toscana,這個分類的誕生,可以說是義大利分級體系正式對「體制外品質」讓步、重新調整的具體案例。"
+            },
+            "quiz_igt_correct": {
+              "text": "Lucia 在一旁補充。「所以你可以說,IGT 這個類別,某種程度上是被我父親那一代人,用實際的市場成績,硬逼出來的。」\n\n【驛站完 · 已獲得知識印記:IGT分類的誕生】",
+              "grants_badge": "IGT分類的誕生",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_igt_wrong": {
+              "text": "遊客還是不確定。「不是完全無關的巧合,IGT 也不是最高等級——再想想,IGT 分類的出現,填補了『日常餐酒』跟『DOC/DOCG』之間,原本沒有被妥善照顧到的哪個空間?」",
+              "sets_fog": "quiz_igt",
+              "choices": [
+                {
+                  "label": "重新思考IGT分類誕生跟超級托斯卡尼的關係",
+                  "next": "quiz_igt"
+                }
+              ]
+            }
+          }
+        },
+        "toscana_final_wp": {
+          "title": "支線:規則追上市場之後",
+          "meta": {
+            "village": "Chianti Classico",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整合傳統奇揚地配方與超級托斯卡尼叛逆精神的當代並存判斷",
+            "requires_badges": [
+              "奇揚地分級結構",
+              "超級托斯卡尼的叛逆"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Lucia 帶你回到酒莊,一邊是符合最新 Gran Selezione 規範、堅守山吉歐維榭主導傳統的酒款;另一邊,是她自己近年釀的一款 IGT Toscana,延續父親當年的叛逆精神。「你覺得,今天的托斯卡尼,傳統跟叛逆,是敵對關係,還是別的什麼關係?」",
+              "choices": [
+                {
+                  "label": "思考今日托斯卡尼傳統與叛逆的並存關係",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "綜合奇揚地經典區分級結構的完善(尤其是 Gran Selezione 的設立)與 IGT 分類為超級托斯卡尼開創的空間,今日托斯卡尼傳統與叛逆之間最貼切的關係是:\n\nA. 兩者水火不容,酒莊只能二選一,選擇傳統就完全放棄創新,選擇 IGT 就等於背叛傳統\n\nB. 奇揚地經典區透過強化自身分級結構(如 Gran Selezione)重新證明堅守傳統配方依然能達到頂尖品質,IGT 分類則為追求不同釀造理念的酒莊保留了合法且受市場認可的空間——兩條路徑如今在同一片土地上並存,不再是誰取代誰的關係,而是托斯卡尼同時擁抱兩種身分的具體展現\n\nC. IGT 分類後來被廢除,所有酒莊現在都必須完全遵循傳統奇揚地配方",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "今日的托斯卡尼,傳統與叛逆並非互斥關係,而是在同一片土地上並存發展:奇揚地經典區透過持續強化自身的分級結構(尤其 2014 年設立的 Gran Selezione),重新向市場證明堅守山吉歐維榭主導的傳統配方,依然能夠達到頂尖品質水準;與此同時,IGT 分類為選擇不同釀造理念(如超級托斯卡尼那種以國際品種自由調配)的酒莊,提供了合法且受市場高度認可的發展空間。這種「傳統路線自我提升、叛逆路線獲得制度性空間」的雙軌並行,正是托斯卡尼這片土地,從中世紀黑公雞傳說裡那種敢於不按牌理出牌的精神,一路延續到當代葡萄酒版圖的具體展現。"
+            },
+            "quiz_final_correct": {
+              "text": "Lucia 滿意地笑了。「答對了——我父親當年選擇離開規則,不是為了背叛這片土地,是為了證明這片土地,能撐得起不只一種詮釋方式。」\n\n她望向窗外連綿的葡萄園。「那隻黑公雞當年提早啼叫,幫佛羅倫斯搶了邊界;我父親提早跳出配方限制,幫托斯卡尼搶了更大的可能性——某種程度上,是同一種精神。」\n\n【支線完 · 已獲得知識印記:托斯卡尼傳統與叛逆並存邏輯】",
+              "grants_badge": "托斯卡尼傳統與叛逆並存邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_final_wrong": {
+              "text": "Lucia 搖頭。「不是二選一的對立關係,IGT 也沒有被廢除——再想想,奇揚地經典區強化自身分級,跟 IGT 為不同理念保留空間,這兩件事,能不能同時成立、互不排斥?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "重新思考今日托斯卡尼傳統與叛逆的並存關係",
+                  "next": "quiz_final"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "veneto_line": {
+      "title": "被遺忘的那桶酒",
+      "tagline": "一桶本來要釀甜酒的葡萄,被遺忘在角落太久,糖分全發酵光了,意外釀出一款「大苦」的乾型烈酒——阿瑪羅內的誕生,是一場意外,它現在的風格走向,卻是一場刻意的辯論",
+      "knowledge_focus": "阿瑪羅內意外誕生的傳說與乾燥葡萄工藝(appassimento)原理、Recioto甜酒與Amarone乾型酒的品種關聯、傳統乾燥閣樓vs現代溫控乾燥室之爭、威尼斯共和國貿易史",
+      "major_region": "義大利 Italia",
+      "region": "威尼托 Veneto",
+      "chapter_order": [
+        "forgotten_barrel_01",
+        "recioto_link_outpost",
+        "fruttaio_modern_02",
+        "venice_trade_outpost",
+        "veneto_final_wp"
+      ],
+      "chapters": {
+        "forgotten_barrel_01": {
+          "title": "第一章:那桶被遺忘的酒",
+          "meta": {
+            "village": "Valpolicella",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "阿瑪羅內意外誕生的傳說與乾燥葡萄工藝(appassimento)原理",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "瓦波利切拉(Valpolicella)一座傳統乾燥閣樓(fruttaio)裡,Marco Rizzi 指著懸吊在竹架上、逐漸風乾皺縮的成串葡萄。「阿瑪羅內(Amarone)的誕生,傳說是一場意外。」",
+              "choices": [
+                {
+                  "label": "「怎麼會是意外?」",
+                  "next": "ask_accident"
+                }
+              ]
+            },
+            "ask_accident": {
+              "text": "「這裡本來的傳統,是釀 Recioto,」Marco 說,「把葡萄吊起來風乾幾個月,讓水分蒸發、糖分濃縮,再釀成一款香甜的紅色甜酒。傳說有一桶 Recioto,不知道是誰疏忽了,在酒窖裡放得太久,發酵沒有適時停下來——糖分幾乎被酵母吃光,釀成了一款完全乾型、酒精濃度異常高的紅酒。」\n\n他笑了笑。「嚐過的人形容它『amaro』——苦,但是一種深沉、餘韻悠長的苦,才有了『Amarone』,大苦這個名字。」",
+              "choices": [
+                {
+                  "label": "思考乾燥葡萄工藝(appassimento)的原理",
+                  "next": "quiz_appassimento"
+                }
+              ]
+            },
+            "quiz_appassimento": {
+              "type": "quiz",
+              "text": "阿瑪羅內釀造過程中使用的乾燥葡萄工藝(appassimento),最準確的描述與作用是:\n\nA. 葡萄採收後,先進行正常釀造,再把釀好的酒放進乾燥的房間裡儲存陳年,跟葡萄本身的風乾無關\n\nB. 葡萄採收後先不立即釀造,而是吊掛或平鋪在通風良好的乾燥閣樓裡風乾數月,讓水分大幅蒸發、糖分與風味物質同步濃縮,之後才進行發酵——阿瑪羅內因為讓發酵徹底進行到糖分幾乎耗盡,才形成乾型、高酒精濃度、風味濃縮的獨特風格\n\nC. 乾燥葡萄工藝只用於白酒釀造,阿瑪羅內作為紅酒完全不使用這項工藝",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_appassimento_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_appassimento_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_appassimento_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "乾燥葡萄工藝(appassimento)是瓦波利切拉產區的核心釀造技法:葡萄採收後,先不立即進行釀造,而是吊掛在通風良好的乾燥閣樓(fruttaio)裡,或平鋪在通風架上,風乾數月(通常從採收季一路到隔年一、二月)。這個過程讓葡萄水分大幅蒸發(重量可能損失三成以上),糖分與風味物質因而同步濃縮。風乾完成後才進行發酵:如果讓發酵在糖分還有相當殘留時就中止,釀出的是香甜的 Recioto;如果讓發酵徹底進行、糖分幾乎完全轉化,則會釀出阿瑪羅內這種乾型、高酒精濃度(通常達 15% 以上)、風味濃縮飽滿的獨特紅酒風格。"
+            },
+            "quiz_appassimento_correct": {
+              "text": "Marco 點頭。「所以 Recioto 跟阿瑪羅內,其實是同一套乾燥葡萄工藝、同一批葡萄原料,只是發酵停不停,決定了最後的命運。」",
+              "grants_badge": "乾燥葡萄工藝原理",
+              "choices": [
+                {
+                  "label": "「這兩款酒,品種上也完全一樣嗎?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_appassimento_wrong": {
+              "text": "Marco 搖頭。「不是先釀造再風乾成品酒,也不是只用於白酒——再想想,葡萄在正式發酵之前,先經過長時間風乾,會對糖分濃度跟風味物質產生什麼影響?」",
+              "sets_fog": "quiz_appassimento",
+              "choices": [
+                {
+                  "label": "重新思考乾燥葡萄工藝(appassimento)的原理",
+                  "next": "quiz_appassimento"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「留到驛站再細講,」Marco 說,「但你猜對了方向——這兩款酒的關係,比大多數人想像的更緊密。」\n\n【第一章完 · 已獲得知識印記:乾燥葡萄工藝原理】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "recioto_link_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "recioto_link_outpost": {
+          "title": "驛站:一對雙生子",
+          "meta": {
+            "village": "Valpolicella",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "Recioto甜酒與Amarone乾型酒的品種與工藝關聯",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "酒窖裡,兩瓶酒並排擺放——一瓶標著「Recioto della Valpolicella」,一瓶標著「Amarone della Valpolicella」。遊客問:「這兩款酒,品種原料是一樣的嗎?」",
+              "choices": [
+                {
+                  "label": "「Recioto 跟阿瑪羅內,真的是同一套原料嗎?」",
+                  "next": "quiz_recioto"
+                }
+              ]
+            },
+            "quiz_recioto": {
+              "type": "quiz",
+              "text": "Recioto della Valpolicella(甜酒)與 Amarone della Valpolicella(乾型酒)之間最準確的關係是:\n\nA. 兩者使用完全不同的葡萄品種,釀造工藝上也毫無關聯\n\nB. 兩者通常使用相同的核心品種組合(以科維納 Corvina、羅蒂內拉 Rondinella 等瓦波利切拉當地品種為主),也都採用乾燥葡萄工藝(appassimento)進行風乾,主要差異在於發酵完成的程度——Recioto 讓發酵在糖分尚有殘留時停止,保留甜度;Amarone 則讓發酵徹底進行至乾型\n\nC. Recioto 是白酒,Amarone 是紅酒,兩者顏色完全不同",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_recioto_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_recioto_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_recioto_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "Recioto della Valpolicella(甜酒)與 Amarone della Valpolicella(乾型酒),兩者通常使用相同的核心品種組合——以瓦波利切拉當地原生品種科維納(Corvina)、羅蒂內拉(Rondinella)等為主軸,也都採用同樣的乾燥葡萄工藝(appassimento)將葡萄風乾濃縮。兩者最主要的差異在於發酵完成的程度:Recioto 讓發酵在糖分還有相當殘留時人為中止,保留明顯甜度,是一款紅色甜酒;Amarone 則讓發酵徹底進行到糖分幾乎完全轉化為酒精,形成乾型、高酒精濃度的獨特風格。這也解釋了為什麼阿瑪羅內的意外誕生傳說如此合理——兩者的原料與前段工藝幾乎完全相同,關鍵的分歧點只在發酵尾聲那個決定性的環節。"
+            },
+            "quiz_recioto_correct": {
+              "text": "Marco 在一旁補充。「所以與其說是兩款完全不同的酒,不如說是同一套工藝,走向了兩種不同的結局——甜蜜的結局,跟意外苦澀卻深邃的結局。」\n\n【驛站完 · 已獲得知識印記:Recioto與Amarone的關聯】",
+              "grants_badge": "Recioto與Amarone的關聯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_recioto_wrong": {
+              "text": "遊客還是不確定。「不是完全不同的品種,也不是紅白酒的區分——再想想,同一批風乾濃縮過的葡萄,發酵停在不同的時間點,會分別導向什麼樣的結果?」",
+              "sets_fog": "quiz_recioto",
+              "choices": [
+                {
+                  "label": "重新思考Recioto與Amarone之間的關聯",
+                  "next": "quiz_recioto"
+                }
+              ]
+            }
+          }
+        },
+        "fruttaio_modern_02": {
+          "title": "第二章:閣樓與溫控室之爭",
+          "meta": {
+            "village": "Valpolicella",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "傳統乾燥閣樓(fruttai)自然風乾vs現代溫控乾燥室的爭議",
+            "requires_badges": [
+              "乾燥葡萄工藝原理"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Marco 帶你參觀隔壁一家大型酒莊——同樣在做乾燥葡萄工藝,卻是一整排裝有溫濕度控制系統的現代化廠房,跟他自家那座依靠自然通風的老閣樓,完全是兩個世界。",
+              "choices": [
+                {
+                  "label": "「傳統閣樓跟現代溫控室,差在哪?」",
+                  "next": "ask_fruttaio"
+                }
+              ]
+            },
+            "ask_fruttaio": {
+              "text": "「我家這種老閣樓,」Marco 說,「完全依靠自然通風跟當年的天氣狀況風乾,速度慢,而且每年結果都不太一樣,運氣不好碰上潮濕年份,還可能發生不必要的黴菌感染。現代溫控乾燥室呢,可以精準控制溫度濕度,風乾速度更快、更穩定,批次跟批次之間的風格落差也小得多。」\n\n他頓了一下。「但也有人批評,溫控室風乾出來的葡萄,少了一點自然閣樓才有的、隨年份變化的個性。」",
+              "choices": [
+                {
+                  "label": "思考傳統閣樓與現代溫控室之爭反映的核心議題",
+                  "next": "quiz_fruttaio"
+                }
+              ]
+            },
+            "quiz_fruttaio": {
+              "type": "quiz",
+              "text": "瓦波利切拉產區「傳統自然通風閣樓」與「現代溫控乾燥室」兩種風乾方式的爭議,最核心的權衡是:\n\nA. 兩種方式釀出的酒款品質完全沒有差異,這個爭議純屬酒莊之間的行銷話術\n\nB. 傳統閣樓依賴自然通風與天氣條件,風乾速度較慢且每年狀況不一,存在較高的黴菌感染風險,但支持者認為能保留隨年份變化的自然個性;現代溫控室能精準控制溫濕度、風乾速度更快更穩定、批次風格一致性更高,但也被批評可能犧牲了一部分自然變化帶來的風味個性——這是「穩定可控」與「自然變化」之間的權衡取捨\n\nC. 現代溫控乾燥室在瓦波利切拉產區法規裡完全被禁止使用,所有阿瑪羅內都必須使用傳統自然通風閣樓",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_fruttaio_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_fruttaio_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_fruttaio_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "瓦波利切拉產區「傳統自然通風閣樓(fruttaio)」與「現代溫控乾燥室」之爭,核心是「穩定可控」與「自然變化」之間的權衡:傳統閣樓完全依賴當年的自然通風與氣候條件進行風乾,速度較慢,每個年份的結果都可能不太一樣,遇上潮濕年份還存在較高的黴菌感染風險,但支持者認為這種方式保留了葡萄隨年份自然變化的獨特個性,是阿瑪羅內風土表現的一部分;現代溫控乾燥室則能精準控制溫度與濕度,風乾速度更快、結果更穩定可預期,批次與批次之間的風格落差也小得多,對追求品質穩定與規模化生產的酒莊而言優勢明顯,但也因此被部分傳統派批評,認為這種方式可能犧牲了一部分自然風乾才有的風味複雜度與年份個性。兩種方式目前在法規上都是被允許的釀造選擇,酒莊可依自身理念與規模自由選用。"
+            },
+            "quiz_fruttaio_correct": {
+              "text": "Marco 點頭。「跟你在皮蒙特學過的巴羅洛戰爭,精神上有點像——只是我們這裡爭的不是橡木桶,是葡萄還沒進酒窖之前,那幾個月該怎麼度過。」",
+              "grants_badge": "傳統閣樓與現代溫控之爭",
+              "choices": [
+                {
+                  "label": "「阿瑪羅內的酒精濃度,最近是不是也有爭議?」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_fruttaio_wrong": {
+              "text": "Marco 搖頭。「不是完全沒有差異的行銷話術,現代溫控室也沒有被法規禁止——再想想,自然通風跟精準溫濕度控制,分別會在『穩定性』跟『自然變化』這兩件事上,帶來什麼樣的取捨?」",
+              "sets_fog": "quiz_fruttaio",
+              "choices": [
+                {
+                  "label": "重新思考傳統閣樓與現代溫控室之爭的核心",
+                  "next": "quiz_fruttaio"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "「確實有,」Marco 說,「這個部分,留到最後那一站再一起討論。」\n\n【第二章完 · 已獲得知識印記:傳統閣樓與現代溫控之爭】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "venice_trade_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "venice_trade_outpost": {
+          "title": "驛站:海上共和國的餐桌",
+          "meta": {
+            "village": "Veneto",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "威尼斯共和國貿易史與葡萄酒的關聯",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "博物館裡,一幅描繪威尼斯商船隊的古畫前,導覽員說:「威尼斯共和國曾經是地中海最強大的海上貿易霸權,這段歷史,跟威尼托的葡萄酒產業,其實關係緊密。」",
+              "choices": [
+                {
+                  "label": "「威尼斯的海上貿易,怎麼影響到葡萄酒產業?」",
+                  "next": "quiz_venice"
+                }
+              ]
+            },
+            "quiz_venice": {
+              "type": "quiz",
+              "text": "威尼斯共和國作為中世紀到近代地中海海上貿易霸權,對威尼托葡萄酒產業發展的影響,最合理的理解是:\n\nA. 威尼斯共和國完全禁止本地葡萄酒貿易,所有酒類都必須從海外進口\n\nB. 威尼斯共和國掌控地中海重要貿易航線,葡萄酒是重要的貿易商品之一;強大的貿易網絡與商業資本,讓威尼托及周邊地區的葡萄酒能透過海運銷往地中海各地甚至更遠的市場,商業繁榮也帶動了當地釀酒業的發展與技術累積\n\nC. 威尼斯共和國跟葡萄酒貿易完全無關,兩者只是地理位置上剛好相鄰",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_venice_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_venice_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_venice_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "威尼斯共和國在中世紀到近代長期是地中海最重要的海上貿易霸權之一,掌控著連結歐洲、地中海與近東的重要貿易航線。葡萄酒是當時重要的貿易商品之一,威尼斯強大的商業資本與貿易網絡,讓威尼托及其周邊地區的葡萄酒得以透過海運銷往地中海各地甚至更遠的市場。這種長期的商業繁榮,不僅帶動了當地釀酒業的資本累積與技術發展,也讓威尼托逐漸建立起作為重要葡萄酒產區的歷史基礎——瓦波利切拉的乾燥葡萄工藝與阿瑪羅內的誕生,正是在這樣深厚的產業與貿易歷史土壤上發展出來的。"
+            },
+            "quiz_venice_correct": {
+              "text": "導覽員點頭。「所以下次喝阿瑪羅內的時候,不妨想想這杯酒背後,其實牽著一整段海上貿易帝國的歷史。」\n\n【驛站完 · 已獲得知識印記:威尼斯共和國貿易史】",
+              "grants_badge": "威尼斯共和國貿易史",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_venice_wrong": {
+              "text": "遊客還是不確定。「不是完全禁止本地酒類貿易,兩者也絕非毫無關聯——再想想,強大的海上貿易網絡跟商業資本,對一個地區的釀酒產業發展,可能帶來什麼樣的助力?」",
+              "sets_fog": "quiz_venice",
+              "choices": [
+                {
+                  "label": "重新思考威尼斯共和國貿易史跟威尼托葡萄酒產業的關聯",
+                  "next": "quiz_venice"
+                }
+              ]
+            }
+          }
+        },
+        "veneto_final_wp": {
+          "title": "支線:越來越烈的爭論",
+          "meta": {
+            "village": "Valpolicella",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整合乾燥工藝、風格演變與現代阿瑪羅內酒精濃度爭議的判斷",
+            "requires_badges": [
+              "Recioto與Amarone的關聯",
+              "傳統閣樓與現代溫控之爭"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Marco 倒了兩杯阿瑪羅內——一杯是二十年前的老年份,酒精感相對含蓄;另一杯是近幾年的新年份,酒精濃度明顯更高、風格更濃郁厚重。「這幾年,阿瑪羅內『越來越甜、越來越烈』的風格演變,一直有人在討論。你怎麼看?」",
+              "choices": [
+                {
+                  "label": "思考現代阿瑪羅內風格演變的成因與爭議",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "近年來部分阿瑪羅內酒款呈現「酒精濃度更高、風格更濃郁甜潤」的演變趨勢,最合理的成因分析是:\n\nA. 這個趨勢跟釀造技術、氣候條件或市場偏好完全無關,純粹是隨機現象\n\nB. 可能的成因包括:氣候暖化讓葡萄成熟度普遍提高、糖分累積更多;部分酒莊為追求市場偏好的濃郁飽滿風格,刻意延長風乾時間或選擇更精準可控的現代溫控乾燥設備以達到更高的糖分濃縮度;加上部分年份發酵未完全進行到底、刻意保留些許殘糖,共同導致部分現代阿瑪羅內酒款呈現出比傳統風格更高酒精、更甜潤濃郁的傾向,這也引發了「是否偏離了阿瑪羅內原本乾型風格定義」的產區內部討論\n\nC. 這個趨勢完全是法規強制規定的結果,酒莊沒有任何自主選擇空間",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "近年部分阿瑪羅內酒款呈現酒精濃度更高、風格更濃郁甜潤的演變趨勢,成因通常是多重因素疊加:氣候暖化讓葡萄園整體成熟度提高、糖分自然累積更多;部分酒莊為了迎合市場對濃郁飽滿風格的偏好,選擇延長風乾時間或採用現代溫控乾燥設備以達到更精準、更高的糖分濃縮度;加上部分酒款可能未讓發酵完全進行到底、刻意保留些許殘糖以增添圓潤口感。這些因素共同作用,讓一部分現代阿瑪羅內偏離了傳統上「乾型、結構扎實、餘韻帶苦」的經典定義,也引發了瓦波利切拉產區內部,關於「阿瑪羅內的風格核心究竟該如何界定」的持續討論——這場討論,某種程度上跟你在皮蒙特學過的巴羅洛戰爭、在波爾多學過的車庫酒爭議,都指向同一個更大的命題:市場偏好與風土/傳統定義之間,該如何拿捏。"
+            },
+            "quiz_final_correct": {
+              "text": "Marco 點頭,神情帶著一絲感慨。「氣候在變,市場口味在變,連『阿瑪羅內到底該是什麼味道』這件事,好像也一直在被重新定義。」\n\n他把兩杯酒並排放在你面前。「唯一沒變的,大概就是那個關於被遺忘的酒桶的傳說——意外開始的東西,好像註定要一直面對『它現在究竟該往哪裡去』的提問。」\n\n【支線完 · 已獲得知識印記:阿瑪羅內風格演變的爭議】",
+              "grants_badge": "阿瑪羅內風格演變的爭議",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_final_wrong": {
+              "text": "Marco 搖頭。「不是隨機現象,也不是法規強制的結果——再想想,氣候暖化、市場偏好、乾燥工藝的選擇,這幾個因素疊加,可能會對葡萄的糖分累積跟酒款風格,造成什麼樣的影響?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "重新思考現代阿瑪羅內風格演變的成因",
+                  "next": "quiz_final"
+                }
+              ]
+            }
+          }
+        }
+      }
+    },
+    "suditalia_line": {
+      "title": "被希臘人命名的土地",
+      "tagline": "古希臘人稱這裡為「訓練葡萄藤之地」,比羅馬帝國還早開始種植葡萄——這片全義大利葡萄種植史最古老的土地,卻花了兩千多年,才等到世界重新正眼看它",
+      "knowledge_focus": "Enotria的由來與古希臘人南義種植史、維蘇威火山土壤與龐貝古城酒館遺跡、傳統散裝酒產區到現代品質革命的轉型、馬薩拉酒與英國商人的加烈酒發現史",
+      "major_region": "義大利 Italia",
+      "region": "南義與島嶼 Sud Italia & Isole",
+      "chapter_order": [
+        "enotria_01",
+        "vesuvius_pompeii_outpost",
+        "quality_revolution_02",
+        "marsala_outpost",
+        "sud_final_wp"
+      ],
+      "chapters": {
+        "enotria_01": {
+          "title": "第一章:訓練葡萄藤之地",
+          "meta": {
+            "village": "Campania",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "Enotria的由來與古希臘人南義種植史",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "埃特納火山(Etna)半山腰的老藤葡萄園裡,Dr. Sofia Greco 蹲下身,撫過一株樹齡超過百年的葡萄老藤。「你知道古希臘人,曾經怎麼稱呼整個南義大利嗎?」",
+              "choices": [
+                {
+                  "label": "「怎麼稱呼?」",
+                  "next": "ask_enotria"
+                }
+              ]
+            },
+            "ask_enotria": {
+              "text": "「Enotria(厄諾特里亞),」Sofia 說,「意思大概是『訓練葡萄藤之地』或『適合種葡萄之地』。早在羅馬帝國興起之前,古希臘殖民者就已經在南義沿海一帶大規模種植葡萄——這裡的葡萄種植史,比羅馬還要古老。」\n\n她站起身。「我原本是考古學家,研究的就是這段古希臘殖民時期的遺跡,後來才轉行釀酒——某種程度上,我覺得自己是在替這片土地,把它最古老的身分重新找回來。」",
+              "choices": [
+                {
+                  "label": "思考Enotria這個名稱背後的歷史意義",
+                  "next": "quiz_enotria"
+                }
+              ]
+            },
+            "quiz_enotria": {
+              "type": "quiz",
+              "text": "古希臘人賦予南義大利的稱呼「Enotria」,以及這個名稱所反映的歷史,最準確的描述是:\n\nA. 「Enotria」這個名稱源自羅馬帝國,是羅馬人為了紀念征服南義而命名的\n\nB. 「Enotria」意指「訓練葡萄藤之地」,源自古希臘殖民者早在羅馬帝國興起之前就已在南義大利沿海地區大規模種植葡萄的歷史,說明南義的葡萄種植傳統比羅馬帝國時期更為古老\n\nC. 「Enotria」這個名稱跟葡萄或葡萄酒完全無關,是描述當地地形的詞彙",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_enotria_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_enotria_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_enotria_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "「Enotria」是古希臘人賦予南義大利的稱呼,意指「訓練葡萄藤之地」——這個名稱源自古希臘殖民者早在羅馬帝國興起之前,便已經在南義大利沿海地區大規模種植葡萄、發展釀酒業的歷史事實。這意味著南義的葡萄種植傳統,實際上比一般人印象中「羅馬帝國時代的葡萄酒」更為古老,可以追溯到希臘古典時期的殖民活動。這段深厚的古老歷史,是理解南義(以及西西里等島嶼)葡萄酒文化底蘊的重要起點,也讓南義成為義大利葡萄種植史真正的發源地之一。"
+            },
+            "quiz_enotria_correct": {
+              "text": "Sofia 點頭。「而且這段古老歷史,不只是傳說——維蘇威火山旁的龐貝古城,就直接挖出了證據。」",
+              "grants_badge": "Enotria的由來",
+              "choices": [
+                {
+                  "label": "「龐貝古城挖出了什麼證據?」",
+                  "next": "chapter_end_1"
+                }
+              ]
+            },
+            "quiz_enotria_wrong": {
+              "text": "Sofia 搖頭。「不是羅馬帝國命名,也跟地形描述無關——再想想,『訓練葡萄藤』這個字面意思,指向的是哪一種產業活動?」",
+              "sets_fog": "quiz_enotria",
+              "choices": [
+                {
+                  "label": "重新思考Enotria這個名稱背後的歷史意義",
+                  "next": "quiz_enotria"
+                }
+              ]
+            },
+            "chapter_end_1": {
+              "text": "「留到驛站,親自帶你看看,」Sofia 說,「那個地方,會讓你對『葡萄酒歷史』這四個字,有完全不同的體會。」\n\n【第一章完 · 已獲得知識印記:Enotria的由來】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "vesuvius_pompeii_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "vesuvius_pompeii_outpost": {
+          "title": "驛站:凝固在火山灰裡的酒館",
+          "meta": {
+            "village": "Campania",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "維蘇威火山土壤與龐貝古城酒館遺跡",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "龐貝古城遺跡裡,考古挖掘出的酒館(thermopolium)櫃台上,還留有存放葡萄酒陶罐的凹槽痕跡。導覽員說:「西元 79 年維蘇威火山爆發,把整座城市瞬間凝固在火山灰底下,也順便替我們保存下了古羅馬人喝酒的日常場景。」",
+              "choices": [
+                {
+                  "label": "「維蘇威火山跟這裡的葡萄酒,還有什麼關係?」",
+                  "next": "quiz_vesuvius"
+                }
+              ]
+            },
+            "quiz_vesuvius": {
+              "type": "quiz",
+              "text": "維蘇威火山(Vesuvius)對周邊坎帕尼亞(Campania)葡萄酒產業的意義,最完整的描述是:\n\nA. 維蘇威火山只帶來破壞(如西元79年摧毀龐貝古城),對當地葡萄酒產業完全沒有正面影響\n\nB. 維蘇威火山一方面透過西元79年的爆發,意外保存了龐貝古城裡古羅馬人的飲酒與釀酒生活場景(包括酒館遺跡),讓後世得以直接研究古代葡萄酒文化;另一方面,火山土壤本身富含礦物質,也持續孕育著周邊葡萄園,是當地葡萄酒風土的重要組成部分\n\nC. 龐貝古城的酒館遺跡跟葡萄酒完全無關,只是普通的飲食場所",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_vesuvius_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_vesuvius_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_vesuvius_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "維蘇威火山對坎帕尼亞地區葡萄酒歷史與產業,具有雙重意義:西元 79 年的大規模爆發雖然摧毀了龐貝、赫庫蘭尼姆等城市,卻也意外將當時的生活場景完整保存在火山灰之下——包括龐貝古城裡的酒館(thermopolium)遺跡,讓考古學家與歷史學家得以直接研究古羅馬人日常的飲酒文化與葡萄酒貿易場景,成為研究古代葡萄酒文化難得的第一手證據。另一方面,維蘇威火山周邊的土壤富含火山礦物質,持續孕育著至今仍在運作的葡萄園(部分甚至栽種著據信與古羅馬時期一脈相承的原生品種),讓這片土地的葡萄酒風土,跟這座活火山的歷史緊密交織在一起。"
+            },
+            "quiz_vesuvius_correct": {
+              "text": "Sofia 在一旁補充。「古羅馬人自己最推崇的葡萄酒,叫法勒諾酒(Falernian),產區就在附近——某種程度上,你現在站的這片土地,兩千年前,已經是當時世界上最頂級的葡萄酒產區之一。」\n\n【驛站完 · 已獲得知識印記:維蘇威火山與龐貝遺跡】",
+              "grants_badge": "維蘇威火山與龐貝遺跡",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_vesuvius_wrong": {
+              "text": "導覽員搖頭。「不是只有破壞,酒館遺跡也絕對跟葡萄酒有關——再想想,火山灰突然掩埋一座城市,對後世研究這座城市當時的生活場景,反而會帶來什麼樣的意外幫助?」",
+              "sets_fog": "quiz_vesuvius",
+              "choices": [
+                {
+                  "label": "重新思考維蘇威火山對當地葡萄酒歷史的意義",
+                  "next": "quiz_vesuvius"
+                }
+              ]
+            }
+          }
+        },
+        "quality_revolution_02": {
+          "title": "第二章:從散裝酒到明日之星",
+          "meta": {
+            "village": "Etna",
+            "tier": "core",
+            "tier_label": "核心章節",
+            "style_focus": "傳統散裝酒(vino sfuso)產區到現代品質革命的轉型",
+            "requires_badges": [
+              "Enotria的由來"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Sofia 帶你看一份幾十年前的老照片——巨大的散裝酒運輸槽車,排隊等著把南義的葡萄酒運往北義,混進其他產區的調配酒裡。「這是我祖父那一輩,南義葡萄酒最典型的命運。」",
+              "choices": [
+                {
+                  "label": "「南義以前,主要都是這樣被利用的?」",
+                  "next": "ask_bulk"
+                }
+              ]
+            },
+            "ask_bulk": {
+              "text": "「很長一段時間,」Sofia 說,「南義因為氣候炎熱、產量容易偏高,被當成廉價散裝酒(vino sfuso)的供應地,大量葡萄酒沒有自己的品牌身分,直接以散裝形式運往北方,用來補足其他產區調配時需要的酒體或濃度。」\n\n她指向窗外埃特納火山的黑色火山岩地塊。「直到 1990 年代之後,一批像我這樣的人開始重新挖掘南義的原生品種——像艾格尼科(Aglianico)、黑達沃拉(Nero d'Avola),還有像我現在在做的,埃特納這種火山土壤的獨特風土——才慢慢把南義,從『被利用的產區』,變成『被追捧的產區』。」",
+              "choices": [
+                {
+                  "label": "思考南義從散裝酒產區轉型的核心邏輯",
+                  "next": "quiz_revolution"
+                }
+              ]
+            },
+            "quiz_revolution": {
+              "type": "quiz",
+              "text": "南義大利(及西西里等島嶼)自 1990 年代起經歷的品質革命,轉型最核心的驅動力是:\n\nA. 完全是政府強制規定的結果,酒莊本身沒有主動投入意願\n\nB. 一批酒莊與釀酒師重新聚焦於當地原生品種(如艾格尼科、黑達沃拉)以及獨特風土(如埃特納火山土壤),投入品質導向的種植與釀造,逐漸擺脫過去作為廉價散裝酒供應地的形象,建立起具有獨立品牌身分與市場辨識度的精品風土產區定位\n\nC. 南義其實從未經歷過散裝酒為主的歷史階段,這段敘述完全不準確",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_revolution_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_revolution_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_revolution_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "南義大利(以及西西里等島嶼)自 1990 年代起經歷的品質革命,核心驅動力來自一批酒莊與釀酒師主動的品質轉型:過去很長一段時間,南義因氣候炎熱、產量容易偏高,被廣泛用作廉價散裝酒(vino sfuso)的供應地,大量葡萄酒沒有獨立品牌身分,直接運往北方補充其他產區調配需求。1990 年代之後,越來越多生產者重新聚焦於當地原生品種(如坎帕尼亞的艾格尼科、西西里的黑達沃拉)以及獨特的地方風土條件(尤其埃特納火山那種黑色火山岩土壤,近年被視為義大利最具潛力的新興精品產區之一),投入品質導向的種植管理與釀造工藝,逐漸建立起具有獨立品牌身分與市場辨識度的精品定位,徹底扭轉了過去被視為廉價調配酒來源地的產區形象。"
+            },
+            "quiz_revolution_correct": {
+              "text": "Sofia 露出欣慰的笑容。「答對了——這不是誰施捨給我們的機會,是這一代人自己動手,把祖先兩千多年前留下的東西,重新擦亮。」",
+              "grants_badge": "南義品質革命",
+              "choices": [
+                {
+                  "label": "「西西里那邊,是不是也有類似的翻身故事?」",
+                  "next": "chapter_end_2"
+                }
+              ]
+            },
+            "quiz_revolution_wrong": {
+              "text": "Sofia 搖頭。「不是政府強制的結果,南義確實經歷過以散裝酒為主的歷史階段——再想想,重新聚焦原生品種跟獨特風土,對一個過去以廉價供應地形象為主的產區,能帶來什麼樣的轉變?」",
+              "sets_fog": "quiz_revolution",
+              "choices": [
+                {
+                  "label": "重新思考南義品質革命的核心驅動力",
+                  "next": "quiz_revolution"
+                }
+              ]
+            },
+            "chapter_end_2": {
+              "text": "「有,」Sofia 說,「而且更早、更戲劇性——去驛站看看馬薩拉酒的故事,那是一個英國商人意外促成的。」\n\n【第二章完 · 已獲得知識印記:南義品質革命】",
+              "choices": [
+                {
+                  "label": "▶️ 輸入 /chapters 看看還有哪些支線",
+                  "next": "opening",
+                  "chapter": "marsala_outpost"
+                }
+              ],
+              "is_ending": true
+            }
+          }
+        },
+        "marsala_outpost": {
+          "title": "驛站:英國商人的意外發現",
+          "meta": {
+            "village": "Sicilia",
+            "tier": "outpost",
+            "tier_label": "知識驛站",
+            "style_focus": "馬薩拉酒與英國商人John Woodhouse的加烈酒發現史",
+            "requires_badges": []
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "西西里馬薩拉(Marsala)港口的老酒窖裡,一份 1773 年的貿易文件複本掛在牆上,簽名是一位英國商人的名字。導覽員說:「馬薩拉加烈酒的誕生,要感謝這位商人的一個實際考量。」",
+              "choices": [
+                {
+                  "label": "「馬薩拉酒是怎麼被發明出來的?」",
+                  "next": "quiz_marsala"
+                }
+              ]
+            },
+            "quiz_marsala": {
+              "type": "quiz",
+              "text": "1773 年英國商人 John Woodhouse 對馬薩拉酒(Marsala)誕生的關鍵貢獻,最準確的描述是:\n\nA. Woodhouse 純粹出於品味偏好,發明了馬薩拉酒的釀造配方,跟長途海運保存需求無關\n\nB. Woodhouse 為了讓西西里本地酒能承受長途海運、抵達英國時不會變質,仿照當時葡萄牙波特酒的做法,在酒中額外添加烈酒提高酒精濃度以利保存,意外開創了馬薩拉這種加烈酒工藝,跟波特酒的誕生邏輯屬於同一類型的解決方案\n\nC. 馬薩拉酒的加烈工藝,是西西里當地釀酒師獨立發展出來的,跟任何英國商人都沒有關聯",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_marsala_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_marsala_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_marsala_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "1773 年,英國商人 John Woodhouse 造訪西西里馬薩拉,發現當地酒款品質不錯,便打算大量採購運回英國銷售。但當時的長途海運環境嚴苛,一般葡萄酒經過數週甚至數月的海上航行,抵達目的地時往往已經變質。Woodhouse 仿照當時葡萄牙波特酒(Port)已經行之有效的做法,在酒中額外添加烈酒(白蘭地類蒸餾酒),藉此提高酒精濃度、增強保存穩定性,才讓酒款得以承受長途海運而不變質。這個為了解決實際貿易運輸問題而採用的加烈技術,意外開創了馬薩拉酒這種獨特的加烈酒風格,跟波特酒的誕生邏輯屬於同一類型的解決方案——都是為了因應長途海運保存需求,而發展出的加烈工藝。"
+            },
+            "quiz_marsala_correct": {
+              "text": "導覽員點頭。「所以馬薩拉酒,某種程度上跟你可能在葡萄牙學過的波特酒,是同一種邏輯的地中海版本——都是被『怎麼讓酒撐過一趟長途海運』這個很實際的問題,意外催生出來的。」\n\n【驛站完 · 已獲得知識印記:馬薩拉酒的加烈史】",
+              "grants_badge": "馬薩拉酒的加烈史",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_marsala_wrong": {
+              "text": "導覽員搖頭。「不是純粹出於品味偏好,也不是西西里本地獨立發展出來的——再想想,長途海運對一般葡萄酒的保存,會帶來什麼樣的挑戰?提高酒精濃度,對解決這個挑戰有什麼幫助?」",
+              "sets_fog": "quiz_marsala",
+              "choices": [
+                {
+                  "label": "重新思考馬薩拉酒誕生的關鍵歷史",
+                  "next": "quiz_marsala"
+                }
+              ]
+            }
+          }
+        },
+        "sud_final_wp": {
+          "title": "支線:被追捧的下一個明星",
+          "meta": {
+            "village": "Etna",
+            "tier": "waypoint",
+            "tier_label": "中繼站",
+            "style_focus": "整合古老歷史與現代品質革命,南義從被忽視到被追捧的產區敘事",
+            "requires_badges": [
+              "維蘇威火山與龐貝遺跡",
+              "南義品質革命"
+            ]
+          },
+          "start_node": "opening",
+          "nodes": {
+            "opening": {
+              "text": "Sofia 帶你走到埃特納火山葡萄園的最高處,俯瞰整片黑色火山岩地塊。「兩千多年前,希臘人叫這裡『訓練葡萄藤之地』;幾十年前,這裡的酒大多被當成廉價散裝原料。你覺得,今天國際市場開始追捧南義跟西西里,靠的到底是什麼?」",
+              "choices": [
+                {
+                  "label": "思考南義從被忽視到被追捧,背後真正的價值來源",
+                  "next": "quiz_final"
+                }
+              ]
+            },
+            "quiz_final": {
+              "type": "quiz",
+              "text": "南義大利與西西里等島嶼,近幾十年從長期被忽視的散裝酒供應地,逐漸轉變為國際市場關注的新興精品產區,最根本的價值來源是:\n\nA. 純粹是行銷包裝與價格炒作的結果,這些產區本身並沒有真正獨特、值得被關注的風土或品種條件\n\nB. 這些產區原本就擁有深厚的古老葡萄種植歷史(如Enotria)、獨特的原生品種資源(如艾格尼科、黑達沃拉)、以及特殊的地質風土條件(如埃特納火山土壤);過去長期被低估與忽視,並非因為條件不足,而是市場關注度與品牌建立的滯後,一旦生產者投入品質導向的耕耘,這些原本就存在的先天優勢便得以被重新發掘與認可\n\nC. 南義與西西里之所以被追捧,單純是因為氣候暖化讓這些原本不適合種植葡萄的地區,近年才剛開始具備種植條件",
+              "choices": [
+                {
+                  "label": "A",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                },
+                {
+                  "label": "B",
+                  "next": "quiz_final_correct",
+                  "correct": true
+                },
+                {
+                  "label": "C",
+                  "next": "quiz_final_wrong",
+                  "correct": false
+                }
+              ],
+              "knowledge_card": "南義大利與西西里等島嶼,近幾十年從長期被忽視的散裝酒供應地,轉變為國際市場關注的新興精品產區,根本的價值來源在於這些地區原本就擁有的深厚先天條件:比羅馬帝國更古老的葡萄種植歷史(Enotria)、豐富獨特的原生品種資源(艾格尼科、黑達沃拉等,許多品種在其他地方完全找不到對應版本)、以及特殊的地質風土條件(埃特納火山黑色火山岩土壤近年被視為義大利最具潛力的新興風土之一)。過去這些地區長期被低估、被當成廉價調配酒供應地,並非因為先天條件不足,而是市場關注度、品牌建立與品質投入的長期滯後。一旦生產者投入品質導向的耕耘與行銷,這些原本就存在、卻被埋沒已久的先天優勢,便得以被重新發掘與國際市場認可——這正是南義大利「被追捧的下一個明星」故事,最根本的價值基礎。"
+            },
+            "quiz_final_correct": {
+              "text": "Sofia 露出滿意的笑容。「答對了——我常常覺得,自己身為考古學家轉行釀酒,做的其實是同一件事:把被埋在土裡、被忽略太久的價值,重新挖出來給世界看。」\n\n她望向遠方的火山口。「從 Enotria 到今天,這片土地從來沒有真正缺過價值,缺的只是願意花時間重新認識它的人。」\n\n【支線完 · 已獲得知識印記:南義產區價值重估邏輯】",
+              "grants_badge": "南義產區價值重估邏輯",
+              "choices": [],
+              "is_ending": true
+            },
+            "quiz_final_wrong": {
+              "text": "Sofia 搖頭。「不是純粹的行銷炒作,也不是氣候暖化才剛創造出種植條件——再想想,這片土地古老的種植歷史、豐富的原生品種、獨特的火山土壤,這些條件是最近才出現的,還是本來就一直存在,只是沒有被好好看見?」",
+              "sets_fog": "quiz_final",
+              "choices": [
+                {
+                  "label": "重新思考南義從被忽視到被追捧背後的真正價值來源",
+                  "next": "quiz_final"
+                }
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }
