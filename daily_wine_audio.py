@@ -50,7 +50,7 @@ def generate_bilingual_text(topic: str) -> dict:
             "content-type": "application/json",
         },
         json={
-            "model": "claude-sonnet-4-6",
+            "model": "claude-sonnet-5",
             "max_tokens": 700,
             "messages": [{"role": "user", "content": prompt}],
         },
