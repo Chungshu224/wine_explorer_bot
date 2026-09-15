@@ -57,17 +57,14 @@ def generate_bilingual_text(topic: str) -> dict:
         timeout=60,
     )
     if resp.status_code != 200:
-    print("Anthropic API error:", resp.status_code, resp.text)
-resp.raise_for_status()
+        print("Anthropic API error:", resp.status_code, resp.text)
+    resp.raise_for_status()
     raw = resp.json()["content"][0]["text"].strip()
     if raw.startswith("```"):
         raw = raw.strip("`")
         if raw.startswith("json"):
             raw = raw[4:]
-    return json.loads(raw.strip())
-
-
-async def _synthesize_async(text: str, voice_name: str, filepath: str) -> None:
+    return json.loads(raw.strip())(text: str, voice_name: str, filepath: str) -> None:
     communicate = edge_tts.Communicate(text, voice_name)
     await communicate.save(filepath)
 
