@@ -56,7 +56,9 @@ def generate_bilingual_text(topic: str) -> dict:
         },
         timeout=60,
     )
-    resp.raise_for_status()
+    if resp.status_code != 200:
+    print("Anthropic API error:", resp.status_code, resp.text)
+resp.raise_for_status()
     raw = resp.json()["content"][0]["text"].strip()
     if raw.startswith("```"):
         raw = raw.strip("`")
