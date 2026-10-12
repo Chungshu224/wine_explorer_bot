@@ -741,14 +741,18 @@ async def handle_choice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     await send_node(query, context, campaign_id, target_chapter, next_node_id, user_id)
 
 
-def main() -> None:
+def build_application(webhook: bool = False) -> Application:
+    """建立 Application 並註冊所有 handler。webhook=True 時不建立 Updater（給 Vercel 用）。"""
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     if not token:
         raise SystemExit("請先設定環境變數 TELEGRAM_BOT_TOKEN(跟 BotFather 申請後取得)")
     if not SUPABASE_URL or not SUPABASE_ANON_KEY:
         raise SystemExit("請先設定環境變數 SUPABASE_URL 與 SUPABASE_ANON_KEY")
 
-    app = Application.builder().token(token).build()
+    builder = Application.builder().token(token)
+    if webhook:
+        builder = builder.updater(None)
+    app = builder.build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("status", status))
     app.add_handler(CommandHandler("chapters", chapters))
@@ -763,7 +767,11 @@ def main() -> None:
     app.add_handler(CallbackQueryHandler(handle_chapter_list_button, pattern=r"^chapterlist:"))
     app.add_handler(CallbackQueryHandler(handle_choice, pattern=r"^goto:"))
     learn.register(app)  # /learn 勃艮第闖關學習模式
+    return app
 
+
+def main() -> None:
+    app = build_application()
     logger.info("風土探勘者 bot(Supabase 持久化版)啟動中...")
     app.run_polling()
 

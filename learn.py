@@ -3,12 +3,12 @@
 
 流程：/learn → 關卡地圖 → 進入關卡 → 逐題作答（選擇題 / 是非題 / 回想題）
       → 結算（≥解鎖門檻即通關，解鎖下一關）。答題結果同步寫入 Leitner 間隔複習表 wc_user_cards。
-進行中的關卡暫存在 context.user_data（重新部署會中斷該次關卡，但進度與通關紀錄都在 Supabase）。
+進行中的關卡暫存在 Supabase wc_sessions（無伺服器環境每次請求都是新的，不能放記憶體）。
 """
 
 import os
 import random
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from typing import Any
 
 import httpx
@@ -54,6 +54,24 @@ async def _insert(table: str, row: dict[str, Any]) -> None:
             headers={**_headers(), "Prefer": "return=minimal"},
             json=row,
         )
+        r.raise_for_status()
+
+
+# ---------------------------------------------------------------- 進行中關卡的暫存（Supabase wc_sessions）
+# 無伺服器（Vercel）每次請求都是全新環境，不能把進度放記憶體，所以每一步都讀寫 wc_sessions。
+async def _load(user_id: int) -> dict[str, Any] | None:
+    rows = await _get("wc_sessions", {"telegram_user_id": f"eq.{user_id}", "select": "state"})
+    return rows[0]["state"] if rows and rows[0]["state"] else None
+
+
+async def _save(user_id: int, state: dict[str, Any]) -> None:
+    await _upsert("wc_sessions", {"telegram_user_id": user_id, "state": state, "updated_at": datetime.now(timezone.utc).isoformat()})
+
+
+async def _drop(user_id: int) -> None:
+    async with httpx.AsyncClient(timeout=20) as c:
+        r = await c.delete(f"{SUPABASE_URL}/rest/v1/wc_sessions", headers=_headers(),
+                           params={"telegram_user_id": f"eq.{user_id}"})
         r.raise_for_status()
 
 
@@ -137,11 +155,9 @@ async def handle_level_start(update: Update, context: ContextTypes.DEFAULT_TYPE)
     uids = {u for it in items for u in it["wc_cards"]["distractors"]}
     quoted = ",".join(f'"{u}"' for u in uids)
     pool = {c["uid"]: c for c in await _get("wc_cards", {"uid": f"in.({quoted})", "select": "uid,q,a"})} if uids else {}
-    context.user_data["wc"] = {
-        "level": lv, "items": items, "pool": pool, "idx": 0, "correct": 0, "cur": None,
-    }
+    s = {"level": lv, "items": items, "pool": pool, "idx": 0, "correct": 0, "cur": None}
     await q.edit_message_text(f"第 {lv['ord']} 關：{lv['title']}\n共 {len(items)} 題，準備好了！")
-    await _ask(q.message, context)
+    await _ask(q.message, q.from_user.id, s)
 
 
 # ---------------------------------------------------------------- 出題
@@ -194,13 +210,13 @@ def _build_question(item: dict[str, Any], pool: dict[str, Any]) -> dict[str, Any
             "answer": reveal, "uid": card["uid"]}
 
 
-async def _ask(message, context: ContextTypes.DEFAULT_TYPE) -> None:
-    s = context.user_data["wc"]
+async def _ask(message, user_id: int, s: dict[str, Any]) -> None:
     if s["idx"] >= len(s["items"]):
-        await _finish(message, context)
+        await _finish(message, user_id, s)
         return
     cur = _build_question(s["items"][s["idx"]], s["pool"])
     s["cur"] = cur
+    await _save(user_id, s)
     head = f"［{s['idx'] + 1}/{len(s['items'])}］\n"
     if cur["mode"] == "mcq":
         kb = [[InlineKeyboardButton(LETTERS[i], callback_data=f"wa:{i}") for i in range(len(cur["options"]))]]
@@ -225,7 +241,7 @@ async def _record(user_id: int, uid: str, ok: bool) -> None:
 
 async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     q = update.callback_query
-    s = context.user_data.get("wc")
+    s = await _load(q.from_user.id)
     if not s or not s.get("cur"):
         await q.answer("這一關已中斷，請用 /learn 重新開始", show_alert=True)
         return
@@ -249,28 +265,27 @@ async def handle_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     await _record(q.from_user.id, cur["uid"], ok)
     mark = "✅ 答對了！" if ok else "❌ 答錯了"
     detail = f"\n正解：{cur['answer']}" if (not ok or cur["mode"] != "recall") else ""
-    cur_uid = cur["uid"]
     kb = [[InlineKeyboardButton("下一題 ➡️", callback_data="wn"), InlineKeyboardButton("🚩 回報錯誤", callback_data=f"wr:{s['idx']}")]]
     await q.edit_message_text(f"{q.message.text}\n\n{mark}{detail}", reply_markup=InlineKeyboardMarkup(kb))
     s["cur"] = None
-    s["last_uid"] = cur_uid
+    await _save(q.from_user.id, s)
 
 
 async def handle_next(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     q = update.callback_query
-    s = context.user_data.get("wc")
+    s = await _load(q.from_user.id)
     if not s:
         await q.answer("這一關已中斷，請用 /learn 重新開始", show_alert=True)
         return
     await q.answer()
     await q.edit_message_reply_markup(reply_markup=None)
     s["idx"] += 1
-    await _ask(q.message, context)
+    await _ask(q.message, q.from_user.id, s)
 
 
 async def handle_report(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     q = update.callback_query
-    s = context.user_data.get("wc")
+    s = await _load(q.from_user.id)
     idx = int(q.data.split(":")[1])
     if not s or idx >= len(s["items"]):
         await q.answer("已中斷", show_alert=True)
@@ -281,13 +296,12 @@ async def handle_report(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 
 
 # ---------------------------------------------------------------- 結算
-async def _finish(message, context: ContextTypes.DEFAULT_TYPE) -> None:
-    s = context.user_data.pop("wc")
+async def _finish(message, user_id: int, s: dict[str, Any]) -> None:
+    await _drop(user_id)
     lv = s["level"]
     total = len(s["items"])
     pct = round(100 * s["correct"] / total)
     passed = pct >= (lv["unlock_pct"] or 80)
-    user_id = message.chat.id  # 私訊中 chat.id == user id
     rows = await _get("wc_user_levels", {"telegram_user_id": f"eq.{user_id}", "level_id": f"eq.{lv['id']}", "select": "*"})
     old = rows[0] if rows else {"best_pct": 0, "attempts": 0, "cleared": False}
     await _upsert("wc_user_levels", {
