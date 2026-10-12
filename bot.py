@@ -29,6 +29,7 @@ from pathlib import Path
 from typing import Any
 
 import httpx
+import learn
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import (
     Application,
@@ -761,6 +762,7 @@ def main() -> None:
     app.add_handler(CallbackQueryHandler(handle_region_menu, pattern=r"^regionmenu:"))
     app.add_handler(CallbackQueryHandler(handle_chapter_list_button, pattern=r"^chapterlist:"))
     app.add_handler(CallbackQueryHandler(handle_choice, pattern=r"^goto:"))
+    learn.register(app)  # /learn 勃艮第闖關學習模式
 
     logger.info("風土探勘者 bot(Supabase 持久化版)啟動中...")
     app.run_polling()
